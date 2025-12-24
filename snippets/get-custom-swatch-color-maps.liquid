@@ -1,0 +1,25 @@
+{%- liquid
+  comment
+    Renders a string that contains a list of custom color names (keys) and values, separated
+    by ' | '. Pulls the names/values from the 'custom_swatch_colors' setting.
+
+    The resulting string is meant to be processed into 2 separate arrays for use with swatches.
+  endcomment
+
+  assign custom_colors = settings.custom_swatch_colors | newline_to_br | split: '<br />'
+  assign custom_color_key_map = ''
+  assign custom_color_value_map = ''
+
+  for color_value in custom_colors
+    assign custom_color_key = color_value | split: ':' | first | strip | downcase
+    assign custom_color_value = color_value | split: ':' | last | strip
+
+    assign custom_color_key_map = custom_color_key_map | append: ',' | append: custom_color_key
+    assign custom_color_value_map = custom_color_value_map | append: ',' | append: custom_color_value
+  endfor
+
+  assign custom_color_key_map = custom_color_key_map | remove_first: ','
+  assign custom_color_value_map = custom_color_value_map | remove_first: ','
+
+  echo '[[keys]] | [[values]]' | replace: '[[keys]]', custom_color_key_map | replace: '[[values]]', custom_color_value_map
+-%}

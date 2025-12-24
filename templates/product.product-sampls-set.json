@@ -1,0 +1,210 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "custom_liquid_eghWga": {
+          "type": "custom_liquid",
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'dynamic-product-header' %}"
+          }
+        },
+        "product_header": {
+          "type": "product_header",
+          "disabled": true,
+          "settings": {
+            "show_divider": true,
+            "show_vendor": true,
+            "show_sku": true,
+            "show_discount": true,
+            "discount_format": "percent_off",
+            "show_product_rating": false,
+            "show_sale_badge": true,
+            "show_custom_badges": true
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p></p>{{ product.description }}",
+            "column_placement": "right"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_icon": "measuring-tape",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "size-guide",
+            "swatch_size": "medium",
+            "chip_layout": "natural"
+          }
+        },
+        "custom_liquid__sample_kit": {
+          "type": "custom_liquid",
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'sample-kit-selector', mode: 'dropdowns', slots: 5, brand: request.params.brand %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "enable_sticky_atc_bar_desktop": true,
+            "enable_sticky_atc_bar_mobile": true,
+            "divider_width": "border--thin"
+          }
+        },
+        "product_callouts-1": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": false,
+            "add_dividers": true,
+            "icon_1": "leaf",
+            "text_1": "<p>Your order ships carbon neutral</p>",
+            "icon_2": "none",
+            "text_2": "",
+            "icon_3": "none",
+            "text_3": "",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "chat",
+            "text_6": "",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "product_callouts-2": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": false,
+            "icon_1": "price-tag",
+            "text_1": "<p><strong>BIGGER MARKDOWNS</strong> — We've refreshed our sale with discounts of up to 50% on select styles.</p>",
+            "icon_2": "paper-airplane",
+            "text_2": "",
+            "icon_3": "chat",
+            "text_3": "",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "chat",
+            "text_6": "",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "product_callouts": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_1": "stiletto",
+            "text_1": "<p>Free shipping over $50</p>",
+            "icon_2": "cotton",
+            "text_2": "<p>Free Returns & Exchanges</p>",
+            "icon_3": "plant",
+            "text_3": "<p>Need help? <a href='/pages/contact''>Contact us</a></p>",
+            "icon_4": "chat",
+            "text_4": "<p>Have questions about fit? <a href=\\\"/pages/contact\\\" title=\\\"Contact\\\">Contact us</a></p>",
+            "icon_5": "moving-truck",
+            "text_5": "<p>Free shipping on orders over $250</p>",
+            "icon_6": "padlock",
+            "text_6": "<p>Secure payment</p>",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "title": "Description",
+            "title_tag": "h3",
+            "text_font_class": "fs-body-100",
+            "column_placement": "left",
+            "display_as_collapsible_row": true,
+            "expand_by_default": true
+          }
+        },
+        "featured_products": {
+          "type": "featured_products",
+          "disabled": true,
+          "settings": {
+            "heading": "Customers also love",
+            "heading_tag": "h3",
+            "column_placement": "left",
+            "max_products": 3,
+            "product_source": "app-recommendations",
+            "product_list": [],
+            "enable_swiper_mobile": true,
+            "display_as_collapsible_row": true,
+            "expand_by_default": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "custom_liquid_eghWga",
+        "product_header",
+        "text",
+        "variant_picker",
+        "custom_liquid__sample_kit",
+        "buy_buttons",
+        "product_callouts-1",
+        "product_callouts-2",
+        "product_callouts",
+        "description",
+        "featured_products",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_product_details": true,
+        "show_breadcrumbs": false,
+        "show_navigation_buttons": false,
+        "show_featured_media_first": false,
+        "gallery_style": "grid",
+        "gallery_style_mobile": "carousel",
+        "gallery_size": "large",
+        "gallery_overflow": "2",
+        "enable_video_looping": true,
+        "enable_product_lightbox": true,
+        "image_aspect_ratio": "portrait",
+        "enable_multiple_variant_media": false,
+        "enable_mobile_carousel_looping": true,
+        "show_mobile_carousel_images_full_width": true,
+        "hide_mobile_carousel_dots": false,
+        "enable_gift_card_recipient": true,
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

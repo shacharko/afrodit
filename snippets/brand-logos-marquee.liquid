@@ -1,0 +1,168 @@
+{%- comment -%}
+Brand Logos Infinite Marquee (RTL safe)
+Metaobject: brand_info
+Required fields per entry: brand_name (text), brand_logo (file)
+Usage:
+  {% render 'brand-logos-marquee', speed_s: 26, logo_h: 48, gap_px: 72, link_to_collections: true %}
+{%- endcomment -%}
+
+{%- assign speed_s = speed_s | default: 28 -%}
+{%- assign link_to_collections = link_to_collections | default: true -%}
+{%- assign logo_h = logo_h | default: 48 -%}
+{%- assign gap_px = gap_px | default: 72 -%}
+
+{%- assign brands = shop.metaobjects['brand_info'].values | default: empty -%}
+{%- if brands != blank -%}
+<div class="af-logos" dir="ltr" data-af-logos
+     style="--af-speed: {{ speed_s }}s; --af-logo-h: {{ logo_h }}px; --af-gap: {{ gap_px }}px;">
+  <div class="af-logos__vp" aria-label="מותגים">
+    <ul class="af-logos__track" role="list">
+      {%- for b in brands -%}
+        {%- if b.brand_logo != blank -%}
+          <li class="af-logos__item" role="listitem">
+            {%- if link_to_collections -%}
+              <a href="/collections/{{ b.brand_name | handleize }}" aria-label="{{ b.brand_name }}">
+                {{ b.brand_logo | image_url: width: 280 | image_tag: alt: b.brand_name, loading: 'eager', class: 'af-logos__img' }}
+              </a>
+            {%- else -%}
+              {{ b.brand_logo | image_url: width: 280 | image_tag: alt: b.brand_name, loading: 'eager', class: 'af-logos__img' }}
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+<style>
+/* Wrapper: שומר LTR כדי שהאנימציה תהיה חלקה בכל אתר RTL */
+.af-logos{
+  --af-distance: 0px; /* ימולא ב-JS */
+  border: none !important; 
+  background:transparent !important;
+  direction:ltr;
+}
+.af-logos__vp{
+  position:relative;
+  overflow:hidden;
+  min-height: calc(var(--af-logo-h) + 32px);
+  display:flex;
+  align-items:center;
+}
+.af-logos__track{
+  display:flex;
+  align-items:center;
+  gap: var(--af-gap);
+  list-style:none; margin:0; padding:0;
+  width:max-content;
+  will-change: transform;
+  direction:ltr;
+}
+.af-logos.is-running .af-logos__track{
+  animation: af-logos-loop var(--af-speed) linear infinite;
+}
+@keyframes af-logos-loop{
+  0%   { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(calc(-1 * var(--af-distance)),0,0); }
+}
+
+/* Items */
+.af-logos__item{
+  line-height:0;
+  display:flex;
+  align-items:center;
+}
+.af-logos__item a{
+  display:grid; place-items:center;
+}
+.af-logos__img{
+  height: var(--af-logo-h);
+  max-height: var(--af-logo-h);
+  width:auto;
+  max-width: clamp(80px, 14vw, 200px);
+  object-fit:contain;
+  display:block;
+  transform: translateZ(0);
+  opacity:.95;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.af-logos__item:hover .af-logos__img{
+  opacity:1; transform: scale(1.04);
+}
+
+/* Pause on hover (אופציונלי) */
+.af-logos__vp:hover .af-logos__track{ animation-play-state: paused; }
+
+/* מובייל */
+@media (max-width:600px){
+  .af-logos{ --af-logo-h: {{ logo_h | times: 0.85 | round }}px; --af-gap: {{ gap_px | times: 0.6 | round }}px; }
+}
+
+/* נגישות */
+@media (prefers-reduced-motion: reduce){
+  .af-logos__track{ animation:none !important; }
+}
+</style>
+
+<script>
+(function(){
+  // לולאה אינסופית: משכפל עד כיסוי ≥ 2.2× רוחב ה־viewport, מחושב בפיקסלים כדי להימנע מ"פס לבן".
+  function init(root){
+    if(!root || root.hasAttribute('data-af-inited')) return;
+    root.setAttribute('data-af-inited','1');
+
+    var vp = root.querySelector('.af-logos__vp');
+    var track = root.querySelector('.af-logos__track');
+    if(!vp || !track) return;
+
+    var base = track.innerHTML.trim();
+    if(!base) return;
+
+    function build(){
+      root.classList.remove('is-running');
+      track.style.animation = 'none';
+      track.innerHTML = base;
+
+      // לחכות לטעינת תמונות כדי לקבל scrollWidth אמיתי
+      var imgs = track.querySelectorAll('img');
+      var n = imgs.length;
+
+      function done(){
+        var target = (vp.clientWidth || 0) * 2.2;
+        var guard = 0;
+        while(track.scrollWidth < target && guard < 40){
+          track.insertAdjacentHTML('beforeend', base);
+          guard++;
+        }
+        var distance = Math.ceil(track.scrollWidth / 2); // נוסעים חצי ואז חוזרים להתחלה ללא תפר
+        root.style.setProperty('--af-distance', distance + 'px');
+
+        void track.offsetWidth; // reflow
+        track.style.animation = '';
+        root.classList.add('is-running');
+      }
+
+      if(n === 0){ done(); return; }
+      var timer = setTimeout(done, 100); // fallback קצר
+      imgs.forEach(function(img){
+        if(img.complete){ if(--n===0){ clearTimeout(timer); done(); } }
+        else{
+          img.addEventListener('load',  function(){ if(--n===0){ clearTimeout(timer); done(); } });
+          img.addEventListener('error', function(){ if(--n===0){ clearTimeout(timer); done(); } });
+        }
+      });
+    }
+
+    build();
+
+    // התאמה לשינויי גודל/טעינה בעורך
+    new ResizeObserver(build).observe(vp);
+    document.addEventListener('shopify:section:load',   function(e){ if(e && e.target && e.target.contains(root)) build(); });
+    document.addEventListener('shopify:section:select', function(e){ if(e && e.target && e.target.contains(root)) build(); });
+    document.addEventListener('shopify:block:select',   function(e){ if(e && e.target && e.target.contains(root)) build(); });
+  }
+
+  document.querySelectorAll('[data-af-logos]').forEach(init);
+})();
+</script>
+{%- endif -%}

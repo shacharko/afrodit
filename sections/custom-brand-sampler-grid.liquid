@@ -1,0 +1,99 @@
+{% comment %}
+    סקשן מעודכן המציג רשימה ייחודית של המותגים (Vendors) 
+    מתוך קולקציה שנבחרה ע"י המשתמש בעורך (Customize).
+    מטרה: יצירת UI גמיש של מותגים הניתן לשימוש חוזר.
+{% endcomment %}
+
+{% comment %} 
+    שלב 1: שליפת הקולקציה שנבחרה בהגדרות הסקשן.
+    המשתנה 'target_collection' מגיע מבלוק ה-{% schema %}
+{% endcomment %}
+{% assign target_collection = section.settings.target_collection %}
+
+{% if target_collection != blank %}
+
+  <div class="section-brand-sampler-grid container">
+    <h2 class="section-title ta-c ff-heading fs-heading-2-base">
+      {{ section.settings.title | default: 'גלו את הדוגמיות לפי מותג' }}
+    </h2>
+
+    {% comment %}
+        שלב א: איסוף רשימת המותגים (Vendors) הייחודיים מכל המוצרים בקולקציה.
+    {% endcomment %}
+    {% assign unique_vendors = '' %}
+    {% for product in target_collection.products %}
+      {% unless unique_vendors contains product.vendor %}
+        {% assign unique_vendors = unique_vendors | append: product.vendor | append: ',' %}
+      {% endunless %}
+    {% endfor %}
+
+    {% assign vendors_array = unique_vendors | split: ',' | compact %}
+
+    {% if vendors_array.size > 0 %}
+      
+      {% comment %} 
+          החלפת קלאסים גנריים בקלאסים נפוצים ל-Grid (רשת) 
+          כדי להסתמך על CSS של ערכת הנושא שלך (Stiletto).
+      {% endcomment %}
+      <div class="brand-grid grid grid--3-col-desktop grid--2-col-tablet grid--1-col-mobile">
+        
+        {% for vendor in vendors_array %}
+          
+          {% assign vendor_name = vendor | strip %}
+          {% unless vendor_name == blank %}
+
+            {% comment %}
+                שלב ב: בניית קישור הסינון לקולקציה הנבחרת לפי מותג (Vendor).
+                קישור: /collections/[הקולקציה הנבחרת]?filter.p.vendor=[שם המותג]
+            {% endcomment %}
+            {% assign vendor_url = target_collection.url | append: '?filter.p.vendor=' | append: vendor_name | url_encode %}
+
+            <div class="grid__item">
+              <a href="{{ vendor_url }}" class="brand-card" title="צפו בדוגמיות של {{ vendor_name }}">
+                
+                <div class="brand-card__image-placeholder">
+                  {% comment %} 
+                      כאן נצטרך להוסיף את קוד התמונה/לוגו בהמשך. 
+                      כעת מוצג שם המותג.
+                  {% endcomment %}
+                </div>
+                
+                <h3 class="brand-card__title ff-body fs-body-1-base">{{ vendor_name }}</h3>
+              </a>
+            </div>
+          {% endunless %}
+        {% endfor %}
+        
+      </div>
+    {% endif %}
+  </div>
+
+{% else %}
+  <p style="text-align: center; color: red;">אנא בחר/י קולקציה להצגה בהגדרות הסקשן.</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "רשת מותגים לפי דוגמיות",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "כותרת הסקשן",
+      "default": "גלו את המותגים בדוגמיות"
+    },
+    {
+      "type": "collection",
+      "id": "target_collection",
+      "label": "בחר קולקציה להצגת המותגים",
+      "info": "הסקשן יציג את כל המותגים (Vendors) מתוך קולקציה זו."
+    }
+  ],
+  "presets": [
+    {
+      "name": "רשימת מותגים (Vendor List)",
+      "category": "תוכן מותאם אישית"
+    }
+  ]
+}
+{% endschema %}

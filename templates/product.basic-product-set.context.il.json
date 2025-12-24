@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.basic-product-set.-Old.json",
+  "context": {
+    "market": "il"
+  },
+  "sections": {
+    "main": {
+      "disabled": false,
+      "settings": {
+        "hide_mobile_carousel_dots": false
+      },
+      "blocks": {
+        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6": {
+          "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "disabled": false,
+          "settings": {
+            "button_style": "solid_accent_2",
+            "button_alignment": "center",
+            "button_content_alignment": "center",
+            "button_margin_top": 0,
+            "button_margin_bottom": 0,
+            "button_max_width": 0,
+            "button_padding_horizontal": 15,
+            "button_full_width": true,
+            "button_show_text": true,
+            "button_show_icon": true,
+            "header-3b2d10c7ae335e3e21944976f723a409": null,
+            "icon_size": 18,
+            "icon_stroke_width": 1,
+            "icon_offset_vertical": 0
+          }
+        },
+        "inventory_counter_nnj7H": {
+          "type": "inventory-counter",
+          "disabled": false,
+          "settings": {
+            "label": "זמינות",
+            "inventory_max": "100",
+            "low_inventory_threshold": "40",
+            "show_status_bar": false,
+            "show_untracked_quantity": false
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_pxCG4": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": false,
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
+        "custom_liquid_6eTRz": {
+          "type": "custom_liquid",
+          "disabled": false,
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
+          }
+        },
+        "buy_buttons": {
+          "settings": {
+            "show_dynamic_checkout": false,
+            "divider_width": "shadow--small"
+          }
+        },
+        "text_YLEgV": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p>המחיר כולל מיסים משלוח יחושב בעת התשלום </p>",
+            "column_placement": "right"
+          }
+        },
+        "accordion_XpdCx": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "right",
+            "heading": "זמני שילוח",
+            "heading_tag": "h3",
+            "paragraph-23376d9536c0844e7bda6f3b5e397b9c": null,
+            "content": "<p>הזמנות שנעשו עד השעה 12 , ישלחו באותו היום משלוח סטנדרטי תוך 48 שעות מקבלת ההזמנה </p>",
+            "page_for_content": "",
+            "custom_liquid": "",
+            "paragraph-84bfc895d4a08a05dd41f13390d838f4": null
+          }
+        },
+        "accordion_fHfiW": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "תיאור",
+            "heading_tag": "h3",
+            "paragraph-d93414de9485f5b555d0a3618387b233": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{{ product.description }}",
+            "paragraph-f7515a8f0b419006de586f0fd9664550": null
+          }
+        },
+        "accordion_3q6Rn": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "הבשמים בקיט",
+            "heading_tag": "h3",
+            "paragraph-44cbce08c06cda64e3803011706d9480": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{%- if product.metafields.custom.sample_kit_products.value != blank -%}\n  <ul style=\"list-style-type: disc; padding-inline-start: 20px; margin:0;\">\n    {%- for p in product.metafields.custom.sample_kit_products.value -%}\n      <li style=\"font-weight:700; margin-bottom:4px;\">{{ p.title }}</li>\n    {%- endfor -%}\n  </ul>\n{%- endif -%}",
+            "paragraph-43bc70ca221383d5b28418f046558cd6": null
+          }
+        },
+        "accordion_BqCY9": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "תווי  ריח",
+            "heading_tag": "h3",
+            "paragraph-1079edc770e81db8587eae9ffb2c0844": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{% assign head_note_single = product.metafields.custom.head_note.value | strip %}\n{% assign middle_note_single = product.metafields.custom.middle_note.value | strip %}\n{% assign base_note_single = product.metafields.custom.base_note.value | strip %}\n\n{% assign head_notes_plural = product.metafields.custom.head_notes.value %}\n{% assign middle_notes_plural = product.metafields.custom.middle_notes.value %}\n{% assign base_notes_plural = product.metafields.custom.base_notes.value %}\n\n<ul>\n\n  {% if head_note_single != blank or head_notes_plural != blank %}\n    <li>\n      {% if head_note_single != blank %}\n        {{ head_note_single }}\n      {% endif %}\n\n      {% if head_notes_plural != blank %}\n        {% assign notes_list = head_notes_plural | split: ',' %}\n        <p>\n          {{ notes_list | join: ', ' | strip }}\n        </p>\n      {% endif %}\n    </li>\n  {% endif %}\n\n  {% if middle_note_single != blank or middle_notes_plural != blank %}\n    <li>\n      {% if middle_note_single != blank %}\n        {{ middle_note_single }}\n      {% endif %}\n\n      {% if middle_notes_plural != blank %}\n        {% assign notes_list = middle_notes_plural | split: ',' %}\n        <p>\n          {{ notes_list | join: ', ' | strip }}\n        </p>\n      {% endif %}\n    </li>\n  {% endif %}\n\n  {% if base_note_single != blank or base_notes_plural != blank %}\n    <li>\n      {% if base_note_single != blank %}\n        {{ base_note_single }}\n      {% endif %}\n\n      {% if base_notes_plural != blank %}\n        {% assign notes_list = base_notes_plural | split: ',' %}\n        <p>\n          {{ notes_list | join: ', ' | strip }}\n        </p>\n      {% endif %}\n    </li>\n  {% endif %}\n\n</ul>",
+            "paragraph-9e92d8d86bfa8e307e51376930070c87": null
+          }
+        },
+        "accordion_JGW3R": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "אודות המותג",
+            "heading_tag": "h3",
+            "paragraph-3f5f86556d832cd45046b6ef32529ae9": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{% assign current_vendor = product.vendor | downcase %}\n{% assign brand_info_handle = 'brand_info' %}\n\n{% for item in shop.metaobjects[brand_info_handle].values %}\n  {% comment %} בדיקת התאמה בין ה-Vendor לשם המותג ב-Metaobject {% endcomment %}\n  {% assign item_brand_name = item.brand_name.value | downcase %}\n  \n  {% if item_brand_name == current_vendor %}\n    {% comment %} רשומה נמצאה. שולפים את אובייקט הקולקציה המקושרת {% endcomment %}\n    {% assign brand_collection = item.brand_collection.value %}\n    \n    {% comment %} הדפסת תיאור הקולקציה {% endcomment %}\n    {{ brand_collection.description }}\n    \n    {% break %}\n  {% endif %}\n{% endfor %}",
+            "paragraph-e1e7bd209caca25fb5caa6141c5e93f7": null
+          }
+        },
+        "product_callouts-1": {
+          "disabled": true,
+          "settings": {}
+        },
+        "product_callouts": {
+          "settings": {
+            "icon_1": "security-badge",
+            "text_1": "<p>ספקים מורשים</p>",
+            "icon_2": "recycle-symbol",
+            "text_2": "<p>אריזה נתנת למחזור</p>",
+            "icon_3": "chat",
+            "text_3": "<p>צריכים עזרה ? <a href=\"/pages/about-us\" target=\"_blank\" title=\"About us\">צרו קשר</a></p>",
+            "icon_4": "heart",
+            "text_4": "<p>דוגמית חינם עם כל רכישה </p>",
+            "icon_5": "padlock",
+            "text_5": "<p>רכישות מאובטחות </p>",
+            "icon_6": "none",
+            "text_6": "",
+            "expand_by_default": true
+          }
+        },
+        "featured_products": {
+          "disabled": false,
+          "settings": {
+            "heading": "בשמים שנקנו ביחד",
+            "column_placement": "left",
+            "product_source": "custom-product-list",
+            "product_list": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products.value }}",
+            "display_as_collapsible_row": false
+          }
+        }
+      },
+      "block_order": [
+        "product_header",
+        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6",
+        "inventory_counter_nnj7H",
+        "share",
+        "variant_picker",
+        "tolstoy_shoppable_video_quiz_stories_block_pxCG4",
+        "quantity_selector",
+        "custom_liquid_6eTRz",
+        "buy_buttons",
+        "text_YLEgV",
+        "accordion_XpdCx",
+        "accordion_fHfiW",
+        "accordion_3q6Rn",
+        "accordion_BqCY9",
+        "accordion_JGW3R",
+        "product_callouts-1",
+        "product_callouts",
+        "description",
+        "featured_products"
+      ]
+    },
+    "recommendations": {
+      "disabled": false,
+      "settings": {
+        "title": "מומלצים"
+      },
+      "blocks": {}
+    },
+    "featured_collection_slider_kkpnqe": {
+      "disabled": true,
+      "settings": {
+        "heading": "המלצות למוצרים נוספים"
+      },
+      "blocks": {
+        "collection_BaeF4G": {
+          "settings": {
+            "collection": "{{ product.metafields.custom.brand_collection.value }}"
+          }
+        }
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recommendations",
+    "featured_collection_slider_kkpnqe"
+  ]
+}

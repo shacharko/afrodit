@@ -1,0 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "image_aspect": "custom",
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "focal_point": "center",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 30,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-bottom-only"
+      }
+    },
+    "main-collection-product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "rows": "4",
+        "show_item_count": true,
+        "show_sort": false,
+        "show_filters": true,
+        "enable_sticky_filter_bar": true,
+        "desktop_filter_location": "sidebar",
+        "collapse_filter_bar": false,
+        "enable_sticky_filter_sidebar": true,
+        "collapse_filter_groups_desktop": true,
+        "collapse_filter_groups_mobile": true,
+        "show_swatch_filters": true,
+        "show_chip_filters": true,
+        "chip_layout": "3col",
+        "pagination": "click",
+        "enable_animation": true,
+        "divider_style": "solid"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main-collection-product-grid"
+  ]
+}

@@ -1,0 +1,80 @@
+{%- if section.settings.custom_liquid != blank -%}
+  <div
+    class="
+      section
+      section--divider-{{ section.settings.divider_style }}
+      {{ section.settings.section_padding }}
+    "
+  >
+    {{ section.settings.custom_liquid }}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.custom_liquid.name",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
+  },
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.custom_liquid.settings.custom_liquid.label"
+    },
+    {
+      "type": "header",
+      "content": "t:shared.settings.section_style.header.content"
+    },
+    {
+      "type": "select",
+      "id": "divider_style",
+      "label": "t:shared.settings.section_style.divider_style.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:shared.settings.section_style.divider_style.options.none"
+        },
+        {
+          "value": "solid",
+          "label": "t:shared.settings.section_style.divider_style.options.solid"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "section_padding",
+      "label": "t:shared.settings.section_style.section_padding.label",
+      "options": [
+        {
+          "value": "section--vertical-padding-none",
+          "label": "t:shared.settings.section_style.section_padding.options.none"
+        },
+        {
+          "value": "section--vertical-padding-top-bottom",
+          "label": "t:shared.settings.section_style.section_padding.options.both"
+        },
+        {
+          "value": "section--vertical-padding-top-only",
+          "label": "t:shared.settings.section_style.section_padding.options.top"
+        },
+        {
+          "value": "section--vertical-padding-bottom-only",
+          "label": "t:shared.settings.section_style.section_padding.options.bottom"
+        }
+      ],
+      "default": "section--vertical-padding-top-bottom"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.custom_liquid.presets.name"
+    }
+  ]
+}
+{% endschema %}

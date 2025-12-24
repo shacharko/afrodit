@@ -1,0 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "image_aspect": "custom",
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "focal_point": "image_presentation",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 30,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "countdown-banner": {
+      "type": "countdown-banner",
+      "settings": {
+        "min_height": 400,
+        "min_height_mobile": 300,
+        "year": 2025,
+        "month": "july",
+        "day": "21",
+        "hour": "3",
+        "minute": "0",
+        "time_zone_selection": "shop",
+        "hide_timer_on_complete": true,
+        "timer_complete_message": "",
+        "heading": "Flash Sale",
+        "heading_tag": "h4",
+        "heading_font_class": "fs-heading-1-base",
+        "subheading": "<p>This week only. Receive a free polishing cloth with orders over $200</p>",
+        "text": "",
+        "link": "",
+        "link_text": "",
+        "button_style": "btn--secondary",
+        "link_2": "",
+        "link_text_2": "",
+        "button_style_2": "btn--secondary",
+        "focal_point": "image_presentation",
+        "mobile_focal_point": "image_presentation",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "background_color": "#5e0511",
+        "color_overlay": "#5e0511",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 0,
+        "enable_animation": true,
+        "show_frame": false,
+        "full_width": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "main-collection-product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "rows": "8",
+        "show_item_count": true,
+        "show_sort": true,
+        "show_filters": true,
+        "enable_sticky_filter_bar": true,
+        "desktop_filter_location": "filter_bar",
+        "collapse_filter_bar": false,
+        "enable_sticky_filter_sidebar": true,
+        "collapse_filter_groups_desktop": true,
+        "collapse_filter_groups_mobile": true,
+        "show_swatch_filters": true,
+        "show_chip_filters": true,
+        "chip_layout": "3col",
+        "pagination": "paginated",
+        "enable_animation": true,
+        "divider_style": "none"
+      }
+    },
+    "multi_column": {
+      "type": "multi-column",
+      "blocks": {
+        "icon_column_1": {
+          "type": "icon_column",
+          "settings": {
+            "icon": "plant",
+            "icon_width": 26,
+            "icon_width_mobile": 26,
+            "custom_icon_image": "",
+            "accent": "Small-Batch",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p></p><p>Each piece is part of a small, deliberate production cycle</p>",
+            "text_font_class": "fs-body-75",
+            "text_max_width": 90,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_2": {
+          "type": "icon_column",
+          "settings": {
+            "icon": "plant",
+            "icon_width": 28,
+            "icon_width_mobile": 28,
+            "custom_icon_image": "",
+            "accent": "Sustainably Made",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p></p><p>Designed with care. Made entirely from 100% certified recycled gold and silver.</p>",
+            "text_font_class": "fs-body-75",
+            "text_max_width": 90,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_3": {
+          "type": "icon_column",
+          "settings": {
+            "icon": "plant",
+            "icon_width": 28,
+            "icon_width_mobile": 28,
+            "custom_icon_image": "",
+            "accent": "Quality that lasts",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p></p><p>Designed for daily wear. Crafted to endure seasons and stories.</p>",
+            "text_font_class": "fs-body-75",
+            "text_max_width": 90,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": ["icon_column_1", "icon_column_2", "icon_column_3"],
+      "name": "Multi-column",
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "heading_font_class": "fs-heading-3-base",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "columns": "3",
+        "column_spacing": 28,
+        "row_spacing": 28,
+        "column_alignment": "center",
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 48,
+        "column_alignment_mobile": "center",
+        "background_behind_columns": false,
+        "background_color": "#f1f1f1",
+        "text_color": "#353030",
+        "button_background_color": "#353030",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "countdown-banner",
+    "main-collection-product-grid",
+    "multi_column"
+  ]
+}

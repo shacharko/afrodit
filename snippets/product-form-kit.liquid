@@ -1,0 +1,202 @@
+{% comment %}
+  product-form-kit.liquid
+
+  מטרת הקובץ:
+  1. לרנדר את טופס הוספה לסל המותאם אישית (הקיט).
+  2. לרנדר את בוררי הקיט (כפתורים/דרופדאונים) בהתבסס על נתוני המותג (kit_data).
+  3. להחליף את בורר הכמות ואת כפתור הקנייה המקוריים תוך שמירה על נראות זהה.
+  4. לשלוח את כל הנתונים הנדרשים (variant_id של המוצר + kit_items) ב-AJAX.
+{% endcomment %}
+
+{% liquid
+  assign current_variant = selected_variant
+  
+  # נתוני הקיט שהועברו מ-main-product-kit-selector.liquid
+  # kit_data = metaobjects.brand_info[product.vendor | handleize]
+  
+  # נניח ש-kit_data מכיל רשימה של רכיבי קיט שצריך לבחור
+  # לצורך הדוגמה, נשתמש ב-dummy data או בלוגיקה שתרוץ על הנתונים שלך
+  
+  # אם אין נתוני קיט או שהווריאציה הנוכחית לא תומכת בקיט, נצא.
+  if kit_data == blank or current_variant == blank
+    render 'product-form' with prod as product, current_variant as current_variant
+    
+  endif
+
+  # משתנים לשמירת נראות כפתור הקנייה הסטנדרטית של התבנית
+  assign is_available = current_variant.available
+  assign button_text = 'products.product.add_to_cart' | t
+  
+  if prod.has_only_default_variant == false
+    unless is_available
+      assign button_text = 'products.product.sold_out' | t
+    endunless
+  endif
+
+  if current_variant.unit_price_measurement
+    assign show_unit_price = true
+  endif
+
+  if current_variant.unit_price
+    assign unit_price_html = current_variant.unit_price | money_without_trailing_zeros
+    assign unit_price_html = unit_price_html | append: '/'
+    assign unit_price_html = unit_price_html | append: current_variant.unit_price_measurement.reference_unit
+  endif
+-%}
+
+<product-form
+  data-product-form
+  class="product-form"
+  data-product-handle="{{ prod.handle }}"
+>
+  {% form 'product', prod, class: 'product-form__form' %}
+    
+    {# ------------------------------------------------------------- #}
+    {# ✅ הוספת בוררי הקיט המותאמים אישית כאן #}
+    {# הדרופדאונים/כפתורים ימוקמו מעל בורר הכמות והכפתור הראשי #}
+    {# ------------------------------------------------------------- #}
+    
+    <div class="product-form__kit-selectors" data-kit-selectors-wrapper>
+      {% comment %}
+        📌 לולאת הדרופדאונים והכפתורים של הקיט (בהתבסס על kit_data) תרונדר כאן.
+        
+        הערה חשובה: הדרופדאונים הללו לא צריכים להיות מסוג <select> רגיל של שופיפיי
+        (כדי לא להתנגש עם ה-variant_picker שנשאר למעלה), אלא כרכיבי UI מותאמים אישית
+        ששולחים את ה-product_id/variant_id הנבחר של מוצר הקיט.
+
+        דוגמה למבנה דרופדאון:
+      {% endcomment %}
+      
+      <div class="product-form__kit-item">
+        <label for="Kit-Item-1" class="form__label">בחר מוצר משלים (Kit Item 1)</label>
+        <div class="select">
+          <select id="Kit-Item-1" name="properties[kit_item_1_id]" form="product-form-{{ section.id }}" data-kit-selector data-kit-handle="kit-item-1-handle">
+            <option value="" disabled selected>--- בחר ---</option>
+            {% comment %}
+              לולאה על מוצרים רלוונטיים:
+              
+              {% for kit_product in all_products.kit_category_1.products %}
+                {% if kit_product.vendor == prod.vendor and kit_product.metafields.custom.size == current_variant.title %}
+                  <option value="{{ kit_product.selected_or_first_available_variant.id }}">{{ kit_product.title }}</option>
+                {% endif %}
+              {% endfor %}
+            {% endcomment %}
+            <option value="123456789">מוצר קיט א' (דוגמה)</option>
+            <option value="987654321">מוצר קיט ב' (דוגמה)</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="product-form__kit-item">
+        <label for="Kit-Item-2" class="form__label">בחר מוצר משלים 2 (Kit Item 2)</label>
+        {% comment %}
+          כאן ירונדרו כפתורי הווריאציה של הקיט
+        {% endcomment %}
+        <fieldset class="js product-form__input">
+          <legend class="visually-hidden">בחירת וריאציה לקיט</legend>
+          <div class="kit-radio-group" data-kit-selector data-kit-handle="kit-item-2-handle">
+            <input type="radio" id="kit_var_a" name="properties[kit_item_2_variant_id]" value="variant_id_a" required>
+            <label for="kit_var_a" class="btn btn--small{% unless is_available %} disabled{% endunless %}" data-kit-option>וריאציה A (זמין)</label>
+            
+            <input type="radio" id="kit_var_b" name="properties[kit_item_2_variant_id]" value="variant_id_b" required disabled>
+            <label for="kit_var_b" class="btn btn--small disabled" data-kit-option>וריאציה B (אזל)</label>
+          </div>
+        </fieldset>
+      </div>
+
+    </div>
+    
+    {# ------------------------------------------------------------- #}
+    {# ✅ שמירה על נראות בורר הכמות המקורי #}
+    {# ------------------------------------------------------------- #}
+    <div class="product-form__item product-form__item--quantity">
+      <label class="form__label" for="Quantity-{{ section.id }}">
+        {{ 'products.product.quantity' | t }}
+      </label>
+      <div class="quantity-selector">
+        <button
+          type="button"
+          class="quantity-selector__button"
+          data-action="decrease-quantity"
+          aria-label="{{ 'products.product.quantity_selector.decrease_quantity' | t }}"
+        >
+          <span class="visually-hidden">{{ 'products.product.quantity_selector.decrease_quantity' | t }}</span>
+          {% render 'icon', icon: 'minus' %}
+        </button>
+        <input
+          class="quantity-selector__input"
+          id="Quantity-{{ section.id }}"
+          type="number"
+          name="quantity"
+          value="1"
+          min="1"
+          pattern="[0-9]*"
+          aria-label="{{ 'products.product.quantity' | t }}"
+          data-quantity-input
+        >
+        <button
+          type="button"
+          class="quantity-selector__button"
+          data-action="increase-quantity"
+          aria-label="{{ 'products.product.quantity_selector.increase_quantity' | t }}"
+        >
+          <span class="visually-hidden">{{ 'products.product.quantity_selector.increase_quantity' | t }}</span>
+          {% render 'icon', icon: 'plus' %}
+        </button>
+      </div>
+    </div>
+
+    {# ------------------------------------------------------------- #}
+    {# ✅ שמירה על נראות כפתור הקנייה המקורי (Buy Buttons) #}
+    {# ------------------------------------------------------------- #}
+    <div class="product-form__buttons" data-buy-buttons>
+      <input
+        type="hidden"
+        name="id"
+        value="{{ current_variant.id }}"
+        data-product-select-id
+      >
+      
+      <button
+        type="submit"
+        name="add"
+        class="btn btn--primary btn--full {% if show_unit_price %} btn--large{% endif %}"
+        {% unless is_available %} disabled="disabled"{% endunless %}
+        data-submit-button
+        aria-live="polite"
+      >
+        <span class="fs-body-75" data-submit-button-text>
+          {{ button_text }}
+        </span>
+        {% if show_unit_price %}
+          <div class="unit-price-container">
+            <span class="unit-price-separator" aria-hidden="true">|</span>
+            <span class="unit-price-label">{{ 'products.product.unit_price_label' | t }}</span>
+            <span class="unit-price">{{ unit_price_html }}</span>
+          </div>
+        {% endif %}
+        {% render 'icon', icon: 'loader' %}
+      </button>
+
+      {% comment %}
+        Dynamic checkout buttons logic (if enabled in theme settings)
+        זהו האזור לכפתורי "קנה עכשיו" (Buy Now) שמשתמשים במבנה הסטנדרטי
+      {% endcomment %}
+      {% if section.settings.show_dynamic_checkout %}
+        {{ form | payment_button }}
+      {% endif %}
+    </div>
+
+    {# הודעת שגיאה / הצלחה #}
+    <div
+      class="product-form__message-container"
+      data-error-message-wrapper
+      role="alert"
+    >
+      <div
+        class="product-form__message"
+        data-error-message
+      ></div>
+    </div>
+  {% endform %}
+</product-form>

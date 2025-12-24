@@ -1,0 +1,116 @@
+{%- comment -%}
+Brands logos grid — FINAL WORKING VERSION
+מציג רק מותגים שיש להם מוצר בשדה build_kit_prodouct.
+- type: brand_info
+- שם: Brand_name
+- לוגו: Brand_logo
+- קישור: לדף המוצר מתוך השדה
+{%- endcomment -%}
+
+{%- assign brand_entries = shop.metaobjects['brand_info'].values -%}
+
+<section class="multi-column" id="brands-logos-{{ section.id }}">
+  <div class="page-width">
+    <div class="multi-column__grid">
+      {%- for entry in brand_entries -%}
+        {%- assign product_ref = entry['build_kit_prodouct'] -%}
+        {%- if product_ref == blank and entry.fields and entry.fields['build_kit_prodouct'] -%}
+          {%- assign product_ref = entry.fields['build_kit_prodouct'].value -%}
+        {%- endif -%}
+
+        {%- assign product_obj = blank -%}
+        {%- assign target_url = blank -%}
+
+        {%- if product_ref and product_ref.value -%}
+          {%- assign product_obj = product_ref.value -%}
+          {%- assign target_url = product_obj.url -%}
+        {%- elsif product_ref and product_ref.url -%}
+          {%- assign target_url = product_ref.url -%}
+          {%- assign product_obj = product_ref -%}
+        {%- endif -%}
+
+        {%- if target_url != blank -%}
+          {%- assign display_name = entry['brand_name'] | default: entry.fields['brand_name'].value | default: entry.handle -%}
+          {%- assign image_obj    = entry['brand_logo'] | default: entry.fields['brand_logo'].value -%}
+
+          {%- assign logo_src = nil -%}
+          {%- if image_obj -%}
+            {%- if image_obj.mime_type and image_obj.mime_type contains 'svg' -%}
+              {%- assign logo_src = image_obj | file_url -%}
+            {%- else -%}
+              {%- assign logo_src = image_obj | image_url: width: 900 -%}
+            {%- endif -%}
+          {%- endif -%}
+
+          <div class="multi-column__grid-item brand-card">
+            <div class="multi-column__grid-item-inner">
+              <a class="img-wrap{% if logo_src == nil %} is-empty{% endif %}" href="{{ target_url }}" aria-label="{{ display_name }}">
+                {% if logo_src %}
+                  <img src="{{ logo_src }}" alt="{{ display_name }}" loading="lazy">
+                {% else %}
+                  <div class="brand-logo--placeholder" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" width="40" height="40" style="color:#c9c9c9;">
+                      <rect x="6" y="10" width="36" height="28" rx="3" ry="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                      <circle cx="18" cy="20" r="3" fill="currentColor" opacity=".25"/>
+                      <path d="M10 34l11-12 8 8 5-5 8 9" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+                    </svg>
+                  </div>
+                {% endif %}
+              </a>
+              <h3 class="title ff-heading fs-heading-4-base">
+                <a href="{{ target_url }}">{{ display_name }}</a>
+              </h3>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* רווח מהדפנות עבור הסקשן הזה */
+  #brands-logos-{{ section.id }} .page-width {
+    padding-left: clamp(16px, 4vw, 40px);
+    padding-right: clamp(16px, 4vw, 40px);
+  }
+
+  #brands-logos-{{ section.id }} .multi-column__grid {
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(18px, 3vw, 28px);
+  }
+  @media (max-width:1024px){
+    #brands-logos-{{ section.id }} .multi-column__grid{ grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width:640px){
+    #brands-logos-{{ section.id }} .multi-column__grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  #brands-logos-{{ section.id }} .multi-column__grid-item-inner {
+    display:flex; flex-direction:column; align-items:center; gap:12px;
+  }
+  #brands-logos-{{ section.id }} .img-wrap {
+    position:relative; width:100%; padding-top:100%;
+    background:#fff; border:1px solid #e6e6e6; border-radius:12px;
+    overflow:hidden; box-sizing:border-box; transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  }
+  #brands-logos-{{ section.id }} .img-wrap:hover {
+    border-color:#dcdcdc; box-shadow:0 2px 10px rgba(0,0,0,.04); transform:translateY(-1px);
+  }
+  #brands-logos-{{ section.id }} .img-wrap.is-empty {
+    border-style:dashed; border-color:#e0e0e0; background:#fafafa;
+  }
+  #brands-logos-{{ section.id }} img {
+    position:absolute; inset:10%; width:80%; height:80%; object-fit:contain; object-position:center;
+  }
+  #brands-logos-{{ section.id }} .title { margin:0; line-height:1.25; text-align:center; }
+  #brands-logos-{{ section.id }} .title a { text-decoration:none; }
+</style>
+
+{% schema %}
+{
+  "name": "Brands logos grid ",
+  "settings": [],
+  "presets": [{ "name": "Brands logos grid -MO-" }]
+}
+{% endschema %}

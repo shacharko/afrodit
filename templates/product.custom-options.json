@@ -1,0 +1,352 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "product_header": {
+          "type": "product_header",
+          "settings": {
+            "show_divider": true,
+            "show_vendor": false,
+            "show_sku": true,
+            "show_discount": true,
+            "discount_format": "percent_off",
+            "show_product_rating": false,
+            "show_sale_badge": true,
+            "show_custom_badges": true
+          }
+        },
+        "custom_option-1": {
+          "type": "custom_option",
+          "settings": {
+            "field_type": "text",
+            "label": "Engraving",
+            "instructions": "",
+            "placeholder": "Enter up to 3 initials",
+            "checked_value": "Yes",
+            "list_style": "dropdown",
+            "list_options": "Option 1, Option 2, Option 3"
+          }
+        },
+        "custom_option-2": {
+          "type": "custom_option",
+          "settings": {
+            "field_type": "list",
+            "label": "Select your chain length",
+            "instructions": "",
+            "placeholder": "Enter your text here",
+            "checked_value": "Yes",
+            "list_style": "dropdown",
+            "list_options": "14\", 16\", 18\" - Most popular, 20\""
+          }
+        },
+        "custom_option-3": {
+          "type": "custom_option",
+          "settings": {
+            "field_type": "checkbox",
+            "label": "This item is a gift",
+            "instructions": "<p>Check this box to receive a gift receipt and free gift wrapping.</p>",
+            "placeholder": "Enter your text here",
+            "checked_value": "Yes",
+            "list_style": "dropdown",
+            "list_options": "Option 1, Option 2, Option 3"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_labels": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "enable_sticky_atc_bar_desktop": true,
+            "enable_sticky_atc_bar_mobile": true,
+            "divider_width": "border--thin"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "title": "Description",
+            "title_tag": "h3",
+            "text_font_class": "fs-body-100",
+            "column_placement": "right",
+            "display_as_collapsible_row": true,
+            "expand_by_default": false
+          }
+        },
+        "accordion-1": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "right",
+            "heading": "Fabric and Care",
+            "heading_tag": "h3",
+            "content": "<p>Hand-wash warm. Tumble dry low. This product has been washed at the factory after sewing to minimize fabric shrinkage.</p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion-2": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "right",
+            "heading": "Shipping and Returns",
+            "heading_tag": "h3",
+            "content": "<p></p><p><strong>Standard Shipping</strong></p><p>Free Standard Shipping on orders over $250. Select “Free Shipping” at checkout.<br/><br/></p><p><strong>Free Easy Returns</strong></p><p>Need to return an item? We make it easy. Email us and we'll send you a free return label with instructions on how to return.</p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 4,
+            "column_placement": "left"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        },
+        "featured_products": {
+          "type": "featured_products",
+          "disabled": true,
+          "settings": {
+            "heading": "Style Together With",
+            "heading_tag": "h3",
+            "column_placement": "right",
+            "max_products": 3,
+            "product_source": "app-recommendations",
+            "product_list": [],
+            "enable_swiper_mobile": true,
+            "display_as_collapsible_row": false,
+            "expand_by_default": true
+          }
+        }
+      },
+      "block_order": [
+        "product_header",
+        "custom_option-1",
+        "custom_option-2",
+        "custom_option-3",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "accordion-1",
+        "accordion-2",
+        "spacer",
+        "share",
+        "featured_products"
+      ],
+      "settings": {
+        "enable_sticky_product_details": true,
+        "show_breadcrumbs": false,
+        "show_navigation_buttons": false,
+        "show_featured_media_first": false,
+        "gallery_style": "grid",
+        "gallery_style_mobile": "carousel",
+        "gallery_size": "small",
+        "gallery_overflow": "2",
+        "enable_video_looping": true,
+        "enable_product_lightbox": true,
+        "image_aspect_ratio": "portrait",
+        "enable_multiple_variant_media": false,
+        "enable_mobile_carousel_looping": false,
+        "show_mobile_carousel_images_full_width": false,
+        "hide_mobile_carousel_dots": false,
+        "enable_gift_card_recipient": true,
+        "enable_animation": true
+      }
+    },
+    "recommendations": {
+      "type": "recommended-products",
+      "disabled": true,
+      "settings": {
+        "title": "Recommended products",
+        "subheading": "",
+        "maximum_products": 8,
+        "columns": "4",
+        "mobile_columns": "2",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi-column": {
+      "type": "multi-column",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "St. Agni",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-1-base",
+            "text": "<p>All our products are made with quality materials and a sustainable process from beginning to end.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 94,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-1": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "top",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-2": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": ["column", "image_column-1", "image_column-2"],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "heading_font_class": "fs-heading-1-base",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "center",
+        "content_background_padding": "medium",
+        "columns": "3",
+        "column_spacing": 36,
+        "row_spacing": 28,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 20,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "sales-banner": {
+      "type": "sales-banner",
+      "settings": {
+        "min_height": 200,
+        "min_height_mobile": 500,
+        "sale_type": "Save up to",
+        "sale_amount": "50",
+        "sale_unit": "percent_off",
+        "terms_and_conditions": "*On select styles only. Limited Supply. T&C's apply.",
+        "terms_vertical_offset": 0,
+        "sale_font_size": 150,
+        "sale_font_size_mobile": 150,
+        "currency_symbol_position": "before",
+        "heading": "Last Chance Sale",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "text": "<p>Sale ends July 30 at ⏱ 23:59 PST  | Use code LAST</p>",
+        "link": "shopify://collections",
+        "link_text": "Shop the sale",
+        "button_style": "btn--primary",
+        "link_2": "shopify://collections",
+        "link_text_2": "",
+        "button_style_2": "btn--secondary",
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "text_color": "#683a25",
+        "button_background_color": "#683a25",
+        "button_text_color": "#ffffff",
+        "background_color": "#efece3",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 0,
+        "layout": "two-columns",
+        "enable_animation": true,
+        "show_frame": false,
+        "full_width": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "promotion-bar-2": {
+      "type": "promotion-bar",
+      "settings": {
+        "min_height": 60,
+        "min_height_mobile": 60,
+        "heading": "Questions?",
+        "heading_tag": "h2",
+        "text": "<p>We’re here for you Monday - Friday 9am-5pm PST</p>",
+        "link": "shopify://collections",
+        "link_text": "Contact us",
+        "button_style": "btn--callout",
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#000000",
+        "background_color": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 0,
+        "enable_animation": true,
+        "full_width": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recommendations",
+    "multi-column",
+    "sales-banner",
+    "promotion-bar-2"
+  ]
+}

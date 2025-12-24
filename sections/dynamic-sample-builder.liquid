@@ -1,0 +1,424 @@
+{% comment %}
+  Section: Dynamic Sample Builder
+  Author: ChatGPT
+  Purpose:
+    - Build a brand-driven sampler on the product page.
+    - Reads brand from URL (?brand=handle) -> metaobject brand_info -> brand_collection (Collection).
+    - Renders either:
+        a) N dropdowns (default 5), OR
+        b) Selectable list (tiles) with small image + title.
+    - Each selection also chooses Size (2ml / 5ml) -> resolves to a matching variant.
+    - Add to cart posts all selected variants (and optional main "kit" product) in one request.
+
+  Assumptions:
+    - Metaobject type handle: "brand_info".
+    - Metaobject fields:
+        - brand_name (text)
+        - brand_collection (collection reference)
+        - brand_image_card / brand_logo (optional, not required here)
+    - Sample products in the brand collection have an option for size.
+      You can set that option name in settings (default: "Size"), and values (2ml/5ml) in settings.
+
+  How it works:
+    - Collects all products from brand_collection.
+    - For each product, finds the variant where option_name == size_option_name and value == selected size.
+    - JS validates selection count == required_slots before enabling add-to-cart.
+
+{% endcomment %}
+
+{% liquid
+  assign url_brand = request.params.brand | default: request.query.brand
+  assign brand_handle = url_brand | handleize
+  assign brand_entry = nil
+  if brand_handle != blank
+    assign brand_entry = shop.metaobjects.brand_info[brand_handle]
+    if brand_entry == blank
+      assign brand_entry = shop.metaobjects.brand_info.values | where: 'brand_name', url_brand | first
+    endif
+  endif
+
+  assign brand_collection = nil
+  if brand_entry != blank and brand_entry.brand_collection != blank
+    assign brand_collection = brand_entry.brand_collection
+  endif
+
+  assign size_option_name = section.settings.size_option_name | default: 'Size'
+  assign size_value_1 = section.settings.size_value_1 | default: '2ml'
+  assign size_value_2 = section.settings.size_value_2 | default: '5ml'
+  assign enable_size_2 = section.settings.enable_size_2
+  assign required_slots = section.settings.required_slots | plus: 0
+  if required_slots == 0
+    assign required_slots = 5
+  endif
+  assign layout_mode = section.settings.layout_mode | default: 'dropdowns'
+
+%}
+
+<section id="dynamic-sample-builder-{{ section.id }}" class="dynamic-sample-builder">
+  {% if brand_entry == blank or brand_collection == blank %}
+    <div class="product-form-block">
+      <p>לא נמצאה קולקציה למותג המבוקש. ודאי שקיים פרמטר <code>?brand=</code> ב-URL וששדה <strong>brand_collection</strong> מוגדר ב-metaobject.</p>
+    </div>
+  {% else %}
+    <div class="product-form-block">
+      <h3 class="ff-heading fs-heading-5-base" style="margin-bottom:.5rem;">בחרי {{ required_slots }} דוגמיות של {{ brand_entry.brand_name | default: url_brand }}</h3>
+      <div class="text-subdued fs-body-75" style="margin-bottom:1rem;">יש לבחור {{ required_slots }} פריטים. כפתור הקנייה יופעל רק לאחר השלמת הבחירה.</div>
+
+      {% assign products = brand_collection.products %}
+      {% if products.size == 0 %}
+        <p>הקולקציה ריקה.</p>
+      {% else %}
+
+      <div class="sample-builder__controls">
+        {% if layout_mode == 'dropdowns' %}
+          {%- for i in (1..required_slots) -%}
+            <div class="sample-select-row">
+              <label class="fs-body-75">דוגמית {{ i }}</label>
+              <select class="sample-select" data-slot="{{ i }}">
+                <option value="">בחרי בושם…</option>
+                {%- for p in products -%}
+                  <option value="{{ p.id }}" data-title="{{ p.title | escape }}">{{ p.title }}</option>
+                {%- endfor -%}
+              </select>
+
+              <div class="sample-size">
+                <label class="radio">
+                  <input type="radio" name="size-{{ i }}" value="{{ size_value_1 }}" checked>
+                  <span>{{ size_value_1 }}</span>
+                </label>
+                {% if enable_size_2 %}
+                <label class="radio">
+                  <input type="radio" name="size-{{ i }}" value="{{ size_value_2 }}">
+                  <span>{{ size_value_2 }}</span>
+                </label>
+                {% endif %}
+              </div>
+            </div>
+          {%- endfor -%}
+
+        {% else %}
+          <div class="sample-tiles" data-max="{{ required_slots }}">
+            {%- for p in products -%}
+              <label class="sample-tile">
+                <input type="checkbox" class="tile-check" value="{{ p.id }}" data-title="{{ p.title | escape }}">
+                <div class="tile-media">
+                  {%- if p.featured_image -%}
+                    <img loading="lazy" src="{{ p.featured_image | image_url: width: 180 }}" alt="{{ p.title | escape }}">
+                  {%- endif -%}
+                </div>
+                <div class="tile-title fs-body-75">{{ p.title }}</div>
+                <div class="tile-sizes">
+                  <label class="radio">
+                    <input type="radio" name="size-{{ p.id }}" value="{{ size_value_1 }}" checked>
+                    <span>{{ size_value_1 }}</span>
+                  </label>
+                  {% if enable_size_2 %}
+                  <label class="radio">
+                    <input type="radio" name="size-{{ p.id }}" value="{{ size_value_2 }}">
+                    <span>{{ size_value_2 }}</span>
+                  </label>
+                  {% endif %}
+                </div>
+              </label>
+            {%- endfor -%}
+          </div>
+          <div class="fs-body-75 text-subdued" style="margin-top:.5rem;">
+            בחירת מקסימום: <span class="sel-count">0</span>/<span class="sel-max">{{ required_slots }}</span>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="product-form-block" style="margin-top:1rem;">
+        <button class="btn btn--callout sample-submit" disabled>הוספה לסל</button>
+        <div class="sample-error fs-body-75" style="color:#b00020;margin-top:.5rem;display:none;"></div>
+      </div>
+
+      {% endif %}
+    </div>
+
+    {%- comment -%} Variant resolver data payload {%- endcomment -%}
+    <script type="application/json" id="dsb-data-{{ section.id }}">
+      {
+        "size_option_name": {{ size_option_name | json }},
+        "size_value_1": {{ size_value_1 | json }},
+        "size_value_2": {{ size_value_2 | json }},
+        "enable_size_2": {{ enable_size_2 | json }},
+        "required_slots": {{ required_slots | json }},
+        "layout_mode": {{ layout_mode | json }},
+        "products": [
+          {%- for p in products -%}
+            {
+              "id": {{ p.id | json }},
+              "title": {{ p.title | json }},
+              "handle": {{ p.handle | json }},
+              "variants": [
+                {%- for v in p.variants -%}
+                  {
+                    "id": {{ v.id | json }},
+                    "title": {{ v.title | json }},
+                    "options": {{ v.options | json }},
+                    "available": {{ v.available | json }}
+                  }{% unless forloop.last %},{% endunless %}
+                {%- endfor -%}
+              ],
+              "options": [
+                {%- for opt in p.options_with_values -%}
+                  {
+                    "name": {{ opt.name | json }},
+                    "values": {{ opt.values | json }}
+                  }{% unless forloop.last %},{% endunless %}
+                {%- endfor -%}
+              ]
+            }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ],
+        "add_main_product": {{ section.settings.add_main_product | json }},
+        "main_product_id": {{ product.id | json }}
+      }
+    </script>
+
+    <script>
+      (function(){
+        const root = document.getElementById('dynamic-sample-builder-{{ section.id }}');
+        const data = JSON.parse(document.getElementById('dsb-data-{{ section.id }}').textContent);
+        const errorEl = root.querySelector('.sample-error');
+        const button = root.querySelector('.sample-submit');
+
+        function findVariantId(productId, wantedSize){
+          const p = data.products.find(x => x.id == productId);
+          if(!p) return null;
+          const sizeIdx = p.options.findIndex(o => o.name.toLowerCase() === data.size_option_name.toLowerCase());
+          // Fallback: try contains
+          const idx = sizeIdx >= 0 ? sizeIdx : p.options.findIndex(o => o.name.toLowerCase().includes('size'));
+          const optIndex = idx >= 0 ? idx : 0;
+          const wantedLower = String(wantedSize).toLowerCase();
+
+          for(const v of p.variants){
+            const ov = (v.options[optIndex] || '').toLowerCase();
+            if(ov === wantedLower) return v.id;
+          }
+          // try startsWith (e.g. "2 ml" vs "2ml")
+          for(const v of p.variants){
+            const ov = (v.options[optIndex] || '').toLowerCase().replace(/\s+/g,'');
+            if(ov === wantedLower.replace(/\s+/g,'')) return v.id;
+          }
+          return null;
+        }
+
+        function validateSelections(getSelections){
+          const sels = getSelections();
+          const filled = sels.filter(s => !!s.variantId).length;
+          const need = data.required_slots;
+          button.disabled = filled !== need;
+          return {filled, need, sels};
+        }
+
+        function postAdd(items){
+          return fetch('/cart/add.js', {
+            method:'POST',
+            headers:{'Content-Type':'application/json','Accept':'application/json'},
+            body: JSON.stringify({ items })
+          }).then(r => r.json());
+        }
+
+        function showError(msg){
+          if(!errorEl) return;
+          errorEl.textContent = msg || '';
+          errorEl.style.display = msg ? 'block' : 'none';
+        }
+
+        if(data.layout_mode === 'dropdowns'){
+          const selects = [...root.querySelectorAll('.sample-select-row')];
+
+          const getSelections = () => {
+            return selects.map(row => {
+              const sel = row.querySelector('.sample-select');
+              const pid = sel && sel.value ? Number(sel.value) : null;
+              const sizeInput = row.querySelector('input[type="radio"]:checked');
+              const size = sizeInput ? sizeInput.value : data.size_value_1;
+              const variantId = pid ? findVariantId(pid, size) : null;
+              return { productId: pid, size, variantId };
+            });
+          };
+
+          selects.forEach(row => {
+            row.addEventListener('change', () => validateSelections(getSelections));
+          });
+
+          validateSelections(getSelections);
+
+          button.addEventListener('click', async (e) => {
+            e.preventDefault();
+            showError('');
+            const {sels} = validateSelections(getSelections);
+            if(sels.some(s => !s.variantId)){
+              showError('יש להשלים את כל הבחירות (כולל מידה).');
+              return;
+            }
+            const items = sels.map(s => ({ id: s.variantId, quantity: 1 }));
+            if(data.add_main_product && data.main_product_id){
+              items.unshift({ id: {{ product.selected_or_first_available_variant.id }}, quantity: 1 });
+            }
+            try{
+              await postAdd(items);
+              window.location.href = '/cart';
+            }catch(err){
+              showError('שגיאה בהוספה לסל. נסי שוב.');
+            }
+          });
+
+        } else {
+          // tiles layout
+          const container = root.querySelector('.sample-tiles');
+          const max = Number(container.dataset.max || data.required_slots);
+          const countEl = root.querySelector('.sel-count');
+
+          function current(){
+            const checks = [...container.querySelectorAll('.tile-check:checked')].map(ch => Number(ch.value));
+            return checks;
+          }
+
+          container.addEventListener('change', (e) => {
+            if(e.target.classList.contains('tile-check')){
+              const sel = current();
+              if(sel.length > max){
+                e.target.checked = false;
+              }
+              if(countEl){ countEl.textContent = current().length; }
+              button.disabled = current().length !== max;
+            }
+          });
+
+          if(countEl){ countEl.textContent = current().length; }
+          button.disabled = current().length !== max;
+
+          button.addEventListener('click', async (e) => {
+            e.preventDefault();
+            showError('');
+            const ids = current();
+            if(ids.length !== max){
+              showError('יש לבחור בדיוק ' + max + ' פריטים.');
+              return;
+            }
+            // resolve size per product
+            const items = ids.map(pid => {
+              const sizeInput = root.querySelector('input[name="size-'+pid+'"]:checked');
+              const size = sizeInput ? sizeInput.value : data.size_value_1;
+              const vid = findVariantId(pid, size);
+              return { id: vid, quantity: 1 };
+            }).filter(x => !!x.id);
+
+            if(items.length !== max){
+              showError('חלק מהווריאנטים לא נמצאו עבור המידות שנבחרו.');
+              return;
+            }
+
+            if(data.add_main_product && data.main_product_id){
+              items.unshift({ id: {{ product.selected_or_first_available_variant.id }}, quantity: 1 });
+            }
+
+            try{
+              await postAdd(items);
+              window.location.href = '/cart';
+            }catch(err){
+              showError('שגיאה בהוספה לסל. נסי שוב.');
+            }
+          });
+        }
+      })();
+    </script>
+
+  {% endif %}
+</section>
+
+<style>
+  /* layout wrappers — שומרות על ה-look של ה-product-form-block */
+  #dynamic-sample-builder-{{ section.id }} .sample-select-row{
+    display:grid; gap:8px; grid-template-columns: 1fr auto; align-items:center;
+    margin-bottom:10px;
+  }
+  #dynamic-sample-builder-{{ section.id }} .sample-select{
+    width:100%; padding:10px; border:1px solid var(--color-borders, #e5e5e5); background:#fff;
+  }
+  #dynamic-sample-builder-{{ section.id }} .sample-size{
+    display:flex; gap:10px; align-items:center; white-space:nowrap;
+  }
+  #dynamic-sample-builder-{{ section.id }} .radio{ display:inline-flex; gap:6px; align-items:center; cursor:pointer; }
+
+  /* tiles mode */
+  #dynamic-sample-builder-{{ section.id }} .sample-tiles{
+    display:grid; gap:12px; grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+  @media(min-width:900px){
+    #dynamic-sample-builder-{{ section.id }} .sample-tiles{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+  }
+  #dynamic-sample-builder-{{ section.id }} .sample-tile{
+    display:grid; gap:6px; padding:10px; border:1px solid var(--color-borders, #e5e5e5); border-radius:8px; background:#fff;
+  }
+  #dynamic-sample-builder-{{ section.id }} .sample-tile .tile-media img{ width:100%; height:auto; display:block; }
+  #dynamic-sample-builder-{{ section.id }} .sample-tile .tile-title{ font-weight:500; }
+  #dynamic-sample-builder-{{ section.id }} .tile-sizes{ display:flex; gap:10px; align-items:center; }
+  #dynamic-sample-builder-{{ section.id }} .tile-check{ margin-inline-end:6px; }
+</style>
+
+{% schema %}
+{
+  "name": "Dynamic Sample Builder",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "מאתר מותג מה-URL (?brand=) -> metaobject brand_info -> שדה brand_collection -> בוחר משם מוצרים לדוגמיות."
+    },
+    {
+      "type": "select",
+      "id": "layout_mode",
+      "label": "תצוגת בחירה",
+      "options": [
+        { "value": "dropdowns", "label": "5 דרופדאונים" },
+        { "value": "tiles", "label": "רשימת כרטיסים (Tiles) עם תמונה" }
+      ],
+      "default": "dropdowns"
+    },
+    {
+      "type": "range",
+      "id": "required_slots",
+      "label": "מספר דוגמיות לבחירה",
+      "min": 3, "max": 8, "step": 1,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "size_option_name",
+      "label": "שם אופציית המידה במוצרים",
+      "default": "Size"
+    },
+    {
+      "type": "text",
+      "id": "size_value_1",
+      "label": "ערך מידה 1",
+      "default": "2ml"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_size_2",
+      "label": "לאפשר מידה נוספת",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "size_value_2",
+      "label": "ערך מידה 2",
+      "default": "5ml"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_main_product",
+      "label": "להוסיף יחד גם את המוצר הראשי (המארז בדף המוצר)",
+      "default": true
+    }
+  ],
+  "presets": [
+    { "name": "Dynamic Sample Builder" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,158 @@
+{% comment %}
+  Behind the brands – clean carousel section
+  Files it expects:
+    assets/bb-carousel.css
+    assets/bb-carousel.js
+{% endcomment %}
+
+<section
+  id="bb-{{ section.id }}"
+  class="bb-sec"
+  data-bb-section
+  data-visible-desktop="3"
+  data-visible-mobile="1"
+>
+  <link rel="stylesheet" href="{{ 'bb-carousel.css' | asset_url }}">
+
+  <div class="bb-wrap container">
+    {% if section.settings.heading or section.settings.subheading %}
+      <div class="bb-head {% if section.settings.centered %}is-center{% endif %}">
+        {% if section.settings.heading %}<h2 class="bb-title">{{ section.settings.heading }}</h2>{% endif %}
+        {% if section.settings.subheading %}<div class="bb-sub rte">{{ section.settings.subheading }}</div>{% endif %}
+      </div>
+    {% endif %}
+
+    <div class="bb-track" data-bb-track tabindex="-1" dir="ltr">
+      {% for block in section.blocks %}
+        {% assign poster = block.settings.poster %}
+        {% assign shopify_video = block.settings.video %}
+        {% assign external_url = block.settings.video_url | strip %}
+
+        <article class="bb-card" data-bb-card data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+          <div class="bb-media">
+            {% if shopify_video != blank %}
+              <video
+                class="bb-video"
+                playsinline
+                preload="metadata"
+                muted
+                {% if section.settings.loop %}loop{% endif %}
+                {% if poster %}poster="{{ poster | image_url: width: 1200 }}"{% endif %}
+              >
+                {% for s in shopify_video.sources %}
+                  <source src="{{ s.url }}" type="{{ s.mime_type }}">
+                {% endfor %}
+              </video>
+            {% elsif external_url != blank %}
+              <video
+                class="bb-video"
+                playsinline
+                preload="metadata"
+                muted
+                {% if section.settings.loop %}loop{% endif %}
+                {% if poster %}poster="{{ poster | image_url: width: 1200 }}"{% endif %}
+              >
+                <source src="{{ external_url }}" type="video/mp4">
+              </video>
+            {% else %}
+              <div class="bb-ph"></div>
+            {% endif %}
+
+            <button class="bb-btn bb-btn--mute" type="button" aria-label="{{ 'general.volume' | t }}" data-bb-mute aria-pressed="true">
+              <svg class="ic ic--unmuted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5l-5 4H4z" fill="currentColor"/><path d="M15 9a3 3 0 0 1 0 6M17 7a6 6 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="ic ic--muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5l-5 4H4z" fill="currentColor"/><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+
+            <button class="bb-btn bb-btn--play" type="button" aria-label="Play/Pause" data-bb-play aria-pressed="false">
+              <svg class="ic ic--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5v14l-11-7 11-7z" fill="currentColor"/></svg>
+              <svg class="ic ic--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" fill="currentColor"/><rect x="14" y="5" width="4" height="14" fill="currentColor"/></svg>
+            </button>
+          </div>
+
+          {%- comment -%}
+            META (קישור מוצר + תמונה/כותרת):
+            • אם נבחר product_ref נטען אוטומטית image/title שלו כברירת מחדל.
+            • אם מולאו product_image / product_title ידנית – הם גוברים.
+            • לא יוצג בלוק ריק.
+          {%- endcomment -%}
+          {%- assign product_obj = block.settings.product_ref -%}
+
+          {%- assign has_link = false -%}
+          {%- assign link_url = '' -%}
+          {%- if product_obj -%}
+            {%- assign has_link = true -%}
+            {%- assign link_url = product_obj.url -%}
+          {%- elsif block.settings.product_link != blank -%}
+            {%- assign has_link = true -%}
+            {%- assign link_url = block.settings.product_link -%}
+          {%- endif -%}
+
+          {%- assign meta_title = block.settings.product_title | default: product_obj.title -%}
+
+          {%- assign meta_image = block.settings.product_image -%}
+          {%- if meta_image == blank and product_obj -%}
+            {%- if product_obj.featured_image -%}
+              {%- assign meta_image = product_obj.featured_image -%}
+            {%- elsif product_obj.featured_media and product_obj.featured_media.preview_image -%}
+              {%- assign meta_image = product_obj.featured_media.preview_image -%}
+            {%- endif -%}
+          {%- endif -%}
+
+          {%- capture meta_inner -%}
+            {%- if meta_image -%}
+              {{ meta_image
+                | image_url: width: 120, height: 120, crop: 'center'
+                | image_tag: class: 'bb-thumb', loading: 'lazy', alt: meta_title | escape }}
+            {%- endif -%}
+            {%- if meta_title -%}
+              <span class="bb-meta__title">{{ meta_title }}</span>
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- assign _meta_inner = meta_inner | strip -%}
+          {%- if _meta_inner != '' -%}
+            {%- if has_link -%}
+              <a class="bb-meta" href="{{ link_url }}">{{ _meta_inner }}</a>
+            {%- else -%}
+              <div class="bb-meta">{{ _meta_inner }}</div>
+            {%- endif -%}
+          {%- endif -%}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script src="{{ 'bb-carousel.js' | asset_url }}" defer></script>
+</section>
+
+{% schema %}
+{
+  "name": "Behind the brands",
+  "tag": "section",
+  "class": "apps section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "BEHIND THE BRANDS" },
+    { "type": "richtext", "id": "subheading", "label": "Subheading" },
+    { "type": "checkbox", "id": "centered", "label": "Center heading", "default": false },
+    { "type": "checkbox", "id": "loop", "label": "Loop videos", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "video_card",
+      "name": "Video card",
+      "settings": [
+        { "type": "video", "id": "video", "label": "Video (Shopify file)" },
+        { "type": "text", "id": "video_url", "label": "Video URL (mp4 fallback)" },
+        { "type": "image_picker", "id": "poster", "label": "Poster image" },
+
+        { "type": "product", "id": "product_ref", "label": "Linked product" },
+        { "type": "url", "id": "product_link", "label": "Link (manual)" },
+        { "type": "image_picker", "id": "product_image", "label": "Product image" },
+        { "type": "text", "id": "product_title", "label": "Product title" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [{ "name": "Behind the brands", "category": "Media" }]
+}
+{% endschema %}

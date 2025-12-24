@@ -1,0 +1,101 @@
+{%- comment -%}
+  dynamic-price-per-100ml.liquid
+  עובר על *כל* הוריאנטים של המוצר.
+  מניח ש־variant.title הוא בנוסח: 2ml, 5ml, 10ml, 50ml, 100ml וכו'.
+  מחשב מחיר ל־100 מ״ל לפי הנוסחה:
+    price_per_100 = (variant.price * 100) / volume_ml
+{%- endcomment -%}
+
+{%- if product and product.variants.size > 0 -%}
+
+  {%- assign items_count = 0 -%}
+
+  {%- for v in product.variants -%}
+    {%- assign title = v.title | strip -%}
+
+    {%- assign volume_ml = title
+      | replace: 'ml',''
+      | replace: 'ML',''
+      | strip
+      | plus: 0
+    -%}
+
+    {%- if volume_ml > 0 and v.price > 0 -%}
+      {%- assign items_count = items_count | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if items_count > 0 -%}
+    <div class="price-per-100ml">
+      <span class="pp100-label">המחיר ל־100 מ״ל:</span>
+
+      {%- assign index = 0 -%}
+      {%- for v in product.variants -%}
+        {%- assign title = v.title | strip -%}
+
+        {%- assign volume_ml = title
+          | replace: 'ml',''
+          | replace: 'ML',''
+          | strip
+          | plus: 0
+        -%}
+
+        {%- if volume_ml > 0 and v.price > 0 -%}
+          {%- comment -%}
+            v.price הוא ב"אגורות" (cents), לכן:
+            per100 = (v.price * 100 / volume_ml)
+            ואז money_without_trailing_zeros מחזיר את זה בשקלים.
+          {%- endcomment -%}
+          {%- assign per100 = v.price | times: 100 | divided_by: volume_ml -%}
+
+          {%- if index > 0 -%}
+            <span class="pp100-sep"> | </span>
+          {%- endif -%}
+
+          <span class="pp100-item">
+            {{ volume_ml }} מ״ל – {{ per100 | money_without_trailing_zeros }}
+          </span>
+
+          {%- assign index = index | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+<style>
+  .price-per-100ml {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: right; /* יישור לימין */
+    direction: rtl;    /* בטוח RTL */
+    padding: 0;        /* בלי פדינג מיותר */
+     background: none;      /* רקע שקוף */
+    background-color: transparent; /* רקע שקוף */
+    border: none;          /* לא בטעות קו */
+  }
+
+  .price-per-100ml .pp100-label {
+    font-weight: 600;
+    margin-left: 4px;
+  }
+
+  .price-per-100ml .pp100-item {
+    white-space: nowrap;
+  }
+
+  .price-per-100ml .pp100-sep {
+    margin: 0 4px;
+    color: #777;
+  }
+
+  @media (max-width: 768px) {
+    .price-per-100ml {
+      font-size: 12px;
+      padding: 0;      /* מבטלים גם במובייל */
+      margin-top: 2px; /* קצת פחות ריווח אם תרצי מהודק */
+    }
+  }
+</style>
+
+  {%- endif -%}
+
+{%- endif -%}

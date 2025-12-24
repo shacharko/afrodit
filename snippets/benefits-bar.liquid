@@ -1,0 +1,158 @@
+{%- comment -%}
+Brand logos marquee (RTL) from metaobject `brand_info`
+Fields on each entry: Brand_name (text), Brand_logo (file)
+Usage: {% render 'brand-logos-strip' %}
+Optional params:
+  - speed_s: seconds for one full loop (default 28)
+  - link_to_collections: true/false (default true) – wrap logos with link to /collections/{handle}
+{%- endcomment -%}
+
+{%- assign speed_s = speed_s | default: 28 -%}
+{%- assign link_to_collections = link_to_collections | default: true -%}
+
+{%- assign brands_all = shop.metaobjects['brand_info'].values | default: empty -%}
+{%- assign brands = brands_all -%} {# אפשר למיין אם רוצים: | sort: 'brand_name' #}
+
+{%- if brands != blank -%}
+<div class="brand-logos-marquee benefits-marquee" dir="rtl" style="--speed: {{ speed_s }}s;">
+  <div class="marquee-window" aria-label="מותגי בישום">
+    <ul class="marquee-track track-a" role="list">
+      {%- for b in brands -%}
+        {%- if b.brand_logo != blank -%}
+          <li class="brand-logo" role="listitem">
+            {%- if link_to_collections == true -%}
+              <a href="/collections/{{ b.brand_name | handleize }}" aria-label="{{ b.brand_name }}">
+                {{ b.brand_logo | image_url: width: 260 | image_tag: alt: b.brand_name, loading: 'eager', class: 'brand-logo__img' }}
+              </a>
+            {%- else -%}
+              {{ b.brand_logo | image_url: width: 260 | image_tag: alt: b.brand_name, loading: 'eager', class: 'brand-logo__img' }}
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+    <ul class="marquee-track track-b" aria-hidden="true"></ul>
+  </div>
+
+  <style>
+    .brand-logos-marquee{
+      --bar-h: 90px;        /* גובה הסטריפ */
+      --logo-h: 48px;       /* גובה מקס ללוגו (אחידות) */
+      --gap: clamp(36px, 7vw, 96px); /* ריווח בין לוגואים */
+      --offset: 0px;        /* ימולא ע"י JS */
+      border-block: 1px solid #eee;
+      background:#fff;
+    }
+    .brand-logos-marquee .marquee-window{
+      position:relative;
+      overflow:hidden;
+      min-height:var(--bar-h);
+      display:flex;
+      align-items:center;
+    }
+    .brand-logos-marquee .marquee-track{
+      position:absolute; top:50%;
+      transform: translateY(-50%);
+      display:flex; align-items:center;
+      gap: var(--gap);
+      list-style:none; margin:0; padding:0;
+      white-space:nowrap;
+      will-change: transform;
+    }
+
+    /* פריט בודד – מעטפת כדי לשמור אחידות גובה/רוחב */
+    .brand-logos-marquee .brand-logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height: var(--bar-h);
+      line-height:0;
+    }
+    .brand-logos-marquee .brand-logo a{
+      display:grid; place-items:center;
+    }
+    .brand-logos-marquee .brand-logo__img{
+      height: var(--logo-h);
+      max-height: var(--logo-h);
+      width: auto;                  /* מונע עיוות */
+      max-width: clamp(80px, 13vw, 180px); /* לא לאפשר רוחב ענק */
+      object-fit: contain;          /* שומר פרופורציות */
+      display:block;
+      filter: none;                 /* אם תרצי grayscale אפשר כאן */
+      transform: translateZ(0);     /* יציבות בזמן אנימציה */
+    }
+
+    /* אנימציה – A זזה שמאלה לאורך הרוחב שלה, B "נדבקת" מאחור */
+    .brand-logos-marquee.ready .track-a{ animation: slideA var(--speed) linear infinite; }
+    .brand-logos-marquee.ready .track-b{ animation: slideB var(--speed) linear infinite; }
+
+    @keyframes slideA{
+      from { transform: translate(0, -50%); }
+      to   { transform: translate(calc(-1 * var(--offset)), -50%); }
+    }
+    @keyframes slideB{
+      from { transform: translate(var(--offset), -50%); }
+      to   { transform: translate(0, -50%); }
+    }
+
+    /* Pause on hover */
+    .brand-logos-marquee .marquee-window:hover .marquee-track{
+      animation-play-state: paused;
+    }
+
+    /* מובייל */
+    @media (max-width: 600px){
+      .brand-logos-marquee{ --bar-h: 78px; --logo-h: 40px; }
+    }
+
+    /* נגישות: הפחתת תנועה */
+    @media (prefers-reduced-motion: reduce){
+      .brand-logos-marquee .marquee-track{ animation:none; position:static; transform:none; }
+      .brand-logos-marquee .marquee-window{ justify-content:center; flex-wrap:wrap; }
+    }
+  </style>
+
+  <script>
+  (function(){
+    document.querySelectorAll('.brand-logos-marquee:not([data-marquee-init])').forEach(function(root){
+      root.setAttribute('data-marquee-init','true');
+      var win   = root.querySelector('.marquee-window');
+      var trackA= root.querySelector('.track-a');
+      var trackB= root.querySelector('.track-b');
+      if(!win || !trackA || !trackB) return;
+
+      var base = trackA.innerHTML; // לשמור את התוכן המקורי (מה-Liquid)
+
+      function build(){
+        // לאפס
+        root.classList.remove('ready');
+        trackA.innerHTML = base;
+
+        // להבטיח כיסוי רוחב + בטחון
+        var viewW = win.offsetWidth || 0;
+        var safety = 1.1; // 10% מרווח בטחון
+        while(trackA.scrollWidth < viewW * safety){
+          trackA.insertAdjacentHTML('beforeend', base);
+        }
+
+        // שכפול למסילה B
+        trackB.innerHTML = trackA.innerHTML;
+
+        // offset = רוחב A הסופי
+        var offset = trackA.scrollWidth;
+        root.style.setProperty('--offset', offset + 'px');
+
+        // להפעיל אנימציות
+        root.classList.add('ready');
+      }
+
+      build();
+
+      // רספונסיביות + שינויי פונט/RTL וכד'
+      var ro = new ResizeObserver(function(){ build(); });
+      ro.observe(win);
+    });
+  })();
+  </script>
+</div>
+{%- endif -%}

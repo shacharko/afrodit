@@ -1,0 +1,48 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "collection.main-sample-set.json",
+  "context": {
+    "market": "il"
+  },
+  "sections": {
+    "banner": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "main-collection-product-grid": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "brands_from_collection_hUJzz": {
+      "type": "brands-from-collection",
+      "disabled": false,
+      "settings": {
+        "collection": "2ml-sample-set",
+        "metaobject_type": "brand_info",
+        "image_field": "Brand_logo",
+        "name_field": "Brand_name",
+        "columns_desktop": 4,
+        "show_debug": false
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Brands grid (static logos)"
+    }
+  },
+  "order": [
+    "image_hero_hhamkD",
+    "brands_from_collection_hUJzz",
+    "banner",
+    "main-collection-product-grid"
+  ]
+}

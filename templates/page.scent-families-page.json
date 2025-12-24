@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "image_hero_PexLwJ": {
+      "type": "image-hero",
+      "blocks": {
+        "accent_QftxGb": {
+          "type": "accent",
+          "disabled": true,
+          "settings": {
+            "accent": "Accent"
+          }
+        },
+        "heading_iy8epb": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-base-1"
+          }
+        },
+        "text_D6Vq7T": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "accent_QftxGb",
+        "heading_iy8epb",
+        "text_D6Vq7T"
+      ],
+      "name": "t:sections.image_hero.presets.name",
+      "settings": {
+        "image_aspect": "original",
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "image": "shopify://shop_images/families2.png",
+        "focal_point": "image_presentation",
+        "mobile_focal_point": "image_presentation",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 40,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "rich_text_kMBKXM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_68UAjq": {
+          "type": "heading",
+          "settings": {
+            "title": "דיסקברי סט לפי משפחות ריח",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "text_Agrjiy": {
+          "type": "text",
+          "settings": {
+            "text": "<h5><strong>מארזי בשמים לפי משפחות ריח – מסע חושי בין עולמות הריח.<br/><br/>כל משפחת ריח היא סיפור בפני עצמו – עולם של תחושות, עומק ואנרגיה ייחודית שמגיעה ישר אל החושים והנשמה.<br/><br/>בקולקציית מארזי השמים לפי משפחות ריח, תוכלו לגלות ולהתחבר למגוון רחב של עולמות בישום – ממארזי , Leather ו‑citrus, דרך Floral ו‑Woody, ועד Gourmand ו‑Aromatic – הכל באריזות מעוצבות בקפידה, שמעניקות חוויה חושית יוקרתית וממוקדת.<br/><br/>כל מארז כולל 5 ניחוחות נבחרים בקפידה, כך שתוכלו להתנסות, לגלות ולהתחבר למגוון רחב של סגנונות ואנרגיות ריחניות.<br/><br/>כל מארז הוא מסע של גילוי – חוויה שמחברת בין החושים לנשמה, מאפשרת להכיר את הסטייל והעומק של כל משפחה ריחנית, ומעניקה תחושת נוכחות, ביטחון ועונג בכל רגע.<br/><br/>בחרו את מארז משפחת הריח שמתאים לכם, ותנו למארזים להוביל אתכם למסע חושי עמוק, מעורר השראה ובלתי נשכח, שבו כל משפחה ריחנית מספרת את הסיפור שלה.</strong></h5>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "heading_68UAjq",
+        "text_Agrjiy"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "collection_list_grid_pjgme9": {
+      "type": "collection-list-grid",
+      "name": "t:sections.collection_list_grid.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "button_style": "btn--callout",
+        "columns": "5",
+        "mobile_columns": "2",
+        "collection_list": [
+          "amber-collection",
+          "aldehydes-scent-family-copy",
+          "aquatic-collection",
+          "chypre-collection",
+          "gourmand-collection",
+          "leathery-scent-family",
+          "floral-collection-1",
+          "fruity-collection",
+          "powdery-collection",
+          "fresh-collection",
+          "sweet-collection",
+          "floral-collection",
+          "woody-collection",
+          "sandelwood-collection"
+        ],
+        "collection_listing_aspect_ratio": "landscape",
+        "label_style": "beneath",
+        "overlay_title_background_style": "gradient",
+        "overlay_text_color": "#ffffff",
+        "overlay_title_background": "#000000",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_hero_PexLwJ",
+    "rich_text_kMBKXM",
+    "collection_list_grid_pjgme9"
+  ]
+}

@@ -1,0 +1,326 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "image-hero": {
+      "type": "image-hero",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Our Studio",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our ceramics studio is based in Brooklyn NY, in a building filled with other artists, surrounded by creativity and design.</p>",
+            "text_font_class": "fs-body-200"
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "spacer"
+      ],
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 75,
+        "mobile_height": 70,
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "media_link": "",
+        "text_position": "flex-start_flex-end",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 1) 96%)",
+        "overlay_opacity": 69,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "multi-column-1": {
+      "type": "multi-column",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "accent": "Location",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-3-base",
+            "text": "<p>1234 Pretend Ave<br/>Brooklyn, NY 11216,<br/>United States<br/></p>",
+            "text_font_class": "fs-body-200",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "View on Google Maps",
+            "button_style": "btn--callout"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "accent": "Hours",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Mon - Fri, 10:00am - 4:00pm<br/>Sat - Sun, 12:00pm - 4:00pm<br/>Closed on all holidays</p>",
+            "text_font_class": "fs-body-200",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "accent": "Contact",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>info@vesselceramics.com<br/>+1-555-5555</p>",
+            "text_font_class": "fs-body-200",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "accent": "Elsewhere",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-1-base",
+            "text": "<p><a href=\"https://facebook.com/shopify\" target=\"_blank\" title=\"https://facebook.com/shopify\">Facebook</a>, <a href=\"https://www.instagram.com/shopify/\" title=\"https://www.instagram.com/shopify/\">Instagram</a>, <a href=\"https://www.twitter.com/shopify/\" target=\"_blank\" title=\"https://www.twitter.com/shopify/\">Twitter</a>, <a href=\"https://www.pinterest.com/shopify/\" target=\"_blank\" title=\"https://www.pinterest.com/shopify/\">Pinterest</a></p>",
+            "text_font_class": "fs-body-200",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4"
+      ],
+      "settings": {
+        "title": "Location & Hours",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "columns": "4",
+        "column_spacing": 48,
+        "row_spacing": 48,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 48,
+        "row_spacing_mobile": 48,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#706b5f",
+        "button_background_color": "#706b5f",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi-column-2": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column-1": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "Founder",
+            "heading": "Tanvi",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Born and raised in Dubai, I worked for over a decade as an interior designer working primarily in the design and execution of 4 & 5 star hotels around the world</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://www.instagram.com/tavceramics/",
+            "link_text": "@tavceramics",
+            "button_style": "btn--callout"
+          }
+        },
+        "image_column-2": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "Production ceramicist",
+            "heading": "Rose",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>I've been making pottery since I was five years old, when my mother taught me on her pottery wheel. I believe in crafting pieces that are made to last.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://www.instagram.com/tavceramics/",
+            "link_text": "@rosean.ceramics",
+            "button_style": "btn--callout"
+          }
+        },
+        "image_column-3": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "Studio Manager",
+            "heading": "Lisa",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>What started as a hobby turned into a side hustle and eventually a thriving business with the mission to create a meaningful experiences with everyday objects.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://www.instagram.com/tavceramics/",
+            "link_text": "@lisa.alencar",
+            "button_style": "btn--callout"
+          }
+        }
+      },
+      "block_order": [
+        "image_column-1",
+        "image_column-2",
+        "image_column-3"
+      ],
+      "settings": {
+        "title": "Production Team",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "columns": "3",
+        "column_spacing": 32,
+        "row_spacing": 48,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 48,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "#ffffff",
+        "text_color": "#706b5f",
+        "button_background_color": "#706b5f",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "image-with-text-2": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Open Studio",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our ceramics studio is based in Brooklyn NY, in a building filled with other artists (ceramicists, painters, fiber artists, jewelers, woodworkers and so many more) so we are constantly surrounded by creativity and design.<br/><br/>Members have 24/7 access for maximum flexibility and to allow them to work at their own pace. Members must be comfortable working on their own.</p><p>For more information, please get in touch:</p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Contact us",
+            "button_style": "btn--secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_position": "left",
+        "aspect_ratio": "square",
+        "focal_point": "bottom",
+        "image_caption": "",
+        "text_alignment": "left",
+        "show_small_image": false,
+        "image_small_focal_point": "center",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#706b5f",
+        "button_background_color": "#706b5f",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image-hero",
+    "multi-column-1",
+    "multi-column-2",
+    "image-with-text-2"
+  ]
+}

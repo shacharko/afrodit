@@ -1,0 +1,263 @@
+<section class="section faq-sento">
+  <div class="site-container faq-sento__layout">
+
+    <!-- LEFT SIDE : Title -->
+    <div class="faq-sento__left">
+      {% if section.settings.eyebrow != blank %}
+        <p class="faq-sento__eyebrow ff-body fs-body-75">
+          {{ section.settings.eyebrow }}
+        </p>
+      {% endif %}
+
+      <h2 class="faq-sento__heading ff-heading">
+        <span class="faq-sento__heading-line faq-sento__heading-line--primary">
+          {{ section.settings.heading_line_1 }}
+        </span>
+        <span class="faq-sento__heading-line faq-sento__heading-line--muted">
+          {{ section.settings.heading_line_2 }}
+        </span>
+      </h2>
+
+      {% if section.settings.text != blank %}
+        <p class="faq-sento__text text rte ff-body fs-body-100">
+          {{ section.settings.text }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- RIGHT SIDE : FAQ Accordion -->
+    <div class="faq-sento__right">
+      <div class="faq-sento__accordion">
+        {% for block in section.blocks %}
+          <details class="faq-sento__item" {{ block.shopify_attributes }}>
+            <summary class="faq-sento__question ff-body fs-body-100">
+              <span class="faq-sento__chevron" aria-hidden="true">
+                <svg viewBox="0 0 16 10" class="faq-sento__chevron-icon">
+                  <path d="M1 1L8 8L15 1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="faq-sento__question-text">
+                {{ block.settings.question }}
+              </span>
+            </summary>
+            <div class="faq-sento__answer rte ff-body fs-body-100">
+              {{ block.settings.answer }}
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+  {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+    <div class="faq-sento__footer">
+      <a href="{{ section.settings.button_link }}" class="faq-sento__btn btn">
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "FAQ – שאלתם, ענינו",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "טקסט קטן מעל הכותרת",
+      "default": "שאלות נפוצות"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_1",
+      "label": "כותרת שורה 1",
+      "default": "אתם שואלים."
+    },
+    {
+      "type": "text",
+      "id": "heading_line_2",
+      "label": "כותרת שורה 2",
+      "default": "אנחנו עונים."
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "טקסט קצר מתחת לכותרת (אופציונלי)"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "טקסט לכפתור בתחתית",
+      "default": "קנו עכשיו"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "קישור לכפתור בתחתית"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "שאלה",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "שאלה",
+          "default": "מה זמן המשלוח?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "תשובה",
+          "default": "<p>כאן תבוא התשובה המלאה.</p>"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "FAQ – שאלתם, ענינו",
+      "category": "טקסט"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  /* Layout כללי */
+  .faq-sento {
+    padding-block: 4rem;
+  }
+
+  .faq-sento__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  /* צד שמאל – כותרת */
+  .faq-sento__left {
+    text-align: right;
+  }
+
+  .faq-sento__eyebrow {
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  .faq-sento__heading {
+    margin: 0;
+    line-height: 1.1;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .faq-sento__heading-line {
+    display: block;
+  }
+
+  .faq-sento__heading-line--primary {
+    color: #111111;
+  }
+
+  .faq-sento__heading-line--muted {
+    color: #6b6b6b;
+  }
+
+  .faq-sento__text {
+    max-width: 26rem;
+    margin-top: 1.25rem;
+    opacity: 0.85;
+  }
+
+  /* צד ימין – אקורדיון */
+  .faq-sento__right {
+    width: 100%;
+  }
+
+  .faq-sento__accordion {
+    width: 100%;
+  }
+
+  .faq-sento__item {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding-block: 0.9rem;
+  }
+
+  .faq-sento__item:first-child {
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .faq-sento__question {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse; /* RTL: חץ בצד ימין, טקסט משמאלו */
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .faq-sento__question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-sento__question-text {
+    flex: 1;
+  }
+
+  .faq-sento__chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faq-sento__chevron-icon {
+    width: 16px;
+    height: 10px;
+    opacity: 0.6;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .faq-sento__item[open] .faq-sento__chevron-icon {
+    transform: rotate(180deg);
+    opacity: 0.9;
+  }
+
+  .faq-sento__answer {
+    margin-top: 0.6rem;
+    opacity: 0.9;
+  }
+
+  /* כפתור בתחתית */
+  .faq-sento__footer {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .faq-sento__btn {
+    min-width: 190px;
+  }
+
+  /* דסקטופ – שתי עמודות */
+  @media (min-width: 992px) {
+    .faq-sento__layout {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .faq-sento__left {
+      flex: 0 0 40%;
+    }
+
+    .faq-sento__right {
+      flex: 1;
+    }
+  }
+</style>

@@ -1,0 +1,203 @@
+
+{%- liquid
+ 
+  assign slots = slots | default: 5
+  assign mode = mode | default: 'dropdowns'
+  
+ 
+  assign brand_handle = ''
+  
+  if request.params.brand != blank
+    assign brand_handle = request.params.brand | handleize
+  elsif brand != blank
+    assign brand_handle = brand | handleize
+  elsif product
+    assign brand_opt_index = -1
+    for opt in product.options
+      assign opt_down = opt | downcase
+      if opt_down == 'brand'
+        assign brand_opt_index = forloop.index0
+      endif
+    endfor
+    
+    assign current = product.selected_or_first_available_variant
+    if brand_opt_index != -1 and current
+      case brand_opt_index
+        when 0
+          assign brand_value = current.option1
+        when 1
+          assign brand_value = current.option2
+        when 2
+          assign brand_value = current.option3
+      endcase
+      assign brand_handle = brand_value | handleize
+    endif
+  endif
+
+  # 2. משיכת Metaobject והקולקציה המשויכת
+  assign entry = blank
+  assign collection_obj = blank
+
+  if brand_handle != blank
+    assign entry = shop.metaobjects['brand_info'][brand_handle]
+    if entry and entry.brand_collection.value
+      assign collection_obj = entry.brand_collection.value
+    endif
+  endif
+
+  # 3. משיכת המוצרים והתמונה הדינמית
+  assign products = empty
+  if collection_obj != blank
+    assign products = collection_obj.products
+  endif
+
+  assign dynamic_brand_image = blank
+  if entry and entry.templet_set_img.value
+    assign dynamic_brand_image = entry.templet_set_img.value
+  endif
+-%}
+
+
+
+
+<div id="sample-kit-selector"
+     class="product-form-block"
+     data-mode="{{ mode }}"
+     data-size-selected="2ml">
+
+  {%- if products and products.size > 0 -%}
+    <div class="sk-grid">
+      {%- for i in (1..slots) -%}
+        <div class="sk-select" data-slot="{{ i }}">
+          <button type="button" class="sk-select__toggle" aria-haspopup="listbox" aria-expanded="false">
+            <span class="sk-select__label">{{ 'בחרי בושם...' }}</span>
+            <span class="sk-select__caret" aria-hidden="true">▾</span>
+          </button>
+
+          <ul class="sk-select__menu" role="listbox" aria-expanded="false">
+            {%- for p in products -%}
+              {%- liquid
+                # טעינת תמונה: מטאפילד מוצר קודם, אח"כ תמונה מומלצת של המוצר
+                assign thumbnail_metafield = p.metafields.custom.templet_set_img
+                assign has_thumb = thumbnail_metafield.value | default: p.featured_image
+                assign thumb_url = blank
+
+                if has_thumb
+                  assign thumb_url = has_thumb | image_url: width: 64
+                endif
+
+                # מציאת וריאציות 2ml/5ml
+                assign v2_id = blank
+                assign v2_avail = false
+                assign v5_id = blank
+                assign v5_avail = false
+                for v in p.variants
+                  assign t = v.title | downcase
+                  if t contains '2ml'
+                    assign v2_id = v.id
+                    assign v2_avail = v.available
+                  endif
+                  if t contains '5ml'
+                    assign v5_id = v.id
+                    assign v5_avail = v.available
+                  endif
+                endfor
+              -%}
+
+              <li class="sk-select__item"
+                  role="option"
+                  data-title="{{ p.title | escape }}"
+                  data-v2="{{ v2_id }}"
+                  data-a2="{{ v2_avail }}"
+                  data-v5="{{ v5_id }}"
+                  data-a5="{{ v5_avail }}">
+                {%- if thumb_url != blank -%}
+                  <img class="sk-select__thumb"
+                        src="{{ thumb_url }}"
+                        alt="{{ p.title | escape }}"
+                        width="36" height="36" loading="lazy">
+                {%- endif -%}
+                <span class="sk-select__item-title">{{ p.title }}</span>
+              </li>
+            {%- endfor -%}
+          </ul>
+
+          <input type="hidden" name="properties[Sample {{ i }}]" class="sk-select__input-name" value="">
+          <input type="hidden" name="properties[_sk_v{{ i }}]" class="sk-select__input-id" value="">
+        </div>
+      {%- endfor -%}
+    </div>
+
+  {%- else -%}
+    <div class="sk-empty-note">
+      לא נמצאה קולקציה תואמת עבור המותג. ודאי שקיים פרמטר "?brand=" ב־URL
+      ושבשדה ה־metaobject מוגדרת קולקציית מותג.
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  .sk-grid{display:grid; gap:.75rem}
+  .sk-select{position:relative}
+  .sk-select__toggle{width:100%; display:flex; justify-content:space-between; align-items:center; padding:.65rem .8rem; border:1px solid var(--color-border, #dcdcdc); background:#fff; cursor:pointer}
+  .sk-select__menu{position:absolute; inset:auto 0 0 0; transform:translateY(100%); z-index:20; max-height:240px; overflow:auto; background:#fff; border:1px solid var(--color-border,#dcdcdc); border-top:none; display:block}
+  .sk-select__menu[aria-expanded="false"]{display:none}
+  .sk-select__item{display:flex; align-items:center; gap:.5rem; padding:.5rem .75rem; cursor:pointer}
+  .sk-select__item:hover{background:#f6f6f6}
+  .sk-select__item.is-disabled{opacity:.45; cursor:not-allowed}
+  .sk-select__thumb{border-radius:4px; flex:0 0 auto}
+</style>
+
+<script>
+(function(){
+  const root=document.getElementById('sample-kit-selector'); if(!root) return;
+
+  const getSize = () => root.getAttribute('data-size-selected') || '2ml';
+
+  const closeAll = () => root.querySelectorAll('.sk-select__menu').forEach(m=>m.setAttribute('aria-expanded','false'));
+
+  const updateAvailability = () => {
+    const size = getSize();
+    root.querySelectorAll('.sk-select__item').forEach(it=>{
+      const available = (size==='2ml') ? (it.dataset.a2==='true') : (it.dataset.a5==='true');
+      it.classList.toggle('is-disabled', !available);
+    });
+  };
+
+  root.querySelectorAll('.sk-select').forEach(sel=>{
+    const toggle  = sel.querySelector('.sk-select__toggle');
+    const menu   = sel.querySelector('.sk-select__menu');
+    const label  = sel.querySelector('.sk-select__label');
+    const inputNm = sel.querySelector('.sk-select__input-name');
+    const inputId = sel.querySelector('.sk-select__input-id');
+
+    toggle.addEventListener('click', e=>{
+      e.preventDefault();
+      const exp = menu.getAttribute('aria-expanded')==='true';
+      closeAll();
+      menu.setAttribute('aria-expanded', (!exp).toString());
+    });
+
+    menu.querySelectorAll('.sk-select__item').forEach(it=>{
+      it.addEventListener('click', ()=>{
+        if(it.classList.contains('is-disabled')) return;
+        const size = getSize();
+        const variantId = (size==='2ml') ? it.dataset.v2 : it.dataset.v5;
+        const niceName = `${it.dataset.title} — ${size}`;
+
+        label.textContent = it.dataset.title;
+        inputNm.value = niceName;
+        inputId.value = variantId || '';
+
+        closeAll();
+      });
+    });
+  });
+
+  document.addEventListener('click', e=>{
+    if(!root.contains(e.target)) closeAll();
+  });
+
+  updateAvailability();
+})();
+</script>

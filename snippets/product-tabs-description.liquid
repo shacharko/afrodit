@@ -1,0 +1,13 @@
+<div class="product-tabs__tab-column">
+  <div class="product-tabs__tab-text-container">
+    {%- unless block.settings.heading == blank -%}
+      <{{ block.settings.heading_tag }} class="product-tabs__tab-heading ff-heading {{ block.settings.heading_font_class }}">
+        {{ block.settings.heading }}
+      </{{ block.settings.heading_tag }}>
+    {%- endunless -%}
+
+    <div class="product-tabs__tab-text ff-body {{ block.settings.text_font_class }} rte">
+      {{ product.description }}
+    </div>
+  </div>
+</div>

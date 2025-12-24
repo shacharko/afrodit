@@ -1,0 +1,28 @@
+{%- liquid
+  capture custom_swatch_color_maps
+    render 'get-custom-swatch-color-maps'
+  endcapture
+
+  assign custom_color_key_map = custom_swatch_color_maps | split: ' | ' | first | split: ','
+  assign custom_color_value_map = custom_swatch_color_maps | split: ' | ' | last | split: ','
+-%}
+
+{%- if product -%}
+  <div
+    data-section-type="recently-viewed-item"
+    data-recently-viewed-item
+  >
+    <div
+      class="recently-viewed__product-item recently-viewed-products__slide carousel__slide swiper-slide"
+      data-slide
+    >
+      {% render 'product-item',
+        prod: product,
+        aspect_ratio: settings.product_listing_aspect_ratio,
+        product_columns_desktop: '3',
+        custom_color_key_map: custom_color_key_map,
+        custom_color_value_map: custom_color_value_map
+      %}
+    </div>
+  </div>
+{%- endif -%}

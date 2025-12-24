@@ -1,0 +1,235 @@
+{%- assign head_note_single   = product.metafields.custom.head_note.value -%}
+{%- assign middle_note_single = product.metafields.custom.middle_note.value -%}
+{%- assign base_note_single   = product.metafields.custom.base_note.value -%}
+
+{%- assign head_notes_plural_original   = product.metafields.custom.head_notes.value   | default: '' -%}
+{%- assign middle_notes_plural_original = product.metafields.custom.middle_notes.value | default: '' -%}
+{%- assign base_notes_plural_original   = product.metafields.custom.base_notes.value   | default: '' -%}
+
+{%- comment -%}
+  ניקוי מחרוזות כמו ["Yuzu", "Ozone"] או טקסט פשוט
+{%- endcomment -%}
+
+{%- assign clean_head = head_notes_plural_original
+  | replace: '[', ''
+  | replace: ']', ''
+  | replace: '"', ''
+  | replace: ', ', ','
+  | strip
+-%}
+{%- if clean_head != '' -%}
+  {%- if clean_head contains ',' -%}
+    {%- assign head_notes_list = clean_head | split: ',' -%}
+  {%- else -%}
+    {%- assign head_notes_list = clean_head | split: ' ' -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign head_notes_list = '' | split: ',' -%}
+{%- endif -%}
+
+{%- assign clean_middle = middle_notes_plural_original
+  | replace: '[', ''
+  | replace: ']', ''
+  | replace: '"', ''
+  | replace: ', ', ','
+  | strip
+-%}
+{%- if clean_middle != '' -%}
+  {%- if clean_middle contains ',' -%}
+    {%- assign middle_notes_list = clean_middle | split: ',' -%}
+  {%- else -%}
+    {%- assign middle_notes_list = clean_middle | split: ' ' -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign middle_notes_list = '' | split: ',' -%}
+{%- endif -%}
+
+{%- assign clean_base = base_notes_plural_original
+  | replace: '[', ''
+  | replace: ']', ''
+  | replace: '"', ''
+  | replace: ', ', ','
+  | strip
+-%}
+{%- if clean_base != '' -%}
+  {%- if clean_base contains ',' -%}
+    {%- assign base_notes_list = clean_base | split: ',' -%}
+  {%- else -%}
+    {%- assign base_notes_list = clean_base | split: ' ' -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign base_notes_list = '' | split: ',' -%}
+{%- endif -%}
+
+{%- if head_note_single or middle_note_single or base_note_single -%}
+<div class="aroma-notes">
+  <h2 class="aroma-title">תווים ארומטיים</h2>
+
+  <div class="aroma-grid">
+
+    {%- assign groups = 'Head Notes|Heart Notes|Base Notes' | split: '|' -%}
+
+    {%- for label in groups -%}
+      {%- if label == 'Head Notes' -%}
+        {%- assign main = head_note_single -%}
+        {%- assign list = head_notes_list -%}
+      {%- elsif label == 'Heart Notes' -%}
+        {%- assign main = middle_note_single -%}
+        {%- assign list = middle_notes_list -%}
+      {%- elsif label == 'Base Notes' -%}
+        {%- assign main = base_note_single -%}
+        {%- assign list = base_notes_list -%}
+      {%- endif -%}
+
+      <div class="aroma-col">
+        <div class="aroma-label">{{ label }}</div>
+
+        {%- if main != blank -%}
+          <div class="aroma-main">
+            {%- if main.note_image -%}
+              <img
+                src="{{ main.note_image | image_url: width: 120 }}"
+                alt="{{ main.hebrew_name | default: main.note_name | default: main.title }}"
+                class="aroma-img"
+              >
+            {%- endif -%}
+            <div class="aroma-main-name">
+              {{ main.title | default: main.name | default: main.note_name }}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if list and list.size > 0 and list.first != '' -%}
+          <div class="aroma-sub">
+            {%- for note in list -%}
+              {%- assign note_clean = note | strip -%}
+              {%- if note_clean != '' -%}
+                {%- unless forloop.first -%}
+                  <span class="aroma-sep-icon">
+                    <svg viewBox="0 0 20 20" width="11" height="11" aria-hidden="true">
+                      <path d="M10.5 1.5C7 4 5 7.5 5 10c0 3 2 5 5 5s5-2 5-5c0-2.5-2-6-4.5-8.5zM8 12c.8.8 2.2.8 3 0"
+                        stroke="#b6b6b6" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                {%- endunless -%}
+                <span class="aroma-sub-item">{{ note_clean }}</span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+      </div>
+    {%- endfor -%}
+
+  </div>
+</div>
+{%- endif -%}
+
+<style>
+/* Wrapper */
+.aroma-notes {
+  padding: 0;
+  margin: 0 auto;
+  background: transparent;
+  text-align: center;
+  max-width: 900px;
+}
+
+/* Title */
+.aroma-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 4px 0 10px;
+}
+
+/* Grid – 3 columns, גם במובייל */
+.aroma-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 28px;
+}
+
+.aroma-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Label */
+.aroma-label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+/* Main note */
+.aroma-main {
+  margin-top: 4px;
+}
+
+.aroma-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  object-fit: cover;
+  margin-bottom: 6px;
+}
+
+.aroma-main-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Sub notes row (שורה שלישית) */
+.aroma-sub {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.aroma-sep-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  opacity: 0.8;
+}
+
+.aroma-sub-item {
+  font-size: 14px;
+}
+
+/* Mobile – שלוש עמודות בשורה אחת, ללא שורה שלישית */
+@media (max-width: 768px) {
+  .aroma-notes {
+    max-width: 100%;
+  }
+
+  .aroma-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .aroma-grid {
+    column-gap: 12px;
+  }
+
+  .aroma-img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 4px;
+  }
+
+  .aroma-main-name {
+    font-size: 14px;
+  }
+
+  /* במובייל – מסתירים את שורת התווים המשניים */
+  .aroma-sub {
+    display: none;
+  }
+}
+</style>

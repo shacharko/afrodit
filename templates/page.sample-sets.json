@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_hero_MmDQFf": {
+      "type": "image-hero",
+      "blocks": {
+        "heading_xnwHty": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-3"
+          }
+        },
+        "text_gyjzKK": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_font_class": "fs-body-200"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xnwHty",
+        "text_gyjzKK"
+      ],
+      "name": "t:sections.image_hero.presets.name",
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 60,
+        "mobile_height": 65,
+        "image": "shopify://shop_images/3876cc50-7a07-4953-8dfe-096ead431441.png",
+        "image_mobile": "shopify://shop_images/3876cc50-7a07-4953-8dfe-096ead431441.png",
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 40,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "rich_text_UkTXUt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_94iM3c": {
+          "type": "heading",
+          "settings": {
+            "title": "מארזי היכרות - הצעד הראשון אל עולמות הניחוחות",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-3-base"
+          }
+        },
+        "text_tEfyPL": {
+          "type": "text",
+          "settings": {
+            "text": "<h5><strong>כל מותג מביא עמו סיפור, סגנון וייחודיות משלו – ועכשיו אפשר לגלות את כולם בקלות ובחוויה אחת.<br/><br/>בקולקציית מארזי ההיכרות שלנו, הכוללת מגוון מותגים, יצרנו חוויה מושלמת של גילוי – מארזים מעוצבים בקפידה, שמאפשרים להתנסות, לגלות ולהתחבר לניחוחות שמגדירים את האופי והסטייל של כל מותג.<br/><br/>כל מארז מגיע עם 5 ניחוחות נבחרים לבחירתכם, כך שתוכלו לחוות את העומק והעושר של כל מותג בדרך אישית ומדויקת.<br/><br/>כל מארז הוא מסע חושי של גילוי – חוויה שמחברת בין החושים לנשמה, מעניקה תחושת נוכחות, ביטחון ועונג בכל רגע, ומזמינה אתכם לגלות את היוקרה, ההשראה והסגנון שמאפיינים כל מותג.<br/><br/>בחרו את מארז ההיכרות שמתאים לכם מכל מותג, ותנו לניחוחות המגוונים להוביל אתכם למסע חושי עמוק, יוקרתי ובלתי נשכח.</strong></h5>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "heading_94iM3c",
+        "text_tEfyPL"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-only",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "brands_logos_mo_UBBhER": {
+      "type": "brands-logos-MO",
+      "name": "Brands logos grid-MO-",
+      "settings": {}
+    }
+  },
+  "order": [
+    "image_hero_MmDQFf",
+    "rich_text_UkTXUt",
+    "brands_logos_mo_UBBhER"
+  ]
+}

@@ -1,0 +1,265 @@
+{% comment %}
+UGC Carousel — Fixed Center + Smooth Circular Motion + RTL Support
+{% endcomment %}
+
+{% if request.locale.iso_code contains 'he' or request.locale.iso_code contains 'ar' %}
+  <section class="ugc-carousel section-{{ section.id }}" dir="rtl">
+{% else %}
+  <section class="ugc-carousel section-{{ section.id }}" dir="ltr">
+{% endif %}
+
+  {% if section.settings.title != blank %}
+    <h2 class="ugc-title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  <div class="ugc-wrapper">
+    <button class="ugc-nav ugc-prev" aria-label="{{ 'general.previous' | t }}">‹</button>
+
+    <div class="ugc-stage">
+      {% for block in section.blocks %}
+        {%- assign thumb = block.settings.poster | default: block.settings.image -%}
+        <div class="ugc-card" {{ block.shopify_attributes }}>
+          <div class="ugc-media">
+            {%- if thumb -%}
+              {%- assign alt_text = block.settings.caption | default: '' | escape -%}
+              {{ thumb | image_url: width: 1000 | img_tag: alt_text, 'ugc-thumb' }}
+            {%- endif -%}
+
+            {%- if block.settings.video_url != blank -%}
+              <video class="ugc-video" playsinline muted preload="none"
+                     {% if thumb %}poster="{{ thumb | image_url: width: 1000 }}"{% endif %}>
+                <source src="{{ block.settings.video_url }}" type="video/mp4">
+              </video>
+              <button type="button" class="ugc-play" aria-label="Play">▶</button>
+            {%- endif -%}
+          </div>
+
+          <div class="ugc-overlay">
+            {% if block.settings.caption %}
+              <div class="ovl-caption">{{ block.settings.caption }}</div>
+            {% endif %}
+            <div class="ovl-stars" aria-label="{{ block.settings.rating }} מתוך 5">
+              {% for i in (1..5) %}
+                {% if i <= block.settings.rating %}
+                  <svg class="star star--full" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.85L18.18 22 12 18.9 5.82 22 7 14.12l-5-4.85 6.91-1.01L12 2z"/></svg>
+                {% else %}
+                  <svg class="star star--empty" viewBox="0 0 24 24"><path d="M22 9.27l-7.19-1.01L12 2 9.19 8.26 2 9.27l5.46 5.09L5.82 22 12 18.9 18.18 22l-1.64-7.64L22 9.27z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                {% endif %}
+              {% endfor %}
+            </div>
+            {% if block.settings.bottom_text %}
+              <div class="ovl-date">{{ block.settings.bottom_text }}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <button class="ugc-nav ugc-next" aria-label="{{ 'general.next' | t }}">›</button>
+  </div>
+</section>
+
+<style>
+.section-{{ section.id }}{
+  text-align:center; overflow:hidden; position:relative; padding:28px 0;
+}
+.section-{{ section.id }} .ugc-title{
+  font-size:clamp(18px,2.2vw,24px);
+  margin-bottom:22px; font-weight:700;
+}
+.section-{{ section.id }} .ugc-wrapper{
+  position:relative; display:flex; align-items:center; justify-content:center;
+}
+.section-{{ section.id }} .ugc-stage{
+  position:relative; width:92%; height:540px;
+  display:flex; align-items:center; justify-content:center;
+  perspective:1000px;
+}
+
+/* כרטיס ממורכז */
+.section-{{ section.id }} .ugc-card{
+  position:absolute;
+  left:50%;
+  aspect-ratio:9/16;
+  width:230px;
+  border-radius:18px;
+  overflow:hidden;
+  background:#111;
+  transition:transform .7s cubic-bezier(.22,1,.36,1), opacity .7s ease, z-index .3s ease;
+  will-change:transform, opacity;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  opacity:0;
+}
+
+/* מדיה */
+.section-{{ section.id }} .ugc-media{ position:relative; width:100%; height:100%; }
+.section-{{ section.id }} .ugc-thumb,
+.section-{{ section.id }} .ugc-video{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; border-radius:inherit; display:block;
+}
+.section-{{ section.id }} .ugc-media::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:38%;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,.65) 100%);
+  pointer-events:none; border-bottom-left-radius:inherit; border-bottom-right-radius:inherit;
+}
+
+/* Overlay */
+.section-{{ section.id }} .ugc-overlay{
+  position:absolute; left:50%; bottom:8px; transform:translateX(-50%);
+  width:90%; color:#fff; text-align:center;
+  text-shadow:0 1px 3px rgba(0,0,0,.55);
+  pointer-events:none; z-index:10;
+}
+.section-{{ section.id }} .ovl-caption{ font-size:13px; margin-bottom:4px; }
+.section-{{ section.id }} .ovl-stars{ display:flex; gap:2px; justify-content:center; margin-bottom:2px; }
+.section-{{ section.id }} .ovl-stars .star{ width:14px; height:14px; fill:#fff; }
+.section-{{ section.id }} .ovl-stars .star--empty{ stroke:#fff; fill:none; }
+.section-{{ section.id }} .ovl-date{ font-size:11px; opacity:.9; }
+
+/* Play button */
+.section-{{ section.id }} .ugc-play{
+  position:absolute; inset:0; margin:auto; width:40px; height:40px;
+  border-radius:999px; display:grid; place-items:center;
+  background:rgba(0,0,0,.55); color:#fff; font-size:16px;
+  border:none; cursor:pointer; z-index:6;
+}
+.section-{{ section.id }} .ugc-card.playing .ugc-play{ display:none; }
+
+/* מיקומי כרטיסים */
+/* מיקומי כרטיסים — כולם סביב -50% כדי שהכל יישב סימטרי למרכז */
+.section-{{ section.id }} .pos-0  { transform:translateX(-50%) scale(1);     opacity:1;   z-index:6; animation:bounce .6s ease; }
+
+.section-{{ section.id }} .pos-1  { transform:translateX(calc(-50% + 220px))  scale(.82); opacity:.95; z-index:5; }
+.section-{{ section.id }} .pos--1 { transform:translateX(calc(-50% - 220px))  scale(.82); opacity:.95; z-index:5; }
+
+.section-{{ section.id }} .pos-2  { transform:translateX(calc(-50% + 400px))  scale(.65); opacity:.80; z-index:4; }
+.section-{{ section.id }} .pos--2 { transform:translateX(calc(-50% - 400px))  scale(.65); opacity:.80; z-index:4; }
+
+.section-{{ section.id }} .pos-far  { transform:translateX(calc(-50% + 500px))  scale(.50); opacity:.55; z-index:3; }
+.section-{{ section.id }} .pos--far { transform:translateX(calc(-50% - 500px))  scale(.50); opacity:.55; z-index:3; }
+
+
+@keyframes bounce{
+  0%{transform:translateX(-50%) scale(.94);}
+  55%{transform:translateX(-50%) scale(1.06);}
+  100%{transform:translateX(-50%) scale(1);}
+}
+
+/* חצים */
+.section-{{ section.id }} .ugc-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:36px; height:36px; border-radius:50%;
+  border:none; background:#fff;
+  box-shadow:0 6px 14px rgba(0,0,0,.12);
+  cursor:pointer; display:grid; place-items:center;
+  font-size:20px; color:#222; z-index:20;
+}
+.section-{{ section.id }}[dir="ltr"] .ugc-prev{ left:2%; }
+.section-{{ section.id }}[dir="ltr"] .ugc-next{ right:2%; }
+.section-{{ section.id }}[dir="rtl"] .ugc-prev{ right:2%; }
+.section-{{ section.id }}[dir="rtl"] .ugc-next{ left:2%; }
+
+@media (max-width: 720px){
+  .section-{{ section.id }} .ugc-card{ width:200px; }
+  .section-{{ section.id }} .pos-1  { transform:translateX(calc(-50% + 150px)) scale(.82); }
+  .section-{{ section.id }} .pos--1 { transform:translateX(calc(-50% - 150px)) scale(.82); }
+  .section-{{ section.id }} .pos-2  { transform:translateX(calc(-50% + 300px)) scale(.65); }
+  .section-{{ section.id }} .pos--2 { transform:translateX(calc(-50% - 300px)) scale(.65); }
+  .section-{{ section.id }} .pos-far  { transform:translateX(calc(-50% + 450px)) scale(.55); }
+  .section-{{ section.id }} .pos--far { transform:translateX(calc(-50% - 450px)) scale(.55); }
+}
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const root = document.querySelector('.section-{{ section.id }}');
+  if(!root) return;
+  const cards = [...root.querySelectorAll('.ugc-card')];
+  const prev  = root.querySelector('.ugc-prev');
+  const next  = root.querySelector('.ugc-next');
+  if(!cards.length) return;
+
+  function classForOffset(off){
+    if(off === 0)  return 'pos-0';
+    if(off === 1)  return 'pos-1';
+    if(off === -1) return 'pos--1';
+    if(off === 2)  return 'pos-2';
+    if(off === -2) return 'pos--2';
+    if(off > 2)    return 'pos-far';
+    if(off < -2)   return 'pos--far';
+  }
+
+  let current = 0, lastCenter = 0;
+  const rtl = root.getAttribute('dir') === 'rtl';
+
+  function update(){
+    const n = cards.length;
+    cards.forEach((card, i)=>{
+      let off = i - current;
+      if(off >  n/2) off -= n;
+      if(off < -n/2) off += n;
+
+      card.classList.remove('pos-0','pos-1','pos--1','pos-2','pos--2','pos-far','pos--far');
+      const cls = classForOffset(off);
+      card.classList.add(cls);
+
+      if(cls === 'pos-0' && i !== lastCenter){
+        card.style.animation = 'bounce .6s ease';
+        lastCenter = i;
+      } else if(cls !== 'pos-0'){
+        card.style.animation = 'none';
+      }
+
+      const playBtn = card.querySelector('.ugc-play');
+      const video = card.querySelector('.ugc-video');
+      if(playBtn && video){
+        playBtn.onclick = (e)=>{ e.stopPropagation(); card.classList.add('playing'); video.play().catch(()=>{}); };
+        card.onclick = (e)=>{
+          if(video.paused){ card.classList.add('playing'); video.play().catch(()=>{}); }
+          else { video.pause(); }
+        };
+      }
+    });
+  }
+
+  function rotate(dir){
+    const n = cards.length;
+    const step = (dir === 'next' ? 1 : -1) * (rtl ? -1 : 1);
+    current = (current + step + n) % n;
+    update();
+  }
+
+  prev.addEventListener('click',()=>rotate('prev'));
+  next.addEventListener('click',()=>rotate('next'));
+  update();
+});
+</script>
+
+{% schema %}
+{
+  "name": "UGC Carousel",
+  "settings": [
+    { "type": "text", "id": "title", "label": "כותרת", "default": "מה הלקוחות שלנו משתפים" }
+  ],
+  "blocks": [
+    {
+      "type": "ugc_item",
+      "name": "פריט UGC",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "תמונה (Thumb / אם אין פוסטר)" },
+        { "type": "image_picker", "id": "poster", "label": "תמונת פוסטר לוידאו (מומלץ)" },
+        { "type": "url", "id": "video_url", "label": "וידאו (MP4)" },
+        { "type": "range", "id": "rating", "label": "דירוג (1–5)", "min": 1, "max": 5, "default": 5 },
+        { "type": "text", "id": "caption", "label": "כיתוב קצר", "default": "משלוח מהיר ושירות מעולה" },
+        { "type": "text", "id": "bottom_text", "label": "תאריך / שם", "default": "27.09.2025" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    { "name": "UGC Carousel", "category": "Social / Reviews" }
+  ]
+}
+{% endschema %}

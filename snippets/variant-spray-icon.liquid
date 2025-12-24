@@ -1,0 +1,149 @@
+{%- comment -%}
+  variant-spray-icon.liquid
+  מציג אייקון ספריי + מספר התזות לפי הווריאנט הנבחר.
+
+  האייקון מגיע מהתיקייה assets בשם:
+  spray.png
+{%- endcomment -%}
+
+{%- if product and product.variants.size > 0 -%}
+
+  {%- assign spray_entries = shop.metaobjects['spray_info'].values | default: empty -%}
+
+  {%- assign spray_map = '{' -%}
+  {%- assign first_pair = true -%}
+
+  {%- for v in product.variants -%}
+    {%- assign count = 0 -%}
+
+    {%- comment -%} 1) מטאפילד וריאנט {%- endcomment -%}
+    {%- assign ref = v.metafields.custom.spray_info -%}
+    {%- if ref and ref.value -%}
+      {%- assign info = ref.value -%}
+      {%- assign count = info.sprays_count | default: 0 | plus: 0 -%}
+    {%- endif -%}
+
+    {%- comment -%} 2) התאמה לפי size בטבלת spray_info {%- endcomment -%}
+    {%- if count == 0 and spray_entries != empty -%}
+      {%- assign variant_size_clean = v.title | downcase | strip -%}
+      {%- for entry in spray_entries -%}
+        {%- assign entry_size = entry.size | default: entry.fields['size'].value -%}
+        {%- assign entry_size_clean = entry_size | downcase | strip -%}
+        {%- if entry_size_clean == variant_size_clean -%}
+          {%- assign count = entry.sprays_count | default: entry.fields['sprays_count'].value | plus: 0 -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- comment -%} 3) fallback לפי "5ml" → 50 התזות {%- endcomment -%}
+    {%- if count == 0 -%}
+      {%- assign title_clean = v.title
+        | replace: 'ml',''
+        | replace: 'ML',''
+        | strip
+      -%}
+      {%- assign volume_ml = title_clean | plus: 0 -%}
+      {%- if volume_ml > 0 -%}
+        {%- assign count = volume_ml | times: 10 -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if count > 0 -%}
+      {%- unless first_pair -%}
+        {%- assign spray_map = spray_map | append: ',' -%}
+      {%- endunless -%}
+      {%- assign spray_map = spray_map
+        | append: '"' | append: v.id | append: '":' | append: count
+      -%}
+      {%- assign first_pair = false -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign spray_map = spray_map | append: '}' -%}
+
+  <div class="variant-spray-indicator"
+       data-product-id="{{ product.id }}"
+       data-sprays-map='{{ spray_map }}'>
+
+    <img 
+      src="{{ 'spray.png' | asset_url }}"
+      alt="Spray Icon"
+      class="spray-icon-img"
+    >
+
+    <span class="variant-spray-count"></span>
+  </div>
+
+  <style>
+    .variant-spray-indicator {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      direction: rtl;
+      background: none;
+      padding: 0;
+      margin: 0;
+      gap: 6px;
+      font-size: 11px;
+    }
+
+    .spray-icon-img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      display: inline-block;
+    }
+
+    .variant-spray-count {
+      opacity: 0.7;
+      font-size: 12px;
+    }
+  </style>
+
+  <script>
+    (function() {
+      document.addEventListener('DOMContentLoaded', function() {
+        var indicators = document.querySelectorAll('.variant-spray-indicator');
+
+        indicators.forEach(function(indicator) {
+          var mapRaw   = indicator.getAttribute('data-sprays-map') || '{}';
+          var countEl  = indicator.querySelector('.variant-spray-count');
+          var spraysMap = {};
+
+          try {
+            spraysMap = JSON.parse(mapRaw);
+          } catch(e) {
+            spraysMap = {};
+          }
+
+          var form = indicator.closest('form');
+          if (!form || !countEl) return;
+
+          function getCurrentVariantId() {
+            var idInput =
+              form.querySelector('input[name="id"]:checked') ||
+              form.querySelector('select[name="id"]') ||
+              form.querySelector('input[name="id"]');
+            return idInput ? idInput.value : null;
+          }
+
+          function updateSprayIndicator() {
+            var vid = getCurrentVariantId();
+            if (vid && spraysMap[vid]) {
+              indicator.style.opacity = '1';
+              countEl.textContent = spraysMap[vid];
+            } else {
+              indicator.style.opacity = '0.3';
+              countEl.textContent = '';
+            }
+          }
+
+          updateSprayIndicator();
+          form.addEventListener('change', updateSprayIndicator);
+        });
+      });
+    })();
+  </script>
+
+{%- endif -%}

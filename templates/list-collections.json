@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "display_type": "selected",
+        "collection_list": [
+          "attar-al-has",
+          "bdk",
+          "borouj",
+          "byron",
+          "clive-christian",
+          "ella-k",
+          "creed",
+          "sospiro",
+          "stephane-humbert-lucas",
+          "widian",
+          "xerjoff",
+          "andy-tauer",
+          "amouage",
+          "byredo",
+          "casamorati",
+          "ducci-giardini-di-toscana",
+          "essential-parfums",
+          "ex-nihilo",
+          "fragrance-de-bois",
+          "goldfield-banks",
+          "initio",
+          "kilian-paris",
+          "juliette-has-a-gun-גולייט-הז-אה-גאן",
+          "le-labo",
+          "maison-francis-kurkdjian-paris-מייסון-פרנסיס-קורקיגן",
+          "mancera-1",
+          "marc-antoine-barrois-1",
+          "marrakech-imperial-1",
+          "matiere-premiere",
+          "memo-paris-1",
+          "montale",
+          "narciso-rodriguez-נרסיסו-רודריגז",
+          "nishane-1",
+          "parfums-de-marly-1",
+          "profumum-roma-1",
+          "roja-1",
+          "theodoros-kalotinis-תיאודורוס-קלוטיניס",
+          "zarkoperfume-זארקו-פרפיום",
+          "zoologist-1",
+          "vilhelm-parfumerie-וילהלם-פרפיומרי",
+          "escentric-molecules-אסנטריק-מולקולה",
+          "pantheon-roma-פנתאון-רומא",
+          "ipiccirilli",
+          "mes-bisous",
+          "jean-paul-gaultier",
+          "tom-ford"
+        ],
+        "columns": "5",
+        "mobile_columns": "2",
+        "rows": "5",
+        "collection_listing_aspect_ratio": "square",
+        "label_style": "beneath",
+        "overlay_title_background_style": "gradient",
+        "overlay_text_color": "#22292d",
+        "overlay_title_background": "#fcfcf9",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

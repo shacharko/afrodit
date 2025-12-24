@@ -1,0 +1,66 @@
+
+
+{% assign selected_variant = product.selected_or_first_available_variant %}
+{% assign current_brand_name = selected_variant.option1 %}
+
+<div class="product__block--product-header-inner">
+    <div class="
+      product-badges
+      product-badges--position-top
+      product-badges--position-left
+     ">
+     
+    </div>
+    
+    
+    <h1 class="product__title ff-heading fs-heading-4-base fs-heading-3-base-ns">
+        {% if current_brand_name != blank and current_brand_name != product.title %}
+            {{ current_brand_name | escape }} -Build your Sample Set
+        {% else %}
+            {{ product.title | escape }}
+        {% endif %}
+    </h1>
+
+  
+    <div class="product__vendor_and_sku" data-showing-sku="false" data-showing-vendor="true">
+        <div class="product__vendor fs-body-100 t-opacity-70">
+            <a href="{{ routes.collections_url }}/vendors?q={{ product.vendor | url_encode }}" title="{{ product.vendor | escape }}">
+                {{ product.vendor | escape }}
+            </a>
+        </div>
+        <div class="product__sku fs-body-25 t-opacity-60" data-product-sku=""></div>
+    </div>
+    
+   
+    <div class="product__price-and-ratings" data-show-product-rating="false">
+       <div class="product__price fs-body-100">
+                <span class="visually-hidden" data-compare-text="">מחיר רגיל</span>
+         <s data-compare-price="">
+                    {% if selected_variant.compare_at_price > selected_variant.price %}
+                        {{ selected_variant.compare_at_price | money }}
+                    {% endif %}
+                </s>
+         <span data-price="">
+           {{ selected_variant.price | money }}
+                </span>
+                <span data-discount-display="" class="product__price-displayed-discount fs-body-50"></span>
+                <dl data-unit-price-container="" class="unit-price">
+                   <dt>
+                      <span class="visually-hidden visually-hidden--inline">מחיר ליחידה</span>
+                   </dt>
+                   <dd class="unit-price__price">
+                        <span data-unit-price=""></span>
+                        <span aria-hidden="true">/</span>
+                        <span class="visually-hidden">לכל&nbsp;</span>
+                        <span data-unit-base="">
+                            <span data-unit-price-base-unit=""></span>
+                        </span>
+                   </dd>
+                </dl>
+            </div>
+    </div>
+    
+   
+    
+  
+</div>

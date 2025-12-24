@@ -1,0 +1,197 @@
+<div class="newsletter-rtl-custom" dir="rtl">
+  <style>
+    #shopify-section-{{ section.id }} {
+      background: {{ section.settings.background_color }};
+      color: {{ section.settings.text_color }};
+    }
+
+    #shopify-section-{{ section.id }} .nl-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 16px;
+      text-align: right;
+    }
+
+    #shopify-section-{{ section.id }} .nl-title {
+      font-size: 22px;
+      margin-bottom: 28px;
+    }
+
+    /* === MAIN ROW === */
+    #shopify-section-{{ section.id }} .nl-row {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    /* RIGHT COLUMN (email + checkbox) */
+    #shopify-section-{{ section.id }} .nl-col-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #shopify-section-{{ section.id }} .nl-email {
+      border: none;
+      border-bottom: 2px solid #000;
+      padding: 12px 0;
+      background: transparent;
+      text-align: right;
+      margin-bottom: 12px;
+    }
+
+    /* checkbox UNDER email, right aligned */
+    #shopify-section-{{ section.id }} .nl-consent {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      justify-content: flex-start;
+    }
+
+    #shopify-section-{{ section.id }} .nl-consent input {
+      margin: 0;
+    }
+
+    #shopify-section-{{ section.id }} .nl-consent a {
+      text-decoration: underline;
+      color: inherit;
+      white-space: nowrap;
+    }
+
+    /* LEFT COLUMN (button) */
+    #shopify-section-{{ section.id }} .nl-col-left {
+      flex: 0 0 auto;
+    }
+
+    #shopify-section-{{ section.id }} .nl-button {
+      min-width: 220px;
+      height: 54px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      #shopify-section-{{ section.id }} .nl-row {
+        flex-direction: column;
+      }
+
+      #shopify-section-{{ section.id }} .nl-button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <div class="nl-wrap">
+    <div class="nl-title">
+      {{ section.settings.heading_text }}
+    </div>
+
+    <form method="post" action="/contact#newsletter" accept-charset="UTF-8">
+      <input type="hidden" name="form_type" value="customer">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <input type="hidden" name="customer[accepts_marketing]" value="true">
+
+      <div class="nl-row">
+        <!-- RIGHT -->
+        <div class="nl-col-right">
+          <input
+            class="nl-email"
+            type="email"
+            name="contact[email]"
+            placeholder="{{ section.settings.email_placeholder }}"
+            required
+          >
+
+          <label class="nl-consent">
+            <input type="checkbox" {% if section.settings.consent_required %}required{% endif %}>
+            <span>
+              {{ section.settings.consent_text }}
+              <a href="{{ section.settings.privacy_link_url }}" target="_blank">
+                {{ section.settings.privacy_link_label }}
+              </a>
+            </span>
+          </label>
+        </div>
+
+        <!-- LEFT -->
+        <div class="nl-col-left">
+          <button type="submit" class="nl-button">
+            {{ section.settings.button_label }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter RTL (Custom)",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "כותרת",
+      "default": "הרשמו לניוזלטר שלנו וקבלו מתנה בלעדית ברכישה הראשונה."
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Placeholder לאימייל",
+      "default": "האימייל שלך"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "טקסט כפתור",
+      "default": "הרשמה"
+    },
+    {
+      "type": "checkbox",
+      "id": "consent_required",
+      "label": "צ׳קבוקס חובה",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "consent_text",
+      "label": "טקסט צ׳קבוקס",
+      "default": "אני רוצה לקבל עדכונים"
+    },
+    {
+      "type": "text",
+      "id": "privacy_link_label",
+      "label": "טקסט קישור",
+      "default": "מדיניות פרטיות"
+    },
+    {
+      "type": "url",
+      "id": "privacy_link_url",
+      "label": "קישור למדיניות פרטיות"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "צבע רקע",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "צבע טקסט",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter RTL (Custom)"
+    }
+  ]
+}
+{% endschema %}

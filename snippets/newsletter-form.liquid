@@ -1,0 +1,143 @@
+{% comment %}
+  Renders a newsletter signup form.
+
+  Required parameters:
+    - base_class: { String } A "prefix" to scope classes for the form and various elements.
+    - form_id: { String } A unique ID that's used for the form and input IDs.
+    - success_msg: { String } The success message for the form.
+
+  Optional parameters:
+    - additional_form_classes: { String } Classes to apply to the form.
+    - button_label: { String } The label for the submit button.
+    - custom_button: { Boolean } Whether to use a custom "floating" button or the dedicated "button-block" snippet.
+    - custom_button_class: { String } A class for the custom button.
+    - custom_button_id: { String } An ID for custom button.
+    - custom_button_label: { String } The label for the custom button.
+    - enable_collect_customer_name: { Boolean } Whether to include first and last name fields.
+    - form_tags: { String: 'newsletter' } Tags to submit with the form.
+{% endcomment %}
+
+{% liquid
+  assign form_class = base_class | append: '-form'
+  assign additional_form_classes = additional_form_classes | default: ''
+
+  if additional_form_classes != ''
+    assign form_class = form_class | append: ' ' | append: additional_form_classes
+  endif
+
+  assign button_wrapper_class = base_class | append: '-button'
+  assign form_tags = form_tags | default: 'newsletter'
+  assign success_msg = success_msg | default: 'general.newsletter_form.confirmation' | t
+%}
+
+{% form 'customer', class: form_class, id: form_id %}
+  {% render 'form-status', form: form, form_id: form_id, success_message: success_msg %}
+
+  {% unless form.posted_successfully? %}
+    <div class="{{ base_class }}-inner">
+      <input type="hidden" name="contact[tags]" value="{{ form_tags }}">
+
+      {% if enable_collect_customer_name %}
+        <div class="{{ base_class }}-name">
+          <label for="{{ form_id }}-first-name" class="visually-hidden">
+            {{ 'general.newsletter_form.first_name_placeholder' | t }}
+          </label>
+
+          <input
+            type="text"
+            class="input {{ base_class }}-input"
+            name="contact[first_name]"
+            id="{{ form_id }}-first-name"
+            value="{% if customer.first_name != blank %}{{ customer.first_name }}{% endif %}"
+            placeholder="{{ 'general.newsletter_form.first_name_placeholder' | t }}"
+            autocorrect="off"
+            autocapitalize="off"
+            required
+          >
+
+          <label for="{{ form_id }}-last-name" class="visually-hidden">
+            {{ 'general.newsletter_form.last_name_placeholder' | t }}
+          </label>
+
+          <input
+            type="text"
+            class="input {{ base_class }}-input"
+            name="contact[last_name]"
+            id="{{ form_id }}-last-name"
+            value="{% if customer.last_name != blank %}{{ customer.last_name }}{% endif %}"
+            placeholder="{{ 'general.newsletter_form.last_name_placeholder' | t }}"
+            autocorrect="off"
+            autocapitalize="off"
+            required
+          >
+        </div>
+      {% endif %}
+
+      <div class="{{ base_class }}-email">
+        <label for="{{ form_id }}-email" class="visually-hidden">
+          {{ 'general.newsletter_form.email_placeholder' | t }}
+        </label>
+
+        <input
+          type="email"
+          class="input {{ base_class }}-input"
+          name="contact[email]"
+          id="{{ form_id }}-email"
+          value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+          placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+          autocorrect="off"
+          autocapitalize="off"
+          required
+        >
+
+        {% if custom_button %}
+          {%- comment -%} טפסים אחרים שמשתמשים ב-custom_button - נשארים כמו במקור {%- endcomment -%}
+          <button type="submit" name="commit" id="{{ custom_button_id }}" class="{{ custom_button_class }}">
+            {{ custom_button_label }}
+          </button>
+        {% else %}
+          {%- comment -%}
+            בפוטר (footer__newsletter) הכפתור משתמש במחלקות של "הוסף לסל".
+            במקומות אחרים נשמרת הקריאה המקורית עם is_full + is_overlay.
+          {%- endcomment -%}
+          {% if base_class == 'footer__newsletter' %}
+            {% render 'button-block',
+              wrapper_class: button_wrapper_class,
+              label: button_label,
+              allow_linkless: true,
+              type: 'submit',
+              button_style: 'product-form__cart-submit btn--medium btn--full btn--primary'
+            %}
+          {% else %}
+            {% render 'button-block',
+              wrapper_class: button_wrapper_class,
+              label: button_label,
+              is_full: true,
+              is_overlay: true,
+              allow_linkless: true,
+              type: 'submit'
+            %}
+          {% endif %}
+        {% endif %}
+      </div>
+
+      {%- comment -%} צ'קבוקס אישור – רק בפוטר {%- endcomment -%}
+      {% if base_class == 'footer__newsletter' %}
+        <div class="footer__newsletter-consent">
+          <label for="{{ form_id }}-marketing-consent">
+            <input
+              type="checkbox"
+              id="{{ form_id }}-marketing-consent"
+              name="marketing_opt_in"
+              required
+            >
+            אני מאשר/ת קבלת דואר פרסומי
+          </label>
+        </div>
+      {% endif %}
+    </div>
+  {% endunless %}
+{% endform %}
+
+
+

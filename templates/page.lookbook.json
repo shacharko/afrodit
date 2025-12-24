@@ -1,0 +1,803 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "image-with-text-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_size": 200,
+            "image_size_mobile": 200
+          }
+        },
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>'24 Collection</p>",
+            "text_font_class": "fs-body-200"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Lookbook",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This lookbook explores the pieces you’ll find in our collection right now and what’s to come as we move through the season. </p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop Collection",
+            "button_style": "btn--secondary"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "text-1",
+        "heading",
+        "text-2",
+        "button"
+      ],
+      "settings": {
+        "image_position": "right",
+        "aspect_ratio": "portrait",
+        "focal_point": "center",
+        "image_caption": "",
+        "text_alignment": "center",
+        "show_small_image": true,
+        "image_small_focal_point": "top",
+        "background_color": "#f7f7e8",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "rich-text-1": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 48
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Undeniably Fresh silhouettes",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Here are some of the best pieces for a new take on dressing. Styled correctly, these dresses can be worn in all seasons.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "button": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "link_text": "Shop the collection",
+            "button_style": "btn--callout"
+          }
+        }
+      },
+      "block_order": [
+        "spacer",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "gallery_carousel-1": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Selena wears the Oia Dress",
+            "text": ""
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Julia wears the Bea Blazer",
+            "text": ""
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Julia wears the Bromley Bralette",
+            "text": ""
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Sarah wears the Evelyn Trench",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3",
+        "image-4"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "columns": "2",
+        "mobile_columns": "1",
+        "loop_carousel": true,
+        "aspect_ratio": "portrait",
+        "image_caption_size": "fs-body-100",
+        "image_caption_style": "beneath",
+        "overlay_text_background_style": "gradient",
+        "overlay_text_color": "#ffffff",
+        "overlay_text_background": "#000000",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "complete-the-look-1": {
+      "type": "complete-the-look",
+      "blocks": {
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-4": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2",
+        "product-3",
+        "product-4"
+      ],
+      "settings": {
+        "video_loop": true,
+        "video_controls": false,
+        "image_position": "right",
+        "aspect_ratio": "natural",
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "button_style": "btn--callout",
+        "product_image_size": "medium",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi-column": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "natural",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Julia wearing the Glimmer Dress",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-200",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Shop this dress",
+            "button_style": "btn--callout"
+          }
+        }
+      },
+      "block_order": [
+        "image_column"
+      ],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "large",
+        "columns": "1",
+        "column_spacing": 28,
+        "row_spacing": 28,
+        "column_alignment": "center",
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 20,
+        "column_alignment_mobile": "center",
+        "background_behind_columns": false,
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "gallery_carousel-2": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Sarah wears the Sherling Jacket in Brown.",
+            "text": ""
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Julia wears the Evie Blazer in Chestnut.",
+            "text": ""
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Julia wears the Dakota Skirt in Noir Sequin.",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "columns": "2",
+        "mobile_columns": "1",
+        "loop_carousel": true,
+        "aspect_ratio": "portrait",
+        "image_caption_size": "fs-body-100",
+        "image_caption_style": "beneath",
+        "overlay_text_background_style": "gradient",
+        "overlay_text_color": "#ffffff",
+        "overlay_text_background": "#000000",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "rich-text-2": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 48
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Elegant Evening Wear",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Here are some of the best Lola pieces for a new take on evening wear. Styled correctly, these can be worn in all seasons.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "button": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "link_text": "Shop the collection",
+            "button_style": "btn--callout"
+          }
+        }
+      },
+      "block_order": [
+        "spacer",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "gallery_carousel-3": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Lidia wears the Chloe Dress in Coffee.",
+            "text": ""
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Julia wears the Isabella Dress in Water Floral.",
+            "text": ""
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Lindsey wears the Stella Jumpsuit in Noir.",
+            "text": ""
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Lidia wears the Magnolia Top in Noir.",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3",
+        "image-4"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "columns": "2",
+        "mobile_columns": "1",
+        "loop_carousel": true,
+        "aspect_ratio": "portrait",
+        "image_caption_size": "fs-body-100",
+        "image_caption_style": "beneath",
+        "overlay_text_background_style": "gradient",
+        "overlay_text_color": "#ffffff",
+        "overlay_text_background": "#000000",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "complete-the-look-2": {
+      "type": "complete-the-look",
+      "blocks": {
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-5": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2",
+        "product-3",
+        "product-5"
+      ],
+      "settings": {
+        "video_loop": true,
+        "video_controls": false,
+        "image_position": "left",
+        "aspect_ratio": "natural",
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "button_style": "btn--callout",
+        "product_image_size": "medium",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "rich-text-3": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": 48
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Lace With Anything",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our lace looks brings elegance and beauty to any look. Easily pair it with jeans, or a beautiful skirt. Styled correctly, these can be worn in all seasons.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "button": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "link_text": "Shop the collection",
+            "button_style": "btn--callout"
+          }
+        },
+        "spacer-2": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        }
+      },
+      "block_order": [
+        "spacer-1",
+        "heading",
+        "text",
+        "button",
+        "spacer-2"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "shoppable-image": {
+      "type": "shoppable-image",
+      "blocks": {
+        "hotspot-1": {
+          "type": "hotspot",
+          "settings": {
+            "product_item": "",
+            "horizontal_position": 34,
+            "vertical_position": 68
+          }
+        },
+        "hotspot-2": {
+          "type": "hotspot",
+          "settings": {
+            "product_item": "",
+            "horizontal_position": 50,
+            "vertical_position": 50
+          }
+        }
+      },
+      "block_order": [
+        "hotspot-1",
+        "hotspot-2"
+      ],
+      "settings": {
+        "aspect_ratio": "natural",
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "button_style": "btn--secondary",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-bottom-only"
+      }
+    },
+    "complete-the-look-3": {
+      "type": "complete-the-look",
+      "blocks": {
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-4": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2",
+        "product-3",
+        "product-4"
+      ],
+      "settings": {
+        "video_loop": true,
+        "video_controls": false,
+        "image_position": "left",
+        "aspect_ratio": "natural",
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "button_style": "btn--callout",
+        "product_image_size": "medium",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "image-with-text-2": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Meet the designer",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "subheading": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Use these sections to promote a particular feature with editorial photography",
+            "subheading_tag": "h3",
+            "subheading_font_class": "fs-heading-5-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This self-taught designer brings a balance of sophisticated femininity, with dark accords & a nod to her personal style.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Read more",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "subheading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_position": "right",
+        "aspect_ratio": "natural",
+        "focal_point": "center",
+        "image_caption": "",
+        "text_alignment": "center",
+        "show_small_image": false,
+        "image_small_focal_point": "center",
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "rich-text-4": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thanks for watching.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_size": 260,
+            "image_size_mobile": 200
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop Collection",
+            "button_style": "btn--primary"
+          }
+        },
+        "spacer-2": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        }
+      },
+      "block_order": [
+        "spacer-1",
+        "text",
+        "image",
+        "heading",
+        "button",
+        "spacer-2"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image-with-text-1",
+    "rich-text-1",
+    "gallery_carousel-1",
+    "complete-the-look-1",
+    "multi-column",
+    "gallery_carousel-2",
+    "rich-text-2",
+    "gallery_carousel-3",
+    "complete-the-look-2",
+    "rich-text-3",
+    "shoppable-image",
+    "complete-the-look-3",
+    "image-with-text-2",
+    "rich-text-4"
+  ]
+}

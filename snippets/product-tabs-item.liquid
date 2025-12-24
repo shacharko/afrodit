@@ -1,0 +1,40 @@
+{%- liquid
+  capture item_content
+    case block.type
+      when 'product_description'
+        render 'product-tabs-description', block: block
+      when 'one_column'
+        assign desktop_columns = 1
+        render 'product-tabs-column', block: block, column_index: 1, desktop_columns: desktop_columns
+      when 'two_column_tab'
+        assign desktop_columns = 2
+        render 'product-tabs-column', block: block, column_index: 1, desktop_columns: desktop_columns
+        render 'product-tabs-column', block: block, column_index: 2, desktop_columns: desktop_columns
+      when 'three_column_tab'
+        assign desktop_columns = 3
+        render 'product-tabs-column', block: block, column_index: 1, desktop_columns: desktop_columns
+        render 'product-tabs-column', block: block, column_index: 2, desktop_columns: desktop_columns
+        render 'product-tabs-column', block: block, column_index: 3, desktop_columns: desktop_columns
+    endcase
+  endcapture
+-%}
+
+{%- if item_content != blank -%}
+  <div
+    class="
+      product-tabs__tab-item-content
+      product-tabs__tab-item-content--vertical-alignment-{{ block.settings.content_vertical_alignment }}
+    "
+    style="
+      --grid-columns-desktop: {{ desktop_columns }};
+      --grid-gap-column-desktop: {{ block.settings.column_spacing | default: 28 }}px;
+      {%- if block.settings.text_max_width != blank and block.settings.content_width == 'custom' -%}
+        --text-max-width: {{ block.settings.text_max_width }}px;
+      {%- else -%}
+        --text-max-width: 100%;
+      {%- endif -%}
+    "
+  >
+    {{ item_content }}
+  </div>
+{%- endif -%}

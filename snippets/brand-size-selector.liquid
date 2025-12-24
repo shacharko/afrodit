@@ -1,0 +1,48 @@
+{%- comment -%}
+  Snippet: brand-size-selector
+  בחירת גודל (2ml/5ml) המשפיעה על כל הדוגמיות.
+{%- endcomment -%}
+
+{%- liquid
+  assign size_option_name = size_option_name | default: 'Size'
+  assign default_size = default_size | default: '2ml'
+  assign enable_size2 = enable_size2
+  if enable_size2 == nil
+    assign enable_size2 = true
+  endif
+  assign size2 = size2 | default: '5ml'
+-%}
+
+<div class="product-form-block" id="brand-size-selector">
+  <div class="product-form-block__label fs-body-75">{{ size_option_name }}</div>
+  <div class="brand-size-selector__options" role="radiogroup">
+    <label class="radio">
+      <input type="radio" name="brand-size" value="{{ default_size }}" checked>
+      <span>{{ default_size }}</span>
+    </label>
+    {%- if enable_size2 -%}
+    <label class="radio">
+      <input type="radio" name="brand-size" value="{{ size2 }}">
+      <span>{{ size2 }}</span>
+    </label>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (function(){
+    const root = document.getElementById('brand-size-selector');
+    if(!root) return;
+    root.addEventListener('change', function(e){
+      if(e.target && e.target.name === 'brand-size'){
+        window.dispatchEvent(new CustomEvent('brand-size:change', { detail: { size: e.target.value }}));
+      }
+    });
+    const checked = root.querySelector('input[name="brand-size"]:checked');
+    window.dispatchEvent(new CustomEvent('brand-size:change', { detail: { size: checked ? checked.value : '{{ default_size }}' }}));
+  })();
+</script>
+
+<style>
+  #brand-size-selector .radio{ display:inline-flex; gap:6px; align-items:center; margin-inline-end:10px; cursor:pointer; }
+</style>

@@ -1,0 +1,404 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.zodiac.json",
+  "context": {
+    "market": "il"
+  },
+  "sections": {
+    "image_hero_m_D9C6t": {
+      "type": "image-hero-m",
+      "disabled": false,
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "paragraph-1a3da26826bc328caa8c1927ac681023": null,
+        "image": "shopify://shop_images/front-view-transparent-bottle-fragrance-isolated-white-wall.jpg",
+        "image_mobile": null,
+        "focal_point": "image_presentation",
+        "mobile_focal_point": "image_presentation",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "header-23441951b8bc9373fedcbb3235a6d8f1": null,
+        "text_color": "#FFFFFF",
+        "button_background_color": "#FFFFFF",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 40,
+        "header-e14ccb5b6bc348c4223103d907beaded": null,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      },
+      "blocks": {
+        "accent_4Wzzy": {
+          "type": "accent",
+          "disabled": false,
+          "settings": {
+            "accent": "הבושם שלך לפי המזל"
+          }
+        },
+        "heading_wxEya": {
+          "type": "heading",
+          "disabled": false,
+          "settings": {
+            "title": "מזל החודש",
+            "heading_tag": "h2",
+            "paragraph-00b4a88f45fd218ef72da379f981b876": null,
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text_LmGmR": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text": "<p>Use these sections to promote a particular feature with editorial photography.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "accent_4Wzzy",
+        "heading_wxEya",
+        "text_LmGmR"
+      ],
+      "name": "t:sections.image_hero.presets.name"
+    },
+    "main": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "multi_column_fh4Ya": {
+      "type": "multi-column",
+      "disabled": false,
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "paragraph-4c93e5c6c22826dba637528767e78074": null,
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "header-2396ef3e7182d466c158e5d337bf6ba8": null,
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "header-e42eb1568ec3307614fc85343956a5a4": null,
+        "columns": "2",
+        "column_spacing": 28,
+        "row_spacing": 28,
+        "column_alignment": "left",
+        "header-2fe8f5bc0d78018e2a7ec68a9bc5469a": null,
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 20,
+        "column_alignment_mobile": "left",
+        "header-77a5782435ae7c31c35a30d4acc70ccd": null,
+        "background_behind_columns": false,
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#FFFFFF",
+        "header-370cf699f512cd9135d987888cbd7ebf": null,
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      },
+      "blocks": {
+        "icon_column_wzbyJ": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 100,
+            "icon_width_mobile": 50,
+            "custom_icon_image": "shopify://shop_images/aries-img.png",
+            "header-e3761e0861117d654fc13f93a4ab340e": null,
+            "accent": "",
+            "heading": "טלה (Aries)",
+            "heading_tag": "h3",
+            "paragraph-d6a097406e8b965f2494310c0c44d85f": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "shopify://collections/aries",
+            "link_text": "גלו את הבשמים",
+            "button_style": "btn--secondary"
+          }
+        },
+        "icon_column_TMr9h": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": "shopify://shop_images/libra.png",
+            "header-e3761e0861117d654fc13f93a4ab340e": null,
+            "accent": "",
+            "heading": "מאזניים (Libra)",
+            "heading_tag": "h3",
+            "paragraph-d6a097406e8b965f2494310c0c44d85f": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_YWqy7": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-e3761e0861117d654fc13f93a4ab340e": null,
+            "accent": "",
+            "heading": "שור (Taurus)",
+            "heading_tag": "h3",
+            "paragraph-d6a097406e8b965f2494310c0c44d85f": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_TVFfm": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-e3761e0861117d654fc13f93a4ab340e": null,
+            "accent": "",
+            "heading": "עקרב (Scorpio)",
+            "heading_tag": "h3",
+            "paragraph-d6a097406e8b965f2494310c0c44d85f": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_7H9XD": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-e3761e0861117d654fc13f93a4ab340e": null,
+            "accent": "",
+            "heading": "תאומים (Gemini)",
+            "heading_tag": "h3",
+            "paragraph-d6a097406e8b965f2494310c0c44d85f": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_YJTLM": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-e3761e0861117d654fc13f93a4ab340e": null,
+            "accent": "",
+            "heading": "קשת (Sagittarius)",
+            "heading_tag": "h3",
+            "paragraph-d6a097406e8b965f2494310c0c44d85f": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_z44iF": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-0815628ebd550f0a0a671ca91c9aec93": null,
+            "accent": "",
+            "heading": "סרטן (Cancer)",
+            "heading_tag": "h3",
+            "paragraph-4f8eeda5cf16191030c9abb8033e83e3": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_rJgDx": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-0815628ebd550f0a0a671ca91c9aec93": null,
+            "accent": "",
+            "heading": "גדי (Capricorn)",
+            "heading_tag": "h3",
+            "paragraph-4f8eeda5cf16191030c9abb8033e83e3": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_7ydzJ": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-0815628ebd550f0a0a671ca91c9aec93": null,
+            "accent": "",
+            "heading": "אריה (Leo)",
+            "heading_tag": "h3",
+            "paragraph-4f8eeda5cf16191030c9abb8033e83e3": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_xXmia": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-0815628ebd550f0a0a671ca91c9aec93": null,
+            "accent": "",
+            "heading": "דלי (Aquarius)",
+            "heading_tag": "h3",
+            "paragraph-4f8eeda5cf16191030c9abb8033e83e3": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_6pEiY": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-0815628ebd550f0a0a671ca91c9aec93": null,
+            "accent": "",
+            "heading": "בתולה (Virgo)",
+            "heading_tag": "h3",
+            "paragraph-4f8eeda5cf16191030c9abb8033e83e3": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "icon_column_aYM4U": {
+          "type": "icon_column",
+          "disabled": false,
+          "settings": {
+            "icon": "plant",
+            "icon_width": 50,
+            "icon_width_mobile": 50,
+            "custom_icon_image": null,
+            "header-0815628ebd550f0a0a671ca91c9aec93": null,
+            "accent": "",
+            "heading": "דגים (Pisces)",
+            "heading_tag": "h3",
+            "paragraph-4f8eeda5cf16191030c9abb8033e83e3": null,
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Pair text with an icon to focus on your chosen product, collection, or blog post.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "icon_column_wzbyJ",
+        "icon_column_TMr9h",
+        "icon_column_YWqy7",
+        "icon_column_TVFfm",
+        "icon_column_7H9XD",
+        "icon_column_YJTLM",
+        "icon_column_z44iF",
+        "icon_column_rJgDx",
+        "icon_column_7ydzJ",
+        "icon_column_xXmia",
+        "icon_column_6pEiY",
+        "icon_column_aYM4U"
+      ],
+      "name": "t:sections.multi_column.presets.name"
+    }
+  },
+  "order": [
+    "main",
+    "image_hero_m_D9C6t",
+    "multi_column_fh4Ya"
+  ]
+}
