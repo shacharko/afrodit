@@ -1,0 +1,464 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "video_hero": {
+      "type": "video-hero",
+      "blocks": {
+        "accent_UNnEqh": {
+          "type": "accent",
+          "disabled": true,
+          "settings": {
+            "accent": "Accent"
+          }
+        },
+        "heading_FGFQwJ": {
+          "type": "heading",
+          "settings": {
+            "title": "About us",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "play_button_3YjpDL": {
+          "type": "play-button",
+          "disabled": true,
+          "settings": {
+            "video_source": "external",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "aspect_ratio": "square",
+            "text": "Watch now",
+            "icon_style": "outline"
+          }
+        },
+        "spacer_pnjNWe": {
+          "type": "spacer",
+          "settings": {
+            "space": 24
+          }
+        }
+      },
+      "block_order": [
+        "accent_UNnEqh",
+        "heading_FGFQwJ",
+        "play_button_3YjpDL",
+        "spacer_pnjNWe"
+      ],
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 80,
+        "mobile_height": 50,
+        "media_link": "",
+        "focal_point": "image_presentation",
+        "focal_point_mobile": "image_presentation",
+        "text_position": "flex-start_flex-end",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 0,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "rich_text-1": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": 40
+          }
+        },
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "Story"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "A female owned & run label, based in Melbourne, celebrating the diversity of women throughout the world.",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "spacer-2": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As such, each collection draws its inspiration from a point on the map be it a city, a region, or otherwise - & the love our travels ignite for the good things in life. We believe in more than just designing garments to be worn; we thrive to inspire women to feel confident & empowered. </p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "spacer-3": {
+          "type": "spacer",
+          "settings": {
+            "space": 40
+          }
+        }
+      },
+      "block_order": [
+        "spacer-1",
+        "accent",
+        "heading",
+        "spacer-2",
+        "text",
+        "spacer-3"
+      ],
+      "settings": {
+        "alignment": "left_left",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "full",
+        "custom_content_width": 700
+      }
+    },
+    "image_with_text_split": {
+      "type": "image-with-text-split",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "OUR FOUNDER"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Meet Kirsty",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-3"
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 16
+          }
+        },
+        "subheading": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Use these sections to promote a particular feature with editorial photography.",
+            "subheading_tag": "h3",
+            "subheading_font_class": "fs-heading-5-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our company is a product of Kirsty’s affection for high-end design, mixed with a love for music & travel, finished seamlessly with her attention to detail. </p><p>Each collection is carefully curated with inspiration stemming from her frequent explorations. It’s easy to see the influence of her favourite cities & its people entwined into each range. A certain mood is encapsulated in her designs whether it be the energy from a bustling city like New York, the coastal freedom of LA or the alluring romance from the streets of Paris.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": ["accent", "heading", "spacer", "subheading", "text"],
+      "settings": {
+        "image_position": "right",
+        "image_mobile_position": "above-content",
+        "image_padding": "none",
+        "aspect_ratio": "square",
+        "focal_point": "image_presentation",
+        "content_alignment": "left",
+        "background_color": "#f7f7e8",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "rich_text-2": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": 40
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Fabrication & Sustainability",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "spacer-2": {
+          "type": "spacer",
+          "settings": {
+            "space": 20
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're committed to making cherished pieces that sustain a long lifetime in a women’s wardrobe. We firmly believe in our responsibility to minimise our impact on the planet & strive towards promoting sustainability.<br/><br/>To achieve this, we are dedicated to constantly innovating, evolving & adopting new sustainable practices in every aspect of our business. By remaining dynamic & constantly evolving, we endeavour to reduce our impact & foster a healthier, more sustainable future.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": ["spacer-1", "heading", "spacer-2", "text"],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 850
+      }
+    },
+    "gallery_carousel": {
+      "type": "gallery-carousel",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Vegan Leather",
+            "text": "<p>Our luxurious PU leather is 100% vegan (not all faux leather is vegan) & not only feels oh so soft, but also (unlike leather) our PU doesn’t dry out over time. All our fabrications are kind to our furry friends, including our leather.</p>"
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Recycled Polyester",
+            "text": "<p>Recycled polyester, often called rPet, is made from recycled plastic bottles. It is a great way to divert plastic from our landfills. The production of recycled polyester requires far fewer resources than that of new fibres & generates fewer CO2 emissions. </p>"
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "focal_point": "image_presentation",
+            "title": "Textile Printing",
+            "text": "<p>All prints are created in house in Melbourne. The benefits of digitality printing include: no minimum order quantities, flexibility with colours/complexity & cost-effectiveness due to no setup costs, therefore reducing the labour required to produce each print.</p>"
+          }
+        }
+      },
+      "block_order": ["image-1", "image-2", "image-3"],
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "columns": "3",
+        "mobile_columns": "1",
+        "loop_carousel": true,
+        "aspect_ratio": "square",
+        "image_caption_style": "beneath",
+        "image_caption_size": "fs-body-100",
+        "overlay_text_background_style": "gradient",
+        "overlay_text_color": "#ffffff",
+        "overlay_text_background": "#000000",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "rich_text-3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Rich text",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "space": 12
+          }
+        }
+      },
+      "block_order": ["heading", "text", "spacer"],
+      "settings": {
+        "alignment": "left_left",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "collapsible_row_list": {
+      "type": "collapsible-row-list",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "leaf",
+            "title": "Low Waste",
+            "text": "<p>Overproduction in fashion is one of the world’s biggest environmental threats. To counter this issue, we have developed a close relation to our supplier, & adopted a bespoke arrangement which allows us to have no minimum quantities on orders. This allows us to produce small runs of inventory instead of mass bulk. This is to reduce waste & to ensure that our customers are repping unique styles.<br/></p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "t-shirt",
+            "title": "Worn For Good",
+            "text": "<p>We have teamed up with the wonderful women at Worn For Good to donate pieces. This is to ensure all our pieces & even samples get a happy home & therefore not contributing to waste & landfill, as well as donating to some incredible charities.</p>"
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "package-open",
+            "title": "Packaging",
+            "text": "<p>Our 100% recycled plastic dust bags will be equipped with a convenient drawstring closure. These dust bags are designed to be reusable, making them versatile for various purposes beyond just packaging fashion items. By opting for recycled plastic, we aim to minimise the demand for new plastic production and encourage the recycling of existing plastic materials.</p>"
+          }
+        }
+      },
+      "block_order": ["item-1", "item-2", "item-3"],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "subheading_tag": "h3",
+        "subheading_font_class": "fs-heading-5-base",
+        "heading_alignment": "left",
+        "item_heading_font": "heading",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 800
+      }
+    },
+    "rich_text-4": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": ["text"],
+      "settings": {
+        "alignment": "left_left",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "rich_text-5": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Designed in Melbourne",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our head office is located in Melbourne & our supplier is located in Toronto. This opportunity gives our company great insights as how our product is produced & builds wonderful relationships with our suppliers. We are very proud of the relationships & credentials we have with them.<br/></p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": ["heading", "spacer", "text"],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 800
+      }
+    },
+    "image_hero": {
+      "type": "image-hero",
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 80,
+        "mobile_height": 80,
+        "focal_point": "image_presentation",
+        "mobile_focal_point": "image_presentation",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 20,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-top-only"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_hero",
+    "rich_text-1",
+    "image_with_text_split",
+    "rich_text-2",
+    "gallery_carousel",
+    "rich_text-3",
+    "collapsible_row_list",
+    "rich_text-4",
+    "rich_text-5",
+    "image_hero"
+  ]
+}

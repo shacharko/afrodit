@@ -1,0 +1,391 @@
+{%- liquid
+  ###############################################
+  # 1) קבלת המותג מה-URL ואיתור רשומת המותג
+  ###############################################
+  assign brand_param = request.params.brand | default: '' | strip
+  assign brand_entry = nil
+  if brand_param != ''
+    assign wanted_handle = brand_param | handle
+    for b in shop.metaobjects['brand_info'].values
+      assign label = b.brand_name | default: b.title
+      assign lh = label | handle
+      if label == brand_param or lh == wanted_handle
+        assign brand_entry = b
+        break
+      endif
+    endfor
+  endif
+
+  ###############################################
+  # 2) קולקציית המותג עבור רשימת הדוגמיות
+  ###############################################
+  assign brand_col = nil
+  if brand_entry and brand_entry.brand_collection
+    assign brand_col = brand_entry.brand_collection
+  endif
+
+  ###############################################
+  # 3) איתור מיקומי האופציות במוצר (Brand/Size)
+  ###############################################
+  assign opt_brand_idx = -1
+  assign opt_size_idx  = -1
+  assign size_values_csv = ''
+  for opt in product.options_with_values
+    assign nm = opt.name | downcase
+    if nm == 'brand' or nm == 'מותג'
+      assign opt_brand_idx = forloop.index0
+    elsif nm == 'size' or nm == 'גודל'
+      assign opt_size_idx = forloop.index0
+      for v in opt.values
+        if size_values_csv != '' 
+          assign size_values_csv = size_values_csv | append: '||SEP||'
+        endif
+        assign size_values_csv = size_values_csv | append: v
+      endfor
+    endif
+  endfor
+  assign size_values = size_values_csv | split: '||SEP||'
+
+  ###############################################
+  # 4) הגדרות עורך
+  ###############################################
+  assign sample_count = section.settings.samples_count | default: 5
+  assign ui_mode      = section.settings.ui_mode | default: 'list'
+
+  ###############################################
+  # 5) סינון ראשוני לפי גודל (תגיות eligible-2ml / eligible-5ml)
+  ###############################################
+  assign initial_size = request.params.size | default: size_values.first
+  assign size_h = initial_size | downcase
+  assign filter_tag = ''
+  if size_h contains '2'
+    assign filter_tag = 'eligible-2ml'
+  elsif size_h contains '5'
+    assign filter_tag = 'eligible-5ml'
+  endif
+
+  assign items = nil
+  if brand_col
+    assign items = brand_col.products | where_exp: 'p', 'filter_tag == "" or p.tags contains filter_tag'
+  endif
+-%}
+
+<section class="section" id="sample-builder" style="--sb-gap:16px;">
+  <div class="page-width">
+
+    {%- if brand_entry == nil -%}
+      <div class="ta-c" style="padding:22px 0">
+        חסר פרמטר <code>?brand=</code> או שלא נמצאה רשומת מותג תואמת.
+      </div>
+    {%- else -%}
+
+      <header class="section-header" style="margin-bottom:12px">
+        <h1 class="h2 ta-c">מארז דוגמיות — {{ brand_entry.brand_name | default: brand_entry.title }}</h1>
+        <p class="ta-c">בחר/י גודל סט ואז {{ sample_count }} דוגמיות מהמוצרים של המותג.</p>
+      </header>
+
+      {%- form 'product', product, id: 'sb-form', class: 'product-form' -%}
+
+        {%- comment -%} קיבוע ה-Brand (מוחבא) {%- endcomment -%}
+        <input type="hidden" name="options[Brand]" id="sb-brand"
+               value="{{ brand_entry.brand_name | default: brand_entry.title | escape }}">
+
+        {%- comment -%} ה-Variant ID יתעדכן אוטומטית לפי Brand×Size {%- endcomment -%}
+        <input type="hidden" name="id" id="sb-variant-id">
+
+        {%- if size_values.size > 0 -%}
+        {%- assign size_qs = request.params.size | downcase -%}
+        <div class="card" style="border:1px solid #eee;border-radius:12px;padding:12px;margin-bottom:12px">
+          <div class="fs-body-200" style="margin-bottom:6px;">בחר/י גודל סט:</div>
+          <div class="radio-list" style="display:flex;gap:12px;flex-wrap:wrap">
+            {%- for sv in size_values -%}
+              {%- assign sv_lower = sv | downcase -%}
+              <label style="display:flex;align-items:center;gap:6px;border:1px solid #e5e5e5;padding:8px 10px;border-radius:10px;cursor:pointer;">
+                <input
+                  type="radio"
+                  name="options[Size]"
+                  value="{{ sv | escape }}"
+                  {% if size_qs != blank and sv_lower == size_qs %}
+                    checked
+                  {% elsif size_qs == blank and forloop.first %}
+                    checked
+                  {% endif %}
+                >
+                <span>{{ sv }}</span>
+              </label>
+            {%- endfor -%}
+          </div>
+          <div id="sb-variant-note" class="fs-body-100" style="opacity:.8;margin-top:6px"></div>
+        </div>
+        {%- endif -%}
+
+        <div class="card" style="border:1px solid #eee;border-radius:12px;padding:12px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <div class="fs-body-200">
+              <strong>בחר/י {{ sample_count }} דוגמיות</strong>
+              <span id="sb-remaining-wrap" {% if ui_mode == 'dropdowns' %}style="display:none"{% endif %}>
+                (נשארו: <span id="sb-remaining">{{ sample_count }}</span>)
+              </span>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <span class="fs-body-100" style="opacity:.8">תצוגה:</span>
+              <span class="fs-body-100">
+                {% if ui_mode == 'dropdowns' %}תיבות בחירה{% else %}רשימה פתוחה{% endif %}
+              </span>
+            </div>
+          </div>
+
+          {%- if items == nil or items.size == 0 -%}
+            <p class="ta-c" style="margin:12px 0 0">לא נמצאו מוצרים מתאימים בקולקציה של המותג (בדקי תגיות eligible-2ml/eligible-5ml).</p>
+          {%- else -%}
+
+            {%- if ui_mode == 'dropdowns' -%}
+              {%- comment -%} מצב Dropdowns: N בחירות {%- endcomment -%}
+              <div id="sb-dropdowns" style="display:grid;gap:10px;margin-top:8px">
+                {%- for n in (1..sample_count) -%}
+                  <div style="border-top:1px solid #eee;padding-top:10px">
+                    <label class="fs-body-100" for="sb-select-{{ n }}">דוגמית {{ n }}</label>
+                    <select id="sb-select-{{ n }}" class="sb-select" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px">
+                      <option value="">בחר/י מוצר…</option>
+                      {%- for p in items -%}
+                        <option value="{{ p.title | escape }}">{{ p.title }}</option>
+                      {%- endfor -%}
+                    </select>
+                  </div>
+                {%- endfor -%}
+              </div>
+              <div id="sb-dup-warning" class="fs-body-100" style="color:#b00;display:none;margin-top:6px">יש כפילויות בבחירה — יש לבחור פריטים שונים.</div>
+            {%- else -%}
+              {%- comment -%} מצב רשימה פתוחה: צ'קבוקסים עם תמונה+שם וקו מפריד {%- endcomment -%}
+              <div id="sb-list" style="margin-top:8px">
+                <style>
+                  .sb-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #eee}
+                  .sb-row:first-child{border-top:0}
+                  .sb-thumb{width:52px;height:52px;border-radius:8px;overflow:hidden;background:#f7f7f7;flex:0 0 52px}
+                  .sb-thumb img{width:100%;height:100%;object-fit:cover}
+                  .sb-title{flex:1}
+                </style>
+                {%- for p in items -%}
+                  <label class="sb-row"
+                         data-title="{{ p.title | escape }}"
+                         data-tags="{{ p.tags | join: ',' | escape }}">
+                    <span class="sb-thumb">
+                      {%- if p.featured_image -%}
+                        {{ p.featured_image | image_url: width: 140 | image_tag: alt: p.title, loading: 'lazy' }}
+                      {%- endif -%}
+                    </span>
+                    <span class="sb-title">{{ p.title }}</span>
+                    <input type="checkbox" class="sb-check" value="{{ p.title | escape }}">
+                  </label>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
+            <div id="sb-props">
+              <input type="hidden" name="properties[Brand]" value="{{ brand_entry.brand_name | default: brand_entry.title | escape }}">
+            </div>
+
+          {%- endif -%}
+        </div>
+
+        <div class="ta-c">
+          <button type="submit" class="btn" id="sb-submit" {% if ui_mode == 'list' %}disabled{% endif %}>
+            הוסף/י לסל
+          </button>
+        </div>
+
+      {%- endform -%}
+
+      <script>
+      (function(){
+        var VARIANTS = {{ product.variants | json }};
+        var idxBrand = {{ opt_brand_idx }};
+        var idxSize  = {{ opt_size_idx }};
+        var brandVal = document.getElementById('sb-brand').value;
+        var sampleCount = {{ sample_count | json }};
+        var uiMode = {{ ui_mode | json }};
+
+        function getSelectedSize(){
+          var r = document.querySelectorAll('input[name="options[Size]"]');
+          var v = ''; r.forEach(function(x){ if(x.checked) v = x.value; });
+          return v;
+        }
+        function updateVariantId(){
+          var sizeVal = getSelectedSize();
+          var found = null;
+          VARIANTS.some(function(v){
+            var ops = [v.option1, v.option2, v.option3];
+            var okBrand = (idxBrand >= 0) ? (ops[idxBrand] == brandVal) : true;
+            var okSize  = (idxSize  >= 0) ? (ops[idxSize]  == sizeVal)  : true;
+            if(okBrand && okSize){ found = v; return true; }
+            return false;
+          });
+          var idField = document.getElementById('sb-variant-id');
+          if(found){ idField.value = found.id; }
+          var note = document.getElementById('sb-variant-note');
+          if(note){ note.textContent = sizeVal ? ('נבחר גודל: ' + sizeVal) : ''; }
+        }
+
+        // ----- FILTER by size (tags eligible-2ml / eligible-5ml) -----
+        var ALL_ITEMS = [
+          {% if brand_col %}
+            {% for p in brand_col.products %}
+              {"title": {{ p.title | json }}, "tags": {{ p.tags | json }} }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        ];
+        function tagForSize(sizeVal){
+          var s = (sizeVal||'').toLowerCase();
+          if(s.indexOf('2')>=0) return 'eligible-2ml';
+          if(s.indexOf('5')>=0) return 'eligible-5ml';
+          return '';
+        }
+        function applyFilterBySize(){
+          var tag = tagForSize(getSelectedSize());
+
+          if(uiMode === 'list'){
+            var grid = document.getElementById('sb-list');
+            if(!grid) return;
+            var rows = grid.querySelectorAll('.sb-row');
+            rows.forEach(function(row){
+              var tags = (row.getAttribute('data-tags')||'').toLowerCase();
+              var show = !tag || tags.indexOf(tag) >= 0;
+              if(!show){
+                var cb = row.querySelector('.sb-check');
+                if(cb && cb.checked){ cb.checked = false; }
+              }
+              row.style.display = show ? '' : 'none';
+            });
+            try{ updateListState(); }catch(e){}
+          } else {
+            for(var i=1;i<=sampleCount;i++){
+              var sel = document.getElementById('sb-select-'+i);
+              if(!sel) continue;
+              var prev = sel.value;
+              sel.innerHTML = '<option value="">בחר/י מוצר…</option>';
+              ALL_ITEMS.forEach(function(it){
+                var ok = !tag || ((it.tags||[]).map(function(t){ return String(t).toLowerCase(); }).indexOf(tag) >= 0);
+                if(ok){
+                  var opt = document.createElement('option');
+                  opt.value = it.title;
+                  opt.textContent = it.title;
+                  sel.appendChild(opt);
+                }
+              });
+              if(prev){
+                for(var j=0;j<sel.options.length;j++){
+                  if(sel.options[j].value === prev){ sel.value = prev; break; }
+                }
+              }
+            }
+            try{ if(typeof onChangeDropdowns === 'function'){ onChangeDropdowns(); } }catch(e){}
+          }
+        }
+
+        // ----- Properties writer + ולידציה -----
+        var props = document.getElementById('sb-props');
+        var submitBtn = document.getElementById('sb-submit');
+        var remainEl = document.getElementById('sb-remaining');
+
+        function writeProperties(list){
+          props.querySelectorAll('input[name^="properties[Sample"]').forEach(function(x){ x.remove(); });
+          list.forEach(function(val, idx){
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'properties[Sample ' + (idx+1) + ']';
+            input.value = val;
+            props.appendChild(input);
+          });
+        }
+
+        if(uiMode === 'dropdowns'){
+          var dupWarn = document.getElementById('sb-dup-warning');
+          function valuesOrNull(){
+            var vals = [];
+            for(var i=1;i<=sampleCount;i++){
+              var el = document.getElementById('sb-select-'+i);
+              var v = el ? (el.value || '') : '';
+              if(!v) return null;
+              vals.push(v);
+            }
+            return vals;
+          }
+          function hasDuplicates(arr){
+            var seen = {};
+            for(var i=0;i<arr.length;i++){
+              if(seen[arr[i]]) return true;
+              seen[arr[i]] = true;
+            }
+            return false;
+          }
+          function onChangeDropdowns(){
+            var vals = valuesOrNull();
+            if(vals && !hasDuplicates(vals)){
+              dupWarn && (dupWarn.style.display = 'none');
+              writeProperties(vals);
+              submitBtn.disabled = false;
+            }else{
+              dupWarn && (dupWarn.style.display = vals ? 'block' : 'none');
+              submitBtn.disabled = true;
+            }
+          }
+          for(var i=1;i<=sampleCount;i++){
+            var el = document.getElementById('sb-select-'+i);
+            if(el) el.addEventListener('change', onChangeDropdowns);
+          }
+          onChangeDropdowns();
+        }else{
+          var grid = document.getElementById('sb-list');
+          function updateListState(){
+            var checks = Array.prototype.slice.call(grid.querySelectorAll('.sb-check'));
+            var chosen = checks.filter(function(c){ return c.checked; }).map(function(c){ return c.value; });
+            var remain = Math.max(0, sampleCount - chosen.length);
+            if(remainEl) remainEl.textContent = remain;
+            checks.forEach(function(c){
+              if(!c.checked) c.disabled = (chosen.length >= sampleCount);
+            });
+            writeProperties(chosen);
+            submitBtn.disabled = (chosen.length !== sampleCount);
+          }
+          if(grid){
+            grid.addEventListener('change', function(e){
+              if(e.target && e.target.classList.contains('sb-check')) updateListState();
+            });
+            updateListState();
+          }
+        }
+
+        // אירועים והפעלות ראשוניות
+        document.querySelectorAll('input[name="options[Size]"]').forEach(function(r){
+          r.addEventListener('change', function(){
+            updateVariantId();
+            applyFilterBySize();
+          });
+        });
+        updateVariantId();
+        applyFilterBySize();
+      })();
+      </script>
+
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "brand-samples",
+  "settings": [
+    { "type": "select", "id": "samples_count", "label": "כמות דוגמיות לבחירה", "options": [
+      { "value": "2", "label": "2" },
+      { "value": "3", "label": "3" },
+      { "value": "4", "label": "4" },
+      { "value": "5", "label": "5 (ברירת מחדל)" }
+    ], "default": "5" },
+    { "type": "select", "id": "ui_mode", "label": "סוג תצוגת בחירה", "options": [
+      { "value": "dropdowns", "label": "Dropdowns (בחירה מתוך תיבות)" },
+      { "value": "list",      "label": "רשימה פתוחה עם תמונות" }
+    ], "default": "list" }
+  ],
+  "presets": [{ "name": "Brand Samples" }]
+}
+{% endschema %}

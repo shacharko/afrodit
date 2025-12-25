@@ -1,0 +1,636 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "product_header": {
+          "type": "product_header",
+          "settings": {
+            "show_divider": true,
+            "show_vendor": true,
+            "show_sku": true,
+            "show_discount": true,
+            "discount_format": "percent_off",
+            "show_product_rating": false,
+            "show_sale_badge": true,
+            "show_custom_badges": true
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p>Add some text to tell customers more about your product.</p>",
+            "column_placement": "right"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_icon": "measuring-tape",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "size-guide",
+            "swatch_size": "medium",
+            "chip_layout": "natural"
+          }
+        },
+        "inventory-counter": {
+          "type": "inventory-counter",
+          "settings": {
+            "label": "",
+            "inventory_max": "40",
+            "low_inventory_threshold": "8",
+            "show_status_bar": true,
+            "show_untracked_quantity": false
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+            "show_labels": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "enable_sticky_atc_bar_desktop": true,
+            "enable_sticky_atc_bar_mobile": true,
+            "divider_width": "border--thick"
+          }
+        },
+        "product_callouts-1": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": false,
+            "add_dividers": true,
+            "icon_1": "leaf",
+            "text_1": "<p>Your order ships carbon neutral</p>",
+            "icon_2": "none",
+            "text_2": "",
+            "icon_3": "none",
+            "text_3": "",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "chat",
+            "text_6": "",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "product_callouts-2": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": false,
+            "icon_1": "price-tag",
+            "text_1": "<p><strong>BIGGER MARKDOWNS</strong> — We've refreshed our sale with discounts of up to 50% on select styles.</p>",
+            "icon_2": "paper-airplane",
+            "text_2": "",
+            "icon_3": "chat",
+            "text_3": "",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "chat",
+            "text_6": "",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "product_callouts": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_1": "stiletto",
+            "text_1": "<p>Free shipping over $50</p>",
+            "icon_2": "cotton",
+            "text_2": "<p>Free Returns & Exchanges</p>",
+            "icon_3": "plant",
+            "text_3": "<p>Need help? <a href='/pages/contact''>Contact us</a></p>",
+            "icon_4": "chat",
+            "text_4": "<p>Have questions about fit? <a href=\"/pages/contact\" title=\"Contact\">Contact us</a></p>",
+            "icon_5": "moving-truck",
+            "text_5": "<p>Free shipping on orders over $250</p>",
+            "icon_6": "padlock",
+            "text_6": "<p>Secure payment</p>",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "title": "Description",
+            "title_tag": "h3",
+            "text_font_class": "fs-body-100",
+            "column_placement": "left",
+            "display_as_collapsible_row": true,
+            "expand_by_default": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "product_header",
+        "text",
+        "variant_picker",
+        "inventory-counter",
+        "quantity_selector",
+        "buy_buttons",
+        "product_callouts-1",
+        "product_callouts-2",
+        "product_callouts",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_product_details": true,
+        "show_breadcrumbs": false,
+        "show_navigation_buttons": false,
+        "show_featured_media_first": false,
+        "gallery_style": "list",
+        "gallery_style_mobile": "carousel",
+        "gallery_size": "xlarge",
+        "gallery_overflow": "2",
+        "enable_video_looping": true,
+        "enable_product_lightbox": true,
+        "image_aspect_ratio": "portrait",
+        "enable_multiple_variant_media": false,
+        "enable_mobile_carousel_looping": false,
+        "show_mobile_carousel_images_full_width": false,
+        "hide_mobile_carousel_dots": false,
+        "enable_gift_card_recipient": true,
+        "enable_animation": true
+      }
+    },
+    "product_tabs": {
+      "type": "product-tabs",
+      "blocks": {
+        "product_description_BPghTa": {
+          "type": "product_description",
+          "settings": {
+            "tab_heading": "Description",
+            "heading": "Description",
+            "heading_font_class": "fs-heading-4-base",
+            "heading_tag": "h3",
+            "text_font_class": "fs-body-100",
+            "content_width": "custom",
+            "text_max_width": 700
+          }
+        },
+        "one_column_XtChYX": {
+          "type": "one_column",
+          "settings": {
+            "tab_heading": "Size & Fit",
+            "heading_column_1": "Size & Fit",
+            "heading_font_class_column_1": "fs-heading-4-base",
+            "heading_tag_column_1": "h3",
+            "text_column_1": "",
+            "page_for_content_column_1": "size-guide",
+            "custom_liquid_column_1": "",
+            "text_font_class_column_1": "fs-body-100",
+            "content_width": "custom",
+            "text_max_width": 700,
+            "image_width_column_1": 100,
+            "image_position_column_1": "above_text"
+          }
+        },
+        "one_column_f8mUz4": {
+          "type": "one_column",
+          "settings": {
+            "tab_heading": "Care Information",
+            "heading_column_1": "Care Information",
+            "heading_font_class_column_1": "fs-heading-4-base",
+            "heading_tag_column_1": "h3",
+            "text_column_1": "<p>Hand-wash warm. Tumble dry low. This product has been washed at the factory after sewing to minimize fabric shrinkage.</p>",
+            "page_for_content_column_1": "",
+            "custom_liquid_column_1": "",
+            "text_font_class_column_1": "fs-body-100",
+            "content_width": "custom",
+            "text_max_width": 700,
+            "image_width_column_1": 100,
+            "image_position_column_1": "above_text"
+          }
+        },
+        "two_column_tab_dJWcHG": {
+          "type": "two_column_tab",
+          "settings": {
+            "tab_heading": "Shipping & Returns",
+            "content_vertical_alignment": "top",
+            "column_spacing": 28,
+            "heading_column_1": "Standard Shipping",
+            "heading_font_class_column_1": "fs-heading-4-base",
+            "heading_tag_column_1": "h3",
+            "text_column_1": "<p>Free Standard Shipping on orders over $250. Select “Free Shipping” at checkout.</p>",
+            "page_for_content_column_1": "",
+            "custom_liquid_column_1": "",
+            "text_font_class_column_1": "fs-body-100",
+            "image_width_column_1": 100,
+            "image_position_column_1": "above_text",
+            "heading_column_2": "Free Easy Returns",
+            "heading_font_class_column_2": "fs-heading-4-base",
+            "heading_tag_column_2": "h3",
+            "text_column_2": "<p>Need to return an item? We make it easy. Email us and we'll send you a free return label with instructions on how to return.</p>",
+            "page_for_content_column_2": "",
+            "custom_liquid_column_2": "",
+            "text_font_class_column_2": "fs-body-100",
+            "image_width_column_2": 100,
+            "image_position_column_2": "above_text"
+          }
+        }
+      },
+      "block_order": [
+        "product_description_BPghTa",
+        "one_column_XtChYX",
+        "one_column_f8mUz4",
+        "two_column_tab_dJWcHG"
+      ],
+      "settings": {
+        "tab_alignment": "left",
+        "tab_spacing": 40,
+        "font_choice": "ff-heading",
+        "tab_font_size": "fs-body-150",
+        "background_color": "",
+        "text_color": "#000000",
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "image-with-text-split": {
+      "type": "image-with-text-split",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "A Closer Look",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "accent": {
+          "type": "accent",
+          "disabled": true,
+          "settings": {
+            "accent": "A closer look"
+          }
+        },
+        "subheading": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "A closer look",
+            "subheading_tag": "h3",
+            "subheading_font_class": "fs-heading-4-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use these sections to promote a particular feature with editorial photography.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        },
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_size": 410,
+            "image_size_mobile": 280
+          }
+        }
+      },
+      "block_order": ["heading", "accent", "subheading", "text", "image"],
+      "settings": {
+        "image_position": "left",
+        "image_mobile_position": "above-content",
+        "image_padding": "none",
+        "aspect_ratio": "portrait",
+        "focal_point": "center",
+        "content_alignment": "center",
+        "background_color": "#d9a49c",
+        "text_color": "#0b0e08",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-top-only"
+      }
+    },
+    "complete-the-look": {
+      "type": "complete-the-look",
+      "blocks": {
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        },
+        "product-4": {
+          "type": "product",
+          "settings": {
+            "product_item": ""
+          }
+        }
+      },
+      "block_order": ["product-1", "product-2", "product-3", "product-4"],
+      "settings": {
+        "video_loop": true,
+        "video_controls": false,
+        "image_position": "right",
+        "aspect_ratio": "portrait_alt",
+        "heading": "Pairs well with",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "button_style": "btn--callout",
+        "product_image_size": "medium",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi-column": {
+      "type": "multi-column",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "accent": "Conscious choice",
+            "heading": "Responsibly Made",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-3-base",
+            "text": "",
+            "text_font_class": "fs-body-300",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "accent": "World class",
+            "heading": "Expertly Crafted",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-3-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "accent": "Flattering fit",
+            "heading": "The Perfect Piece",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-3-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 86,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": ["column-1", "column-2", "column-3"],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "heading_font_class": "fs-heading-3-base",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "center",
+        "content_background_padding": "large",
+        "columns": "3",
+        "column_spacing": 48,
+        "row_spacing": 28,
+        "column_alignment": "center",
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 4,
+        "column_alignment_mobile": "center",
+        "background_behind_columns": false,
+        "background_color": "#f7f7e8",
+        "text_color": "#242526",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "product": "",
+            "image_position": "right",
+            "aspect_ratio": "portrait",
+            "focal_point": "center",
+            "show_rating": true,
+            "rating": 5,
+            "quote": "\"I love Stiletto! They're my favorite brand. Customer service is excellent. I have only returned items once and it was so easy. \"",
+            "author": "– Kiana Sato"
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "product": "",
+            "image_position": "right",
+            "aspect_ratio": "portrait",
+            "focal_point": "bottom",
+            "show_rating": true,
+            "rating": 5,
+            "quote": "\"Lola's prices are very reasononable for the amazing quality you're getting\"",
+            "author": "– Nia Harris"
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "product": "",
+            "image_position": "right",
+            "aspect_ratio": "portrait",
+            "focal_point": "center",
+            "show_rating": true,
+            "rating": 5,
+            "quote": "\"Add customer reviews and testimonials to showcase your store’s happy customers.\"",
+            "author": "– Jessica Lipton"
+          }
+        }
+      },
+      "block_order": ["testimonial-1", "testimonial-2", "testimonial-3"],
+      "settings": {
+        "image_size": "large",
+        "quote_font": "body",
+        "background_color": "#f7f7e8",
+        "text_color": "#22292d",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "image-hero": {
+      "type": "image-hero",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "A seamless addition"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Always Chic.",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        }
+      },
+      "block_order": ["accent", "heading"],
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 70,
+        "mobile_height": 65,
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "media_link": "",
+        "text_position": "flex-start_flex-start",
+        "text_position_mobile": "center_center",
+        "text_color": "#e2e4e4",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 40,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "recommendations": {
+      "type": "recommended-products",
+      "disabled": true,
+      "settings": {
+        "title": "We also recommend",
+        "subheading": "",
+        "maximum_products": 8,
+        "columns": "4",
+        "mobile_columns": "2",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "scrolling_content": {
+      "type": "scrolling-content",
+      "blocks": {
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "text": "End of season sale",
+            "link": ""
+          }
+        },
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "image_size": 100,
+            "image_size_mobile": 100,
+            "link": ""
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "text": "Get them before they're gone",
+            "link": ""
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "image_size": 100,
+            "image_size_mobile": 100,
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["text-1", "image-1", "text-2", "image-2"],
+      "settings": {
+        "font_choice": "ff-heading",
+        "text_font_class": "fs-heading-2-base",
+        "duration": 10,
+        "direction": "normal",
+        "gap": 50,
+        "padding_top": 5,
+        "padding_bottom": 5,
+        "borders": "none",
+        "text_color": "#111111",
+        "background_color": "rgba(0,0,0,0)",
+        "border_color": "#aaaaaa",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_tabs",
+    "image-with-text-split",
+    "complete-the-look",
+    "multi-column",
+    "testimonials",
+    "image-hero",
+    "recommendations",
+    "scrolling_content"
+  ]
+}

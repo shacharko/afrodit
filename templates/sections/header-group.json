@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:groups.header_group.name",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_ez6fEr": {
+          "type": "announcement",
+          "settings": {
+            "title": "<h5><strong>-</strong></h5><h5><strong>3 דוגמיות מתנה בכל רכישה</strong></h5>",
+            "title_mobile": "",
+            "link": "shopify://collections/קולקציית-מארזים-כללית"
+          }
+        },
+        "5a2005ed-4438-4c3e-9549-f61724bea26f": {
+          "type": "announcement",
+          "settings": {
+            "title": "<h5><strong>מארזי Discovery Set </strong></h5><h5><strong>הדרך לגלות את הניחוח הבא שלך,עכשיו ב־18% הנחה</strong></h5>",
+            "title_mobile": "",
+            "link": "shopify://collections/קולקציית-מארזים-כללית"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_ez6fEr",
+        "5a2005ed-4438-4c3e-9549-f61724bea26f"
+      ],
+      "custom_css": [
+        ".ui-overlap-wrap .fader {display: none !important;}",
+        "@media (max-width: 768px) {.announcement-bar__item, .announcement-bar__item-inner, .announcement-bar__text, .announcement-bar__text p {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }}"
+      ],
+      "settings": {
+        "enable_sticky_announcement_bar": "mobile",
+        "autoplay_enabled": true,
+        "autoplay_delay": 3,
+        "color_background": "#000000",
+        "color_text": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "compact_meganav_aWXCW4": {
+          "type": "compact_meganav",
+          "settings": {
+            "dropdown_parent_link": "בשמים",
+            "columns_width": 440,
+            "column_count": 1,
+            "show_column_borders": true,
+            "show_promo": true,
+            "promo_width": 440,
+            "promo_height": 280,
+            "secondary_position": "right",
+            "image": "shopify://shop_images/E35FB307-5625-4757-AE32-6CA9CFC23C81.png",
+            "focal_point": "image_presentation",
+            "promo_text": "",
+            "link": "shopify://collections/all",
+            "link_text": "",
+            "text_position": "flex-start_flex-end",
+            "text_color": "#ffffff",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "",
+            "overlay_opacity": 30
+          }
+        },
+        "compact_meganav_6JGmJU": {
+          "type": "compact_meganav",
+          "settings": {
+            "dropdown_parent_link": "דיסקברי סט",
+            "columns_width": 440,
+            "column_count": 1,
+            "show_column_borders": true,
+            "show_promo": true,
+            "promo_width": 440,
+            "promo_height": 280,
+            "secondary_position": "right",
+            "image": "shopify://shop_images/C64A17DE-9238-4DE0-8FDC-953E07A3DE0E.png",
+            "focal_point": "image_presentation",
+            "promo_text": "",
+            "link": "shopify://collections/all",
+            "link_text": "",
+            "text_position": "flex-start_flex-end",
+            "text_color": "#ffffff",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "",
+            "overlay_opacity": 30
+          }
+        },
+        "full_width_meganav_WXyTTy": {
+          "type": "full_width_meganav",
+          "settings": {
+            "dropdown_parent_link": "מותגים",
+            "column_count": 4,
+            "show_column_borders": true,
+            "show_promo": true,
+            "promo_width": 440,
+            "promo_height": 250,
+            "secondary_position": "right",
+            "image": "shopify://shop_images/8303E4B8-8AB8-4756-A72C-EE0BE0E3E47C.png",
+            "focal_point": "image_presentation",
+            "promo_text": "",
+            "link": "shopify://collections/all",
+            "link_text": "",
+            "text_position": "flex-start_flex-end",
+            "text_color": "#ffffff",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "",
+            "overlay_opacity": 30
+          }
+        },
+        "mobile_menu_images_cpJiWE": {
+          "type": "mobile_menu_images",
+          "settings": {
+            "menu_name": "",
+            "aspect_ratio": "square",
+            "thumbnail_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "compact_meganav_aWXCW4",
+        "compact_meganav_6JGmJU",
+        "full_width_meganav_WXyTTy",
+        "mobile_menu_images_cpJiWE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "layout": "logo-center_nav-below",
+        "enable_sticky_header": true,
+        "cart_icon": "cart",
+        "divider_width": "0px",
+        "enable_locale_selector": false,
+        "enable_country_selector": false,
+        "show_social_media": false,
+        "show_social_media_mobile": false,
+        "logo": "shopify://shop_images/Oligarch_Logo_SVG.svg",
+        "logo_width": 110,
+        "mobile_logo_width": 120,
+        "menu": "hadermenu",
+        "secondary_menu": "",
+        "featured_link_label": "",
+        "featured_link_color": "#ffffff",
+        "enable_transparent_on_home": false,
+        "enable_transparent_template_list": "",
+        "color_text_transparent": "#ffffff",
+        "color_count_transparent": "#000000"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

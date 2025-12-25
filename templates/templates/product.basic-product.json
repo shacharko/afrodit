@@ -1,0 +1,420 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "product_header": {
+          "type": "product_header",
+          "settings": {
+            "show_divider": true,
+            "show_vendor": true,
+            "show_sku": true,
+            "show_discount": true,
+            "discount_format": "percent_off",
+            "show_product_rating": false,
+            "show_sale_badge": true,
+            "show_custom_badges": true
+          }
+        },
+        "judge_me_reviews_preview_badge_ECh4zK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "inventory_counter_nnj7H": {
+          "type": "inventory-counter",
+          "settings": {
+            "label": "זמינות",
+            "inventory_max": "100",
+            "low_inventory_threshold": "40",
+            "show_status_bar": false,
+            "show_untracked_quantity": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "",
+            "variant_popup_icon": "none",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "",
+            "swatch_size": "medium",
+            "chip_layout": "natural"
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_pxCG4": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_labels": true
+          }
+        },
+        "custom_liquid_aQhpT": {
+          "type": "custom_liquid",
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "enable_sticky_atc_bar_desktop": false,
+            "enable_sticky_atc_bar_mobile": false,
+            "divider_width": "shadow--small"
+          }
+        },
+        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6": {
+          "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "settings": {
+            "button_style": "solid_accent_2",
+            "button_alignment": "center",
+            "button_content_alignment": "center",
+            "button_margin_top": 0,
+            "button_margin_bottom": 0,
+            "button_max_width": 0,
+            "button_padding_horizontal": 15,
+            "button_full_width": true,
+            "button_show_text": true,
+            "button_show_icon": true,
+            "icon_size": 18,
+            "icon_stroke_width": 1,
+            "icon_offset_vertical": 0
+          }
+        },
+        "text_YLEgV": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p><strong>המחיר כולל מע״מ.<br/>משלוח חינם עד הבית בעת הזמנה מעל 300 ש״ח</strong></p>",
+            "column_placement": "right"
+          }
+        },
+        "accordion_XpdCx": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "right",
+            "heading": "זמני שילוח",
+            "heading_tag": "h3",
+            "content": "<p><strong>הזמנות שיבוצעו עד השעה 12:00 יטופלו ויישלחו באותו יום עסקים. </strong></p><p><strong>זמן אספקת משלוח סטנדרטי: עד 3 ימי עסקים מרגע אישור ההזמנה.</strong></p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_fHfiW": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "תיאור",
+            "heading_tag": "h3",
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{{ product.description }}"
+          }
+        },
+        "accordion_3q6Rn": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "משפחות ריח",
+            "heading_tag": "h3",
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{% assign scent_family_original = product.metafields.custom.scent_family.value %}\n\n{% if scent_family_original != blank %}\n  {% assign scent_family_cleaned = scent_family_original | replace: '[', '' | replace: ']', '' | replace: '\"', '' | replace: ', ', ',' %}\n  {% assign scent_families = scent_family_cleaned | split: ',' %}\n{% endif %}\n\n{% if scent_families != blank and scent_families.size > 0 %}\n  <ul style=\"list-style-type: disc; padding-inline-start: 20px; margin-top: 0;\">\n    {% for family in scent_families %}\n      <li class=\"scent-family-item\" dir=\"rtl\">{{ family | strip }}</li>\n    {% endfor %}\n  </ul>\n{% endif %}"
+          }
+        },
+        "accordion_BqCY9": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "מחיר ליחידת מידה",
+            "heading_tag": "h3",
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{% render 'dynamic-price-per-100ml' %}"
+          }
+        },
+        "accordion_JGW3R": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "אודות המותג",
+            "heading_tag": "h3",
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{% liquid\n  assign vendor_handle = product.vendor | handleize\n  assign brand_entry = shop.metaobjects['brand_info'][vendor_handle]\n%}\n\n{% if brand_entry and brand_entry.brand_collection and brand_entry.brand_collection.value %}\n  {{ brand_entry.brand_collection.value.description }}\n{% endif %}"
+          }
+        },
+        "product_callouts-1": {
+          "type": "product_callouts",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_1": "package-closed",
+            "text_1": "<p>Free shipping over $50</p>",
+            "icon_2": "paper-airplane",
+            "text_2": "<p>Free Returns & Exchanges</p>",
+            "icon_3": "chat",
+            "text_3": "<p>Need help? <a href=\"/pages/contact\">Contact us</a></p>",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "none",
+            "text_6": "",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "product_callouts": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_1": "heart",
+            "text_1": "<p><strong>ספקים מורשים</strong></p>",
+            "icon_2": "bill",
+            "text_2": "<p><strong>מתחייבים למוצרים מקוריים</strong></p>",
+            "icon_3": "chat",
+            "text_3": "<p><strong>צריכים עזרה ? </strong><a href=\"/pages/contact\" title=\"Contact\"><strong>צרו קשר</strong></a></p>",
+            "icon_4": "bottle",
+            "text_4": "<p><strong>דוגמית חינם עם כל רכישה </strong></p>",
+            "icon_5": "padlock",
+            "text_5": "<p><strong>רכישות מאובטחות </strong></p>",
+            "icon_6": "moving-truck",
+            "text_6": "<p><strong>החזרות\\החלפות  </strong><a href=\"/pages/shipping_info\" title=\"shipping\"><strong> מדיניות החזרות</strong></a></p>",
+            "display_as_collapsible_row": false,
+            "expand_by_default": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "title": "Description",
+            "title_tag": "h3",
+            "text_font_class": "fs-body-100",
+            "column_placement": "left",
+            "display_as_collapsible_row": true,
+            "expand_by_default": true
+          }
+        },
+        "featured_products": {
+          "type": "featured_products",
+          "settings": {
+            "heading": "בשמים שנקנו ביחד",
+            "heading_tag": "h3",
+            "column_placement": "left",
+            "max_products": 3,
+            "product_source": "custom-product-list",
+            "product_list": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products.value }}",
+            "enable_swiper_mobile": true,
+            "display_as_collapsible_row": false,
+            "expand_by_default": true
+          }
+        }
+      },
+      "block_order": [
+        "product_header",
+        "judge_me_reviews_preview_badge_ECh4zK",
+        "inventory_counter_nnj7H",
+        "share",
+        "variant_picker",
+        "tolstoy_shoppable_video_quiz_stories_block_pxCG4",
+        "quantity_selector",
+        "custom_liquid_aQhpT",
+        "buy_buttons",
+        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6",
+        "text_YLEgV",
+        "accordion_XpdCx",
+        "accordion_fHfiW",
+        "accordion_3q6Rn",
+        "accordion_BqCY9",
+        "accordion_JGW3R",
+        "product_callouts-1",
+        "product_callouts",
+        "description",
+        "featured_products"
+      ],
+      "custom_css": [
+        ".product_price {display: flex; flex-wrap: wrap; gap: 8px; /* שחקי עם הערך: 6–12 */}"
+      ],
+      "settings": {
+        "enable_sticky_product_details": true,
+        "show_breadcrumbs": true,
+        "show_navigation_buttons": false,
+        "show_featured_media_first": true,
+        "gallery_style": "thumbnails",
+        "gallery_style_mobile": "thumbnails",
+        "gallery_size": "medium",
+        "gallery_overflow": "never",
+        "enable_video_looping": true,
+        "enable_product_lightbox": true,
+        "image_aspect_ratio": "portrait",
+        "enable_multiple_variant_media": false,
+        "enable_mobile_carousel_looping": false,
+        "show_mobile_carousel_images_full_width": false,
+        "hide_mobile_carousel_dots": false,
+        "enable_gift_card_recipient": true,
+        "enable_animation": true
+      }
+    },
+    "custom_liquid_NcDEVc": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom_liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% render 'dynamic-price-per-100ml' %}",
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "custom_liquid_cCEPFd": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% render 'aroma-notes-slider' %}",
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-bottom-only"
+      }
+    },
+    "1765108798e420838a": {
+      "type": "apps",
+      "blocks": {
+        "google_reviews_google_carousel_one_YCc9Kh": {
+          "type": "shopify://apps/google-reviews/blocks/google-carousel-one/4eeaae1c-902b-481c-bec5-3f32291a58d5",
+          "settings": {
+            "rank": "1",
+            "photo_size": "large",
+            "auto_scroll": true,
+            "auto_scroll_interval": 3,
+            "rating": true,
+            "submit_review_button": true,
+            "business_info": true,
+            "review_photo": true,
+            "review_card_shadow": false,
+            "corner_radius": 20,
+            "star_color": "#f6ab00",
+            "review_card_background": "#f3f6f9",
+            "content_color": "#000000",
+            "name_color": "#000000",
+            "date_color": "#7a7a7a",
+            "more_color": "#1a73e8",
+            "submit_button_background_color": "#0084ff",
+            "submit_button_text": "#ffffff",
+            "business_info_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "google_reviews_google_carousel_one_YCc9Kh"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "App section",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "recommendations": {
+      "type": "recommended-products",
+      "settings": {
+        "title": "מומלצים",
+        "heading_tag": "h2",
+        "subheading": "",
+        "maximum_products": 8,
+        "columns": "4",
+        "mobile_columns": "2",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "1763928931e420ca2d": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_iJe6KW": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_iJe6KW"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "App section",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "17660146559414553a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_bWPLBe": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_bWPLBe"
+      ],
+      "settings": {
+        "heading": "",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_NcDEVc",
+    "custom_liquid_cCEPFd",
+    "1765108798e420838a",
+    "recommendations",
+    "1763928931e420ca2d",
+    "17660146559414553a"
+  ]
+}

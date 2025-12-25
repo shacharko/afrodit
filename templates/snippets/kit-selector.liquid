@@ -1,0 +1,309 @@
+{%- comment -%}
+KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no duplicates
+{%- endcomment -%}
+
+{%- assign rc = required | default: 5 -%}
+
+{%- assign vendor_norm = product.vendor | default: '' | strip | downcase -%}
+{%- assign brand_meta = nil -%}
+{%- if shop.metaobjects and shop.metaobjects['brand_info'] and shop.metaobjects['brand_info'].values -%}
+  {%- for entry in shop.metaobjects['brand_info'].values -%}
+    {%- assign entry_name = entry.brand_name.value | default: '' | strip | downcase -%}
+    {%- if entry_name == vendor_norm -%}
+      {%- assign brand_meta = entry -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- assign brand_collection = nil -%}
+{%- if brand_meta and brand_meta.brand_collection and brand_meta.brand_collection.value -%}
+  {%- assign brand_collection = brand_meta.brand_collection.value -%}
+{%- endif -%}
+
+{%- capture kit_data_all -%}
+[
+{%- assign first_product = true -%}
+{%- if brand_collection and brand_collection.products_count > 0 -%}
+  {%- for p in brand_collection.products -%}
+    {%- assign pass_flag = false -%}
+    {%- if p.metafields.custom.is_sample_set and p.metafields.custom.is_sample_set.value == true -%}
+      {%- assign pass_flag = true -%}
+    {%- endif -%}
+    {%- if pass_flag -%}
+      {%- assign variants_2ml_count = 0 -%}
+      {%- for v in p.variants -%}
+        {%- assign is_2ml = false -%}
+        {%- for opt in v.options -%}
+          {%- assign od = opt | downcase | strip | replace: 'מ״ל','ml' | replace: 'מ"ל','ml' | replace: 'מל','ml' | replace: ' ', '' -%}
+          {%- if od contains '2ml' -%}{%- assign is_2ml = true -%}{%- endif -%}
+        {%- endfor -%}
+        {%- if is_2ml -%}{%- assign variants_2ml_count = variants_2ml_count | plus: 1 -%}{%- endif -%}
+      {%- endfor -%}
+
+      {%- if variants_2ml_count > 0 -%}
+        {%- assign featured = p.featured_media | default: p.featured_image -%}
+        {%- assign image_url = featured | img_url: '240x240', scale: 2 | prepend: 'https:' -%}
+        {%- unless first_product -%},{%- endunless -%}
+        {
+          "product_id": {{ p.id }},
+          "product_title": {{ p.title | json }},
+          "image": {{ image_url | json }},
+          "variants": [
+            {%- assign vfirst = true -%}
+            {%- for v in p.variants -%}
+              {%- assign is_2ml = false -%}
+              {%- for opt in v.options -%}
+                {%- assign od = opt | downcase | strip | replace: 'מ״ל','ml' | replace: 'מ"ל','ml' | replace: 'מל','ml' | replace: ' ', '' -%}
+                {%- if od contains '2ml' -%}{%- assign is_2ml = true -%}{%- endif -%}
+              {%- endfor -%}
+              {%- if is_2ml -%}
+                {%- unless vfirst -%},{%- endunless -%}
+                {
+                  "id": {{ v.id }},
+                  "name": {{ p.title | json }},
+                  "available": {{ v.available | json }},
+                  "inventory_quantity": {{ v.inventory_quantity | default: 0 }},
+                  "values": {{ v.options | json }}
+                }
+                {%- assign vfirst = false -%}
+              {%- endif -%}
+            {%- endfor -%}
+          ]
+        }
+        {%- assign first_product = false -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+]
+{%- endcapture -%}
+
+<div id="kit-selector" class="product-form-block" data-required="{{ rc }}">
+  <div class="kit-grid">
+    {%- for i in (1..rc) -%}
+      <div class="kit-select" data-index="{{ i }}">
+        <button type="button" class="btn btn--secondary kit-select__button" aria-expanded="false">
+          <span class="kit-select__label" data-placeholder>אנא בחרי דוגמית</span>
+          <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <input type="hidden" class="kit-select__value" />
+        <div class="kit-select__panel card" hidden>
+          <ul class="kit-select__list"></ul>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <style>
+    .kit-grid{display:grid;gap:.75rem}
+    .kit-select{position:relative;width:100%;direction:rtl}
+    .kit-select__button{width:100%;display:flex;align-items:center;justify-content:space-between;padding:.6rem .9rem;border-radius:0}
+    .kit-select__panel{position:absolute;inset-inline:0;top:calc(100% + 4px);z-index:30;background:#fff;box-shadow:0 12px 24px rgba(0,0,0,.08);border-radius:0}
+    .kit-select__list{list-style:none;margin:0;padding:6px;max-height:320px;overflow:auto}
+    .kit-option{display:flex;gap:.75rem;align-items:center;padding:.5rem .6rem;border-radius:.375rem;cursor:pointer;justify-content:flex-start;direction:rtl}
+    .kit-option:hover{background:#f6f6f6}
+    .kit-option[aria-disabled=true]{color:#8a8a8a;opacity:.55;cursor:not-allowed}
+    .kit-option__img{width:34px;height:34px;object-fit:cover;border:1px solid rgba(0,0,0,.06);border-radius:.375rem;flex-shrink:0}
+    .kit-option__details{display:flex;flex-direction:column;flex-grow:1}
+    .kit-option__title{font-size:1em;display:block;line-height:1.2}
+    .kit-option__inventory-text{font-size:.8em;color:#8a8a8a;text-align:right;direction:rtl;display:block}
+  </style>
+</div>
+
+<script type="application/json" id="kit-data-json">{{ kit_data_all | strip }}</script>
+<script type="application/json" id="variants-map-json">{}</script>
+
+<script>
+(function(){
+  var DATA_ALL = JSON.parse(document.getElementById('kit-data-json').textContent || '[]');
+  var REQUIRED = Number({{ rc }}) || 5;
+  var root = document.getElementById('kit-selector');
+  var selects = root.querySelectorAll('.kit-select');
+  var addBtn = document.getElementById('kit-add-to-cart-button');
+  var form = document.querySelector('form[action="/cart/add"]') || document.querySelector('product-form form');
+
+  function countSelectedItems(){
+    var counts={};
+    selects.forEach(function(w){
+      var v=(w.querySelector('.kit-select__value')||{}).value;
+      if(v){counts[v]=(counts[v]||0)+1;}
+    });
+    return counts;
+  }
+
+  // IDs שנבחרו בדרופדאונים אחרים (למניעת בחירה כפולה)
+  function chosenIdSet(currentWrapper){
+    var set=new Set();
+    selects.forEach(function(w){
+      if(currentWrapper && w===currentWrapper) return;
+      var v=(w.querySelector('.kit-select__value')||{}).value;
+      if(v) set.add(String(v));
+    });
+    return set;
+  }
+
+  function filteredList(){
+    var out=[];
+    DATA_ALL.forEach(function(p){
+      (p.variants||[]).forEach(function(v){
+        out.push({
+          product_title:v.name||p.product_title,
+          variant_id:String(v.id),
+          available:!!v.available,
+          image:p.image,
+          inventory_quantity:v.inventory_quantity
+        });
+      });
+    });
+    return out;
+  }
+
+  function refreshATC(){
+    if(!addBtn) return;
+    var chosen=root.querySelectorAll('.kit-select__value[value]').length;
+    var done=chosen>=REQUIRED;
+    addBtn.disabled=!done;
+    addBtn.classList.toggle('disabled',!done);
+  }
+
+  function renderList(ul,items,currentId,wrapper){
+    ul.innerHTML='';
+    var ph=document.createElement('li');
+    ph.className='kit-option';
+    ph.setAttribute('data-variant-id','');
+    ph.innerHTML='<div class="kit-option__details"><div class="kit-option__title">אנא בחרי דוגמית</div></div>';
+    ul.appendChild(ph);
+
+    if(!items.length){
+      var li=document.createElement('li');
+      li.className='kit-option';
+      li.setAttribute('aria-disabled','true');
+      li.innerHTML='<div class="kit-option__details"><div class="kit-option__title">אין דוגמיות זמינות</div></div>';
+      ul.appendChild(li);
+      return;
+    }
+
+    var taken=chosenIdSet(wrapper);
+    var selectedCounts=countSelectedItems();
+
+    items.forEach(function(item){
+      var li=document.createElement('li');
+      li.className='kit-option';
+
+      var title=item.product_title;
+      var total=Number(item.inventory_quantity);
+      if(isNaN(total)||total<0) total=9999;
+
+      var selected=selectedCounts[item.variant_id]||0;
+      if(item.variant_id===currentId) selected-=1;
+      var remaining=total-selected;
+      var outOfStock=remaining<=0 || !item.available;
+
+      var alreadyChosenElsewhere = taken.has(String(item.variant_id)) && item.variant_id!==currentId;
+
+      if(outOfStock || alreadyChosenElsewhere){
+        li.setAttribute('aria-disabled','true');
+      }
+
+      li.setAttribute('data-variant-id',item.variant_id);
+      li.setAttribute('data-title',title);
+
+      var img=item.image?'<img class="kit-option__img" src="'+item.image+'" alt="">':'';
+      var note='';
+      if(alreadyChosenElsewhere){
+        note='<span class="kit-option__inventory-text" style="font-weight:600;">(כבר נבחר)</span>';
+      }else if(outOfStock){
+        note='<span class="kit-option__inventory-text" style="color:#d32f2f;font-weight:bold;">אזל מהמלאי</span>';
+      }else if(total!==9999){
+        note='<span class="kit-option__inventory-text">(נותר: '+Math.max(0,remaining)+')</span>';
+      }
+
+      li.innerHTML=img+'<div class="kit-option__details"><span class="kit-option__title">'+title+'</span>'+note+'</div>';
+      ul.appendChild(li);
+    });
+  }
+
+  function rebuildDropdowns(){
+    var list=filteredList();
+    selects.forEach(function(wrapper){
+      var ul=wrapper.querySelector('.kit-select__list');
+      var label=wrapper.querySelector('.kit-select__label');
+      var hidden=wrapper.querySelector('.kit-select__value');
+      var currentId=hidden.value;
+      var cur=list.find(function(i){return i.variant_id===currentId;});
+      label.textContent=cur?cur.product_title:'אנא בחרי דוגמית';
+      renderList(ul,list,currentId,wrapper);
+    });
+    refreshATC();
+  }
+
+  selects.forEach(function(wrapper){
+    var btn=wrapper.querySelector('.kit-select__button');
+    var panel=wrapper.querySelector('.kit-select__panel');
+    var ul=wrapper.querySelector('.kit-select__list');
+    var hidden=wrapper.querySelector('.kit-select__value');
+    var label=wrapper.querySelector('.kit-select__label');
+
+    btn.addEventListener('click',function(){
+      var expanded=btn.getAttribute('aria-expanded')==='true';
+      root.querySelectorAll('.kit-select__button[aria-expanded="true"]').forEach(function(b){
+        if(b!==btn){b.setAttribute('aria-expanded','false');b.nextElementSibling.hidden=true;}
+      });
+      btn.setAttribute('aria-expanded',String(!expanded));
+      panel.hidden=expanded;
+    });
+
+    ul.addEventListener('click',function(e){
+      var li=e.target.closest('.kit-option');
+      if(!li||li.getAttribute('aria-disabled')==='true') return;
+      var vid=li.getAttribute('data-variant-id');
+      var title=li.getAttribute('data-title')||'אנא בחרי דוגמית';
+      if(vid){ hidden.value=vid; label.textContent=title; }
+      else { hidden.removeAttribute('value'); label.textContent='אנא בחרי דוגמית'; }
+      btn.setAttribute('aria-expanded','false');
+      panel.hidden=true;
+      rebuildDropdowns();
+    });
+
+    document.addEventListener('click',function(ev){
+      if(!wrapper.contains(ev.target)){ btn.setAttribute('aria-expanded','false'); panel.hidden=true; }
+    });
+  });
+
+  // הוספה לעגלה — נשאר כפי שהיה
+  if(addBtn){
+    addBtn.addEventListener('click',function(ev){
+      ev.preventDefault();
+      var chosen = Array.from(root.querySelectorAll('.kit-select__value'))
+        .map(function(inp,idx){
+          return { id: inp.value || '', title: (root.querySelectorAll('.kit-select__label')[idx]||{}).textContent || '' };
+        }).filter(function(x){return x.id;});
+      if(chosen.length<REQUIRED){ refreshATC(); return; }
+
+      var formEl = form;
+      var mainVariantInput = formEl ? formEl.querySelector('[name="id"]') : null;
+      var mainVariantId = mainVariantInput ? mainVariantInput.value : null;
+      var qtyInput = formEl ? formEl.querySelector('[name="quantity"]') : null;
+      var qty = qtyInput ? (parseInt(qtyInput.value,10)||1) : 1;
+
+      var props = {};
+      chosen.forEach(function(c,idx){ props['דוגמית '+(idx+1)] = (c.title || '').split(' (')[0]; });
+
+      var payload = { items:[{ id: Number(mainVariantId), quantity: qty, properties: props }] };
+
+      fetch('/cart/add.js',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      }).then(function(r){ if(!r.ok) throw new Error('AJAX fail'); return r.json(); })
+        .then(function(){
+          if(location.pathname.indexOf('/cart')===-1){ location.href='/cart'; } else { location.reload(); }
+        })
+        .catch(function(e){ console.error('Submission failed:', e); });
+    });
+  }
+
+  rebuildDropdowns();
+})();
+</script>

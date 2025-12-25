@@ -1,0 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "collection.zodicnew.json",
+  "context": {
+    "market": "il"
+  },
+  "sections": {
+    "image_hero_hhamkD": {
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 50,
+        "mobile_height": 50,
+        "image": "{{ collection.metafields.custom.banner_img.value }}"
+      },
+      "blocks": {
+        "heading_YQQtNm": {
+          "settings": {
+            "title": "{{ collection.title }}"
+          }
+        },
+        "text_jMrJ9T": {
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_YQQtNm",
+        "text_jMrJ9T"
+      ]
+    },
+    "main-collection-product-grid": {
+      "settings": {
+        "columns_desktop": "3"
+      },
+      "blocks": {}
+    }
+  }
+}

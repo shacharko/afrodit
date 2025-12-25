@@ -1,0 +1,216 @@
+{%- liquid
+  assign filters_valid = false
+  if results.filters != empty and show_filters
+    assign filters_valid = true
+  endif
+-%}
+
+{%- if filters_valid -%}
+
+  <form
+    class="filter-sidebar"
+    id="filter-sidebar"
+    data-filter-form
+    data-filter-sidebar
+    aria-expanded="{% if collapse_filter_bar %}false{% else %}true{% endif %}"
+  >
+    <div class="filter-sidebar-inner" data-sticky-container>
+      {%- if search.terms -%}
+        <input
+          type="hidden"
+          name="q"
+          id="SearchFilters--FilterDrawer"
+          value="{{ search.terms | escape }}"
+        >
+      {%- endif -%}
+
+      {%- if results.terms -%}
+        <input type="hidden" name="q" value="{{ results.terms | escape }}">
+        <input name="options[prefix]" type="hidden" value="last">
+      {%- endif -%}
+
+      {%- if results.current_type -%}
+        <input type="hidden" name="q" value="{{ results.current_type | escape }}">
+      {%- endif -%}
+
+      {%- if results.current_vendor -%}
+        <input type="hidden" name="q" value="{{ results.current_vendor | escape }}">
+      {%- endif -%}
+
+      {%- comment -%}
+        מציגים רק את הפילטרים: מחיר, מותג, עונות (custom.seasons),
+        משפחת ריחות (custom.scent_family), ריכוז (custom.concentration), גודל — ובסדר הזה.
+      {%- endcomment -%}
+      {%- assign desired_order = 'price_range|vendor|seasons|scent_family|concentration|size' | split: '|' -%}
+
+      {%- for want in desired_order -%}
+        {%- for filter in results.filters -%}
+          {%- liquid
+            assign fl_key = ''
+
+            if filter.type == 'price_range'
+              assign fl_key = 'price_range'
+            else
+              assign h = filter.label | handleize
+              assign u = filter.url_to_remove | default: ''
+              if h == 'vendor' or h == 'brand' or h == 'מותג'
+                assign fl_key = 'vendor'
+              elsif h contains 'season' or h == 'עונות' or u contains '.seasons'
+                assign fl_key = 'seasons'
+              elsif h contains 'scent-family' or h contains 'family' or h == 'משפחת-ריחות' or h == 'משפחת-ניחוחות' or u contains '.scent_family'
+                assign fl_key = 'scent_family'
+              elsif h contains 'concentration' or h == 'ריכוז' or u contains '.concentration'
+                assign fl_key = 'concentration'
+              elsif h == 'גודל' or h == 'נפח' or h contains 'size' or h contains 'volume'
+                assign fl_key = 'size'
+              endif
+            endif
+
+            if fl_key != want
+              continue
+            endif
+          -%}
+
+          {% render 'filter-drawer-group',
+            filter: filter,
+            scope: 'sidebar',
+            collapse_filter_groups: collapse_filter_groups,
+            show_swatch_filters: show_swatch_filters,
+            swatch_options: swatch_options,
+            show_chip_filters: show_chip_filters,
+            chip_options: chip_options,
+            chip_layout: chip_layout,
+            custom_color_key_map: custom_color_key_map,
+            custom_color_value_map: custom_color_value_map
+          %}
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </form>
+<style>
+/* === Price filter: show only the slider === */
+.filter-sidebar [data-price-range] .filter-drawer__price-range-input-wrapper,
+.filter-sidebar [data-price-range] .filter-drawer__price-range-input,
+.filter-sidebar [data-price-range] .filter-drawer__price-range-currency,
+.filter-sidebar [data-price-range] .filter-drawer__price-range-label,
+.filter-sidebar [data-price-range] .filter-group__values-header { display: none !important; }
+
+/* === Slider container polish (no clipping + nice spacing) === */
+.filter-sidebar .filter-group__values { padding-inline: 10px; overflow: visible; }
+.filter-sidebar .filter-drawer__price-range { position: relative; padding-inline: 10px; }
+.filter-sidebar .filter-drawer__slider { margin-block: 10px 12px; }
+
+/* === Price bubbles above handles (requires JS) === */
+.filter-sidebar .has-price-bubbles .noUi-handle,
+.filter-sidebar .has-price-bubbles [role="slider"] { overflow: visible; z-index: 5; }
+.filter-sidebar .price-bubble {
+  position: absolute; bottom: 110%; left: 50%; transform: translateX(-50%);
+  white-space: nowrap; font-size: 12px; background: #e7dfde; color: #111;
+  padding: 4px 6px; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,.08); line-height: 1;
+}
+.filter-sidebar .price-bubble::after {
+  content: ""; position: absolute; left: 50%; transform: translateX(-50%); top: 100%;
+  border: 6px solid transparent; border-top-color: #e7dfde;
+}
+
+/* === Checkbox → text spacing (also top bar) === */
+.filter-sidebar .filter-item__content-inner .filter-input__input,
+.filter-bar     .filter-item__content-inner .filter-input__input { margin-inline-end: 8px !important; flex: 0 0 auto; }
+.filter-sidebar .filter-item__content-inner,
+.filter-bar     .filter-item__content-inner { display: inline-flex; align-items: center; }
+
+/* === Spacing between filter bar and results grid === */
+.filter-bar { margin-block-end: 16px; }
+.filter-bar + .collection__container { margin-top: 8px; } /* fallback for other themes */
+
+/* === Bubble: active filters count in the top bar (circle like cart badge) === */
+.filter-bar__button-count{
+  margin-inline-start: 8px;
+  background: #1f2226 !important; color: #fff !important; border: 0 !important;
+  border-radius: 9999px !important;
+  min-width: 22px !important; height: 22px !important; padding: 0 6px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  line-height: 1 !important; font-size: 12px !important; font-weight: 600 !important;
+}
+
+/* === Bubble: active count per group in the sidebar (force circle) === */
+.filter-sidebar .filter-group__label .filter-group__label-count,
+.filter-group__label .filter-group__label-count,
+.filter-sidebar .filter-group__label [data-group-active-count],
+.filter-group__label [data-group-active-count]{
+  background: #1f2226 !important; color: #fff !important; border: 0 !important;
+  border-radius: 9999px !important;
+  min-width: 20px !important; height: 20px !important; padding: 0 6px !important;
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  line-height: 1 !important; font-size: 11px !important; font-weight: 600 !important;
+  margin-inline-start: 6px !important; /* small gap from title */
+}
+</style>
+
+<script>
+(function () {
+  var CUR = '{{ cart.currency.symbol }}' || '₪';
+  var fmt = v => CUR + ' ' + Math.round(+v || 0).toLocaleString();
+
+  function init() {
+    // סליידר מחיר יחיד בסיידבר
+    var range = document.querySelector('.filter-sidebar [data-price-range]');
+    if (!range) return;
+    var slider = range.querySelector('.noUi-target') || range.querySelector('[data-range-slider]');
+    if (!slider || !slider.noUiSlider || slider._bubblesBound) return;
+
+    slider._bubblesBound = true;            // לא לצבור מאזינים
+    slider.classList.add('has-price-bubbles');
+
+    function ensureBubble(h) {
+      var b = h.querySelector('.price-bubble');
+      if (!b) { b = document.createElement('span'); b.className = 'price-bubble'; h.appendChild(b); }
+      return b;
+    }
+
+    function update(values) {
+      try {
+        // מאתרים כל פעם את הידיות (יש תמות שמחליפות DOM בזמן גרירה)
+        var hs = slider.querySelectorAll('.noUi-handle, [role="slider"]');
+        if (hs.length < 2) return;
+
+        // מי משמאל/מימין בפועל
+        var h0 = hs[0], h1 = hs[1];
+        if (h0.getBoundingClientRect().left > h1.getBoundingClientRect().left) { var t=h0; h0=h1; h1=t; }
+
+        // noUi מחזיר תמיד values[0]=נמוך, values[1]=גבוה
+        ensureBubble(h0).textContent = fmt(values[1]); // שמאל = מקסימום
+        ensureBubble(h1).textContent = fmt(values[0]); // ימין  = מינימום
+      } catch(e) { /* שקט ובטוח */ }
+    }
+
+    slider.noUiSlider.on('update', update);
+    update(slider.noUiSlider.get());       // סט ראשוני
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+  window.addEventListener('load', init);
+  document.addEventListener('shopify:section:load', init);
+  document.addEventListener('filter:changed', function(){ setTimeout(function(){
+    // אם ניקו מסננים/נטען מחדש — נריץ שוב; נשחרר דגל אם האלמנט הוחלף
+    var s = document.querySelector('.filter-sidebar [data-price-range] .noUi-target');
+    if (s) s._bubblesBound = false;
+    init();
+  }, 120); });
+  document.addEventListener('click', function(e){
+    if (e.target.closest('[data-filter-group-reset],[data-active-filters-clear]')) {
+      setTimeout(function(){
+        var s = document.querySelector('.filter-sidebar [data-price-range] .noUi-target');
+        if (s) s._bubblesBound = false;
+        init();
+      }, 120);
+    }
+  });
+})();
+</script>
+
+
+
+
+
+{%- endif -%}

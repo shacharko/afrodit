@@ -1,0 +1,746 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "image_with_text_1": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "{{ page.title }}",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 4
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "{{ page.content }}",
+            "text_font_class": "fs-body-75"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "spacer",
+        "text"
+      ],
+      "name": "t:sections.image_with_text.presets.name",
+      "settings": {
+        "image_position": "left",
+        "aspect_ratio": "landscape",
+        "focal_point": "image_presentation",
+        "image_caption": "",
+        "text_alignment": "left",
+        "show_small_image": false,
+        "image_small_focal_point": "image_presentation",
+        "background_color": "#f2f1eb",
+        "text_color": "#282828",
+        "button_background_color": "#282828",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi_column": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column_1": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Sterling Silver",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p></p><p>Our silver pieces are crafted from 925 sterling silver for its brilliance and strength. Each is hallmarked for authenticity and designed to age gracefully with wear, developing a subtle patina over time.</p>",
+            "text_font_class": "fs-body-75",
+            "text_max_width": 90,
+            "link": "",
+            "link_text": "Shop Silver",
+            "button_style": "btn--callout"
+          }
+        },
+        "image_column_2": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Gold Layers",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p></p><p>Many designs are artfully hand-sculpted in bronze, then double-plated with 18k and 24k gold for depth and durability. The gold layer gives each piece a luminous finish while keeping them lightweight for all-day comfort</p>",
+            "text_font_class": "fs-body-75",
+            "text_max_width": 90,
+            "link": "",
+            "link_text": "Shop Gold",
+            "button_style": "btn--callout"
+          }
+        },
+        "image_column_3": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Bronze",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p></p><p>We use up to 35% recycled bronze for its sculptural qualities and ability to hold intricate detail. This ancient material brings warmth and character while supporting sustainable production.</p>",
+            "text_font_class": "fs-body-75",
+            "text_max_width": 90,
+            "link": "",
+            "link_text": "Shop all jewelry",
+            "button_style": "btn--callout"
+          }
+        },
+        "image_column_4": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Brass",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p></p><p>Used as a base metal in select pieces, brass offers a warm undertone and excellent strength for detailed designs. It’s double-plated in 18k and 24k gold to achieve a luminous finish while maintaining a lightweight feel.</p>",
+            "text_font_class": "fs-body-75",
+            "text_max_width": 90,
+            "link": "",
+            "link_text": "Shop all jewelry",
+            "button_style": "btn--callout"
+          }
+        }
+      },
+      "block_order": [
+        "image_column_1",
+        "image_column_2",
+        "image_column_3",
+        "image_column_4"
+      ],
+      "name": "t:sections.multi_column.presets.name",
+      "settings": {
+        "title": "Materials",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "small",
+        "columns": "4",
+        "column_spacing": 8,
+        "row_spacing": 36,
+        "column_alignment": "left",
+        "enable_slider_mobile": true,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 48,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "#f2f1eb",
+        "text_color": "#282828",
+        "button_background_color": "#282828",
+        "button_text_color": "#fafaf0",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "rich_text_1": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer_1": {
+          "type": "spacer",
+          "settings": {
+            "space": 48
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Care Guide",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-3-base"
+          }
+        },
+        "spacer_2": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        }
+      },
+      "block_order": [
+        "spacer_1",
+        "heading",
+        "spacer_2"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-only",
+        "content_width": "custom",
+        "custom_content_width": 600
+      }
+    },
+    "image_with_text_2": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "How to store Your Jewelry",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "spacer_1": {
+          "type": "spacer",
+          "settings": {
+            "space": 16
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6><strong>Keep pieces separate</strong></h6><p>Store each item in its own soft pouch or lined box to prevent scratches and tangling.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "border_1": {
+          "type": "border",
+          "settings": {}
+        },
+        "text_2": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Protect from humidity</h6><p>If you live in a humid environment, include a silica gel packet or anti-tarnish strip in your storage.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "border_2": {
+          "type": "border",
+          "settings": {}
+        },
+        "text_3": {
+          "type": "text",
+          "settings": {
+            "text": "<h6><strong>Avoid sunlight</strong></h6><p>Prolonged exposure to direct sunlight can cause certain materials and stones to fade over time.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "spacer_2": {
+          "type": "spacer",
+          "settings": {
+            "space": 40
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "spacer_1",
+        "text_1",
+        "border_1",
+        "text_2",
+        "border_2",
+        "text_3",
+        "spacer_2"
+      ],
+      "name": "t:sections.image_with_text.presets.name",
+      "settings": {
+        "image_position": "left",
+        "aspect_ratio": "portrait",
+        "focal_point": "image_presentation",
+        "image_caption": "",
+        "text_alignment": "left",
+        "show_small_image": false,
+        "image_small_focal_point": "image_presentation",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#282828",
+        "button_background_color": "#282828",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-only"
+      }
+    },
+    "image_with_text_3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Managing Exposure",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "spacer_1": {
+          "type": "spacer",
+          "settings": {
+            "space": 16
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6><strong>Remove before water contact</strong></h6><p>Take off jewelry before swimming, showering, or washing hands to avoid moisture damage.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "border_1": {
+          "type": "border",
+          "settings": {}
+        },
+        "text_2": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Protect from humidity</h6><p>Perfumes, lotions, hair products, and cleaning agents can cause discoloration or erosion of finishes.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "border_2": {
+          "type": "border",
+          "settings": {}
+        },
+        "text_3": {
+          "type": "text",
+          "settings": {
+            "text": "<h6><strong>Avoid sunlight</strong></h6><p>Do not wear pieces during exercise, gardening, or other activities where they may be scratched or dented.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "spacer_2": {
+          "type": "spacer",
+          "settings": {
+            "space": 40
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "spacer_1",
+        "text_1",
+        "border_1",
+        "text_2",
+        "border_2",
+        "text_3",
+        "spacer_2"
+      ],
+      "name": "t:sections.image_with_text.presets.name",
+      "settings": {
+        "image_position": "left",
+        "aspect_ratio": "portrait",
+        "focal_point": "image_presentation",
+        "image_caption": "",
+        "text_alignment": "left",
+        "show_small_image": false,
+        "image_small_focal_point": "image_presentation",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#282828",
+        "button_background_color": "#282828",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "image_with_text_4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Mindful Usage",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "spacer_1": {
+          "type": "spacer",
+          "settings": {
+            "space": 16
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h6><strong>Put Jewelry on Last</strong></h6><p>After applying makeup, perfume, and hair products, add your jewelry as a final touch.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "border_1": {
+          "type": "border",
+          "settings": {}
+        },
+        "text_2": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Remove before bed</h6><p>Taking off pieces before sleeping helps avoid accidental pulling or bending.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "border_2": {
+          "type": "border",
+          "settings": {}
+        },
+        "text_3": {
+          "type": "text",
+          "settings": {
+            "text": "<h6><strong>Handle with clean hands</strong></h6><p>Use a soft microfiber cloth for daily maintenance. For deeper cleaning, gently wash with mild soap and lukewarm water, then pat dry.</p>",
+            "text_font_class": "fs-body-75"
+          }
+        },
+        "spacer_2": {
+          "type": "spacer",
+          "settings": {
+            "space": 40
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "spacer_1",
+        "text_1",
+        "border_1",
+        "text_2",
+        "border_2",
+        "text_3",
+        "spacer_2"
+      ],
+      "name": "t:sections.image_with_text.presets.name",
+      "settings": {
+        "image_position": "left",
+        "aspect_ratio": "portrait",
+        "focal_point": "image_presentation",
+        "image_caption": "",
+        "text_alignment": "left",
+        "show_small_image": false,
+        "image_small_focal_point": "image_presentation",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#282828",
+        "button_background_color": "#282828",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-bottom-only"
+      }
+    },
+    "grid": {
+      "type": "grid",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "width": "50",
+            "height": 500,
+            "mobile_height": 500,
+            "media_fit": "cover",
+            "focal_point": "image_presentation",
+            "mobile_focal_point": "image_presentation",
+            "text_position": "flex-start_flex-end",
+            "accent": "",
+            "title": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-3-base",
+            "subheading": "",
+            "subheading_tag": "h4",
+            "subheading_font_class": "fs-heading-5-base",
+            "text": "<h4>Professional Cleaning</h4><p> We offer professional cleaning services in-store to remove buildup and restore the lustre of your jewelry.</p>",
+            "text_font_class": "fs-body-75",
+            "link": "",
+            "link_text": "Book an appointment",
+            "button_style": "btn--callout",
+            "background_color": "",
+            "text_color": "#ffffff",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.47) 28%, rgba(0, 0, 0, 0.19) 47%, rgba(0, 0, 0, 0) 67%)",
+            "overlay_opacity": 60
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "width": "50",
+            "height": 500,
+            "mobile_height": 500,
+            "media_fit": "cover",
+            "focal_point": "image_presentation",
+            "mobile_focal_point": "image_presentation",
+            "text_position": "flex-start_flex-end",
+            "accent": "",
+            "title": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-2-base",
+            "subheading": "",
+            "subheading_tag": "h4",
+            "subheading_font_class": "fs-heading-5-base",
+            "text": "<h4>Visit our stores</h4><p>Our team is here to help. Stop by for personal styling, fittings, and to learn more about caring for your pieces.</p>",
+            "text_font_class": "fs-body-75",
+            "link": "",
+            "link_text": "Find a store",
+            "button_style": "btn--callout",
+            "background_color": "",
+            "text_color": "#ffffff",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.47) 28%, rgba(0, 0, 0, 0.19) 47%, rgba(0, 0, 0, 0) 67%)",
+            "overlay_opacity": 60
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2"
+      ],
+      "name": "t:sections.grid.presets.name",
+      "settings": {
+        "heading": "Discover more",
+        "heading_tag": "h2",
+        "subheading": "",
+        "content_alignment": "center",
+        "enable_animation": true,
+        "full_width": false,
+        "spacing": 25,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-only"
+      }
+    },
+    "rich_text_2": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "space": 24
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "FAQ",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-3-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Below are some common questions:</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "spacer",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "collapsible_row_list": {
+      "type": "collapsible-row-list",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "Can I wear my jewelry every day?",
+            "text": "<p>Yes, our pieces are designed for daily wear but should be treated with care. To preserve their finish, avoid contact with water, perfumes, and harsh chemicals.</p>"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "Can I shower or swim with my jewelry?",
+            "text": "<p>We recommend removing your jewelry before showering, swimming, or exercising. Moisture and chemicals can cause tarnishing and dull the gold layer over time.</p>"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "How should I store my jewelry?",
+            "text": "<p>Store each piece in its original pouch or box to avoid scratches. Keep them in a cool, dry place, away from sunlight and humidity.</p>"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "What’s the best way to clean gold-plated jewelry?",
+            "text": "<p>Gently wipe with a soft, lint-free cloth after wear. For deeper cleaning, use lukewarm water and mild soap, then dry thoroughly. Avoid abrasive cloths or chemicals.</p>"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "What’s the best way to clean silver jewelry?",
+            "text": "<p>Use a special silver polishing cloth for light tarnish. For deeper cleaning, rinse in lukewarm water with mild soap, then dry with a microfiber cloth.</p>"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "Can I use a jewelry cleaner?",
+            "text": "<p>We recommend avoiding liquid jewelry cleaners as they may strip plated finishes. Instead, opt for professional cleaning services.</p>"
+          }
+        },
+        "item_7": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "Will my jewelry tarnish over time?",
+            "text": "<p>Tarnishing is a natural process, especially for silver pieces. Proper care and regular gentle cleaning will help maintain their original shine.</p>"
+          }
+        },
+        "item_8": {
+          "type": "item",
+          "settings": {
+            "expand_by_default": false,
+            "icon": "none",
+            "title": "Do you offer professional cleaning?",
+            "text": "<p>Yes. Visit one of our stores or contact customer service to arrange a professional cleaning service for your pieces.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "item_6",
+        "item_7",
+        "item_8"
+      ],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "heading_alignment": "left",
+        "subheading": "",
+        "subheading_tag": "h3",
+        "subheading_font_class": "fs-heading-5-base",
+        "item_heading_font": "heading",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-bottom-only",
+        "content_width": "custom",
+        "custom_content_width": 850
+      }
+    },
+    "rich_text_3": {
+      "type": "rich-text",
+      "blocks": {
+        "button_bbBPwj": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Visit the FAQ",
+            "button_style": "btn--callout"
+          }
+        },
+        "spacer_t4CgMK": {
+          "type": "spacer",
+          "settings": {
+            "space": 24
+          }
+        }
+      },
+      "block_order": [
+        "button_bbBPwj",
+        "spacer_t4CgMK"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-bottom-only",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_1",
+    "multi_column",
+    "rich_text_1",
+    "image_with_text_2",
+    "image_with_text_3",
+    "image_with_text_4",
+    "grid",
+    "rich_text_2",
+    "collapsible_row_list",
+    "rich_text_3"
+  ]
+}

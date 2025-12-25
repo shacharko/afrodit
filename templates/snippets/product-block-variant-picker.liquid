@@ -1,0 +1,266 @@
+{%- comment -%}
+  FIX: Replaced {% liquid ... %} with separate {% assign %} tags to fix syntax error in this theme environment.
+{%- endcomment -%}
+
+<style>
+  .product__spray-info {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+</style>
+
+{% assign swatch_options = settings.swatch_options | downcase | split: ', ' %}
+{% assign chip_options = settings.chip_options | downcase | split: ', ' %}
+
+{% comment %} Sibling products {% endcomment %}
+{% assign sibling_products = product.metafields.stiletto.sibling_collection.value.products | default: product.metafields.stiletto.siblings_collection.value.products %}
+
+{% case settings.swatch_shape %}
+  {% when 'rectangle' %}
+    {% case block_settings.swatch_size %}
+      {% when 'large' %}{% assign swatch_width = 72 %}
+      {% when 'medium' %}{% assign swatch_width = 60 %}
+      {% else %}{% assign swatch_width = 44 %}
+    {% endcase %}
+  {% else %}
+    {% case block_settings.swatch_size %}
+      {% when 'large' %}{% assign swatch_width = 48 %}
+      {% when 'medium' %}{% assign swatch_width = 38 %}
+      {% else %}{% assign swatch_width = 30 %}
+    {% endcase %}
+{% endcase %}
+
+{% assign swatch_image_width = swatch_width | times: 2 %}
+
+{% capture swatch_style %}
+  --swatch-width: {{ swatch_width }}px;
+  --swatch-image-fit: {{ settings.swatch_image_fit }};
+{% endcapture %}
+
+{%- unless product.has_only_default_variant -%}
+  {%- liquid
+    assign variant_popup_page = pages[block_settings.variant_popup_page]
+    assign variant_popup_content_exists = false
+    assign variant_popup_option = ''
+
+    if block_settings.variant_popup_option != blank and block_settings.variant_popup_text != blank and variant_popup_page.content != blank
+      assign variant_popup_content_exists = true
+      assign variant_popup_option = block_settings.variant_popup_option | downcase
+    endif
+  -%}
+
+  <div
+    class="product__controls-group product__variants-wrapper product__block product__block--medium"
+    data-enable-dynamic-product-options="{{ settings.enable_dynamic_product_options }}"
+    data-current-variant-id="{{ product.selected_or_first_available_variant.id }}"
+    style="{{ swatch_style }}"
+    {{ block.shopify_attributes }}
+  >
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign option_name = option.name | downcase
+        assign show_popup_trigger = false
+        assign rendered_popup_trigger = ''
+        assign option_values = ''
+
+        if variant_popup_content_exists and option_name == variant_popup_option
+          assign show_popup_trigger = true
+        endif
+      -%}
+      {% if option_name != 'brand' %}
+
+      {% if show_popup_trigger %}
+        {% capture rendered_popup_trigger %}
+          {% render 'product-block-information-popup' with
+            block: block,
+            popup_page_target: block_settings.variant_popup_page,
+            popup_page: variant_popup_page,
+            icon: block_settings.variant_popup_icon,
+            custom_icon_image: block_settings.custom_icon_image,
+            text: block_settings.variant_popup_text
+          %}
+        {% endcapture %}
+      {% endif %}
+
+      {%- capture option_values -%}
+        <select
+          id="option{{ option.position }}"
+          name="options[{{ option.name | escape }}]"
+          class="input {% if settings.enable_dynamic_product_options %}dynamic-variant-input{% endif %}"
+          data-index="option{{ forloop.index }}"
+          {% if option_name == 'size' %}data-size-option="true"{% endif %}
+        >
+          {%- for value in option.values -%}
+            <option
+              data-value-handle="{{ value | handleize }}--{{ forloop.index }}"
+              value="{{ value | escape }}"
+              {%- if option.selected_value == value -%}selected="selected"{%- endif -%}
+            >
+              {{ value }}
+            </option>
+          {%- endfor -%}
+        </select>
+      {%- endcapture -%}
+
+      {% capture rendered_option_inner %}
+        {% if swatch_options contains option_name %}
+          <div class="product__color-swatches" data-option-buttons data-product-option="option{{ option.position }}">
+            <div class="product__color-swatches--inner {% if settings.enable_dynamic_product_options %}dynamic-variant-input-wrap{% endif %}" data-index="option{{ forloop.index }}">
+              {%- for value in option.values -%}
+                {% render 'product-swatch',
+                  context: 'product-page',
+                  prod: product,
+                  forloop_index: forloop.index,
+                  swatch_size: block_settings.swatch_size,
+                  swatch_image_width: swatch_image_width,
+                  option_index: option.position,
+                  option_name: option_name,
+                  option_value: value,
+                  selected_value: option.selected_value,
+                  custom_color_key_map: custom_color_key_map,
+                  custom_color_value_map: custom_color_value_map
+                %}
+              {%- endfor -%}
+
+              {{ option_values }}
+            </div>
+          </div>
+
+        {% elsif chip_options contains option_name %}
+          <div class="product__color-chips {% if settings.enable_dynamic_product_options %}dynamic-variant-input-wrap{% endif %}"
+               data-option-buttons
+               data-product-option="option{{ option.position }}"
+               data-index="option{{ forloop.index }}"
+               data-layout="{{ block_settings.chip_layout }}">
+            {%- for value in option.values -%}
+              <button
+                type="button"
+                data-button
+                data-label="{{ value | url_encode }}"
+                aria-label="{{ value | replace: '"', "'" }}"
+                data-option-value="{{ value | escape }}"
+                data-option-handle="{{ value | handleize }}--{{ forloop.index }}"
+                class="product__chip {% if option.selected_value == value %}selected{% endif %} {% if settings.enable_dynamic_product_options %}dynamic-variant-button{% endif %}"
+              >
+                {{ value }}
+              </button>
+            {%- endfor -%}
+
+            {{ option_values }}
+          </div>
+
+        {% else %}
+          <div class="select-wrapper {% if settings.enable_dynamic_product_options %}dynamic-variant-input-wrap{% endif %}" data-index="option{{ forloop.index }}">
+            {{ option_values }}
+            {% render 'icon' with icon: 'chevron-small' %}
+          </div>
+        {% endif %}
+      {% endcapture %}
+
+      {% capture rendered_option %}
+        <div class="js-enabled product__option" data-product-option {% if option_name == 'size' %}dir="rtl"{% endif %}>
+
+          {%- comment -%}
+            עבור size – במקום לייבל רגיל נשים רק את מלל ההתזות, בתוך אותו wrapper,
+            כדי שהוא יופיע בדיוק מעל כפתורי הווריאציה.
+          {%- endcomment -%}
+          {% if option_name == 'size' %}
+            <div class="product__label-wrapper">
+              <div class="product__spray-info t-opacity-70">
+                <span data-size-label="true"></span>
+              </div>
+            </div>
+          {% else %}
+            <div class="product__label-wrapper">
+              <label class="product__label fs-body-100" for="option{{ option.position }}">
+                {{ option.name }}:
+                <span class="t-opacity-70"
+                  data-selected-value-for-option
+                  data-option-name="option{{ option.position }}"
+                ></span>
+              </label>
+            </div>
+          {% endif %}
+
+          {{ rendered_option_inner }}
+          {{ rendered_popup_trigger }}
+        </div>
+      {% endcapture %}
+
+      {{ rendered_option }}
+      {% endif %}
+    {% endfor %}
+
+    {% if settings.enable_dynamic_product_options %}
+      <script type="application/json" data-variant-json>
+        {{ product.variants | json }}
+      </script>
+    {% endif %}
+  </div>
+{% endunless %}
+
+{%- assign spray_infos = shop.metaobjects['spray_info'].values -%}
+{% if spray_infos != blank %}
+<script>
+  // מיפוי size → sprays_count מתוך ה-metaobject
+  window.getSprayCount = (function () {
+    const map = {
+      {% for entry in spray_infos %}
+        "{{ entry.size | strip | escape }}": {{ entry.sprays_count | default: 0 }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+    return size => map[size] ?? null;
+  })();
+
+  function updateSizeLabelFromMeta() {
+    const span = document.querySelector('[data-size-label="true"]');
+    if (!span) return;
+
+    // קודם ננסה לקרוא מה-select של ה-size
+    const select = document.querySelector('[data-size-option="true"]');
+    let size = select ? select.value : '';
+
+    // fallback: כפתור selected של ה-size
+    if (!size) {
+      const sizeOptionContainer = document.querySelector('.product__option[dir="rtl"]');
+      if (sizeOptionContainer) {
+        const selectedBtn =
+          sizeOptionContainer.querySelector('.product__chip.selected[data-option-value]') ||
+          sizeOptionContainer.querySelector('[data-button].selected[data-option-value]');
+        if (selectedBtn) {
+          size = selectedBtn.getAttribute('data-option-value') || selectedBtn.textContent.trim();
+        }
+      }
+    }
+
+    if (!size || !window.getSprayCount) return;
+
+    const sprays = getSprayCount(size);
+
+    // מציגים טקסט רק אם זה 2ml או 5ml וגם יש ערך ב-metaobject
+    if (sprays != null && (size.includes('2ml') || size.includes('5ml') || size.includes('10ml'))) {
+      span.textContent = `${sprays} התזות`;
+    } else {
+      span.textContent = '';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', updateSizeLabelFromMeta);
+
+  document.addEventListener('change', function (e) {
+    if (e.target.matches('[data-size-option="true"]')) {
+      updateSizeLabelFromMeta();
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('[data-option-buttons] [data-button], [data-option-buttons] .product__chip');
+    if (btn) {
+      setTimeout(updateSizeLabelFromMeta, 0);
+    }
+  });
+
+  document.addEventListener('variant:changed', updateSizeLabelFromMeta);
+  document.addEventListener('product:variant-change', updateSizeLabelFromMeta);
+</script>
+{% endif %}

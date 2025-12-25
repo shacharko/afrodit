@@ -1,0 +1,151 @@
+{% doc %}
+  @prompt
+    Horizontal line
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-horizontal-line-{{ ai_gen_id }} {
+    width: 100%;
+    padding: {{ block.settings.spacing_top }}px 0 {{ block.settings.spacing_bottom }}px;
+  }
+
+  .ai-horizontal-line-{{ ai_gen_id }}__line {
+    width: 100%;
+    height: {{ block.settings.line_thickness }}px;
+    background-color: {{ block.settings.line_color }};
+    border: none;
+    margin: 0;
+    {% if block.settings.line_style == 'dashed' %}
+      background: repeating-linear-gradient(
+        to right,
+        {{ block.settings.line_color }} 0px,
+        {{ block.settings.line_color }} 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    {% elsif block.settings.line_style == 'dotted' %}
+      background: repeating-linear-gradient(
+        to right,
+        {{ block.settings.line_color }} 0px,
+        {{ block.settings.line_color }} 4px,
+        transparent 4px,
+        transparent 12px
+      );
+    {% endif %}
+  }
+
+  .ai-horizontal-line-{{ ai_gen_id }}--width-narrow .ai-horizontal-line-{{ ai_gen_id }}__line {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .ai-horizontal-line-{{ ai_gen_id }}--width-medium .ai-horizontal-line-{{ ai_gen_id }}__line {
+    width: 75%;
+    margin: 0 auto;
+  }
+{% endstyle %}
+
+<div
+  class="ai-horizontal-line-{{ ai_gen_id }} ai-horizontal-line-{{ ai_gen_id }}--width-{{ block.settings.line_width }}"
+  {{ block.shopify_attributes }}
+>
+  <hr class="ai-horizontal-line-{{ ai_gen_id }}__line">
+</div>
+
+{% schema %}
+{
+  "name": "Horizontal line",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Line style"
+    },
+    {
+      "type": "select",
+      "id": "line_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "dashed",
+          "label": "Dashed"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "select",
+      "id": "line_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Narrow"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ],
+      "default": "full"
+    },
+    {
+      "type": "range",
+      "id": "line_thickness",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Thickness",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Color",
+      "default": "#AAAAAA"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Horizontal line"
+    }
+  ]
+}
+{% endschema %}

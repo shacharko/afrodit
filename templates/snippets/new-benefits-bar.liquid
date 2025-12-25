@@ -1,0 +1,223 @@
+{%- comment -%}
+Benefits marquee (RTL Hebrew version, full width strip + inner line)
+Usage: {% render 'benefits-marquee-afrodite' %}
+{%- endcomment -%}
+
+<div class="af-marquee-wrapper">
+  <div class="af-marquee" dir="ltr" data-af-marquee>
+    <div class="af-track">
+
+      <div class="af-tag">
+        <a href="#">
+          <span class="af-img">
+            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902462_m.jpg"
+                 width="64" height="64" alt="100% אותנטיות מובטחת">
+          </span>
+          <span class="af-text">100% אותנטיות מובטחת</span>
+        </a>
+      </div>
+
+      <div class="af-tag">
+        <a href="#">
+          <span class="af-img">
+            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902461_m.jpg"
+                 width="64" height="64" alt="תשלום מאובטח">
+          </span>
+          <span class="af-text">תשלום מאובטח</span>
+        </a>
+      </div>
+
+      <div class="af-tag">
+        <a href="#">
+          <span class="af-img">
+            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902460_m.jpg"
+                 width="64" height="64" alt="יבואן רשמי">
+          </span>
+          <span class="af-text">יבואן רשמי / נקודת מכירה מורשית</span>
+        </a>
+      </div>
+
+      <div class="af-tag">
+        <a href="#">
+          <span class="af-img">
+            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902458_m.jpg"
+                 width="64" height="64" alt="דוגמיות מתנה">
+          </span>
+          <span class="af-text">דוגמיות מתנה בכל רכישה מעל 300₪</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- הקו שמתחת לאייקונים -->
+  <div class="af-marquee-line"></div>
+</div>
+
+<style>
+/* עטיפה שיוצאת מה-page-width של התבנית – סטריפ על כל המסך */
+.af-marquee-wrapper{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+}
+
+/* הסטריפ עצמו */
+.af-marquee{
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:transparent;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-inline:20px;
+  direction:ltr;
+}
+
+/* המסילה */
+.af-track{
+  display:flex;
+  align-items:center;
+  gap:64px;
+  will-change:transform;
+  width:max-content;
+  direction:ltr;
+}
+
+/* טאגים */
+.af-tag{
+  display:flex;
+  align-items:center;
+  flex-direction:row-reverse;
+  white-space:nowrap;
+}
+
+.af-tag > a{
+  display:flex;
+  align-items:center;
+  flex-direction:row-reverse;
+  gap:14px;
+  text-decoration:none;
+  color:#222;
+  font-weight:500;
+  font-size:15px;
+  height:80px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.af-text{
+  direction:rtl;
+  line-height:1.2;
+}
+
+/* אייקון */
+.af-img{
+  line-height:0;
+  display:grid;
+  place-items:center;
+}
+
+.af-img img{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+  display:block;
+  opacity:.9;
+  transition:opacity .2s ease, transform .2s ease;
+}
+
+.af-tag:hover .af-img img{
+  opacity:1;
+  transform:scale(1.08);
+}
+
+/* הקו – ברוחב קונטיינר, צמוד לאייקונים */
+.af-marquee-line{
+  width:min(1200px,92%);
+  height:2px;
+  background:#d7d7d7;
+  margin:0 auto;
+  margin-top:-30px;      /* קירוב לקצה התחתון של האייקונים */
+  margin-bottom:16px;   /* רווח אחרי הקו */
+}
+
+/* אנימציה */
+.af-marquee.is-running .af-track{
+  animation: af-loop var(--af-speed, 38s) linear infinite;
+}
+
+@keyframes af-loop{
+  0%   { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(calc(-1 * var(--af-distance, 1000px)),0,0); }
+}
+
+/* מובייל */
+@media (max-width: 600px){
+  .af-track{ gap:36px; }
+  .af-img img{ width:32px; height:32px; }
+  .af-tag > a{
+    font-size:14px;
+    height:70px;
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+}
+</style>
+
+<script>
+(function(){
+  function init(root){
+    if(!root || root.hasAttribute('data-af-inited')) return;
+    root.setAttribute('data-af-inited','1');
+    var vp = root, track = root.querySelector('.af-track');
+    if(!track) return;
+
+    var base = track.innerHTML.trim();
+    if(!base) return;
+
+    function build(){
+      root.classList.remove('is-running');
+      track.style.animation = 'none';
+      track.innerHTML = base;
+      var imgs = track.querySelectorAll('img');
+      var left = imgs.length;
+
+      var done = function(){
+        var target = (vp.clientWidth || 0) * 2.2, guard = 0;
+        while(track.scrollWidth < target && guard < 30){
+          track.insertAdjacentHTML('beforeend', base);
+          guard++;
+        }
+        var distance = Math.ceil(track.scrollWidth / 2);
+        root.style.setProperty('--af-distance', distance + 'px');
+        void track.offsetWidth;
+        track.style.animation = '';
+        root.classList.add('is-running');
+      };
+
+      if(left === 0){ done(); return; }
+      var timer = setTimeout(done, 80);
+
+      imgs.forEach(function(img){
+        if(img.complete){
+          if(--left===0){ clearTimeout(timer); done(); }
+        } else {
+          img.addEventListener('load', function(){
+            if(--left===0){ clearTimeout(timer); done(); }
+          });
+          img.addEventListener('error', function(){
+            if(--left===0){ clearTimeout(timer); done(); }
+          });
+        }
+      });
+    }
+
+    build();
+    new ResizeObserver(build).observe(vp);
+  }
+
+  document.querySelectorAll('[data-af-marquee]').forEach(init);
+})();
+</script>

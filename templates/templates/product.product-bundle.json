@@ -1,0 +1,229 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "product_header": {
+          "type": "product_header",
+          "settings": {
+            "show_divider": false,
+            "show_vendor": false,
+            "show_sku": true,
+            "show_discount": true,
+            "discount_format": "percent_off",
+            "show_product_rating": false,
+            "show_sale_badge": true,
+            "show_custom_badges": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "title": "Description",
+            "title_tag": "h3",
+            "text_font_class": "fs-body-100",
+            "column_placement": "right",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p><strong>Includes:</strong></p>",
+            "column_placement": "right"
+          }
+        },
+        "product_callouts-1": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": false,
+            "icon_1": "none",
+            "text_1": "<p>1x Dinner bowl</p>",
+            "icon_2": "none",
+            "text_2": "<p>1x  Dinner plate</p>",
+            "icon_3": "none",
+            "text_3": "<p>1x Side plate</p>",
+            "icon_4": "none",
+            "text_4": "<p>1x Breakfast bowl</p>",
+            "icon_5": "none",
+            "text_5": "<p>1x Napkin Ring</p>",
+            "icon_6": "chat",
+            "text_6": "",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_icon": "none",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "",
+            "swatch_size": "medium",
+            "chip_layout": "2col"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_labels": true
+          }
+        },
+        "inventory-counter": {
+          "type": "inventory-counter",
+          "settings": {
+            "label": "Stock:",
+            "inventory_max": "40",
+            "low_inventory_threshold": "5",
+            "show_status_bar": true,
+            "show_untracked_quantity": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "enable_sticky_atc_bar_desktop": true,
+            "enable_sticky_atc_bar_mobile": true,
+            "divider_width": "shadow--small"
+          }
+        },
+        "product_callouts": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_1": "none",
+            "text_1": "<p>Dishwasher and Microwave safe</p>",
+            "icon_2": "none",
+            "text_2": "<p>Free shipping on orders over $150</p>",
+            "icon_3": "none",
+            "text_3": "<p>Need help? <a href=\"/pages/contact\">Contact us</a></p>",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "chat",
+            "text_6": "",
+            "display_as_collapsible_row": false,
+            "expand_by_default": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        },
+        "accordion-1": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "right",
+            "heading": "Product Care",
+            "heading_tag": "h3",
+            "content": "",
+            "page_for_content": "product-care",
+            "custom_liquid": ""
+          }
+        },
+        "accordion-2": {
+          "type": "accordion",
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "right",
+            "heading": "Shipping & Returns",
+            "heading_tag": "h3",
+            "content": "<p>All orders are processed as quickly and carefully as possible within 7 days. Some items are made to order and may be subject to 2 weeks lead time for production. If you require your item by a certain date, please get in touch to ensure your shipping date before you place an order. </p><p>Once your items are shipped, you will receive an email notification with the tracking details if applicable. </p><p>Local pick up is also available at our studio in Brooklyn NY. Please select the local pick up option at check out and wait for us to get in touch with you to coordinate a pick up time once your order is ready. Learn more about Shipping & Returns <a href=\"/pages/shipping-returns\" title=\"Shipping & Returns\">here</a>.</p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_header",
+        "description",
+        "text",
+        "product_callouts-1",
+        "variant_picker",
+        "quantity_selector",
+        "inventory-counter",
+        "buy_buttons",
+        "product_callouts",
+        "share",
+        "accordion-1",
+        "accordion-2"
+      ],
+      "settings": {
+        "enable_sticky_product_details": true,
+        "show_breadcrumbs": false,
+        "show_navigation_buttons": false,
+        "show_featured_media_first": false,
+        "gallery_style": "grid",
+        "gallery_style_mobile": "carousel",
+        "gallery_size": "xlarge",
+        "gallery_overflow": "3",
+        "enable_video_looping": true,
+        "enable_product_lightbox": true,
+        "image_aspect_ratio": "square",
+        "enable_multiple_variant_media": false,
+        "enable_mobile_carousel_looping": false,
+        "show_mobile_carousel_images_full_width": false,
+        "hide_mobile_carousel_dots": false,
+        "enable_gift_card_recipient": true,
+        "enable_animation": true
+      }
+    },
+    "featured-collection-slider": {
+      "type": "featured-collection-slider",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "show_view_all": true,
+            "collection": "",
+            "collection_name": "Plates & Bowls"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "show_view_all": true,
+            "collection": "",
+            "collection_name": "Mugs & Cups"
+          }
+        }
+      },
+      "block_order": ["collection-1", "collection-2"],
+      "settings": {
+        "heading": "The Full Range",
+        "heading_tag": "h2",
+        "subheading": "<p>Build your own dinnerware collection:</p>",
+        "link": "",
+        "link_text": "",
+        "maximum_products": 8,
+        "columns": "3",
+        "mobile_columns": "2",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": ["main", "featured-collection-slider"]
+}

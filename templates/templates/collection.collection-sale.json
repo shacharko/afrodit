@@ -1,0 +1,431 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "image_aspect": "custom",
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "focal_point": "center",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 30,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "sales-banner": {
+      "type": "sales-banner",
+      "settings": {
+        "min_height": 500,
+        "min_height_mobile": 500,
+        "sale_type": "UP TO 50% OFF *",
+        "sale_amount": "SALE",
+        "sale_unit": "none",
+        "terms_and_conditions": "*Ends March 31, 2025, 11:59 PST. T&C's Apply",
+        "terms_vertical_offset": 0,
+        "sale_font_size": 150,
+        "sale_font_size_mobile": 150,
+        "currency_symbol_position": "before",
+        "heading": "Bigger Markdowns",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "text": "<p>We've refreshed our sale with discounts of up to 50% on select styles.</p>",
+        "link": "shopify://collections",
+        "link_text": "",
+        "button_style": "btn--secondary",
+        "link_2": "shopify://collections",
+        "link_text_2": "",
+        "button_style_2": "btn--secondary",
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "background_color": "#faf7c3",
+        "text_color": "#fcff8c",
+        "button_background_color": "#fcff8c",
+        "button_text_color": "#000000",
+        "color_overlay": "#750e00",
+        "color_overlay_gradient": "linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(224, 224, 224, 1) 98%)",
+        "overlay_opacity": 23,
+        "layout": "two-columns",
+        "enable_animation": true,
+        "show_frame": false,
+        "full_width": true,
+        "section_padding": "section--vertical-padding-bottom-only"
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "Last call to save on"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Winter faves",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Save up to 40%</p>",
+            "text_font_class": "fs-body-200"
+          }
+        },
+        "button-1": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop Dresses",
+            "button_style": "btn--primary"
+          }
+        },
+        "button-2": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop Tops",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "accent",
+        "heading",
+        "text",
+        "button-1",
+        "button-2"
+      ],
+      "settings": {
+        "image_position": "right",
+        "aspect_ratio": "square",
+        "focal_point": "center",
+        "image_caption": "",
+        "text_alignment": "center",
+        "show_small_image": false,
+        "image_small_focal_point": "center",
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-bottom-only"
+      }
+    },
+    "multi-column": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column-1": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Up to 40% on Tops</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://sort_by=manual&filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Tops",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-2": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Under $125</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-3": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Under $200</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-4": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Up to 40% on Dresses</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-5": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>Save on Best Sellers</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "image_column-1",
+        "image_column-2",
+        "image_column-3",
+        "image_column-4",
+        "image_column-5"
+      ],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "large",
+        "columns": "5",
+        "column_spacing": 28,
+        "row_spacing": 28,
+        "column_alignment": "center",
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 16,
+        "row_spacing_mobile": 36,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "grid": {
+      "type": "grid",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "width": "33",
+            "height": 500,
+            "mobile_height": 360,
+            "media_fit": "cover",
+            "focal_point": "center",
+            "mobile_focal_point": "center",
+            "text_position": "flex-start_flex-end",
+            "accent": "Sale",
+            "title": "Mini Dress",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-2-base",
+            "subheading": "",
+            "subheading_tag": "h4",
+            "subheading_font_class": "fs-heading-5-base",
+            "text": "<p>Save on this best seller</p>",
+            "text_font_class": "fs-body-100",
+            "link": "",
+            "link_text": "Shop Now",
+            "button_style": "btn--primary",
+            "background_color": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "button_background_color": "#faf7c3",
+            "button_text_color": "#22292d",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.15) 22%, rgba(0, 0, 0, 1) 96%)",
+            "overlay_opacity": 20
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "width": "33",
+            "height": 500,
+            "mobile_height": 360,
+            "media_fit": "cover",
+            "focal_point": "center",
+            "mobile_focal_point": "center",
+            "text_position": "flex-start_flex-end",
+            "accent": "Sale",
+            "title": "Jumpsuit",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-2-base",
+            "subheading": "",
+            "subheading_tag": "h4",
+            "subheading_font_class": "fs-heading-5-base",
+            "text": "<p>They're selling out quickly!</p>",
+            "text_font_class": "fs-body-100",
+            "link": "",
+            "link_text": "Shop now",
+            "button_style": "btn--primary",
+            "background_color": "rgba(0,0,0,0)",
+            "text_color": "#fcfcf9",
+            "button_background_color": "#faf7c3",
+            "button_text_color": "#22292d",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.15) 22%, rgba(0, 0, 0, 1) 96%)",
+            "overlay_opacity": 33
+          }
+        },
+        "item-3": {
+          "type": "item",
+          "settings": {
+            "width": "33",
+            "height": 500,
+            "mobile_height": 360,
+            "media_fit": "cover",
+            "focal_point": "center",
+            "mobile_focal_point": "center",
+            "text_position": "flex-start_flex-end",
+            "accent": "Sale",
+            "title": "Corset",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-2-base",
+            "subheading": "",
+            "subheading_tag": "h4",
+            "subheading_font_class": "fs-heading-5-base",
+            "text": "<p>Don't miss out!</p>",
+            "text_font_class": "fs-body-100",
+            "link": "",
+            "link_text": "Shop now",
+            "button_style": "btn--primary",
+            "background_color": "rgba(0,0,0,0)",
+            "text_color": "#ffffff",
+            "button_background_color": "#faf7c3",
+            "button_text_color": "#22292d",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.15) 22%, rgba(0, 0, 0, 1) 96%)",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "content_alignment": "left",
+        "enable_animation": true,
+        "full_width": false,
+        "spacing": 24,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "main-collection-product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "rows": "4",
+        "show_item_count": true,
+        "show_sort": true,
+        "show_filters": true,
+        "enable_sticky_filter_bar": true,
+        "desktop_filter_location": "sidebar",
+        "collapse_filter_bar": false,
+        "enable_sticky_filter_sidebar": true,
+        "collapse_filter_groups_desktop": true,
+        "collapse_filter_groups_mobile": true,
+        "show_swatch_filters": true,
+        "show_chip_filters": true,
+        "chip_layout": "3col",
+        "pagination": "click",
+        "enable_animation": true,
+        "divider_style": "solid"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "sales-banner",
+    "image-with-text",
+    "multi-column",
+    "grid",
+    "main-collection-product-grid"
+  ]
+}

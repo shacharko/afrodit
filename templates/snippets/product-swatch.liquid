@@ -1,0 +1,183 @@
+{% liquid
+  comment
+    Renders a swatch.
+
+    Required parameters:
+      - context: { String } Where the swatch is being rendered (the swatch markup can vary depending on the context). Can be:
+        - 'product-page'
+        - 'product-item'
+      - prod: { Object } The product that the swatch is associated with.
+      - forloop_index: { Number } Taken from the option looping through values.
+      - option_name: { String } The option name whose values should display as swatches. Is downcased and has newlines stripped.
+      - option_index: { Number } The index of the option (1-based) in the list of product options. Used to find the associated variant image if variant image swatches are enabled.
+      - option_value: { String } The current option value being rendered as a swatch.
+
+    Optional parameters:
+      - swatch_size: { Number } The width of the swatch.
+      - swatch_image_width: { Number } The width of the swatch image source.
+      - sibling_product: { Object } The product object for a sibling swatch. Used to show a sibling product image if the sibling swatch source is set to "Product image".
+      - selected_value: { String } The currently selected option value. Only applies to variant picker swatches to determine whether the current swatch is selected.
+  endcomment
+
+  assign file_extension = '.png'
+  assign option_index0 = option_index | minus: 1
+  assign sibling_swatch_use_product_image = settings.product_show_siblings_product_image
+
+  if context == 'product-item'
+    assign sibling_swatch_use_product_image = settings.product_listing_show_siblings_product_image
+  endif
+
+  capture swatch_html
+    assign option = option_value | downcase | strip
+
+    if sibling_product
+      assign downcased_sibling_option_name = option_name | strip | downcase
+      assign downcased_sibling_value_name = option_value | strip | downcase
+
+      for option in sibling_product.options_with_values
+        assign downcased_option_name = option.name | downcase
+
+        if downcased_option_name == downcased_sibling_option_name
+          for value in option.values
+            assign downcased_value_name = value.name | downcase
+
+            if downcased_value_name == downcased_sibling_value_name
+              assign sibling_value = value
+              break
+            endif
+          endfor
+
+          break
+        endif
+      endfor
+
+      if sibling_swatch_use_product_image and sibling_product.featured_media != blank
+        echo sibling_product.featured_media | image_url: width: swatch_image_width | image_tag: alt: option_value, loading: 'lazy', role: 'presentation'
+      else
+        if sibling_value.swatch and sibling_value.swatch.image
+          echo sibling_value.swatch.image | image_url: width: swatch_image_width | image_tag: alt: sibling_value, loading: 'lazy', role: 'presentation'
+        else
+          assign custom_swatch_image = sibling_value | handle | append: file_extension
+          if images[custom_swatch_image] != blank
+            echo images[custom_swatch_image] | image_url: width: swatch_image_width | image_tag: alt: sibling_value, loading: 'lazy', role: 'presentation'
+          endif
+        endif
+
+        # color
+        if sibling_value.swatch and sibling_value.swatch.color
+          assign background_color_value = sibling_value.swatch.color | downcase | replace: ' ', ''
+
+        elsif custom_color_key_map contains sibling_value
+          for color_name in custom_color_key_map
+            if color_name == sibling_value
+              assign background_color_value = custom_color_value_map[forloop.index0]
+              break
+            endif
+          endfor
+        else
+          assign background_color_value = sibling_product.metafields.stiletto.sibling_option_name | downcase | replace: ' ', ''
+        endif
+
+        assign swatch_background_style = 'background-color: [[bcv]];' | replace: '[[bcv]]', background_color_value
+      endif
+    else
+      assign swatch_img = ''
+
+      if option_value.swatch and option_value.swatch.image
+        assign swatch_img = option_value.swatch.image
+      elsif settings.use_variant_image_swatches
+        assign variant_swatch_image = blank
+        for variant in prod.variants
+          if variant.options[option_index0] == option_value and variant.image
+            assign variant_swatch_image = variant.image
+            break
+          endif
+        endfor
+        if variant_swatch_image != blank
+          assign swatch_img = variant_swatch_image
+        endif
+      else
+        assign custom_swatch_image = option_value | handle | append: file_extension
+        if images[custom_swatch_image] != blank
+          assign swatch_img = images[custom_swatch_image]
+        endif
+      endif
+
+      if swatch_img != blank
+        echo swatch_img | image_url: width: swatch_image_width | image_tag: alt: option_value, loading: 'lazy', role: 'presentation'
+      endif
+
+      # color
+      if option_value.swatch and option_value.swatch.color
+        assign background_color_value = option_value.swatch.color
+      elsif custom_color_key_map contains option
+        for color_name in custom_color_key_map
+          if color_name == option
+            assign background_color_value = custom_color_value_map[forloop.index0]
+            break
+          endif
+        endfor
+      else
+        assign background_color_value = option_value | downcase | replace: ' ', ''
+      endif
+
+      assign swatch_background_style = 'background-color: [[bcv]];' | replace: '[[bcv]]', background_color_value
+    endif
+  endcapture
+%}
+
+{% case context %}
+  {% when 'product-item' %}
+    <li
+      class="product-swatches-options__item product-swatches-options__item--swatch"
+      data-swatch-shape="{{ settings.swatch_shape }}"
+      style="{{ swatch_background_style }}"
+      aria-label="{{ option_name }} {{ option_value }}"
+    >
+      {{- swatch_html -}}
+    </li>
+  {% else %}
+    {% if sibling_product != blank %}
+      <a
+        href="{{ sibling_product.url }}"
+        data-shape="{{ settings.swatch_shape }}"
+        data-size="{{ swatch_size }}"
+        class="
+          product__color-swatch
+          product__color-swatch--sibling-product
+          {% if sibling_product.id == prod.id %}
+            selected
+          {% endif %}
+        "
+        style="{{ swatch_background_style }}"
+        data-sibling-swatch
+        data-sibling-cutline="{{ sibling_product.metafields.stiletto.sibling_option_name }}"
+        aria-label="{{ sibling_product.metafields.stiletto.sibling_option_name }}"
+      >
+        {{- swatch_html -}}
+      </a>
+    {% else %}
+      <button
+        type="button"
+        data-button
+        data-label="{{ option_value | url_encode }}"
+        aria-label="{{ option_value | replace: '"', "'" }}"
+        data-option-value="{{ option_value | escape }}"
+        data-option-handle="{{ option_value | handleize }}--{{ forloop_index }}"
+        data-shape="{{ settings.swatch_shape }}"
+        data-size="{{ swatch_size }}"
+        class="
+          product__color-swatch
+          {% if selected_value == option_value %}
+            selected
+          {% endif %}
+          {% if settings.enable_dynamic_product_options %}
+            dynamic-variant-button
+          {% endif %}
+        "
+        style="{{ swatch_background_style }}"
+      >
+        {{- swatch_html -}}
+      </button>
+    {% endif %}
+{% endcase %}

@@ -1,0 +1,76 @@
+{%- liquid
+  assign image_width_setting = 'image_width_column_[[ci]]' | replace: '[[ci]]', column_index
+  assign image_setting = 'image_column_[[ci]]' | replace: '[[ci]]', column_index
+  assign image_position_setting = 'image_position_column_[[ci]]' | replace: '[[ci]]', column_index
+
+  assign heading_setting = 'heading_column_[[ci]]' | replace: '[[ci]]', column_index
+  assign heading_tag_setting = 'heading_tag_column_[[ci]]' | replace: '[[ci]]', column_index
+  assign heading_font_class_setting = 'heading_font_class_column_[[ci]]' | replace: '[[ci]]', column_index
+
+  assign custom_liquid_setting = 'custom_liquid_column_[[ci]]' | replace: '[[ci]]', column_index
+  assign page_for_content_setting = 'page_for_content_column_[[ci]]' | replace: '[[ci]]', column_index
+  assign text_setting = 'text_column_[[ci]]' | replace: '[[ci]]', column_index
+  assign text_font_class_setting = 'text_font_class_column_[[ci]]' | replace: '[[ci]]', column_index
+
+  capture content
+    if block.settings[custom_liquid_setting] != blank
+      echo block.settings[custom_liquid_setting]
+    elsif block.settings[page_for_content_setting] != blank
+      assign content_page = pages[block.settings[page_for_content_setting]]
+
+      if content_page and content_page.content != blank
+        echo content_page.content
+      else
+        echo block.settings[text_setting]
+      endif
+    else
+      echo block.settings[text_setting]
+    endif
+  endcapture
+-%}
+
+{%- if content != blank or block.settings[image_setting] != blank -%}
+  <div class="product-tabs__tab-column">
+    {%- capture image_figure -%}
+      <figure
+        class="product-tabs__tab-image-figure"
+        style="--image-max-width: {{ block.settings[image_width_setting] }}%;"
+      >
+        <div class="product-tabs__tab-image-wrapper">
+          {%- capture image_sizes -%}
+            (min-width: 720px) calc(calc(100vw - calc(2 * clamp(18px, 3.3vw, 3.3vw))) / {{ desktop_columns }} *
+            {{ block.settings[image_width_setting] | divided_by: 100.0 }}), calc(100vw - calc(2 * 3.3vw))
+          {%- endcapture -%}
+
+          {%- render 'image',
+            wrapper_class: "product-tabs__tab-image",
+            image: block.settings[image_setting],
+            sizes: image_sizes
+          -%}
+        </div>
+      </figure>
+    {%- endcapture -%}
+
+    {%- if block.settings[image_setting] != blank and block.settings[image_position_setting] == 'above_text' -%}
+      {{ image_figure }}
+    {%- endif -%}
+
+    {%- if content != blank -%}
+      <div class="product-tabs__tab-text-container">
+        {%- unless block.settings[heading_setting] == blank -%}
+          <{{ block.settings[heading_tag_setting] }} class="product-tabs__tab-heading ff-heading {{ block.settings[heading_font_class_setting] }}">
+            {{ block.settings[heading_setting] }}
+          </{{ block.settings[heading_tag_setting] }}>
+        {%- endunless -%}
+
+        <div class="product-tabs__tab-text ff-body {{ block.settings[text_font_class_setting] }} rte">
+          {{ content }}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if block.settings[image_setting] != blank and block.settings[image_position_setting] == 'below_text' -%}
+      {{ image_figure }}
+    {%- endif -%}
+  </div>
+{%- endif -%}

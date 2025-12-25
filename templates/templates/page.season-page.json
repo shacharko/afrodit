@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_JzPVC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jreHw": {
+          "type": "heading",
+          "settings": {
+            "title": "מארזי דיסקברי סט לפי עונות",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "subheading_AqADC": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "",
+            "subheading_tag": "h3",
+            "subheading_font_class": "fs-heading-5-base"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jreHw",
+        "subheading_AqADC"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-only",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "multi_column_iLEQk": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column_THVVd": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/Virgin-Gorda-in-the-British-Virgin-Islands.jpg",
+            "image_width": 100,
+            "aspect_ratio": "portrait",
+            "enable_image_crop_circle": false,
+            "focal_point": "bottom",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/discovery-set-summer",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Summer Collection",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column_6mWAa": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/istockphoto-1255934700-612x612.jpg",
+            "image_width": 100,
+            "aspect_ratio": "portrait",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/discovery-set-spring",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Spring  Collection",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column_whNEh": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/Signs-of-Winter.jpg",
+            "image_width": 100,
+            "aspect_ratio": "portrait",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/discovery-set-winter",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Winter Collection",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column_RX86j": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/shutterstock-475746394.webp",
+            "image_width": 100,
+            "aspect_ratio": "portrait",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/discovery-set-autumn",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Autumn Collection",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "image_column_THVVd",
+        "image_column_6mWAa",
+        "image_column_whNEh",
+        "image_column_RX86j"
+      ],
+      "name": "t:sections.multi_column.presets.name",
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-1-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "columns": "2",
+        "column_spacing": 32,
+        "row_spacing": 28,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 20,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": [
+    "rich_text_JzPVC",
+    "multi_column_iLEQk"
+  ]
+}

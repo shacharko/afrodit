@@ -1,0 +1,70 @@
+{%- comment -%}
+Gift Wrap Checkbox (RTL)
+Usage example:
+  {% render 'gift-wrap-checkbox',
+     label: 'ארוז למתנה',
+     property_key: 'ארוז למתנה',
+     checked_value: 'כן',
+     unchecked_value: 'לא'
+  %}
+If you omit params, sensible Hebrew defaults are used.
+Must be placed INSIDE the product form.
+{%- endcomment -%}
+
+{%- assign gw_label = label | default: 'ארוז למתנה' -%}
+{%- assign gw_key   = property_key | default: gw_label -%}
+{%- assign gw_yes   = checked_value | default: 'כן' -%}
+{%- assign gw_no    = unchecked_value | default: 'לא' -%}
+
+<div class="product__controls-group product__controls-group--checkbox product__block product__block--medium" dir="rtl">
+  <!-- שולח ערך גם כשהתיבה לא מסומנת -->
+  <input type="hidden" name="properties[{{ gw_key }}]" value="{{ gw_no }}">
+
+  <label class="gw-checkbox" aria-label="{{ gw_label }}">
+    <input
+      type="checkbox"
+      class="gw-checkbox__input"
+      name="properties[{{ gw_key }}]"
+      value="{{ gw_yes }}"
+    >
+    
+    <span class="gw-checkbox__label fs-body-100">{{ gw_label }}</span>
+  </label>
+</div>
+
+<style>
+/* Gift-wrap checkbox — RTL inline layout: [checkbox] [icon] [text] */
+.gw-checkbox{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;           /* תיבת סימון — רווח — איקון — רווח — מלל */
+  cursor:pointer;
+  user-select:none;
+  color:inherit;      /* שומר על צבע וטיפוגרפיה מהמערכת */
+}
+.gw-checkbox__input{
+  inline-size: 18px;
+  block-size: 18px;
+  margin: 0;
+  accent-color: currentColor; /* בדפדפנים תומכים */
+}
+.gw-checkbox__icon{
+  line-height:0;
+  display:grid;
+  place-items:center;
+}
+.gw-checkbox__label{
+  font: inherit;
+}
+.gw-checkbox:hover .gw-checkbox__label{ opacity: .9; }
+
+/* אופציונלי: מראה נגיש בזמן פוקוס באמצעות מקלדת */
+.gw-checkbox__input:focus-visible{
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.gw-checkbox__label{
+  font: inherit;
+  font-size: 0.9em;
+}
+</style>

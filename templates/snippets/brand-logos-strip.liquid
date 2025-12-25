@@ -1,0 +1,196 @@
+{%- comment -%}
+Brand logos infinite loop (RTL) using working JS marquee
+Usage: {% render 'brand-logos-strip', speed_s: 26, link_to_collections: true %}
+Params:
+  - speed_s: מהירות לולאה אחת (שניות), ברירת מחדל 28
+  - link_to_collections: true/false – לקשר אל /collections/{brand}
+{%- endcomment -%}
+
+{%- assign speed_s = speed_s | default: 28 -%}
+{%- assign link_to_collections = link_to_collections | default: true -%}
+{%- assign brands = shop.metaobjects['brand_info'].values | default: empty -%}
+
+{%- if brands != blank -%}
+<div class="brand-logos-marquee" dir="rtl" style="--speed: {{ speed_s }}s">
+  <div class="marquee-window" aria-label="מותגים">
+    <!-- מסילה A – כאן ליקוויד מייצר את הסט הבסיסי של הלוגואים -->
+    <div class="marquee-track track-a">
+      {%- for b in brands -%}
+        {%- if b.brand_logo != blank -%}
+          <div class="brand-logo-item">
+            {%- if link_to_collections -%}
+              <a href="/collections/{{ b.brand_name | handleize }}" aria-label="{{ b.brand_name }}">
+                {{ b.brand_logo
+                  | image_url: width: 380
+                  | image_tag: alt: b.brand_name, loading: 'eager', class: 'brand-logo-img' }}
+              </a>
+            {%- else -%}
+              {{ b.brand_logo
+                | image_url: width: 380
+                | image_tag: alt: b.brand_name, loading: 'eager', class: 'brand-logo-img' }}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <!-- מסילה B – JS ימלא אותה לפי A -->
+    <div class="marquee-track track-b"></div>
+  </div>
+
+  <style>
+    /* סטריפ בגובה 130, רקע שקוף */
+    .brand-logos-marquee{
+      --bar-h: 130px;
+      --gap: clamp(40px, 7vw, 110px);
+      --speed: {{ speed_s }}s;
+
+      background: transparent !important;
+      border-block: none;
+      padding: 0;
+      position: relative;
+    }
+
+    .marquee-window{
+      position: relative;
+      overflow: hidden;
+      height: var(--bar-h);
+      min-height: var(--bar-h);
+      display: flex;
+      align-items: center;
+    }
+
+    .marquee-track{
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      gap: var(--gap);
+      height: 100%;
+      will-change: transform;
+    }
+
+    /* מסילה B מתחילה מ-offset לימין, JS מגדיר --offset */
+    .track-a{ transform: translate3d(0,0,0); }
+    .track-b{ transform: translate3d(var(--offset, 0px),0,0); }
+
+    .brand-logo-item{
+     height: auto;              /* לא להכריח גובה מלא */
+  max-height: 80px;          /* זה הגובה המקסימלי של הלוגו */
+  width: auto;
+  max-width: 100%;           /* שלא יחרוג לרוחב */
+
+  object-fit: contain;
+  display: block;
+  opacity: .95;
+  transform: translateZ(0);
+  transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .brand-logo-item a{
+      display: grid;
+      place-items: center;
+      height: 100%;
+    }
+
+    /* הלוגו – תופס את גובה הסטריפ, בלי הגבלת גובה קשיחה */
+    .brand-logo-img{
+      height: 100%;
+      max-height: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      opacity: .95;
+      transform: translateZ(0);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+
+    .brand-logo-item:hover .brand-logo-img{
+      opacity: 1;
+      transform: scale(1.04);
+    }
+
+    /* אנימציה – רק כשה-root קיבל ready מה-JS */
+    .brand-logos-marquee.ready .track-a{
+      animation: marquee-a var(--speed) linear infinite;
+    }
+    .brand-logos-marquee.ready .track-b{
+      animation: marquee-b var(--speed) linear infinite;
+    }
+
+    @keyframes marquee-a{
+      0%   { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(calc(-1 * var(--offset, 1000px)),0,0); }
+    }
+
+    @keyframes marquee-b{
+      0%   { transform: translate3d(var(--offset, 1000px),0,0); }
+      100% { transform: translate3d(0,0,0); }
+    }
+
+    /* עצירה בהובר – אם לא רוצים, למחוק את הבלוק הזה */
+    .marquee-window:hover .track-a,
+    .marquee-window:hover .track-b{
+      animation-play-state: paused;
+    }
+
+    @media (max-width: 600px){
+      .brand-logos-marquee{
+        --bar-h: 110px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .brand-logos-marquee.ready .track-a,
+      .brand-logos-marquee.ready .track-b{
+        animation: none;
+      }
+    }
+  </style>
+
+  <script>
+  (function(){
+    document.querySelectorAll('.brand-logos-marquee:not([data-marquee-init])').forEach(function(root){
+      root.setAttribute('data-marquee-init','true');
+      var win    = root.querySelector('.marquee-window');
+      var trackA = root.querySelector('.track-a');
+      var trackB = root.querySelector('.track-b');
+      if(!win || !trackA || !trackB) return;
+
+      var base = trackA.innerHTML; // התוכן המקורי מה-Liquid
+
+      function build(){
+        // איפוס
+        root.classList.remove('ready');
+        trackA.innerHTML = base;
+        trackB.innerHTML = '';
+
+        // לוודא כיסוי רוחב החלון עם קצת מרווח בטחון
+        var viewW  = win.offsetWidth || 0;
+        var safety = 1.1; // 10% בטחון
+        while(trackA.scrollWidth < viewW * safety){
+          trackA.insertAdjacentHTML('beforeend', base);
+        }
+
+        // מסילה B = עותק של A אחרי ששוכפל
+        trackB.innerHTML = trackA.innerHTML;
+
+        // offset = רוחב הסופי של מסילה A
+        var offset = trackA.scrollWidth;
+        root.style.setProperty('--offset', offset + 'px');
+
+        // להפעיל אנימציות
+        root.classList.add('ready');
+      }
+
+      build();
+
+      // רספונסיבי – אם משתנה רוחב, נבנה מחדש
+      var ro = new ResizeObserver(function(){ build(); });
+      ro.observe(win);
+    });
+  })();
+  </script>
+</div>
+{%- endif -%}

@@ -1,0 +1,425 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "enable_animation": true,
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "image-hero": {
+      "type": "image-hero",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "disabled": true,
+          "settings": {
+            "accent": "Accent"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Vendors",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Find our products at our trusted partners' locations. They can help you with fit, styles, and special orders to enhance your wardrobe with all  our offerings.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": ["accent", "heading", "text"],
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 55,
+        "mobile_height": 65,
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 40,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "multi-column-1": {
+      "type": "multi-column",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "accent": "Forward",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>frwrd.co</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "accent": "NettPort",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>nettport.ca</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "accent": "Forward",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>frwrd.co</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "accent": "NettPort",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>nettport.ca</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-5": {
+          "type": "column",
+          "settings": {
+            "accent": "Forward",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>frwrd.co</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-6": {
+          "type": "column",
+          "settings": {
+            "accent": "NettPort",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>nettport.ca</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-7": {
+          "type": "column",
+          "settings": {
+            "accent": "Forward",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>frwrd.co</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column-8": {
+          "type": "column",
+          "settings": {
+            "accent": "NettPort",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>nettport.ca</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4",
+        "column-5",
+        "column-6",
+        "column-7",
+        "column-8"
+      ],
+      "settings": {
+        "title": "Online",
+        "heading_tag": "h2",
+        "subheading": "",
+        "heading_font_class": "fs-heading-3-base",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "small",
+        "columns": "4",
+        "column_spacing": 24,
+        "row_spacing": 48,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 12,
+        "row_spacing_mobile": 48,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi-column-2": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column-1": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Open House",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>106 - 561 Johnson St. <br/>Victoria, BC<br/>V8W 1M2<br/>Canada<br/></p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://www.google.com/maps/dir/?api=1&destination=561%20Johnson%20Street%20%23106%20Victoria%20British%20Columbia%20V8W%201M2%20Canada",
+            "link_text": "Get Directions",
+            "button_style": "btn--secondary"
+          }
+        },
+        "image_column-2": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Les Amis",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>3420 Evanston Ave N<br/>Seattle, WA <br/>9813<br/>United States</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://www.google.com/maps/dir/48.4089278,-123.3439004/Les+Amis,+Evanston+Avenue+North,+Seattle,+WA,+USA/@48.4306058,-123.9295227,8z/data=!3m2!4b1!5s0x5486717735c6dc41:0x91d5d41f70e41ad1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x549015071604c2f5:0x13f102744042ac24!2m2!1d-122.3511054!2d47.650483",
+            "link_text": "Get Directions",
+            "button_style": "btn--secondary"
+          }
+        },
+        "image_column-3": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Teller",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p>8820 Washington Blvd #103<br/>Culver City, CS<br/>09232U <br/>United States</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://www.google.com/maps/dir/48.4089278,-123.3439004/Neighbour%2FWoman,+Powell+Street,+Vancouver,+BC/@48.8970436,-124.0642005,9z/data=!3m2!4b1!5s0x5486717735c6dc41:0x91d5d41f70e41ad1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x5486717734ee9c33:0xf799ca22506116b1!2m2!1d-123.1032925!2d49.2833975",
+            "link_text": "Get Directions",
+            "button_style": "btn--secondary"
+          }
+        }
+      },
+      "block_order": ["image_column-1", "image_column-2", "image_column-3"],
+      "settings": {
+        "title": "Retail stores",
+        "heading_tag": "h2",
+        "subheading": "",
+        "heading_font_class": "fs-heading-3-base",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "columns": "3",
+        "column_spacing": 28,
+        "row_spacing": 48,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 12,
+        "row_spacing_mobile": 48,
+        "column_alignment_mobile": "center",
+        "background_behind_columns": false,
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi-column-3": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column-1": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-2": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "square",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "column": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "<p><strong>Location</strong><span style=\"text-decoration:underline\"><br/></span>1234 Pretend Street, <br/>Abbotsford 3000, VIC<br/>Australia<br/><br/><strong>Hours</strong><span style=\"text-decoration:underline\"><br/></span>Monday - Sunday 11 am - 7pm</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "https://www.google.com/maps/dir/?api=1&destination=561%20Johnson%20Street%20%23106%20Victoria%20British%20Columbia%20V8W%201M2%20Canada",
+            "link_text": "Get Directions",
+            "button_style": "btn--secondary"
+          }
+        }
+      },
+      "block_order": ["image_column-1", "image_column-2", "column"],
+      "settings": {
+        "title": "Main studio",
+        "heading_tag": "h2",
+        "subheading": "",
+        "heading_font_class": "fs-heading-3-base",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "center",
+        "content_background_padding": "medium",
+        "columns": "3",
+        "column_spacing": 28,
+        "row_spacing": 28,
+        "column_alignment": "center",
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 20,
+        "column_alignment_mobile": "center",
+        "background_behind_columns": false,
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "solid",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image-hero",
+    "multi-column-1",
+    "multi-column-2",
+    "multi-column-3"
+  ]
+}

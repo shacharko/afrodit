@@ -1,0 +1,294 @@
+{%- comment -%}
+Blog list slider (with description)
+— Visual parity with collection_list_slider; source = blogs (via blocks)
+— Image: blog.metafields.custom.image (File) -> first article image -> placeholder
+— Description: blog.metafields.custom.description (fallback to .descripiton)
+— Click → blog.url
+{%- endcomment -%}
+
+{%- capture image_sizes -%}
+  (min-width: 720px) calc(calc(100vw - calc(2 * clamp(18px, 3.3vw, 3.3vw))) / {{ section.settings.columns }}),
+  calc(calc(100vw - calc(2 * clamp(18px, 3.3vw, 3.3vw))) / {{ section.settings.mobile_columns }})
+{%- endcapture -%}
+
+<div
+  class="
+    collection-list-slider
+    section
+    section--divider-{{ section.settings.divider_style }}
+    {{ section.settings.section_padding }}
+    {% if settings.enable_section_animations and section.settings.enable_animation %}
+      animation
+      animation--list-slider
+    {% endif %}
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-list-slider"
+  data-products-per-view="{{ section.settings.columns }}"
+  data-mobile-products-per-view="{{ section.settings.mobile_columns }}"
+>
+  <div class="collection-list-slider__inner">
+    <div class="collection-list-slider__meta carousel__navigation-wrapper">
+      <div class="section-introduction animation--section-introduction">
+        {%- unless section.settings.heading == blank -%}
+          <{{ section.settings.heading_tag }} class="collection-list-slider__heading ff-heading fs-heading-3-base section-introduction__heading">
+            {{ section.settings.heading }}
+          </{{ section.settings.heading_tag }}>
+        {%- endunless -%}
+
+        {%- unless section.settings.subheading == blank -%}
+          <div class="collection-list-slider__subheading ff-body fs-body-100 rte section-introduction__subheading">
+            {{ section.settings.subheading }}
+          </div>
+        {%- endunless -%}
+
+        {%- render 'button-block' with
+          wrapper_class: "collection-list-slider__button section-introduction__button",
+          link: section.settings.link,
+          label: section.settings.link_text,
+          button_style: section.settings.button_style
+        -%}
+      </div>
+
+      {%- render 'carousel-navigation' with wrapper_class: 'animation--controls' %}
+    </div>
+
+    <div
+      class="
+        collection-list-slider__content
+        carousel
+        carousel--mobile-per-view-{{ section.settings.mobile_columns }}
+        carousel--per-view-{{ section.settings.columns }}
+        swiper
+      "
+    >
+      <div class="collection-list-slider__collections carousel__wrapper swiper-wrapper">
+
+        {%- if section.blocks.size > 0 -%}
+          {%- for block in section.blocks -%}
+            {%- assign b = block.settings.blog -%}
+            {%- if b -%}
+              {%- assign blog_url = b.url -%}
+              {%- assign blog_title = b.title -%}
+
+              {%- comment %} Image from metafield (File) or first article image {%- endcomment -%}
+              {%- assign blog_image = blank -%}
+              {%- if b.metafields.custom.image != blank -%}
+                {%- assign blog_image = b.metafields.custom.image -%}
+                {%- if blog_image.value != blank -%}{%- assign blog_image = blog_image.value -%}{%- endif -%}
+              {%- endif -%}
+              {%- if blog_image == blank and b.articles_count > 0 -%}
+                {%- assign first_article = b.articles | first -%}
+                {%- if first_article and first_article.image != blank -%}
+                  {%- assign blog_image = first_article.image -%}
+                {%- endif -%}
+              {%- endif -%}
+
+              {%- assign blog_desc = b.metafields.custom.description | default: b.metafields.custom.descripiton -%}
+              {%- assign blog_desc_text = blog_desc | strip_html | strip -%}
+
+              <div class="collection-list-slider__collection carousel__slide swiper-slide" {{ block.shopify_attributes }}>
+                <a href="{{ blog_url }}" class="collection-item collection-item--{{ section.settings.label_style }} collection-item--{{ section.settings.collection_listing_aspect_ratio }}">
+                  <div class="collection-item__image-wrapper">
+                    {%- if blog_image != blank -%}
+                      {{ blog_image
+                        | image_url: width: 1200
+                        | image_tag:
+                          class: 'collection-item__image',
+                          widths: '360, 540, 720, 900, 1200',
+                          sizes: image_sizes,
+                          loading: 'lazy',
+                          alt: blog_title | escape
+                      }}
+                    {%- else -%}
+                      {{ 'collection-1' | placeholder_svg_tag: 'collection-item__image placeholder-svg' }}
+                    {%- endif -%}
+                  </div>
+
+                  {%- if section.settings.label_style == 'overlay' -%}
+                    <div class="collection-item__label-wrapper collection-item__label-wrapper--overlay"
+                         style="--overlay-text-color: {{ section.settings.overlay_text_color }}; --overlay-bg: {{ section.settings.overlay_title_background }};">
+                      <div class="collection-item__label collection-item__label--overlay collection-item__label--{{ section.settings.overlay_title_background_style }}">
+                        {{ blog_title }}
+                      </div>
+                    </div>
+                  {%- else -%}
+                    <div class="collection-item__label collection-item__label--beneath">
+                      {{ blog_title }}
+                    </div>
+                  {%- endif -%}
+                </a>
+
+                {%- if section.settings.show_desc and blog_desc_text != blank -%}
+                  <div class="collection-list-slider__description" style="--desc-lines: {{ section.settings.desc_lines | default: 3 }};">
+                    {{ blog_desc_text }}
+                  </div>
+                  {%- if section.settings.show_read_more -%}
+                    <a class="collection-list-slider__read-more" href="{{ blog_url }}">
+                      {{ section.settings.read_more_label | default: 'קרא/י עוד' }}
+                    </a>
+                  {%- endif -%}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- else -%}
+          {%- for i in (1..6) -%}
+            <div class="collection-list-slider__collection carousel__slide swiper-slide">
+              <a href="#" class="collection-item collection-item--{{ section.settings.label_style }} collection-item--{{ section.settings.collection_listing_aspect_ratio }}">
+                <div class="collection-item__image-wrapper">
+                  {{ 'collection-1' | placeholder_svg_tag: 'collection-item__image placeholder-svg' }}
+                </div>
+                {%- if section.settings.label_style == 'overlay' -%}
+                  <div class="collection-item__label-wrapper collection-item__label-wrapper--overlay"
+                       style="--overlay-text-color: {{ section.settings.overlay_text_color }}; --overlay-bg: {{ section.settings.overlay_title_background }};">
+                    <div class="collection-item__label collection-item__label--overlay collection-item__label--{{ section.settings.overlay_title_background_style }}">
+                      Blog title
+                    </div>
+                  </div>
+                {%- else -%}
+                  <div class="collection-item__label collection-item__label--beneath">Blog title</div>
+                {%- endif -%}
+              </a>
+              {%- if section.settings.show_desc -%}
+                <div class="collection-list-slider__description" style="--desc-lines: {{ section.settings.desc_lines | default: 3 }};">
+                  תיאור קצר לבלוג יוצג כאן.
+                </div>
+                {%- if section.settings.show_read_more -%}
+                  <span class="collection-list-slider__read-more" aria-hidden="true">{{ section.settings.read_more_label | default: 'קרא/י עוד' }}</span>
+                {%- endif -%}
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* מוסיפים רק מחלקות תיאור/קישור; כל השאר זהה למקור */
+.collection-list-slider__description{
+  margin-top: 8px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--desc-lines, 3);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.collection-list-slider__read-more{
+  display:inline-block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+.collection-list-slider__read-more::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 -2px 0;
+  height:1px;
+  background: currentColor;
+  opacity:.65;
+}
+
+/* תאימות יחס תמונה — כמו בסקשן הקולקציות */
+.collection-item--square    .collection-item__image{ aspect-ratio: 1 / 1;  object-fit: cover; width:100%; height:auto; }
+.collection-item--portrait  .collection-item__image{ aspect-ratio: 4 / 5;  object-fit: cover; width:100%; height:auto; }
+.collection-item--landscape .collection-item__image{ aspect-ratio: 16 / 9; object-fit: cover; width:100%; height:auto; }
+/* Natural — ללא כפיית יחס */
+.collection-item--natural   .collection-item__image{ width:100%; height:auto; object-fit: contain; }
+</style>
+
+{% schema %}
+{
+  "name": "Blog list slider",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"],
+    "templates": ["password"]
+  },
+  "settings": [
+    { "type": "text", "id": "heading", "label": "כותרת", "default": "מהבלוג" },
+    { "type": "select", "id": "heading_tag", "label": "Heading tag",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "h2"
+    },
+    { "type": "richtext", "id": "subheading", "label": "כיתוב משנה" },
+
+    { "type": "url", "id": "link", "label": "כפתור כללי – קישור"},
+    { "type": "text", "id": "link_text", "label": "כפתור כללי – תווית", "default": "לכל הבלוגים" },
+    { "type": "select", "id": "button_style", "label": "סגנון כפתור",
+      "options": [
+        { "value": "btn--primary", "label": "Solid" },
+        { "value": "btn--secondary", "label": "Outline" },
+        { "value": "btn--callout", "label": "Text" }
+      ],
+      "default": "btn--callout"
+    },
+
+    { "type":"header", "content":"תצוגה" },
+    { "type":"select", "id":"columns", "label":"עמודות בדסקטופ",
+      "options":[ { "value":"3","label":"3" }, { "value":"4","label":"4" }, { "value":"5","label":"5" } ],
+      "default":"4"
+    },
+    { "type":"select", "id":"mobile_columns", "label":"עמודות במובייל",
+      "options":[ { "value":"1","label":"1" }, { "value":"2","label":"2" } ],
+      "default":"2"
+    },
+
+    { "type":"header", "content":"כותרת על/מתחת לתמונה" },
+    { "type":"select", "id":"collection_listing_aspect_ratio", "label":"יחס תמונה",
+      "options":[
+        { "value":"natural", "label":"Natural" },
+        { "value":"square", "label":"Square" },
+        { "value":"portrait", "label":"Portrait" },
+        { "value":"landscape", "label":"Landscape" }
+      ],
+      "default":"square"
+    },
+    { "type":"select", "id":"label_style", "label":"מיקום כותרת",
+      "options":[
+        { "value":"overlay", "label":"Overlay" },
+        { "value":"beneath", "label":"Beneath" }
+      ],
+      "default":"overlay"
+    },
+    { "type":"select", "id":"overlay_title_background_style", "label":"Overlay BG style",
+      "options":[ { "value":"solid","label":"Solid" }, { "value":"gradient","label":"Gradient" } ],
+      "default":"gradient"
+    },
+    { "type":"color", "id":"overlay_text_color", "label":"Overlay text", "default":"#FFFFFF" },
+    { "type":"color", "id":"overlay_title_background", "label":"Overlay background", "default":"#000000" },
+
+    { "type":"header", "content":"תיאור ו\"קרא/י עוד\"" },
+    { "type":"checkbox", "id":"show_desc", "label":"הצג תיאור מתחת לכותרת (מ-custom.description)", "default": true },
+    { "type":"range", "id":"desc_lines", "label":"מס’ שורות לתיאור (Clamp)", "min": 2, "max": 6, "step": 1, "default": 3 },
+    { "type":"checkbox", "id":"show_read_more", "label":"הצג \"קרא/י עוד\"", "default": true },
+    { "type":"text", "id":"read_more_label", "label":"טקסט \"קרא/י עוד\"", "default": "קרא/י עוד" }
+  ],
+  "blocks": [
+    {
+      "type": "blog_item",
+      "name": "Blog",
+      "settings": [
+        { "type": "blog", "id": "blog", "label": "בחרי בלוג" }
+      ]
+    }
+  ],
+  "max_blocks": 24,
+  "presets": [
+    { "name": "Blog list slider (with description)" }
+  ]
+}
+{% endschema %}

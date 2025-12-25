@@ -1,0 +1,307 @@
+/* ===== FILTER BAR DESKTOP ALIGN FIX ===== */
+
+/* סידור השורה */
+.filter-bar__inner {
+  display: flex !important;
+  justify-content: space-between !important; /* דוחף את האלמנטים לקצוות */
+  align-items: center !important;
+  padding: 10px 20px;
+  direction: rtl; /* עבודה לימין-לשמאל */
+}
+
+/* כמות המוצרים בצד ימין */
+.filter-bar__results-count {
+  order: 1;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
+/* המיון בצד שמאל */
+.filter-bar__sort-group {
+  order: 2;
+  margin-right: auto !important; /* דוחף אותו לקצה השני */
+  margin-left: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* הסתרת כפתור מסננים */
+button.filter-bar__button.filter-bar__button--filters {
+  display: none !important;
+}
+/* שלא ייחתך מהשורה */
+.filter-bar,
+.filter-bar__inner {
+  overflow: visible !important;
+}
+
+/* הכפתור עצמו – שנראה כמו תיבה מסודרת */
+.filter-bar__sort-group summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  line-height: 1.2;
+}
+
+/* --- שלא ייחתך מהבר העליון --- */
+.filter-bar,
+.filter-bar__inner,
+.filter-bar__sort-group { overflow: visible !important; }
+
+/* --- שלא ייחתך מהבר העליון --- */
+.filter-bar,
+.filter-bar__inner,
+.filter-bar__sort-group {
+  overflow: visible !important;
+}
+
+/* העוגן של הדרופדאון */
+.filter-bar__sort-group {
+  position: relative !important;
+}
+
+/* שליטה בתצוגה לפי aria-hidden ש-Stiletto משנה */
+#filter-bar-sort[aria-hidden="true"]  { display: none !important; }
+#filter-bar-sort[aria-hidden="false"] { display: block !important; }
+
+/* --- דרופדאון ממוּקם יפה מתחת לכפתור המיון --- */
+#filter-bar-sort {
+  /* מבטל סטיילים של "מגירת צד" אם הוחלו דרך filter-group__values */
+  
+  top: calc(100% + 8px) !important;  /* מתחת לכפתור */
+  inset-inline-end: 0 !important;    /* יישור לקצה הימני ב-RTL */
+  left: auto !important;
+  right: auto;                        /* למקרה שתבנית הגדירה fixed/left */
+  bottom: auto !important;
+  transform: none !important;
+
+  width: max(240px, 100%);
+  max-width: 360px;
+  max-height: 60vh;
+  overflow: auto;
+
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,.10);
+  padding: 8px 0;
+  z-index: 9999; /* מעל הגריד/תמונות */
+}
+
+/* רשימת האפשרויות בתוך התפריט */
+.filter-group__list--sort {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  direction: rtl; /* כיוון טקסט */
+}
+.filter-group__list--sort .filter-item__content {
+  display: block;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+.filter-group__list--sort .filter-item__content:hover {
+  background: #f7f7f7;
+}
+
+/* מסתיר את רדיו הויזואלי אם צריך */
+#filter-bar-sort .filter-item__radio { display: none; }
+
+/* לא לחתוך את התפריט מהשורה */
+.filter-bar,
+.filter-bar__inner,
+.filter-bar__sort-group { overflow: visible !important; }
+
+/* נהפוך את קבוצת המיון לעוגן למיקום מוחלט של התפריט */
+.filter-bar__sort-group,
+.filter-bar__inner { position: relative !important; }
+
+/* שליטה בתצוגה לפי ה-aria של התבנית */
+#filter-bar-sort[aria-hidden="true"]  { display: none !important; }
+#filter-bar-sort[aria-hidden="false"] { display: block !important; }
+
+/* --- מיקום ועיצוב הדרופדאון (התפריט) --- */
+#filter-bar-sort,
+[data-dropdown="filter-bar-sort"] {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;   /* מתחת לכפתור המיון */
+  inset-inline-end: 0 !important;     /* יישור לקצה הימני (RTL) */
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+
+  width: 280px !important;            /* רוחב סביר */
+  max-height: 60vh !important;
+  overflow: auto !important;
+
+  background: #fff !important;
+  border: 1px solid #e6e6e6 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 24px rgba(0,0,0,.10) !important;
+  padding: 8px 0 !important;
+  z-index: 9999 !important;           /* מעל התמונות/הגריד */
+}
+
+/* רשימת האפשרויות בפנים */
+#filter-bar-sort .filter-group__list,
+[data-dropdown="filter-bar-sort"] .filter-group__list {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  direction: rtl;
+}
+
+#filter-bar-sort .filter-item__content,
+[data-dropdown="filter-bar-sort"] .filter-item__content {
+  display: block;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+#filter-bar-sort .filter-item__content:hover,
+[data-dropdown="filter-bar-sort"] .filter-item__content:hover {
+  background: #f7f7f7;
+}
+/* אקורדיון RTL - טקסט מימין, איקון לידו */
+html[dir="rtl"] .accordion__label {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start !important;
+  flex-direction: row-reverse !important; /* האיקון עובר ימינה */
+  text-align: right !important;
+  direction: rtl !important;
+  gap: 0.6rem;
+  padding: 12px 0;
+}
+
+/* הכותרת נשארת מיושרת לימין */
+html[dir="rtl"] .accordion__label h3 {
+  margin: 0;
+  flex-grow: 1;
+  text-align: right !important;
+  direction: rtl;
+}
+
+/* האיקונים (פלוס/מינוס) ממורכזים ומודדים */
+html[dir="rtl"] .accordion__label-icons {
+  flex: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+html[dir="rtl"] .accordion__label-icons svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* להבטיח מצב פתוח/סגור נכון */
+html[dir="rtl"] .accordion__label[aria-expanded="true"] .icon-plus {
+  display: none;
+}
+html[dir="rtl"] .accordion__label[aria-expanded="false"] .icon-minus {
+  display: none;
+}
+
+
+html[dir="rtl"] .slideshow-navigation__button--next svg {
+    transform: rotate(180deg) !important;
+}
+
+
+
+html[dir="rtl"] .slideshow-navigation__button--next {
+    right: 0 !important;
+    left: auto !important;
+}
+html[dir="rtl"] .carousel__navigation-buttons {
+    gap: 24px !important;  /* מרווח בין החיצים */
+    justify-content: flex-start !important; /* שהם יישארו בצד שמאל */
+}
+
+/*CSS for pages*/
+
+/* כל הטקסט הרגיל בסקשן יהיה דק יותר */
+.rich-text__text.rte.section-blocks__subheading {
+  font-weight: 300 !important;
+  font-variation-settings: "wght" 300 !important;
+}
+
+/* Bold אמיתי — מודגש והרבה יותר כבד */
+.rich-text__text.rte.section-blocks__subheading strong,
+.rich-text__text.rte.section-blocks__subheading b {
+  font-weight: 800 !important;
+  font-variation-settings: "wght" 800 !important;
+}
+/* Make carousel arrows align with the title row */
+.featured-collection-slider__navigation-wrapper,
+.carousel__navigation-wrapper {
+  align-items: flex-start !important; /* במקום center */
+  padding-top: 0 !important;
+  margin-top: -10px; /* לכוונן לגובה הכותרת – אולי -8 או -12 לפי הצורך */
+}
+
+/* להפוך רק את החץ הימני (NEXT) לכיוון ההפוך */
+button.slideshow-navigation__navigation-button--next .icon svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(180deg) !important; /* הופך כיוון */
+}
+/* להפוך את החץ השמאלי (PREVIOUS) */
+button.slideshow-navigation__navigation-button--previous .icon svg {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(180deg) !important;
+}
+/* Quick Product (Stiletto Quick View) — force RTL + right align */
+.quick-product .product__description .rte,
+.quick-product .product__description .rte p,
+.quick-product .product__description .rte li,
+.quick-product .product__description .rte span {
+  direction: rtl;
+  text-align: right !important;
+}
+
+/* Override inline text-align:center inside Quick Product */
+.quick-product .product__description .rte p[style],
+.quick-product .product__description .rte span[style] {
+  text-align: right !important;
+}
+
+/* הצמדה מלאה לימין */
+.quick-product .product__description .rte {
+  padding-right: 0 !important;
+  padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

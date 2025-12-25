@@ -1,0 +1,287 @@
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="quote"
+  class="
+    quote
+    section
+    section--divider-{{ section.settings.divider_style }}
+    {{ section.settings.section_padding }}
+    {% if settings.enable_section_animations and section.settings.enable_animation %}
+      animation
+      animation--quotes
+    {% endif %}
+  "
+>
+  <div class="section__inner">
+    <div
+      class="quotes swiper {% if section.blocks.size > 1 %}has-multiple{% endif %}"
+      data-slider
+      data-autoplay-enabled="{{ section.settings.autoplay_enabled }}"
+      data-autoplay-delay="{{ section.settings.autoplay_delay | times: 1000 }}"
+      data-count="{{ section.blocks.size }}"
+      data-pagination-style="{{ section.settings.pagination_style }}"
+    >
+      <div class="slider-fade-out left"></div>
+      {% if section.blocks.size > 1 %}
+        <button class="slider-nav-button slider-nav-button-prev" title="{{ 'general.accessibility.previous' | t }}">
+          {% render 'icon' with icon: 'chevron' %}
+        </button>
+      {% endif %}
+      <div class="slider-inner swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {%-
+            render 'quote-item' with
+            has_multiple_blocks: section.blocks.size > 1,
+            block: block,
+            forloop: forloop,
+            quote: block.settings.quote,
+            logo: block.settings.logo,
+            author: block.settings.title,
+            pagination_style: section.settings.pagination_style,
+            font_choice: section.settings.font_choice,
+            font_size: block.settings.font_size
+          -%}
+          {%- if section.settings.pagination_style == 'logos' -%}
+            {%- capture logo_pagination_list_item -%}
+              {{ logo_pagination_list_item }}
+              <li>
+                <a
+                  tabindex="1"
+                  role="button"
+                  logo-nav-button
+                  data-index="{{ forloop.index0 }}"
+                  aria-label="{{ 'general.accessibility.quote_nav' | t: name: block.settings.title }}"
+                >
+                  {% if block.settings.logo %}
+                    {%- render 'quote-item-logo' with logo: block.settings.logo, class: "quote__navigation-logo" -%}
+                  {% else %}
+                    <span class="fs-accent">Add Logo</span>
+                  {% endif %}
+                </a>
+              </li>
+            {%- endcapture -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="slider-fade-out right"></div>
+      {% if section.blocks.size > 1 %}
+        <button class="slider-nav-button slider-nav-button-next" title="{{ 'general.accessibility.next' | t }}">
+          {% render 'icon' with icon: 'chevron' %}
+        </button>
+      {% endif %}
+    </div>
+    {% if section.blocks.size > 1 %}
+      <div class="quote__navigation">
+        {% if section.settings.pagination_style == 'dots' %}
+          {%- render 'navigation-dots' with dot_count: section.blocks.size -%}
+        {% else %}
+          <ul class="logo-navigation">
+            {{ logo_pagination_list_item }}
+          </ul>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.quotes.name",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay_enabled",
+      "label": "t:sections.quotes.settings.autoplay_enabled.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "label": "t:sections.quotes.settings.autoplay_delay.label",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "unit": "s",
+      "default": 7
+    },
+    {
+      "type": "select",
+      "id": "pagination_style",
+      "label": "t:sections.quotes.settings.pagination_style.label",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.quotes.settings.pagination_style.options.dots"
+        },
+        {
+          "value": "logos",
+          "label": "t:sections.quotes.settings.pagination_style.options.logos"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font_choice",
+      "label": "t:shared.settings.font_choice.label",
+      "options": [
+        {
+          "value": "ff-heading",
+          "label": "t:shared.settings.font_choice.options.heading"
+        },
+        {
+          "value": "ff-body",
+          "label": "t:shared.settings.font_choice.options.body"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:shared.settings.section_style.header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "t:shared.settings.section_style.enable_animation.label",
+      "default": true,
+      "info": "t:shared.settings.section_style.enable_animation.info"
+    },
+    {
+      "type": "select",
+      "id": "divider_style",
+      "label": "t:shared.settings.section_style.divider_style.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:shared.settings.section_style.divider_style.options.none"
+        },
+        {
+          "value": "solid",
+          "label": "t:shared.settings.section_style.divider_style.options.solid"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "section_padding",
+      "label": "t:shared.settings.section_style.section_padding.label",
+      "options": [
+        {
+          "value": "section--vertical-padding-none",
+          "label": "t:shared.settings.section_style.section_padding.options.none"
+        },
+        {
+          "value": "section--vertical-padding-top-bottom",
+          "label": "t:shared.settings.section_style.section_padding.options.both"
+        },
+        {
+          "value": "section--vertical-padding-top-only",
+          "label": "t:shared.settings.section_style.section_padding.options.top"
+        },
+        {
+          "value": "section--vertical-padding-bottom-only",
+          "label": "t:shared.settings.section_style.section_padding.options.bottom"
+        }
+      ],
+      "default": "section--vertical-padding-top-bottom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "t:sections.quotes.blocks.quote.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "t:sections.quotes.blocks.quote.settings.logo.label"
+        },
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "t:sections.quotes.blocks.quote.settings.quote.label",
+          "default": "t:sections.quotes.blocks.quote.settings.quote.default"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.quotes.blocks.quote.settings.author.label",
+          "default": "t:sections.quotes.blocks.quote.settings.author.default"
+        },
+        {
+          "type": "select",
+          "id": "quote_tag",
+          "label": "t:shared.settings.heading_tag.quote.label",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:shared.settings.heading_tag.options.h2"
+            },
+            {
+              "value": "h3",
+              "label": "t:shared.settings.heading_tag.options.h3"
+            },
+            {
+              "value": "h4",
+              "label": "t:shared.settings.heading_tag.options.h4"
+            },
+            {
+              "value": "h5",
+              "label": "t:shared.settings.heading_tag.options.h5"
+            },
+            {
+              "value": "h6",
+              "label": "t:shared.settings.heading_tag.options.h6"
+            }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:shared.settings.heading_tag.quote.info"
+        },
+        {
+          "type": "select",
+          "id": "font_size",
+          "label": "t:sections.quotes.blocks.quote.settings.font_size.label",
+          "options": [
+            {
+              "value": "small",
+              "label": "t:sections.quotes.blocks.quote.settings.font_size.options.small"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.quotes.blocks.quote.settings.font_size.options.medium"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.quotes.blocks.quote.settings.font_size.options.large"
+            }
+          ],
+          "default": "medium"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.quotes.presets.name",
+      "blocks": [
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

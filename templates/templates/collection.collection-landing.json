@@ -1,0 +1,676 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "image_aspect": "custom",
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "focal_point": "center",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#ffffff",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 30,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "image-hero-1": {
+      "type": "image-hero",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "disabled": true,
+          "settings": {
+            "accent": "Accent"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The City Edit",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Use these sections to promote a particular feature with editorial photography.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "accent",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 80,
+        "mobile_height": 75,
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#fcfcf9",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 10,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "multi-column-1": {
+      "type": "multi-column",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Maxis",
+            "button_style": "btn--callout"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Minis",
+            "button_style": "btn--callout"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Outerwear",
+            "button_style": "btn--callout"
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Crop Tops",
+            "button_style": "btn--callout"
+          }
+        },
+        "column-5": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Dresses",
+            "button_style": "btn--callout"
+          }
+        },
+        "column-6": {
+          "type": "column",
+          "settings": {
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Pants",
+            "button_style": "btn--callout"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4",
+        "column-5",
+        "column-6"
+      ],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "columns": "6",
+        "column_spacing": 4,
+        "row_spacing": 20,
+        "column_alignment": "center",
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 4,
+        "row_spacing_mobile": 32,
+        "column_alignment_mobile": "center",
+        "background_behind_columns": false,
+        "background_color": "#f7f7e8",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "rich-text-1": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Summer Sets",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pieces for fall days and cool nights. Each layer sprinkled with elegant details, each piece is designed to make you feel your best.</p>",
+            "text_font_class": "fs-body-200"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 750
+      }
+    },
+    "image-with-text-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "The City Edit"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The Fringe Top",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add fun to your look combining the Fringe Skirt and and the Fringe Top. Add a blazer for extra layering. </p>",
+            "text_font_class": "fs-body-200"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop this",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "accent",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_position": "right",
+        "aspect_ratio": "portrait",
+        "focal_point": "center",
+        "image_caption": "Pair it with the matching blazer.",
+        "text_alignment": "left",
+        "show_small_image": true,
+        "image_small_aspect": "square",
+        "image_small_focal_point": "center",
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "image-with-text-2": {
+      "type": "image-with-text",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "The City Edit"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The Jumpsuit",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One piece of the most fashionable ensembles ever.</p>",
+            "text_font_class": "fs-body-200"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop this",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "accent",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_position": "left",
+        "aspect_ratio": "portrait",
+        "focal_point": "center",
+        "image_caption": "",
+        "text_alignment": "left",
+        "show_small_image": true,
+        "image_small_aspect": "square",
+        "image_small_focal_point": "center",
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "multi-column-2": {
+      "type": "multi-column",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "accent": "Exclusive",
+            "heading": "The Duo",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-3-base",
+            "text": "<p>Pure elegance. Get ready for an event with this duo.</p>",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "Shop this",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-1": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "portrait",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-2": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "portrait",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column-3": {
+          "type": "image_column",
+          "settings": {
+            "image_width": 100,
+            "aspect_ratio": "portrait",
+            "enable_image_crop_circle": false,
+            "focal_point": "center",
+            "image_position": "above_text",
+            "image_link": "",
+            "small_caption": "",
+            "accent": "",
+            "heading": "",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "column",
+        "image_column-1",
+        "image_column-2",
+        "image_column-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
+        "subheading": "",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "center",
+        "content_background_padding": "medium",
+        "columns": "4",
+        "column_spacing": 48,
+        "row_spacing": 28,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 20,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "image-with-text-3": {
+      "type": "image-with-text",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "The City Edit"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The Sally Short",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-3"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This unique piece will have everyone ohhhh-ing as you walk away.</p>",
+            "text_font_class": "fs-body-200"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop this",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "accent",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_position": "right",
+        "aspect_ratio": "portrait",
+        "focal_point": "center",
+        "image_caption": "Left: Worn with the Lily Shirt",
+        "text_alignment": "left",
+        "show_small_image": true,
+        "image_small_aspect": "square",
+        "image_small_focal_point": "center",
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "image-hero-2": {
+      "type": "image-hero",
+      "blocks": {
+        "accent": {
+          "type": "accent",
+          "settings": {
+            "accent": "The City Edit"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The Bodysuit",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bring style and elegance to any look with the bodysuit.</p>",
+            "text_font_class": "fs-body-200"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Shop this",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "accent",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 80,
+        "mobile_height": 65,
+        "focal_point": "center",
+        "mobile_focal_point": "center",
+        "media_link": "",
+        "text_position": "flex-end_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#171819",
+        "button_background_color": "#22292d",
+        "button_text_color": "#fcfcf9",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "linear-gradient(90deg, rgba(194, 184, 174, 0) 32%, rgba(153, 142, 130, 1) 100%)",
+        "overlay_opacity": 100,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-top-only"
+      }
+    },
+    "rich-text-2": {
+      "type": "rich-text",
+      "blocks": {
+        "spacer-1": {
+          "type": "spacer",
+          "settings": {
+            "space": 24
+          }
+        },
+        "spacer-2": {
+          "type": "spacer",
+          "settings": {
+            "space": 12
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "All City Edit Pieces",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-1-base"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop the entire collection</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "spacer-1",
+        "spacer-2",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "main-collection-product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "columns_desktop": "4",
+        "columns_mobile": "2",
+        "rows": "4",
+        "show_item_count": true,
+        "show_sort": true,
+        "show_filters": true,
+        "enable_sticky_filter_bar": true,
+        "desktop_filter_location": "filter_bar",
+        "collapse_filter_bar": true,
+        "enable_sticky_filter_sidebar": true,
+        "collapse_filter_groups_desktop": true,
+        "collapse_filter_groups_mobile": true,
+        "show_swatch_filters": true,
+        "show_chip_filters": true,
+        "chip_layout": "3col",
+        "pagination": "click",
+        "enable_animation": true,
+        "divider_style": "solid"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "image-hero-1",
+    "multi-column-1",
+    "rich-text-1",
+    "image-with-text-1",
+    "image-with-text-2",
+    "multi-column-2",
+    "image-with-text-3",
+    "image-hero-2",
+    "rich-text-2",
+    "main-collection-product-grid"
+  ]
+}

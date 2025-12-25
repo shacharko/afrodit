@@ -1,0 +1,234 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.basic-product-Old.json",
+  "context": {
+    "market": "il"
+  },
+  "sections": {
+    "main": {
+      "disabled": false,
+      "settings": {
+        "show_featured_media_first": true,
+        "gallery_style_mobile": "thumbnails",
+        "gallery_size": "medium",
+        "gallery_overflow": "never",
+        "enable_multiple_variant_media": false,
+        "hide_mobile_carousel_dots": false
+      },
+      "blocks": {
+        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6": {
+          "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+          "disabled": false,
+          "settings": {
+            "button_style": "solid_accent_2",
+            "button_alignment": "center",
+            "button_content_alignment": "center",
+            "button_margin_top": 0,
+            "button_margin_bottom": 0,
+            "button_max_width": 0,
+            "button_padding_horizontal": 15,
+            "button_full_width": true,
+            "button_show_text": true,
+            "button_show_icon": true,
+            "header-062766fbf3b899c803ec294a03a8352b": null,
+            "icon_size": 18,
+            "icon_stroke_width": 1,
+            "icon_offset_vertical": 0
+          }
+        },
+        "inventory_counter_nnj7H": {
+          "type": "inventory-counter",
+          "disabled": false,
+          "settings": {
+            "label": "זמינות",
+            "inventory_max": "100",
+            "low_inventory_threshold": "40",
+            "show_status_bar": false,
+            "show_untracked_quantity": false
+          }
+        },
+        "variant_picker": {
+          "settings": {
+            "variant_popup_option": ""
+          }
+        },
+        "tolstoy_shoppable_video_quiz_stories_block_pxCG4": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "disabled": false,
+          "settings": {
+            "publishId": "publishId"
+          }
+        },
+        "custom_liquid_aQhpT": {
+          "type": "custom_liquid",
+          "disabled": false,
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
+          }
+        },
+        "buy_buttons": {
+          "settings": {
+            "show_dynamic_checkout": false,
+            "divider_width": "shadow--small"
+          }
+        },
+        "text_YLEgV": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p>המחיר כולל מיסים משלוח יחושב בעת התשלום </p>",
+            "column_placement": "right"
+          }
+        },
+        "accordion_XpdCx": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "right",
+            "heading": "זמני שילוח",
+            "heading_tag": "h3",
+            "paragraph-3b6ef4a964fc5955e0d9bf9f434cf331": null,
+            "content": "<p>הזמנות שנעשו עד השעה 12 , ישלחו באותו היום ץץמשלוח סטנדרטי תוך 48 שעות מקבלת ההזמנה </p>",
+            "page_for_content": "",
+            "custom_liquid": "",
+            "paragraph-573afd754e8fd29b0cdc5a98c8467d50": null
+          }
+        },
+        "accordion_fHfiW": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "תיאור",
+            "heading_tag": "h3",
+            "paragraph-4be58f62ecfff5a9e985c2048215432d": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{{ product.description }}",
+            "paragraph-d2d5777524de51ebce32feaa10797a0b": null
+          }
+        },
+        "accordion_3q6Rn": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "משפחות ריח",
+            "heading_tag": "h3",
+            "paragraph-91f8e3606aa3b8b46902958d0d7a12eb": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{% assign scent_family_original = product.metafields.custom.scent_family.value %}\n\n{% if scent_family_original != blank %}\n  {% assign scent_family_cleaned = scent_family_original | replace: '[', '' | replace: ']', '' | replace: '\"', '' | replace: ', ', ',' %}\n  {% assign scent_families = scent_family_cleaned | split: ',' %}\n{% endif %}\n\n{% if scent_families != blank and scent_families.size > 0 %}\n  <ul style=\"list-style-type: disc; padding-inline-start: 20px; margin-top: 0;\">\n    {% for family in scent_families %}\n      <li class=\"scent-family-item\" dir=\"rtl\">\n        {{ family | strip }}\n      </li>\n    {% endfor %}\n  </ul>\n{% endif %}",
+            "paragraph-707aaedd33ea5d0f9fa4ddf8b8ea6fa9": null
+          }
+        },
+        "accordion_BqCY9": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "תווי  ריח",
+            "heading_tag": "h3",
+            "paragraph-807a473a23de45536cdf9f56adb6ce40": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{%- liquid\n  assign head_note_single = product.metafields.custom.head_note.value\n  assign middle_note_single = product.metafields.custom.middle_note.value\n  assign base_note_single = product.metafields.custom.base_note.value\n\n  assign head_notes_plural_original = product.metafields.custom.head_notes.value | default: ''\n  assign middle_notes_plural_original = product.metafields.custom.middle_notes.value | default: ''\n  assign base_notes_plural_original = product.metafields.custom.base_notes.value | default: ''\n\n  assign clean_head = head_notes_plural_original | replace: '[', '' | replace: ']', '' | replace: '\"', '' | replace: ', ', ','\n  if clean_head contains ','\n    assign head_notes_list = clean_head | split: ','\n  else\n    assign head_notes_list = clean_head | split: ' '\n  endif\n  assign head_notes_display = head_notes_list | join: ', ' | strip\n\n  assign clean_middle = middle_notes_plural_original | replace: '[', '' | replace: ']', '' | replace: '\"', '' | replace: ', ', ','\n  if clean_middle contains ','\n    assign middle_notes_list = clean_middle | split: ','\n  else\n    assign middle_notes_list = clean_middle | split: ' '\n  endif\n  assign middle_notes_display = middle_notes_list | join: ', ' | strip\n\n  assign clean_base = base_notes_plural_original | replace: '[', '' | replace: ']', '' | replace: '\"', '' | replace: ', ', ','\n  if clean_base contains ','\n    assign base_notes_list = clean_base | split: ','\n  else\n    assign base_notes_list = clean_base | split: ' '\n  endif\n  assign base_notes_display = base_notes_list | join: ', ' | strip\n-%}\n\n{% if head_note_single != blank or head_notes_display != blank or middle_note_single != blank or middle_notes_display != blank or base_note_single != blank or base_notes_display != blank -%}\n<ul dir=\"rtl\" style=\"list-style:none; padding-inline-start:0; margin-top:0;\">\n\n  {%- if head_note_single != blank or head_notes_display != blank -%}\n    <li style=\"display:flex; align-items:flex-start; column-gap:8px; margin-bottom:6px;\">\n      {%- if head_note_single != blank and head_note_single.note_image != blank -%}\n        {{ head_note_single.note_image \n          | image_url: width: 32 \n          | image_tag: alt: head_note_single.hebrew_name | default: head_note_single.note_name }}\n      {%- endif -%}\n\n      <div>\n        {%- if head_note_single != blank -%}\n          <strong style=\"display:block;\">\n            {{ head_note_single.title | default: head_note_single.name | default: head_note_single }}\n          </strong>\n        {%- endif -%}\n\n        {%- if head_notes_display != blank -%}\n          <span style=\"display:block; opacity:0.8;\">\n            {{ head_notes_display }}\n          </span>\n        {%- endif -%}\n      </div>\n    </li>\n  {%- endif -%}\n\n  {%- if middle_note_single != blank or middle_notes_display != blank -%}\n    <li style=\"display:flex; align-items:flex-start; column-gap:8px; margin-bottom:6px;\">\n      {%- if middle_note_single != blank and middle_note_single.note_image != blank -%}\n        {{ middle_note_single.note_image \n          | image_url: width: 32 \n          | image_tag: alt: middle_note_single.hebrew_name | default: middle_note_single.note_name }}\n      {%- endif -%}\n\n      <div>\n        {%- if middle_note_single != blank -%}\n          <strong style=\"display:block;\">\n            {{ middle_note_single.title | default: middle_note_single.name | default: middle_note_single }}\n          </strong>\n        {%- endif -%}\n\n        {%- if middle_notes_display != blank -%}\n          <span style=\"display:block; opacity:0.8;\">\n            {{ middle_notes_display }}\n          </span>\n        {%- endif -%}\n      </div>\n    </li>\n  {%- endif -%}\n\n  {%- if base_note_single != blank or base_notes_display != blank -%}\n    <li style=\"display:flex; align-items:flex-start; column-gap:8px; margin-bottom:6px;\">\n      {%- if base_note_single != blank and base_note_single.note_image != blank -%}\n        {{ base_note_single.note_image \n          | image_url: width: 32 \n          | image_tag: alt: base_note_single.hebrew_name | default: base_note_single.note_name }}\n      {%- endif -%}\n\n      <div>\n        {%- if base_note_single != blank -%}\n          <strong style=\"display:block;\">\n            {{ base_note_single.title | default: base_note_single.name | default: base_note_single }}\n          </strong>\n        {%- endif -%}\n\n        {%- if base_notes_display != blank -%}\n          <span style=\"display:block; opacity:0.8;\">\n            {{ base_notes_display }}\n          </span>\n        {%- endif -%}\n      </div>\n    </li>\n  {%- endif -%}\n\n</ul>\n{%- endif -%}",
+            "paragraph-96cf48d7da3cfa70776ceeacadd71b6d": null
+          }
+        },
+        "accordion_JGW3R": {
+          "type": "accordion",
+          "disabled": false,
+          "settings": {
+            "expand_by_default": false,
+            "column_placement": "left",
+            "heading": "אודות המותג",
+            "heading_tag": "h3",
+            "paragraph-a2f41d3b43bc968b94599154f6b4555c": null,
+            "content": "",
+            "page_for_content": "",
+            "custom_liquid": "{% liquid\n  assign vendor_handle = product.vendor | handleize\n  assign brand_entry = shop.metaobjects['brand_info'][vendor_handle]\n%}\n\n{% if brand_entry and brand_entry.brand_collection and brand_entry.brand_collection.value %}\n  {{ brand_entry.brand_collection.value.description }}\n{% endif %}",
+            "paragraph-e93dd434516b4bf92c11ca6c020ba491": null
+          }
+        },
+        "product_callouts-1": {
+          "disabled": true,
+          "settings": {}
+        },
+        "product_callouts": {
+          "settings": {
+            "icon_1": "security-badge",
+            "text_1": "<p>ספקים מורשים</p>",
+            "icon_2": "recycle-symbol",
+            "text_2": "<p>אריזה נתנת למחזור</p>",
+            "icon_3": "chat",
+            "text_3": "<p>צריכים עזרה ? <a href=\"#\" title=\"#\">צרו קשר</a></p>",
+            "icon_4": "heart",
+            "text_4": "<p>דוגמית חינם עם כל רכישה </p>",
+            "icon_5": "padlock",
+            "text_5": "<p>רכישות מאובטחות </p>",
+            "icon_6": "none",
+            "text_6": "",
+            "expand_by_default": true
+          }
+        },
+        "featured_products": {
+          "disabled": false,
+          "settings": {
+            "heading": "בשמים שנקנו ביחד",
+            "column_placement": "left",
+            "product_source": "custom-product-list",
+            "product_list": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products.value }}",
+            "display_as_collapsible_row": false
+          }
+        }
+      },
+      "block_order": [
+        "product_header",
+        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6",
+        "inventory_counter_nnj7H",
+        "share",
+        "variant_picker",
+        "tolstoy_shoppable_video_quiz_stories_block_pxCG4",
+        "quantity_selector",
+        "custom_liquid_aQhpT",
+        "buy_buttons",
+        "text_YLEgV",
+        "accordion_XpdCx",
+        "accordion_fHfiW",
+        "accordion_3q6Rn",
+        "accordion_BqCY9",
+        "accordion_JGW3R",
+        "product_callouts-1",
+        "product_callouts",
+        "description",
+        "featured_products"
+      ]
+    },
+    "recommendations": {
+      "disabled": false,
+      "settings": {
+        "title": "מומלצים"
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "main",
+    "recommendations"
+  ]
+}
