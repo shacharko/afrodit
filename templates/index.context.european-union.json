@@ -8,6 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "parent": "index.json",
+  "context": {
+    "market": "european-union"
+  },
+  "sections": {}
 }
