@@ -8,12 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "markets": {
-    "il": {
-      "parent": "@default"
-    },
-    "european-union": {
-      "parent": "@default"
-    }
-  }
+  "parent": "footer-group.json",
+  "context": {
+    "market": "european-union"
+  },
+  "sections": {}
 }
