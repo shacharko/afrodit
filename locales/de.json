@@ -314,7 +314,9 @@
     "newsletter_form": {
       "confirmation": "Vielen Dank für Ihr Abonnement!",
       "email_placeholder": "Ihre E-Mail",
-      "submit": "Abonnieren"
+      "submit": "Abonnieren",
+      "first_name_placeholder": "Vorname",
+      "last_name_placeholder": "Nachname"
     },
     "pagination": {
       "addresses": "Adressen",
@@ -575,6 +577,37 @@
       "pick_up_currently_unavailable": "Abholung derzeit nicht möglich",
       "pick_up_unavailable_at": "Abholung nicht möglich bei {{ location_name }}",
       "view_store_info": "Filialinformationen anzeigen"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "thank_you": {
+        "checkout_again": "Erneut auschecken"
+      },
+      "required_extensions": {
+        "errors": {
+          "interaction_required": "Zur Vervollständigung des Bestellvorgangs ist eine Interaktion mit einer Erweiterung erforderlich."
+        }
+      }
+    }
+  },
+  "customer_accounts": {
+    "payment_methods": {
+      "update_payment_method": {
+        "subscriptions_title": "Abonnements",
+        "subscriptions_list_accessibility_label": "Liste der Abonnementprodukte",
+        "pre_orders_title": "Demnächst",
+        "pre_orders_list_accessibility_label": "Liste der ausstehenden Bestellungen",
+        "resources_list_accessibility_label": "Abonnementprodukte und Produkte mit ausstehender Bestellung, die mit dieser Zahlungsmethode bezahlt werden",
+        "resources_card_scroll": "Scrollen Sie, um weitere Artikel anzuzeigen.",
+        "resources_card_show_more": "Mehr anzeigen",
+        "resources_card_show_less": "Weniger anzeigen",
+        "loading_resources": "Abonnements und anstehende Bestellungen werden geladen"
+      },
+      "add_success": {
+        "title": "Zahlungsmethode hinzugefügt",
+        "done_button": "Weiter einkaufen"
+      }
     }
   }
 }
