@@ -53,7 +53,7 @@
         "compact_meganav_aWXCW4": {
           "type": "compact_meganav",
           "settings": {
-            "dropdown_parent_link": "בשמים",
+            "dropdown_parent_link": "Perfumes",
             "columns_width": 440,
             "column_count": 1,
             "show_column_borders": true,
@@ -137,7 +137,7 @@
         "cart_icon": "cart",
         "divider_width": "0px",
         "enable_locale_selector": true,
-        "enable_country_selector": false,
+        "enable_country_selector": true,
         "show_social_media": false,
         "show_social_media_mobile": false,
         "logo": "shopify://shop_images/Oligarch_Logo_SVG.svg",
