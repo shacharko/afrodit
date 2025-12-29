@@ -97,7 +97,7 @@
         "full_width_meganav_WXyTTy": {
           "type": "full_width_meganav",
           "settings": {
-            "dropdown_parent_link": "מותגים",
+            "dropdown_parent_link": "Brands",
             "column_count": 4,
             "show_column_borders": true,
             "show_promo": true,
