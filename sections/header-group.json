@@ -75,7 +75,7 @@
         "compact_meganav_6JGmJU": {
           "type": "compact_meganav",
           "settings": {
-            "dropdown_parent_link": "דיסקברי סט",
+            "dropdown_parent_link": "Discovery Sets",
             "columns_width": 440,
             "column_count": 1,
             "show_column_borders": true,
