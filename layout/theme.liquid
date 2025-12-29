@@ -1,18 +1,6 @@
 <!doctype html>
 
 <!--
-        ___                 ___           ___           ___
-       /  /\                     /__/\         /  /\         /  /\
-      /  /:/_                    \  \:\       /  /:/        /  /::\
-     /  /:/ /\  ___     ___       \  \:\     /  /:/        /  /:/\:\
-    /  /:/ /:/ /__/\   /  /\  ___  \  \:\   /  /:/  ___   /  /:/  \:\
-   /__/:/ /:/  \  \:\ /  /:/ /__/\  \__\:\ /__/:/  /  /\ /__/:/ \__\:\
-   \  \:\/:/    \  \:\  /:/  \  \:\ /  /:/ \  \:\ /  /:/ \  \:\ /  /:/
-    \  \::/      \  \:\/:/    \  \:\  /:/   \  \:\  /:/   \  \:\  /:/
-     \  \:\       \  \::/      \  \:\/:/     \  \:\/:/     \  \:\/:/
-      \  \:\       \__\/        \  \::/       \  \::/       \  \::/
-       \__\/                     \__\/         \__\/         \__\/
-
   --------------------------------------------------------------------
   #  Stiletto v5.1.1
   #  Documentation: https://help.fluorescent.co/v/stiletto
@@ -21,19 +9,26 @@
   --------------------------------------------------------------------
 -->
 
-<html class="no-js" lang="he" dir="rtl" style="--announcement-height: 1px;">
+<html class="no-js"
+      lang="{{ request.locale.iso_code }}"
+      dir="ltr"
+      style="--announcement-height: 1px;">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     {% render 'meta-description' %}
 
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    {%- if settings.favicon != blank -%}
-      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" type="image/png">
-    {%- endif -%}
+    {% if settings.favicon != blank %}
+      <link rel="shortcut icon"
+            href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
+            type="image/png">
+    {% endif %}
 
     {%- capture seo_title -%}
       {%- if request.page_type == 'search' and search.performed == true -%}
@@ -42,50 +37,48 @@
       {%- else -%}
         {{ page_title }}
       {%- endif -%}
+
       {%- if current_tags -%}
         {%- assign meta_tags = current_tags | join: ', ' -%}
         &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
       {%- endif -%}
+
       {%- if current_page != 1 -%}
         &ndash; {{ 'general.meta.page' | t: page: current_page }}
       {%- endif -%}
-      {%- assign escaped_page_title = page_title | escape -%}
-      {%- unless escaped_page_title contains shop.name -%}
+
+      {%- unless page_title contains shop.name -%}
         &ndash; {{ shop.name }}
       {%- endunless -%}
     {%- endcapture -%}
+
     <title>{{ seo_title | strip }}</title>
 
     {% render 'social-meta-tags' %}
-
     {% render 'theme-setup' %}
     {% render 'theme-setting-vars' %}
-    {%- render 'theme-globals' -%}
+    {% render 'theme-globals' %}
 
     {{ content_for_header }}
-
-    
-
-
   </head>
 
   <body class="template-{{ request.page_type | handle }}">
-   
+
     <div class="page">
+
       {% if settings.enable_page_transitions %}
         {% render 'page-transition-overlay' %}
       {% endif %}
 
       <div class="theme-editor-scroll-offset"></div>
-
       <div class="header__space" data-header-space></div>
 
       {% sections 'header-group' %}
       {% sections 'overlay-group' %}
 
-      {%- if settings.enable_quick_search -%}
+      {% if settings.enable_quick_search %}
         {% render 'quick-search' %}
-      {%- endif -%}
+      {% endif %}
 
       <div class="header-overlay" data-header-overlay>
         <div class="header-overlay__inner"></div>
@@ -101,100 +94,89 @@
       {% render 'quick-view-modal' %}
       {% render 'modal' %}
       {% render 'back-to-top' %}
+
     </div>
 
     {{ '//www.youtube.com/iframe_api' | script_tag }}
     {{ '//cdn.shopify.com/shopifycloud/shopify-plyr/v1.0/shopify-plyr.css' | stylesheet_tag }}
-  <!--Whatup -->
 
-  {%- comment -%}
-  Floating WhatsApp Button – no text, mobile + desktop
-{%- endcomment -%}
+    {%- comment -%}
+      Floating WhatsApp Button – LTR / English
+    {%- endcomment -%}
 
-<div class="whatsapp-float">
-  <a
-    id="whatsapp-float-link"
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="צ'אט בוואטסאפ"
-  >
-    <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-float__icon">
-      <path d="M16.04 3C9.41 3 4 8.41 4 15.04c0 2.65.87 5.08 2.36 7.06L4 29l7.12-2.32A11.87 11.87 0 0 0 16.04 27C22.66 27 28 21.59 28 15.04 28 8.41 22.66 3 16.04 3zm6.93 17.09c-.29.82-1.44 1.51-2.01 1.56-.52.05-1.18.07-1.9-.12-.44-.12-1.01-.33-1.75-.64-3.08-1.33-5.08-4.44-5.23-4.64-.15-.2-1.25-1.66-1.25-3.17 0-1.51.8-2.25 1.08-2.56.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.71.54.29.7.98 2.4 1.07 2.58.09.18.15.4.03.6-.11.2-.17.33-.33.51-.15.17-.32.39-.46.52-.15.15-.31.31-.14.61.17.29.76 1.25 1.64 2.02 1.13 1.01 2.08 1.32 2.37 1.47.29.15.46.13.63-.08.17-.2.73-.85.93-1.14.2-.29.39-.24.66-.15.27.09 1.72.81 2.02.95.29.15.48.22.55.34.07.12.07.86-.22 1.68z"/>
-    </svg>
-  </a>
-</div>
+    <div class="whatsapp-float">
+      <a
+        id="whatsapp-float-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+      >
+        <svg viewBox="0 0 32 32" aria-hidden="true" class="whatsapp-float__icon">
+          <path d="M16.04 3C9.41 3 4 8.41 4 15.04c0 2.65.87 5.08 2.36 7.06L4 29l7.12-2.32A11.87 11.87 0 0 0 16.04 27C22.66 27 28 21.59 28 15.04 28 8.41 22.66 3 16.04 3zm6.93 17.09c-.29.82-1.44 1.51-2.01 1.56-.52.05-1.18.07-1.9-.12-.44-.12-1.01-.33-1.75-.64-3.08-1.33-5.08-4.44-5.23-4.64-.15-.2-1.25-1.66-1.25-3.17 0-1.51.8-2.25 1.08-2.56.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.19.01.45-.07.71.54.29.7.98 2.4 1.07 2.58.09.18.15.4.03.6-.11.2-.17.33-.33.51-.15.17-.32.39-.46.52-.15.15-.31.31-.14.61.17.29.76 1.25 1.64 2.02 1.13 1.01 2.08 1.32 2.37 1.47.29.15.46.13.63-.08.17-.2.73-.85.93-1.14.2-.29.39-.24.66-.15.27.09 1.72.81 2.02.95.29.15.48.22.55.34.07.12.07.86-.22 1.68z"/>
+        </svg>
+      </a>
+    </div>
 
-<style>
-  .whatsapp-float {
-    position: fixed;
-    right: 18px;   /* אם תרצי שמאל – החליפי ל: left: 18px; */
-    bottom: 18px;
-    z-index: 9999;
-  }
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 9999;
+      }
 
-  .whatsapp-float a {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
-    text-decoration: none;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-  }
+      .whatsapp-float a {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #25D366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+        text-decoration: none;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
 
-  .whatsapp-float a:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
-    background: #1ebe5c;
-  }
+      .whatsapp-float__icon {
+        width: 60%;
+        height: 60%;
+        fill: #ffffff;
+      }
+    </style>
 
-  .whatsapp-float__icon {
-    width: 60%;
-    height: 60%;
-    fill: #ffffff;
-    display: block;
-  }
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var link = document.getElementById('whatsapp-float-link');
+        if (!link) return;
 
-  /* התאמת גודל למובייל אם רוצים קצת יותר קטן */
-  @media (max-width: 768px) {
-    .whatsapp-float a {
-      width: 52px;
-      height: 52px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.35);
-    }
-  }
-</style>
+        var phoneNumber = '972523311312';
+        var defaultText = 'Hi! I have a question about: ' + window.location.href;
+        var waUrl = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(defaultText);
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var link = document.getElementById('whatsapp-float-link');
-    if (!link) return;
-
-    // *** פה לעדכן למספר שלך ***
-    var phoneNumber = '972523311312'; // בלי 0 בהתחלה, בלי רווחים / מקפים
-
-    var defaultText = 'היי, יש לי שאלה לגבי ' + window.location.href;
-    var waUrl = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(defaultText);
-
-    link.setAttribute('href', waUrl);
-  });
-</script>
+        link.setAttribute('href', waUrl);
+      });
+    </script>
 
   </body>
+
   <link
     rel="preload"
     fetchpriority="low"
     href="{{ 'theme-deferred.css' | asset_url }}"
     as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript><link rel="stylesheet" href="{{ 'theme-deferred.css' | asset_url }}"></noscript>
-  <!-- ה-CSS המותאם שלך – נטען אחרון -->
+    onload="this.onload=null;this.rel='stylesheet'">
 
+  <noscript>
+    <link rel="stylesheet" href="{{ 'theme-deferred.css' | asset_url }}">
+  </noscript>
+
+  {%- comment -%}
+    Custom CSS – keep disabled for now if it had RTL rules
+  {%- endcomment -%}
+  {%- comment -%}
   <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}" media="all">
+  {%- endcomment -%}
 
 </html>
