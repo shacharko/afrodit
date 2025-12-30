@@ -826,7 +826,7 @@
         "text_xaUeb7": {
           "type": "text",
           "settings": {
-            "text": "<h3>Premium Gift Card<br/><br/></h3>",
+            "text": "<h3><strong>Premium Gift Card<br/><br/></strong></h3>",
             "text_font_class": "fs-body-100"
           }
         },
