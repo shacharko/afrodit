@@ -883,8 +883,8 @@
         "email_placeholder": "Your Email Address",
         "button_label": "Subscribe",
         "consent_required": false,
-        "consent_text": "אני רוצה לקבל עדכונים",
-        "privacy_link_label": "מדיניות פרטיות",
+        "consent_text": "I would like to receive updates",
+        "privacy_link_label": "Privacy Policy",
         "privacy_link_url": "shopify://policies/privacy-policy",
         "background_color": "#ffffff",
         "text_color": "#000000"
