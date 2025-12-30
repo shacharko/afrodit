@@ -1,5 +1,5 @@
 {%- comment -%}
-Benefits marquee (RTL Hebrew version, full width strip + inner line)
+Benefits marquee (LTR only, multi-language via locales)
 Usage: {% render 'benefits-marquee-afrodite' %}
 {%- endcomment -%}
 
@@ -10,59 +10,64 @@ Usage: {% render 'benefits-marquee-afrodite' %}
       <div class="af-tag">
         <a href="#">
           <span class="af-img">
-            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902462_m.jpg"
-                 width="64" height="64" alt="100% אותנטיות מובטחת">
+            <img
+              src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902462_m.jpg"
+              width="64" height="64"
+              alt="{{ 'afrodite.benefits.item1' | t | escape }}">
           </span>
-          <span class="af-text">100% אותנטיות מובטחת</span>
+          <span class="af-text">{{ 'afrodite.benefits.item1' | t }}</span>
         </a>
       </div>
 
       <div class="af-tag">
         <a href="#">
           <span class="af-img">
-            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902461_m.jpg"
-                 width="64" height="64" alt="תשלום מאובטח">
+            <img
+              src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902461_m.jpg"
+              width="64" height="64"
+              alt="{{ 'afrodite.benefits.item2' | t | escape }}">
           </span>
-          <span class="af-text">תשלום מאובטח</span>
+          <span class="af-text">{{ 'afrodite.benefits.item2' | t }}</span>
         </a>
       </div>
 
       <div class="af-tag">
         <a href="#">
           <span class="af-img">
-            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902460_m.jpg"
-                 width="64" height="64" alt="יבואן רשמי">
+            <img
+              src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902460_m.jpg"
+              width="64" height="64"
+              alt="{{ 'afrodite.benefits.item3' | t | escape }}">
           </span>
-          <span class="af-text">יבואן רשמי / נקודת מכירה מורשית</span>
+          <span class="af-text">{{ 'afrodite.benefits.item3' | t }}</span>
         </a>
       </div>
 
       <div class="af-tag">
         <a href="#">
           <span class="af-img">
-            <img src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902458_m.jpg"
-                 width="64" height="64" alt="דוגמיות מתנה">
+            <img
+              src="https://afroditedecants.com/wp-content/uploads/2025/03/photo_5944751955261902458_m.jpg"
+              width="64" height="64"
+              alt="{{ 'afrodite.benefits.item4' | t | escape }}">
           </span>
-          <span class="af-text">דוגמיות מתנה בכל רכישה מעל 300₪</span>
+          <span class="af-text">{{ 'afrodite.benefits.item4' | t }}</span>
         </a>
       </div>
 
     </div>
   </div>
 
-  <!-- הקו שמתחת לאייקונים -->
   <div class="af-marquee-line"></div>
 </div>
 
 <style>
-/* עטיפה שיוצאת מה-page-width של התבנית – סטריפ על כל המסך */
 .af-marquee-wrapper{
   width:100vw;
   margin-left:calc(50% - 50vw);
   margin-right:calc(50% - 50vw);
 }
 
-/* הסטריפ עצמו */
 .af-marquee{
   box-sizing:border-box;
   display:flex;
@@ -75,7 +80,6 @@ Usage: {% render 'benefits-marquee-afrodite' %}
   direction:ltr;
 }
 
-/* המסילה */
 .af-track{
   display:flex;
   align-items:center;
@@ -85,18 +89,17 @@ Usage: {% render 'benefits-marquee-afrodite' %}
   direction:ltr;
 }
 
-/* טאגים */
 .af-tag{
   display:flex;
   align-items:center;
-  flex-direction:row-reverse;
+  flex-direction:row;
   white-space:nowrap;
 }
 
 .af-tag > a{
   display:flex;
   align-items:center;
-  flex-direction:row-reverse;
+  flex-direction:row;
   gap:14px;
   text-decoration:none;
   color:#222;
@@ -108,11 +111,11 @@ Usage: {% render 'benefits-marquee-afrodite' %}
 }
 
 .af-text{
-  direction:rtl;
+  direction:ltr;
+  text-align:left;
   line-height:1.2;
 }
 
-/* אייקון */
 .af-img{
   line-height:0;
   display:grid;
@@ -133,17 +136,15 @@ Usage: {% render 'benefits-marquee-afrodite' %}
   transform:scale(1.08);
 }
 
-/* הקו – ברוחב קונטיינר, צמוד לאייקונים */
 .af-marquee-line{
   width:min(1200px,92%);
   height:2px;
   background:#d7d7d7;
   margin:0 auto;
-  margin-top:-30px;      /* קירוב לקצה התחתון של האייקונים */
-  margin-bottom:16px;   /* רווח אחרי הקו */
+  margin-top:-30px;
+  margin-bottom:16px;
 }
 
-/* אנימציה */
 .af-marquee.is-running .af-track{
   animation: af-loop var(--af-speed, 38s) linear infinite;
 }
@@ -153,7 +154,6 @@ Usage: {% render 'benefits-marquee-afrodite' %}
   100% { transform: translate3d(calc(-1 * var(--af-distance, 1000px)),0,0); }
 }
 
-/* מובייל */
 @media (max-width: 600px){
   .af-track{ gap:36px; }
   .af-img img{ width:32px; height:32px; }
