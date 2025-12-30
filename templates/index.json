@@ -231,7 +231,7 @@
         "heading_tag": "h5",
         "subheading": "<p><strong>Discover iconic fragrances loved by thousands — scents with presence, depth, and perfect balance for those who seek quality, experience, and a lasting impression.</strong></p><p></p>",
         "link": "shopify://collections/best-seller",
-        "link_text": "הנמכרים ביותר",
+        "link_text": "Best Sellers",
         "button_style": "btn--callout",
         "maximum_products": 15,
         "columns": "5",
@@ -795,7 +795,7 @@
         "text_YygntL": {
           "type": "text",
           "settings": {
-            "text": "<h3><strong>חווית ריח בלתי נשכחת</strong></h3>",
+            "text": "<h3><strong>An Unforgettable Scent Experience</strong><br/></h3>",
             "text_font_class": "fs-body-100"
           }
         },
