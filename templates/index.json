@@ -136,96 +136,6 @@
         "section_padding": "section--vertical-padding-top-bottom"
       }
     },
-    "slideshow_KrHxxB": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_Bt8taz": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/PHOTO-2025-12-28-10-04-09.jpg",
-            "image_mobile": "shopify://shop_images/PHOTO-2025-12-28-10-04-08.jpg",
-            "focal_point": "image_presentation",
-            "mobile_focal_point": "image_presentation",
-            "media_link": "",
-            "text_position": "center_center",
-            "text_position_mobile": "center_center",
-            "accent": "",
-            "title": "",
-            "heading_tag": "h4",
-            "heading_font_class": "fs-heading-display-3",
-            "subheading": "",
-            "subheading_tag": "h2",
-            "subheading_font_class": "fs-heading-4-base",
-            "text": "",
-            "text_font_class": "fs-body-200",
-            "link_1": "shopify://collections/קולקציית-מארזים-כללית",
-            "link_text_1": "",
-            "button_style_1": "btn--secondary",
-            "link_2": "",
-            "link_text_2": "",
-            "button_style_2": "btn--secondary",
-            "text_color": "#ffffff",
-            "button_background_color": "#ffffff",
-            "button_text_color": "#000000",
-            "color_overlay": "#000000",
-            "color_overlay_gradient": "",
-            "overlay_opacity": 40
-          }
-        },
-        "slide_akRbMi": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/IMG_4588.jpg",
-            "image_mobile": "shopify://shop_images/IMG_4588.jpg",
-            "focal_point": "image_presentation",
-            "mobile_focal_point": "image_presentation",
-            "media_link": "",
-            "text_position": "center_center",
-            "text_position_mobile": "center_center",
-            "accent": "",
-            "title": "",
-            "heading_tag": "h4",
-            "heading_font_class": "fs-heading-display-3",
-            "subheading": "",
-            "subheading_tag": "h2",
-            "subheading_font_class": "fs-heading-6-base",
-            "text": "<p><strong>גלו את המארז שמדבר אליכם</strong></p><p><strong>כל ריח הוא מסע, וכל מארז – חוויה שמחכה להתגלות.</strong></p><p><strong>סיטרוס מרענן, פרחוני קסום, פירותי שובב, מתובל חם או עץ עמוק – לכל אחד יש את הריח שמספר את סיפורו.</strong></p><p><strong>בחרו את המארז שלכם עכשיו והתחילו לחוות רגעים בלתי נשכחים.</strong></p>",
-            "text_font_class": "fs-body-200",
-            "link_1": "shopify://collections",
-            "link_text_1": "",
-            "button_style_1": "btn--primary",
-            "link_2": "",
-            "link_text_2": "Read more",
-            "button_style_2": "btn--secondary",
-            "text_color": "#ffffff",
-            "button_background_color": "#ffffff",
-            "button_text_color": "#000000",
-            "color_overlay": "#000000",
-            "color_overlay_gradient": "",
-            "overlay_opacity": 40
-          }
-        }
-      },
-      "block_order": [
-        "slide_Bt8taz",
-        "slide_akRbMi"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "image_aspect": "custom",
-        "desktop_height": 50,
-        "mobile_height": 50,
-        "enable_autoplay": true,
-        "duration_autoplay": 5,
-        "navigation_alignment": "center",
-        "navigation_color_foreground": "#ffffff",
-        "navigation_color_background": "",
-        "navigation_background_opacity": 100,
-        "enable_animation": true,
-        "section_padding": "section--vertical-padding-top-only"
-      }
-    },
     "collection_list_slider_mR8grQ": {
       "type": "collection-list-slider",
       "name": "t:sections.collection_list_slider.presets.name",
@@ -340,8 +250,6 @@
             "width": "50",
             "height": 700,
             "mobile_height": 500,
-            "image": "shopify://shop_images/o.H516cXBht3P.jpg",
-            "mobile_image": "shopify://shop_images/o.H516cXBht3P.jpg",
             "media_fit": "cover",
             "focal_point": "center",
             "mobile_focal_point": "image_presentation",
@@ -373,8 +281,6 @@
             "width": "50",
             "height": 700,
             "mobile_height": 500,
-            "image": "shopify://shop_images/kzdcg32t.fbs_MP_ca61d78d-bf76-4d7d-9ad8-aa5a5d2beedc_3_07325380223980085413410062923_549.jpg",
-            "mobile_image": "shopify://shop_images/kzdcg32t.fbs_MP_ca61d78d-bf76-4d7d-9ad8-aa5a5d2beedc_3_07325380223980085413410062923_549.jpg",
             "media_fit": "cover",
             "focal_point": "image_presentation",
             "mobile_focal_point": "image_presentation",
@@ -502,7 +408,6 @@
         "custom_content_width": 700
       }
     },
-    
     "grid_hd3m4p": {
       "type": "grid",
       "blocks": {
@@ -512,7 +417,6 @@
             "width": "50",
             "height": 500,
             "mobile_height": 500,
-            "image": "shopify://shop_images/Img-2.webp",
             "media_fit": "cover",
             "focal_point": "image_presentation",
             "mobile_focal_point": "image_presentation",
@@ -544,7 +448,6 @@
             "width": "50",
             "height": 500,
             "mobile_height": 500,
-            "image": "shopify://shop_images/Img-1.webp",
             "media_fit": "cover",
             "focal_point": "image_presentation",
             "mobile_focal_point": "image_presentation",
@@ -714,7 +617,6 @@
         "image_position": "right",
         "image_mobile_position": "above-content",
         "image_padding": "none",
-        "image": "shopify://shop_images/IMG_4212.jpg",
         "aspect_ratio": "square",
         "focal_point": "image_presentation",
         "content_alignment": "center",
@@ -788,7 +690,6 @@
         "image_position": "left",
         "image_mobile_position": "above-content",
         "image_padding": "none",
-        "image": "shopify://shop_images/IMG_4214.jpg",
         "aspect_ratio": "natural",
         "focal_point": "image_presentation",
         "content_alignment": "center",
@@ -958,7 +859,6 @@
       "name": "t:sections.image_with_text.presets.name",
       "settings": {
         "image_position": "left",
-        "image": "shopify://shop_images/429F5A94-94ED-4808-9176-EEA946A2DBF6.jpg",
         "aspect_ratio": "portrait",
         "focal_point": "image_presentation",
         "image_caption": "",
@@ -1076,7 +976,6 @@
     "rich_text_dmzFYM",
     "custom_liquid_97CHAd",
     "collection_list_slider_X66xn8",
-    "slideshow_KrHxxB",
     "collection_list_slider_mR8grQ",
     "custom_liquid_Yhm46m",
     "collection_list_slider_FWw4BR",
