@@ -342,8 +342,8 @@
       "name": "t:sections.featured_collection_slider.presets.name",
       "settings": {
         "heading": "NEW ARRIVALS",
-        "heading_tag": "h5",
-        "subheading": "<p><strong>הטרנדים הכי חמים לשנת 2025, ההשקות הכי מדוברות— כאן תמצאו את החידושים שמציתים סקרנות, מעוררים השראה ומחכים רק לכם</strong></p>",
+        "heading_tag": "h4",
+        "subheading": "<p><strong>The hottest trends of 2025 and the most talked-about launches — here you’ll find the latest innovations that spark curiosity, inspire, and are waiting just for you.</strong></p><p></p>",
         "link": "shopify://collections/new-arrivals",
         "link_text": "חדש על המדף",
         "button_style": "btn--callout",
