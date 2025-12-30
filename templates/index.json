@@ -140,7 +140,7 @@
       "type": "collection-list-slider",
       "name": "t:sections.collection_list_slider.presets.name",
       "settings": {
-        "heading": "דיסקברי סט לפי משפחות ריח",
+        "heading": "Discovery Sets by Fragrance Family",
         "heading_tag": "h2",
         "subheading": "<p><strong>גלו את הניחוח שמדבר אליכם - פרחוני, פירותי, עצי, אוריינטלי, פרשי ועוד ... תנו לריחות להוביל אתכם למסע אישי ומרגש.</strong></p>",
         "link": "shopify://pages/scent-families",
