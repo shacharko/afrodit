@@ -880,7 +880,7 @@
       "name": "Newsletter RTL (Custom)",
       "settings": {
         "heading_text": "Sign up for our newsletter and receive 10% off your first purchase (including promotional discounts).",
-        "email_placeholder": "האימייל שלך",
+        "email_placeholder": "Your Email Address",
         "button_label": "Subscribe",
         "consent_required": false,
         "consent_text": "אני רוצה לקבל עדכונים",
