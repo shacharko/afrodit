@@ -879,9 +879,9 @@
       "type": "newsletter-compact-trl",
       "name": "Newsletter RTL (Custom)",
       "settings": {
-        "heading_text": "הירשמו לניוזלטר שלנו וקבלו 10% הנחה לרכישה ראשונה (כולל כפל מבצעים)",
+        "heading_text": "Sign up for our newsletter and receive 10% off your first purchase (including promotional discounts).",
         "email_placeholder": "האימייל שלך",
-        "button_label": "הרשמה",
+        "button_label": "Subscribe",
         "consent_required": false,
         "consent_text": "אני רוצה לקבל עדכונים",
         "privacy_link_label": "מדיניות פרטיות",
