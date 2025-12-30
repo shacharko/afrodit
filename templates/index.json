@@ -841,7 +841,7 @@
           "type": "button",
           "settings": {
             "link": "shopify://products/gift-card-product",
-            "link_text": "המתנה המושלמת",
+            "link_text": "The Perfect Gift",
             "button_style": "btn--primary"
           }
         }
