@@ -178,9 +178,9 @@
       "type": "collection-list-slider",
       "name": "t:sections.collection_list_slider.presets.name",
       "settings": {
-        "heading": "דיסקברי סט לפי מזלות",
+        "heading": "Discovery Sets by Zodiac Signs",
         "heading_tag": "h2",
-        "subheading": "<p><strong>גלה את הניחוח שמעצים את המזל שלך. כל סט מותאם לאנרגיה הייחודית שלך, מחבר אותך לאופי שלך ומזמין חוויה ריחנית אישית, מדויקת ובלתי נשכחת</strong></p>",
+        "subheading": "<p><strong>Discover the scent that enhances your zodiac sign. Each set is tailored to your unique energy, connecting you to your character and inviting a personal, refined, and unforgettable fragrance experience.</strong></p><p></p>",
         "link": "shopify://pages/zodiac",
         "link_text": "לקולקציה המלאה",
         "button_style": "btn--callout",
