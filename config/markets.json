@@ -9,9 +9,6 @@
  */
 {
   "markets": {
-    "il": {
-      "parent": "@default"
-    },
     "european-union": {
       "parent": "@default"
     }
