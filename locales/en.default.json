@@ -578,5 +578,15 @@
       "pick_up_unavailable_at": "Pickup unavailable at {{ location_name }}",
       "view_store_info": "View store information"
     }
+  },
+
+  "afrodite": {
+    "benefits": {
+      "item1": "100% authenticity guaranteed",
+      "item2": "Secure payment",
+      "item3": "Official retailer / authorized point of sale",
+      "item4": "Free samples with every purchase over ₪300"
+    }
   }
+
 }
