@@ -609,6 +609,13 @@
         "done_button": "Weiter einkaufen"
       }
     }
+  },
+  "afrodite": {
+    "benefits": {
+      "item1": "100%ige Echtheitsgarantie",
+      "item2": "Sichere Zahlung",
+      "item3": "Offizieller Händler / autorisierte Verkaufsstelle",
+      "item4": "Gratisproben bei jedem Einkauf über 300 ₪"
+    }
   }
-
 }
