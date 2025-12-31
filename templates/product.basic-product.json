@@ -121,7 +121,7 @@
           "settings": {
             "expand_by_default": false,
             "column_placement": "left",
-            "heading": "מחיר ליחידת מידה",
+            "heading": "Price per Unit",
             "heading_tag": "h3",
             "content": "",
             "page_for_content": "",
