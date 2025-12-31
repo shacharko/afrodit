@@ -599,7 +599,7 @@
           "type": "button",
           "settings": {
             "link": "shopify://collections/zoologist-1",
-            "link_text": "גלו את הקולקציה",
+            "link_text": "Discover the Collection",
             "button_style": "btn--primary"
           }
         }
@@ -619,7 +619,7 @@
         "image_padding": "none",
         "aspect_ratio": "square",
         "focal_point": "image_presentation",
-        "content_alignment": "center",
+        "content_alignment": "left",
         "background_color": "#ffffff",
         "text_color": "#000000",
         "button_background_color": "#000000",
