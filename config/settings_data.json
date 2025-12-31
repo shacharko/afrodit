@@ -15,35 +15,35 @@
     "color_border": "#aaaaaa",
     "color_header_text": "#22292d",
     "color_header_bg": "#fcfcf9",
-    "color_text_footer": "{{ shop.brand.colors.primary[0].background }}",
-    "color_background_footer": "#ffffff",
-    "color_background_button": "#111111",
-    "color_text_button": "#FFFFFF",
+    "color_text_footer": "#f7f7e8",
+    "color_background_footer": "#171819",
+    "color_background_button": "#242526",
+    "color_text_button": "#faf7c3",
     "color_products_sale_price": "#d21404",
     "color_products_stock_good": "#435830",
-    "color_products_stock_medium": "#3c9342",
+    "color_products_stock_medium": "#e69b1d",
     "color_products_stock_bad": "#aaaaaa",
-    "font_logo": "serif",
+    "font_logo": "work_sans_n5",
     "capitalize_logo": false,
     "logo_letter_spacing": -20,
     "logo_base_size": 60,
-    "font_heading": "serif",
+    "font_heading": "fraunces_n3",
     "heading_letter_spacing": -25,
-    "heading_base_size": 36,
+    "heading_base_size": 50,
     "heading_mobile_base_scale": 78,
-    "font_body": "serif",
+    "font_body": "instrument_sans_n4",
     "body_letter_spacing": 0,
-    "body_base_size": 15,
+    "body_base_size": 17,
     "body_mobile_base_scale": 95,
     "capitalize_navigation": false,
     "navigation_letter_spacing": 0,
-    "navigation_base_size": 14,
+    "navigation_base_size": 17,
     "product_listing_title_uppercase": false,
     "product_listing_title_letter_spacing": 0,
     "capitalize_buttons": false,
     "buttons_letter_spacing": 0,
     "enable_section_animations": true,
-    "swatch_shape": "rectangle",
+    "swatch_shape": "square",
     "swatch_image_fit": "cover",
     "sold_out_product_price_display": "show",
     "color_text_sale_badge": "#d21404",
@@ -85,148 +85,7 @@
     "capitalize_headings": false,
     "product_card_swatch_size": "small",
     "quick_search_max_result_size": 6,
-    "content_for_index": [],
-    "blocks": {
-      "4139971114690857691": {
-        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-collection/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "button_style": "plain_accent_1",
-          "button_placement": "top-end",
-          "button_offset_horizontal": 0,
-          "button_offset_vertical": 0,
-          "button_background_opacity": 85,
-          "button_background_size": 34,
-          "button_background_border_radius": 24,
-          "button_border_width": 1,
-          "show_shadow": false,
-          "icon_size": 18,
-          "icon_stroke_width": 1,
-          "app_integration_preset": "none",
-          "product_link_selector": "",
-          "floating_reference_js": ""
-        }
-      },
-      "3915993389370480168": {
-        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-link-floating/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "button_style": "solid_accent_1",
-          "button_mode": "always_show",
-          "button_position": "bottom-end",
-          "button_offset_horizontal": 10,
-          "button_offset_vertical": 20,
-          "button_size": 56,
-          "button_border_width": 2,
-          "button_border_radius": 40,
-          "show_shadow": true,
-          "icon_size": 24,
-          "icon_stroke_width": 2,
-          "counter_style": "outline_accent_1",
-          "counter_mode": "always_show",
-          "counter_position": "bottom-end",
-          "counter_offset_vertical": -5,
-          "counter_offset_horizontal": 0,
-          "counter_size": 16,
-          "counter_border_width": 1
-        }
-      },
-      "13655089695959051254": {
-        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/code-access/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "version": "main"
-        }
-      },
-      "4705145147225299685": {
-        "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/widget-block/06fa8282-42ff-403e-b67c-1936776aed11",
-        "disabled": false,
-        "settings": {}
-      },
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
-      "13429640401162358610": {
-        "type": "shopify://apps/google-reviews/blocks/app-embed-block/4eeaae1c-902b-481c-bec5-3f32291a58d5",
-        "disabled": false,
-        "settings": {}
-      },
-      "12613470449828698166": {
-        "type": "shopify://apps/tabnav-web-accessibility/blocks/app/6e7da68b-b18e-4550-b9fe-b12dd1396395",
-        "disabled": false,
-        "settings": {
-          "widget_position": "left",
-          "widget_language": "he",
-          "button_size": "small",
-          "color": "#8e56dc",
-          "use_default_widget_color": false,
-          "button_color": "#8e56dc",
-          "use_default_button_color": false
-        }
-      },
-      "11349500561483629931": {
-        "type": "shopify://apps/notify-me/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
-        "disabled": false,
-        "settings": {}
-      },
-      "14197025361042770389": {
-        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/app-settings-main/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "theme_preset": "stiletto",
-          "color_accent_1": "#000000",
-          "color_accent_2": "#000000",
-          "color_solid_button_label": "#ffffff",
-          "color_outline_button_label": "#000000",
-          "color_background_1": "#ffffff",
-          "color_background_2": "#ffffff",
-          "color_text": "#000000",
-          "button_min_height": 45,
-          "button_border_width": 1,
-          "button_border_radius": 0,
-          "input_min_height": 45,
-          "input_border_width": 1,
-          "input_border_radius": 0,
-          "shadow_opacity": 15,
-          "shadow_horizontal_offset": 0,
-          "shadow_vertical_offset": 2,
-          "shadow_blur": 4,
-          "font_text_scale": 100,
-          "access_mode": "UNRESTRICTED",
-          "wishlist_mode": "VARIANT",
-          "wishlist_path": "/apps/wishlist",
-          "money_show_currency_code": true
-        }
-      },
-      "6680288666557934739": {
-        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-page/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-        "disabled": false,
-        "settings": {
-          "column_width": "md",
-          "wishlist_empty_link": "shopify://collections/all",
-          "page_max_width": 1200,
-          "page_padding_top": 30,
-          "page_padding_bottom": 80,
-          "show_share_button": true,
-          "show_buy_all_button": true,
-          "show_clear_wishlist_button": true,
-          "add_to_cart_remove_from_wishlist": false,
-          "remove_button_style": "icon",
-          "product_options": "dropdowns",
-          "cta_button": "add_to_cart",
-          "cta_button_style": "solid_accent_1",
-          "alignment": "center",
-          "image_aspect_ratio": "1/1",
-          "image_object_fit": "cover",
-          "show_vendor": false,
-          "show_product_title": true,
-          "show_price": true,
-          "show_variant_input_label": false
-        }
-      }
-    }
+    "content_for_index": []
   },
   "installed_preset_name": "Stiletto",
   "presets": {
