@@ -98,7 +98,7 @@
             "expand_by_default": false,
             "column_placement": "left",
             "heading": "Description",
-            "heading_tag": "h5",
+            "heading_tag": "h6",
             "content": "",
             "page_for_content": "",
             "custom_liquid": "{{ product.description }}"
