@@ -25,10 +25,6 @@
             "show_custom_badges": true
           }
         },
-        "judge_me_reviews_preview_badge_ECh4zK": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "inventory_counter_nnj7H": {
           "type": "inventory-counter",
           "settings": {
@@ -54,12 +50,6 @@
             "chip_layout": "natural"
           }
         },
-        "tolstoy_shoppable_video_quiz_stories_block_pxCG4": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "publishId"
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -80,24 +70,6 @@
             "enable_sticky_atc_bar_desktop": false,
             "enable_sticky_atc_bar_mobile": false,
             "divider_width": "shadow--small"
-          }
-        },
-        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6": {
-          "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-          "settings": {
-            "button_style": "solid_accent_2",
-            "button_alignment": "center",
-            "button_content_alignment": "center",
-            "button_margin_top": 0,
-            "button_margin_bottom": 0,
-            "button_max_width": 0,
-            "button_padding_horizontal": 15,
-            "button_full_width": true,
-            "button_show_text": true,
-            "button_show_icon": true,
-            "icon_size": 18,
-            "icon_stroke_width": 1,
-            "icon_offset_vertical": 0
           }
         },
         "text_YLEgV": {
@@ -125,8 +97,8 @@
           "settings": {
             "expand_by_default": false,
             "column_placement": "left",
-            "heading": "תיאור",
-            "heading_tag": "h3",
+            "heading": "Description",
+            "heading_tag": "h4",
             "content": "",
             "page_for_content": "",
             "custom_liquid": "{{ product.description }}"
@@ -244,15 +216,12 @@
       },
       "block_order": [
         "product_header",
-        "judge_me_reviews_preview_badge_ECh4zK",
         "inventory_counter_nnj7H",
         "share",
         "variant_picker",
-        "tolstoy_shoppable_video_quiz_stories_block_pxCG4",
         "quantity_selector",
         "custom_liquid_aQhpT",
         "buy_buttons",
-        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6",
         "text_YLEgV",
         "accordion_XpdCx",
         "accordion_fHfiW",
@@ -308,35 +277,6 @@
     },
     "1765108798e420838a": {
       "type": "apps",
-      "blocks": {
-        "google_reviews_google_carousel_one_YCc9Kh": {
-          "type": "shopify://apps/google-reviews/blocks/google-carousel-one/4eeaae1c-902b-481c-bec5-3f32291a58d5",
-          "settings": {
-            "rank": "1",
-            "photo_size": "large",
-            "auto_scroll": true,
-            "auto_scroll_interval": 3,
-            "rating": true,
-            "submit_review_button": true,
-            "business_info": true,
-            "review_photo": true,
-            "review_card_shadow": false,
-            "corner_radius": 20,
-            "star_color": "#f6ab00",
-            "review_card_background": "#f3f6f9",
-            "content_color": "#000000",
-            "name_color": "#000000",
-            "date_color": "#7a7a7a",
-            "more_color": "#1a73e8",
-            "submit_button_background_color": "#0084ff",
-            "submit_button_text": "#ffffff",
-            "business_info_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "google_reviews_google_carousel_one_YCc9Kh"
-      ],
       "disabled": true,
       "settings": {
         "heading": "App section",
@@ -361,21 +301,6 @@
     },
     "1763928931e420ca2d": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_iJe6KW": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_iJe6KW"
-      ],
       "disabled": true,
       "settings": {
         "heading": "App section",
@@ -386,20 +311,6 @@
     },
     "17660146559414553a": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_bWPLBe": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_bWPLBe"
-      ],
       "settings": {
         "heading": "",
         "enable_animation": true,
