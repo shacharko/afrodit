@@ -672,7 +672,7 @@
           "type": "button",
           "settings": {
             "link": "shopify://collections/attar-al-has",
-            "link_text": "גלו את הקולקציה",
+            "link_text": "Discover the Collection",
             "button_style": "btn--primary"
           }
         }
