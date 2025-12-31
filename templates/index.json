@@ -619,7 +619,7 @@
         "image_padding": "none",
         "aspect_ratio": "square",
         "focal_point": "image_presentation",
-        "content_alignment": "left",
+        "content_alignment": "center",
         "background_color": "#ffffff",
         "text_color": "#000000",
         "button_background_color": "#000000",
