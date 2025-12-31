@@ -691,6 +691,7 @@
         "image_position": "left",
         "image_mobile_position": "above-content",
         "image_padding": "none",
+        "image": "shopify://shop_images/IMG_4214.webp",
         "aspect_ratio": "natural",
         "focal_point": "image_presentation",
         "content_alignment": "center",
