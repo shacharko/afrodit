@@ -1,4 +1,4 @@
-<div class="newsletter-rtl-custom" dir="rtl">
+<div class="newsletter-custom" dir="ltr">
   <style>
     #shopify-section-{{ section.id }} {
       background: {{ section.settings.background_color }};
@@ -9,7 +9,7 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 18px 16px;
-      text-align: right;
+      text-align: left;
     }
 
     #shopify-section-{{ section.id }} .nl-title {
@@ -24,8 +24,8 @@
       align-items: flex-start;
     }
 
-    /* RIGHT COLUMN (email + checkbox) */
-    #shopify-section-{{ section.id }} .nl-col-right {
+    /* LEFT COLUMN (email + checkbox) */
+    #shopify-section-{{ section.id }} .nl-col-left {
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -36,11 +36,11 @@
       border-bottom: 2px solid #000;
       padding: 12px 0;
       background: transparent;
-      text-align: right;
+      text-align: left;
       margin-bottom: 12px;
     }
 
-    /* checkbox UNDER email, right aligned */
+    /* checkbox under email, left aligned */
     #shopify-section-{{ section.id }} .nl-consent {
       display: flex;
       align-items: center;
@@ -59,8 +59,8 @@
       white-space: nowrap;
     }
 
-    /* LEFT COLUMN (button) */
-    #shopify-section-{{ section.id }} .nl-col-left {
+    /* RIGHT COLUMN (button) */
+    #shopify-section-{{ section.id }} .nl-col-right {
       flex: 0 0 auto;
     }
 
@@ -97,8 +97,8 @@
       <input type="hidden" name="customer[accepts_marketing]" value="true">
 
       <div class="nl-row">
-        <!-- RIGHT -->
-        <div class="nl-col-right">
+        <!-- LEFT (email + checkbox) -->
+        <div class="nl-col-left">
           <input
             class="nl-email"
             type="email"
@@ -111,15 +111,15 @@
             <input type="checkbox" {% if section.settings.consent_required %}required{% endif %}>
             <span>
               {{ section.settings.consent_text }}
-              <a href="{{ section.settings.privacy_link_url }}" target="_blank">
+              <a href="{{ section.settings.privacy_link_url }}" target="_blank" rel="noopener">
                 {{ section.settings.privacy_link_label }}
               </a>
             </span>
           </label>
         </div>
 
-        <!-- LEFT -->
-        <div class="nl-col-left">
+        <!-- RIGHT (button) -->
+        <div class="nl-col-right">
           <button type="submit" class="nl-button">
             {{ section.settings.button_label }}
           </button>
@@ -131,67 +131,65 @@
 
 {% schema %}
 {
-  "name": "Newsletter RTL (Custom)",
+  "name": "Newsletter (Custom)",
   "tag": "section",
   "settings": [
     {
       "type": "text",
       "id": "heading_text",
-      "label": "כותרת",
-      "default": "הרשמו לניוזלטר שלנו וקבלו מתנה בלעדית ברכישה הראשונה."
+      "label": "Heading",
+      "default": "Subscribe to our newsletter and get an exclusive gift on your first purchase."
     },
     {
       "type": "text",
       "id": "email_placeholder",
-      "label": "Placeholder לאימייל",
-      "default": "האימייל שלך"
+      "label": "Email placeholder",
+      "default": "Your email"
     },
     {
       "type": "text",
       "id": "button_label",
-      "label": "טקסט כפתור",
-      "default": "הרשמה"
+      "label": "Button label",
+      "default": "Subscribe"
     },
     {
       "type": "checkbox",
       "id": "consent_required",
-      "label": "צ׳קבוקס חובה",
+      "label": "Consent required",
       "default": false
     },
     {
       "type": "text",
       "id": "consent_text",
-      "label": "טקסט צ׳קבוקס",
-      "default": "אני רוצה לקבל עדכונים"
+      "label": "Consent text",
+      "default": "I want to receive updates"
     },
     {
       "type": "text",
       "id": "privacy_link_label",
-      "label": "טקסט קישור",
-      "default": "מדיניות פרטיות"
+      "label": "Privacy link label",
+      "default": "Privacy policy"
     },
     {
       "type": "url",
       "id": "privacy_link_url",
-      "label": "קישור למדיניות פרטיות"
+      "label": "Privacy policy link"
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "צבע רקע",
+      "label": "Background color",
       "default": "#FFFFFF"
     },
     {
       "type": "color",
       "id": "text_color",
-      "label": "צבע טקסט",
+      "label": "Text color",
       "default": "#000000"
     }
   ],
   "presets": [
-    {
-      "name": "Newsletter RTL (Custom)"
-    }
+    { "name": "Newsletter (Custom)" }
   ]
 }
 {% endschema %}
