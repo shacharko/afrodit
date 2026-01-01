@@ -511,7 +511,9 @@
         "video_card_RrW83b": {
           "type": "video_card",
           "settings": {
+            "video": "shopify://files/videos/ScreenRecording_11-18-2025 17-42-25_1.mp4",
             "video_url": "",
+            "poster": "shopify://shop_images/IMG_4423.jpg",
             "product_ref": "",
             "product_link": "",
             "product_title": ""
