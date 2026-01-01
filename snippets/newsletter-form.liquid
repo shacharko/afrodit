@@ -9,7 +9,7 @@
   Optional parameters:
     - additional_form_classes: { String } Classes to apply to the form.
     - button_label: { String } The label for the submit button.
-    - custom_button: { Boolean } Whether to use a custom "floating" button or the dedicated "button-block" snippet.
+    - custom_button: { Boolean } Whether to use a custom button.
     - custom_button_class: { String } A class for the custom button.
     - custom_button_id: { String } An ID for custom button.
     - custom_button_label: { String } The label for the custom button.
@@ -28,6 +28,8 @@
   assign button_wrapper_class = base_class | append: '-button'
   assign form_tags = form_tags | default: 'newsletter'
   assign success_msg = success_msg | default: 'general.newsletter_form.confirmation' | t
+
+  assign consent_label = 'general.newsletter_form.marketing_consent_label' | t
 %}
 
 {% form 'customer', class: form_class, id: form_id %}
@@ -91,15 +93,10 @@
         >
 
         {% if custom_button %}
-          {%- comment -%} טפסים אחרים שמשתמשים ב-custom_button - נשארים כמו במקור {%- endcomment -%}
           <button type="submit" name="commit" id="{{ custom_button_id }}" class="{{ custom_button_class }}">
             {{ custom_button_label }}
           </button>
         {% else %}
-          {%- comment -%}
-            בפוטר (footer__newsletter) הכפתור משתמש במחלקות של "הוסף לסל".
-            במקומות אחרים נשמרת הקריאה המקורית עם is_full + is_overlay.
-          {%- endcomment -%}
           {% if base_class == 'footer__newsletter' %}
             {% render 'button-block',
               wrapper_class: button_wrapper_class,
@@ -121,7 +118,7 @@
         {% endif %}
       </div>
 
-      {%- comment -%} צ'קבוקס אישור – רק בפוטר {%- endcomment -%}
+      {%- comment -%} Marketing consent checkbox — footer only {%- endcomment -%}
       {% if base_class == 'footer__newsletter' %}
         <div class="footer__newsletter-consent">
           <label for="{{ form_id }}-marketing-consent">
@@ -131,13 +128,10 @@
               name="marketing_opt_in"
               required
             >
-            אני מאשר/ת קבלת דואר פרסומי
+            {{ consent_label }}
           </label>
         </div>
       {% endif %}
     </div>
   {% endunless %}
 {% endform %}
-
-
-
