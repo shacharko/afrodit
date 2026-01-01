@@ -22,7 +22,7 @@
             "collapse_on_mobile": false,
             "title": "",
             "show_title_on_desktop": false,
-            "text": "<h4><strong>הבית לבשמי נישה ויוקרה בישראל</strong></h4>",
+            "text": "<h4>The Home of Niche & Luxury Fragrances</h4><p></p>",
             "image": "shopify://shop_images/Oligarch_Logo_SVG.svg",
             "image_max_width": 150,
             "image_placement": "above_text",
@@ -64,7 +64,7 @@
       "custom_css": [],
       "settings": {
         "enable_locale_selector": true,
-        "enable_country_selector": true,
+        "enable_country_selector": false,
         "show_payment_icons": true,
         "additional_copyright_text": ""
       }
