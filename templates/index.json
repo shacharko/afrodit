@@ -500,7 +500,9 @@
         "video_card_aKX4mG": {
           "type": "video_card",
           "settings": {
+            "video": "shopify://files/videos/v24044gl0000cv8ss8fog65mnge7nm20 2.MP4",
             "video_url": "",
+            "poster": "shopify://shop_images/IMG_4422.jpg",
             "product_ref": "",
             "product_link": "",
             "product_title": ""
