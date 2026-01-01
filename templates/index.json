@@ -1025,7 +1025,7 @@
           "type": "item",
           "settings": {
             "question": "Do you offer personal fragrance consultations?",
-            "answer": "<p>כן. הצוות שלנו מספק ייעוץ מקצועי מותאם אישית, ומסייע לבחור את הבושם המתאים ביותר לפי סגנון, טעם אישי והעדפות ריח.</p>"
+            "answer": "<p><br/>Yes. Our team offers <strong>expert, personalized fragrance consultations</strong>, guiding you in selecting the perfume that best suits your <strong>style, personal taste, scent preferences, and lifestyle</strong>. Our goal is to help you find a fragrance that truly feels like <strong>your signature scent</strong>.<br/><br/></p>"
           }
         }
       },
