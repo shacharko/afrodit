@@ -494,6 +494,60 @@
         "section_padding": "section--vertical-padding-top-bottom"
       }
     },
+    "behind_brands_ygfcLP": {
+      "type": "behind-brands",
+      "blocks": {
+        "video_card_aKX4mG": {
+          "type": "video_card",
+          "settings": {
+            "video_url": "",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        },
+        "video_card_RrW83b": {
+          "type": "video_card",
+          "settings": {
+            "video_url": "",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        },
+        "video_card_CfRRYU": {
+          "type": "video_card",
+          "settings": {
+            "video_url": "",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        },
+        "video_card_bmBgce": {
+          "type": "video_card",
+          "settings": {
+            "video_url": "",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_card_aKX4mG",
+        "video_card_RrW83b",
+        "video_card_CfRRYU",
+        "video_card_bmBgce"
+      ],
+      "name": "Behind the brands",
+      "settings": {
+        "heading": "BEHIND THE BRANDS",
+        "subheading": "",
+        "centered": false,
+        "loop": true
+      }
+    },
     "blogs_slider_description_QNtjM8": {
       "type": "blogs-slider-description",
       "blocks": {
@@ -990,6 +1044,7 @@
     "rich_text_arA9fN",
     "rich_text_qF8Ria",
     "grid_hd3m4p",
+    "behind_brands_ygfcLP",
     "blogs_slider_description_QNtjM8",
     "image_with_text_split_XQD3a6",
     "image_with_text_split_pcVmAB",
