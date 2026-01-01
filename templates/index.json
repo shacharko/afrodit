@@ -522,7 +522,9 @@
         "video_card_CfRRYU": {
           "type": "video_card",
           "settings": {
+            "video": "shopify://files/videos/v12044gd0000co24iv7og65n0a13kejg.MP4",
             "video_url": "",
+            "poster": "shopify://shop_images/IMG_4428.jpg",
             "product_ref": "",
             "product_link": "",
             "product_title": ""
