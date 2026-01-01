@@ -497,6 +497,17 @@
     "behind_brands_ygfcLP": {
       "type": "behind-brands",
       "blocks": {
+        "video_card_WhGHEG": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/ScreenRecording_10-29-2025 16-55-24_1.mov",
+            "video_url": "",
+            "poster": "shopify://shop_images/IMG_4426.jpg",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        },
         "video_card_aKX4mG": {
           "type": "video_card",
           "settings": {
@@ -543,6 +554,7 @@
         }
       },
       "block_order": [
+        "video_card_WhGHEG",
         "video_card_aKX4mG",
         "video_card_RrW83b",
         "video_card_CfRRYU",
