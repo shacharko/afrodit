@@ -533,7 +533,9 @@
         "video_card_bmBgce": {
           "type": "video_card",
           "settings": {
+            "video": "shopify://files/videos/v09044g40000co01q67og65ubetnrbbg.MP4",
             "video_url": "",
+            "poster": "shopify://shop_images/IMG_4427.jpg",
             "product_ref": "",
             "product_link": "",
             "product_title": ""
