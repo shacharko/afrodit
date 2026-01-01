@@ -1024,7 +1024,7 @@
         "item_3BEBGR": {
           "type": "item",
           "settings": {
-            "question": "האם אנו מציעים ייעוץ אישי בבחירת בושם?",
+            "question": "Do you offer personal fragrance consultations?",
             "answer": "<p>כן. הצוות שלנו מספק ייעוץ מקצועי מותאם אישית, ומסייע לבחור את הבושם המתאים ביותר לפי סגנון, טעם אישי והעדפות ריח.</p>"
           }
         }
