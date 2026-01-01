@@ -20,6 +20,7 @@
     assign payment_icons = true
   endif
 -%}
+
 <div
   class="footer section"
   data-section-id="{{ section.id }}"
@@ -41,6 +42,7 @@
             {%- render 'image' with image: block.settings.image, wrapper_class: 'footer__image', sizes_px: block.settings.image_max_width -%}
           {%- endcapture -%}
         {%- endif -%}
+
         <div
           class="
             footer__group
@@ -61,6 +63,7 @@
             <h4 class="footer__header ff-body{% if block.settings.collapse_on_mobile %} footer__header--collapsed{% endif %}">
               <span class="footer__heading fs-accent">{{ block.settings.title }}</span>
             </h4>
+
             {%- if block.settings.collapse_on_mobile -%}
               <button type="button" class="footer__header ff-body" data-header>
                 <span class="footer__heading fs-accent">{{ block.settings.title }}</span>
@@ -74,7 +77,9 @@
               {%- if block.settings.image_placement == 'above_text' -%}
                 {{ rendered_image }}
               {%- endif -%}
+
               <div class="fs-body-100 footer__text">{{ block.settings.text }}</div>
+
               {%- if rendered_image and block.settings.image_placement == 'below_text' -%}
                 {{ rendered_image }}
               {%- endif -%}
@@ -111,19 +116,16 @@
 
                 {% assign custom_button_label = 'general.newsletter_form.submit' | t %}
 
-                {% assign custom_button_label = 'general.newsletter_form.submit' | t %}
-
-{% render 'newsletter-form',
-  base_class: 'footer__newsletter',
-  form_id: 'footer-subscribe',
-  success_msg: section.settings.newsletter_success,
-  custom_button: true,
-  custom_button_id: 'Subscribe-footer',
-  custom_button_class: 'footer__newsletter-button product-form__cart-submit btn btn--medium btn--primary',
-  custom_button_label: custom_button_label,
-  button_label: custom_button_label
-%}
-
+                {% render 'newsletter-form',
+                  base_class: 'footer__newsletter',
+                  form_id: 'footer-subscribe',
+                  success_msg: section.settings.newsletter_success,
+                  custom_button: true,
+                  custom_button_id: 'Subscribe-footer',
+                  custom_button_class: 'footer__newsletter-button product-form__cart-submit btn btn--medium btn--primary',
+                  custom_button_label: custom_button_label,
+                  button_label: custom_button_label
+                %}
 
                 {%- if block.settings.show_social_icons -%}
                   {% render 'social-icons' %}
@@ -135,7 +137,7 @@
                   </div>
                 {%- endif -%}
               </div>
-            {%- endif %}
+            {%- endif -%}
           </div>
         </div>
       {% endfor %}
@@ -153,9 +155,9 @@
         {% endif %}
 
         <div class="footer__credits fs-body-50">
-          <p style="text-align:center; font-size:13px; color:#777; direction:rtl;">
+          <p style="text-align:center; font-size:13px; color:#777;">
             Powered by
-            <a href="https://yybranding.co.il" target="_blank" style="color:#555; font-weight:600; text-decoration:none;">
+            <a href="https://yybranding.co.il" target="_blank" rel="noopener" style="color:#555; font-weight:600; text-decoration:none;">
               YY Branding
             </a>
           </p>
@@ -165,35 +167,33 @@
       <div class="footer__bottom-right">
         {%- if payment_icons -%}
           {% render 'payment-icons' %}
-        {%- endif %}
+        {%- endif -%}
       </div>
     </div>
   </div>
 </div>
 
 <style>
-/* === FOOTER refined === */
+/* === FOOTER refined (LTR / English) === */
 :root {
   --footer-link-color: #b8bdc2;
   --footer-link-hover: #000;
   --footer-heading-color: #000;
 }
 
-/* כותרות */
+/* headings */
 .footer__heading,
 .footer__header .fs-accent {
   color: var(--footer-heading-color) !important;
   font-weight: 400 !important;
-  font-family: "IBM Plex Sans Hebrew", sans-serif !important;
   font-size: 14px !important;
   margin: 0 0 12px 0 !important;
 }
 
-/* קישורים */
+/* links */
 .footer__group a,
 .footer__links a {
   color: var(--footer-link-color) !important;
-  font-family: "IBM Plex Sans Hebrew", sans-serif !important;
   font-size: 14px !important;
   text-decoration: none !important;
   border-bottom: 1px solid rgba(184, 189, 194, 0.4);
@@ -204,94 +204,21 @@
 .footer__group a:hover,
 .footer__links a:hover {
   color: var(--footer-link-hover) !important;
-  border-bottom: 1px solid var(--footer-link-hover);
+  border-bottom-color: var(--footer-link-hover);
 }
 
-/* יישור לימין */
-.footer__group,
-.footer__header {
-  text-align: right;
-}
-
-/* טיפוגרפיה */
+/* typography (newsletter) */
 .footer__newsletter-input,
 .footer__newsletter-button {
-  font-family: "IBM Plex Sans Hebrew", sans-serif !important;
   font-size: 14px !important;
 }
 
-/* ============================
-        ניוזלטר RTL – שורה אחת
-   ============================ */
-
-html[dir="rtl"] body .footer__newsletter-email {
-  display: flex !important;
-  align-items: stretch !important;
-  gap: 10px !important;
-  margin: 0 auto;
-  width: 100% !important;
-}
-
-/* השדה – 65% */
-html[dir="rtl"] body .footer__newsletter-email input[type="email"] {
-  flex: 0 0 65% !important;
-  max-width: 65% !important;
-  min-width: 0 !important;
-  border: none;
-  border-bottom: 1px solid #cfcfcf;
-  border-radius: 0;
-  padding: 0.75rem 0;
-  background: transparent;
-  outline: none;
-}
-
-/* הכפתור – 35% */
-html[dir="rtl"] body .footer__newsletter-button {
-  flex: 0 0 35% !important;
-  max-width: 35% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: auto !important;
-  white-space: nowrap !important;
-  margin: 0 !important;
-}
-
-/* טקסט לבן בכפתור */
-html[dir="rtl"] body .footer__newsletter-button,
-html[dir="rtl"] body .footer__newsletter-button span {
-  color: #fff !important;
-}
-
-/* ================
-   צ'קבוקס ניוזלטר
-   ================ */
-
-html[dir="rtl"] body .footer__newsletter-consent {
-  max-width: 480px;
-  font-size: 0.75rem;
-  text-align: right;
-  display: flex;
-  align-items: right;
-  gap: 0.5rem;
-}
-
-html[dir="rtl"] body .footer__newsletter-consent input[type="checkbox"] {
-  width: 14px;
-  height: 14px;
-  flex: 0 0 auto;
-}
-
-html[dir="rtl"] body .footer__newsletter-consent label {
-  cursor: pointer;
-}
-
-/* אייקונים הפוכים */
-.footer .social-icons .icon svg {
-  transform: scaleX(-1) !important;
-}
-
-
+/* IMPORTANT:
+   Removed all RTL-only rules:
+   - html[dir="rtl"] newsletter layout overrides
+   - flipped social icons (scaleX(-1))
+   If you still need a custom 1-row newsletter layout in LTR, tell me and I’ll style it cleanly for LTR.
+*/
 </style>
 
 {% schema %}
@@ -348,65 +275,14 @@ html[dir="rtl"] body .footer__newsletter-consent label {
       "type": "text",
       "name": "t:sections.footer.blocks.text.name",
       "settings": [
-        {
-          "type": "range",
-          "id": "desktop_width",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_width.label",
-          "min": 10,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 30
-        },
-        {
-          "type": "range",
-          "id": "desktop_padding",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label",
-          "min": 0,
-          "max": 20,
-          "step": 1,
-          "unit": "%",
-          "default": 2
-        },
-        {
-          "type": "checkbox",
-          "id": "collapse_on_mobile",
-          "label": "t:sections.footer.blocks.shared.settings.collapse_on_mobile.label",
-          "default": true
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "t:sections.footer.blocks.shared.settings.title.label",
-          "default": "t:sections.footer.blocks.shared.settings.title.default_text"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_title_on_desktop",
-          "label": "t:sections.footer.blocks.shared.settings.show_title_on_desktop.label",
-          "default": true
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "t:sections.footer.blocks.text.settings.text.label",
-          "default": "t:sections.footer.blocks.text.settings.text.default"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.footer.blocks.text.settings.image.label"
-        },
-        {
-          "type": "range",
-          "id": "image_max_width",
-          "label": "t:sections.footer.blocks.text.settings.image_max_width.label",
-          "min": 50,
-          "max": 350,
-          "step": 10,
-          "unit": "px",
-          "default": 200
-        },
+        { "type": "range", "id": "desktop_width", "label": "t:sections.footer.blocks.shared.settings.desktop_width.label", "min": 10, "max": 100, "step": 1, "unit": "%", "default": 30 },
+        { "type": "range", "id": "desktop_padding", "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label", "min": 0, "max": 20, "step": 1, "unit": "%", "default": 2 },
+        { "type": "checkbox", "id": "collapse_on_mobile", "label": "t:sections.footer.blocks.shared.settings.collapse_on_mobile.label", "default": true },
+        { "type": "text", "id": "title", "label": "t:sections.footer.blocks.shared.settings.title.label", "default": "t:sections.footer.blocks.shared.settings.title.default_text" },
+        { "type": "checkbox", "id": "show_title_on_desktop", "label": "t:sections.footer.blocks.shared.settings.show_title_on_desktop.label", "default": true },
+        { "type": "richtext", "id": "text", "label": "t:sections.footer.blocks.text.settings.text.label", "default": "t:sections.footer.blocks.text.settings.text.default" },
+        { "type": "image_picker", "id": "image", "label": "t:sections.footer.blocks.text.settings.image.label" },
+        { "type": "range", "id": "image_max_width", "label": "t:sections.footer.blocks.text.settings.image_max_width.label", "min": 50, "max": 350, "step": 10, "unit": "px", "default": 200 },
         {
           "type": "select",
           "id": "image_placement",
@@ -416,18 +292,8 @@ html[dir="rtl"] body .footer__newsletter-consent label {
             { "value": "below_text", "label": "t:sections.footer.blocks.text.settings.image_placement.options.below_text" }
           ]
         },
-        {
-          "type": "checkbox",
-          "id": "show_social_icons",
-          "label": "t:sections.footer.blocks.shared.settings.social_media.show_social_icons.label",
-          "default": false
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_follow_on_shop",
-          "label": "t:sections.footer.blocks.shared.settings.follow_on_shop.enable_follow_on_shop.label",
-          "default": false
-        }
+        { "type": "checkbox", "id": "show_social_icons", "label": "t:sections.footer.blocks.shared.settings.social_media.show_social_icons.label", "default": false },
+        { "type": "checkbox", "id": "enable_follow_on_shop", "label": "t:sections.footer.blocks.shared.settings.follow_on_shop.enable_follow_on_shop.label", "default": false }
       ]
     },
 
@@ -435,50 +301,12 @@ html[dir="rtl"] body .footer__newsletter-consent label {
       "type": "links",
       "name": "t:sections.footer.blocks.links.name",
       "settings": [
-        {
-          "type": "range",
-          "id": "desktop_width",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_width.label",
-          "min": 10,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 20
-        },
-        {
-          "type": "range",
-          "id": "desktop_padding",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label",
-          "min": 0,
-          "max": 20,
-          "step": 1,
-          "unit": "%",
-          "default": 4
-        },
-        {
-          "type": "checkbox",
-          "id": "collapse_on_mobile",
-          "label": "t:sections.footer.blocks.shared.settings.collapse_on_mobile.label",
-          "default": true
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "t:sections.footer.blocks.shared.settings.title.label",
-          "default": "t:sections.footer.blocks.shared.settings.title.default_links"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_title_on_desktop",
-          "label": "t:sections.footer.blocks.shared.settings.show_title_on_desktop.label",
-          "default": true
-        },
-        {
-          "type": "link_list",
-          "id": "link_list",
-          "label": "t:sections.footer.blocks.links.settings.link_list.label",
-          "default": "footer"
-        }
+        { "type": "range", "id": "desktop_width", "label": "t:sections.footer.blocks.shared.settings.desktop_width.label", "min": 10, "max": 100, "step": 1, "unit": "%", "default": 20 },
+        { "type": "range", "id": "desktop_padding", "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label", "min": 0, "max": 20, "step": 1, "unit": "%", "default": 4 },
+        { "type": "checkbox", "id": "collapse_on_mobile", "label": "t:sections.footer.blocks.shared.settings.collapse_on_mobile.label", "default": true },
+        { "type": "text", "id": "title", "label": "t:sections.footer.blocks.shared.settings.title.label", "default": "t:sections.footer.blocks.shared.settings.title.default_links" },
+        { "type": "checkbox", "id": "show_title_on_desktop", "label": "t:sections.footer.blocks.shared.settings.show_title_on_desktop.label", "default": true },
+        { "type": "link_list", "id": "link_list", "label": "t:sections.footer.blocks.links.settings.link_list.label", "default": "footer" }
       ]
     },
 
@@ -486,31 +314,9 @@ html[dir="rtl"] body .footer__newsletter-consent label {
       "type": "liquid",
       "name": "t:sections.footer.blocks.liquid.name",
       "settings": [
-        {
-          "type": "range",
-          "id": "desktop_width",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_width.label",
-          "min": 10,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 30
-        },
-        {
-          "type": "range",
-          "id": "desktop_padding",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label",
-          "min": 0,
-          "max": 20,
-          "step": 1,
-          "unit": "%",
-          "default": 2
-        },
-        {
-          "type": "liquid",
-          "id": "liquid",
-          "label": "t:sections.footer.blocks.liquid.settings.liquid.label"
-        }
+        { "type": "range", "id": "desktop_width", "label": "t:sections.footer.blocks.shared.settings.desktop_width.label", "min": 10, "max": 100, "step": 1, "unit": "%", "default": 30 },
+        { "type": "range", "id": "desktop_padding", "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label", "min": 0, "max": 20, "step": 1, "unit": "%", "default": 2 },
+        { "type": "liquid", "id": "liquid", "label": "t:sections.footer.blocks.liquid.settings.liquid.label" }
       ]
     },
 
@@ -518,68 +324,15 @@ html[dir="rtl"] body .footer__newsletter-consent label {
       "type": "newsletter",
       "name": "t:sections.footer.blocks.newsletter.name",
       "settings": [
-        {
-          "type": "range",
-          "id": "desktop_width",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_width.label",
-          "min": 10,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 30
-        },
-        {
-          "type": "range",
-          "id": "desktop_padding",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label",
-          "min": 0,
-          "max": 20,
-          "step": 1,
-          "unit": "%",
-          "default": 2
-        },
-        {
-          "type": "checkbox",
-          "id": "collapse_on_mobile",
-          "label": "t:sections.footer.blocks.shared.settings.collapse_on_mobile.label",
-          "default": true
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "t:sections.footer.blocks.shared.settings.title.label",
-          "default": "t:sections.footer.blocks.shared.settings.title.default_newsletter"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_title_on_desktop",
-          "label": "t:sections.footer.blocks.shared.settings.show_title_on_desktop.label",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_collect_customer_name",
-          "label": "t:shared.options.enable_collect_customer_name.label",
-          "default": false
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "label": "t:sections.footer.blocks.newsletter.settings.text.label",
-          "default": "t:sections.footer.blocks.newsletter.settings.text.default"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_social_icons",
-          "label": "t:sections.footer.blocks.shared.settings.social_media.show_social_icons.label",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_follow_on_shop",
-          "label": "t:sections.footer.blocks.shared.settings.follow_on_shop.enable_follow_on_shop.label",
-          "default": true
-        }
+        { "type": "range", "id": "desktop_width", "label": "t:sections.footer.blocks.shared.settings.desktop_width.label", "min": 10, "max": 100, "step": 1, "unit": "%", "default": 30 },
+        { "type": "range", "id": "desktop_padding", "label": "t:sections.footer.blocks.shared.settings.desktop_padding.label", "min": 0, "max": 20, "step": 1, "unit": "%", "default": 2 },
+        { "type": "checkbox", "id": "collapse_on_mobile", "label": "t:sections.footer.blocks.shared.settings.collapse_on_mobile.label", "default": true },
+        { "type": "text", "id": "title", "label": "t:sections.footer.blocks.shared.settings.title.label", "default": "t:sections.footer.blocks.shared.settings.title.default_newsletter" },
+        { "type": "checkbox", "id": "show_title_on_desktop", "label": "t:sections.footer.blocks.shared.settings.show_title_on_desktop.label", "default": true },
+        { "type": "checkbox", "id": "enable_collect_customer_name", "label": "t:shared.options.enable_collect_customer_name.label", "default": false },
+        { "type": "richtext", "id": "text", "label": "t:sections.footer.blocks.newsletter.settings.text.label", "default": "t:sections.footer.blocks.newsletter.settings.text.default" },
+        { "type": "checkbox", "id": "show_social_icons", "label": "t:sections.footer.blocks.shared.settings.social_media.show_social_icons.label", "default": true },
+        { "type": "checkbox", "id": "enable_follow_on_shop", "label": "t:sections.footer.blocks.shared.settings.follow_on_shop.enable_follow_on_shop.label", "default": true }
       ]
     },
 
@@ -587,16 +340,7 @@ html[dir="rtl"] body .footer__newsletter-consent label {
       "type": "spacer",
       "name": "t:sections.footer.blocks.spacer.name",
       "settings": [
-        {
-          "type": "range",
-          "id": "desktop_width",
-          "label": "t:sections.footer.blocks.shared.settings.desktop_width.label",
-          "min": 5,
-          "max": 100,
-          "step": 1,
-          "unit": "%",
-          "default": 5
-        }
+        { "type": "range", "id": "desktop_width", "label": "t:sections.footer.blocks.shared.settings.desktop_width.label", "min": 5, "max": 100, "step": 1, "unit": "%", "default": 5 }
       ]
     }
   ],
