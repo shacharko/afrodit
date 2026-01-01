@@ -1,5 +1,5 @@
 {% comment %}
-  Behind the brands – clean carousel section
+  Behind the brands –  carousel section (LTR only)
   Files it expects:
     assets/bb-carousel.css
     assets/bb-carousel.js
@@ -8,6 +8,7 @@
 <section
   id="bb-{{ section.id }}"
   class="bb-sec"
+  dir="ltr"
   data-bb-section
   data-visible-desktop="3"
   data-visible-mobile="1"
@@ -22,7 +23,7 @@
       </div>
     {% endif %}
 
-    <div class="bb-track" data-bb-track tabindex="-1" dir="ltr">
+    <div class="bb-track" data-bb-track tabindex="-1">
       {% for block in section.blocks %}
         {% assign poster = block.settings.poster %}
         {% assign shopify_video = block.settings.video %}
@@ -59,21 +60,32 @@
             {% endif %}
 
             <button class="bb-btn bb-btn--mute" type="button" aria-label="{{ 'general.volume' | t }}" data-bb-mute aria-pressed="true">
-              <svg class="ic ic--unmuted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5l-5 4H4z" fill="currentColor"/><path d="M15 9a3 3 0 0 1 0 6M17 7a6 6 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <svg class="ic ic--muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5l-5 4H4z" fill="currentColor"/><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg class="ic ic--unmuted" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5l-5 4H4z" fill="currentColor"/>
+                <path d="M15 9a3 3 0 0 1 0 6M17 7a6 6 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <svg class="ic ic--muted" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5l-5 4H4z" fill="currentColor"/>
+                <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
             </button>
 
             <button class="bb-btn bb-btn--play" type="button" aria-label="Play/Pause" data-bb-play aria-pressed="false">
-              <svg class="ic ic--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5v14l-11-7 11-7z" fill="currentColor"/></svg>
-              <svg class="ic ic--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" fill="currentColor"/><rect x="14" y="5" width="4" height="14" fill="currentColor"/></svg>
+              <svg class="ic ic--play" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 5v14l-11-7 11-7z" fill="currentColor"/>
+              </svg>
+              <svg class="ic ic--pause" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="6" y="5" width="4" height="14" fill="currentColor"/>
+                <rect x="14" y="5" width="4" height="14" fill="currentColor"/>
+              </svg>
             </button>
           </div>
 
           {%- comment -%}
-            META (קישור מוצר + תמונה/כותרת):
-            • אם נבחר product_ref נטען אוטומטית image/title שלו כברירת מחדל.
-            • אם מולאו product_image / product_title ידנית – הם גוברים.
-            • לא יוצג בלוק ריק.
+            META (product link + image/title):
+            • If product_ref is selected, its image/title are used as defaults.
+            • If product_image / product_title are set manually – they override.
+            • Empty meta block is not rendered.
           {%- endcomment -%}
           {%- assign product_obj = block.settings.product_ref -%}
 
