@@ -1011,7 +1011,7 @@
           "type": "item",
           "settings": {
             "question": "How long does shipping take?",
-            "answer": "<p>הזמנות עד השעה 12:00 מטופלות ונשלחות באותו יום עסקים.<br/><br/>זמן אספקת משלוח סטנדרטי: 1–3 ימי עסקים מרגע אישור ההזמנה.<br/><br/>ניתן לבחור משלוח עד הבית או לנקודת חלוקה.<br/><br/>ברגע שהמשלוח יוצא לדרך, תקבלו מספר מעקב למעקב בזמן אמת.</p>"
+            "answer": "<p>Orders placed <strong>before 12:00 PM</strong> are processed and shipped <strong>on the same business day</strong>.<br/><br/>Standard delivery time is <strong>1–3 business days</strong> from order confirmation.<br/><br/>You can choose between <strong>home delivery</strong> or <strong>pickup point delivery</strong>.<br/><br/>Once your order is shipped, you will receive a <strong>tracking number for real-time updates</strong>.<br/><br/></p>"
           }
         },
         "item_bhTeKb": {
