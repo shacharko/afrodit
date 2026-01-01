@@ -237,6 +237,7 @@
       "subtext": "The page you requested does not exist.",
       "title": "404 Page Not Found"
     },
+    
     "accessibility": {
       "access_more_details_about_product": "Access more details about {{ product_title }}",
       "accordion_groups": "Accordion Control Group Buttons",
@@ -316,7 +317,8 @@
       "email_placeholder": "Your email",
       "first_name_placeholder": "First name",
       "last_name_placeholder": "Last name",
-      "submit": "Subscribe"
+      "submit": "Subscribe",
+      "marketing_consent_label": "I agree to receive marketing emails"
     },
     "pagination": {
       "addresses": "addresses",
