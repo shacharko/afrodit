@@ -57,8 +57,8 @@
         "focal_point": "image_presentation",
         "mobile_focal_point": "image_presentation",
         "media_link": "",
-        "text_position": "flex-end_flex-end",
-        "text_position_mobile": "center_center",
+        "text_position": "flex-start_flex-end",
+        "text_position_mobile": "flex-start_center",
         "text_color": "#aaaaaa",
         "button_background_color": "#ffffff",
         "button_text_color": "#000000",
@@ -83,7 +83,7 @@
         "text_W6pbPw": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>כל מזל הוא סיפור בפני עצמו – שילוב ייחודי של אנרגיה, רגש ועוצמה פנימית.</strong></p><p><strong>בקולקציית המארזים לפי מזלות שלנו, איחדנו בין עולמות הבישום והאסטרולוגיה כדי ליצור חוויה מושלמת – מארזים שכל אחד מהם כולל 5 ניחוחות שנבחרו בקפידה, בהתאם לאופי, לתדר ולאנרגיה של כל מזל.</strong></p><p><strong>יש דברים שלא בוחרים – הם פשוט קורים.</strong></p><p><strong>הריח שמרגיש נכון, הנוכחות שמתחברת בדיוק אל הלב, האנרגיה שמרגישה “שלך”.</strong></p><p><strong>במארזים שלנו, כל ניחוח נולד בהשראת הכוכבים – חיבור נדיר בין ריח, רגש וייעוד, שמגלה לך מה באמת גורם לך לזהור.<br/></strong></p><p><strong>כל מארז הוא הרבה מעבר למתנה – זו חוויה חושית ורוחנית, השזורה באנרגיה של המזלות ומספרת סיפור של עומק, איזון ומשיכה טבעית.</strong></p><p><strong>זה לא עוד מארז בישום – זו דרך לגעת בעצמך דרך הריח, להתחבר לאנרגיה שלך, ולהרגיש את הקסם שבין שמיים לאדמה.</strong></p>",
+            "text": "<p>Each zodiac sign is a story of its own – a unique blend of energy, emotion, and inner strength.</p><p>In our zodiac-based gift set collection, we combined the worlds of perfumery and astrology to create a complete experience – sets in which each one includes five carefully selected fragrances, chosen according to the character, frequency, and energy of each sign.</p><p>There are things you don’t choose – they simply happen.</p><p>The scent that feels right,<br/><br/>the presence that connects directly to the heart,<br/><br/>the energy that feels “yours.”</p><p>In our sets, every fragrance is inspired by the stars – a rare connection between scent, emotion, and destiny, revealing what truly makes you shine.</p><p>Each set is far more than a gift – it is a sensory and spiritual experience, woven with zodiac energy and telling a story of depth, balance, and natural attraction.</p><p>This is not just another fragrance set – it is a way to touch yourself through scent, connect with your energy, and feel the magic that exists between sky and earth.</p>",
             "text_font_class": "fs-body-100"
           }
         }
