@@ -139,7 +139,7 @@
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/libra-collection",
-            "link_text": "גלו את המארזים",
+            "link_text": "Discover the Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -158,7 +158,7 @@
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/taurus",
-            "link_text": "גלו את המארזים",
+            "link_text": "Discover the Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -177,7 +177,7 @@
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/scorpio",
-            "link_text": "גלו את המארזים",
+            "link_text": "Discover the Sets",
             "button_style": "btn--secondary"
           }
         },
