@@ -140,7 +140,7 @@
         "cart_icon": "cart",
         "divider_width": "0px",
         "enable_locale_selector": true,
-        "enable_country_selector": true,
+        "enable_country_selector": false,
         "show_social_media": false,
         "show_social_media_mobile": false,
         "logo": "shopify://shop_images/Oligarch_Logo_SVG.svg",
