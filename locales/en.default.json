@@ -598,6 +598,11 @@
   "price_per_100ml": {
     "label": "Price per 100 ml:",
     "ml": "ml"
+  },
+  
+  "aroma_notes": {
+    "title": "Aromatic Notes"
   }
+
 
 }
