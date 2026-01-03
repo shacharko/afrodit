@@ -94,7 +94,14 @@
     "capitalize_headings": false,
     "product_card_swatch_size": "small",
     "quick_search_max_result_size": 6,
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "installed_preset_name": "Stiletto",
   "presets": {
