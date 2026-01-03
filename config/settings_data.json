@@ -180,7 +180,7 @@
         "type": "shopify://apps/swish-formerly-wishlist-king/blocks/app-settings-main/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
         "settings": {
-          "theme_preset": "dawn",
+          "theme_preset": "stiletto",
           "color_accent_1": "#000000",
           "color_accent_2": "#000000",
           "color_solid_button_label": "#FFFFFF",
