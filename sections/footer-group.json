@@ -33,7 +33,7 @@
         "footer-2": {
           "type": "links",
           "settings": {
-            "desktop_width": 35,
+            "desktop_width": 30,
             "desktop_padding": 0,
             "collapse_on_mobile": true,
             "title": "",
@@ -44,7 +44,7 @@
         "newsletter_EgW87N": {
           "type": "newsletter",
           "settings": {
-            "desktop_width": 35,
+            "desktop_width": 40,
             "desktop_padding": 0,
             "collapse_on_mobile": true,
             "title": "Newsletter",
