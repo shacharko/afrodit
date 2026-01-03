@@ -590,10 +590,10 @@
       "item4": "Free samples with every purchase over ₪300"
     }
   },
-  "gift_wrap": {
-    "label": "Geschenkverpackung",
-    "yes": "Ja",
-    "no": "Nein"
+ "gift_wrap": {
+    "label": "Gift wrapping",
+    "yes": "Yes",
+    "no": "No"
   }
 
 }
