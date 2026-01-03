@@ -158,7 +158,7 @@
       {% endcapture %}
 
       {% capture rendered_option %}
-        <div class="js-enabled product__option" data-product-option {% if option_name == 'size' %}dir="rtl"{% endif %}>
+        <div class="js-enabled product__option" data-product-option {% if option_name == 'size' %}{% endif %}>
 
           {%- comment -%}
             עבור size – במקום לייבל רגיל נשים רק את מלל ההתזות, בתוך אותו wrapper,
