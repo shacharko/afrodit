@@ -589,6 +589,11 @@
       "item3": "Official retailer / authorized point of sale",
       "item4": "Free samples with every purchase over ₪300"
     }
+  },
+  "gift_wrap": {
+    "label": "Geschenkverpackung",
+    "yes": "Ja",
+    "no": "Nein"
   }
 
 }
