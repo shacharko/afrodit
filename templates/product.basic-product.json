@@ -17,7 +17,7 @@
           "settings": {
             "show_divider": true,
             "show_vendor": true,
-            "show_sku": true,
+            "show_sku": false,
             "show_discount": true,
             "discount_format": "percent_off",
             "show_product_rating": false,
@@ -256,16 +256,6 @@
         "enable_animation": true
       }
     },
-    "custom_liquid_NcDEVc": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom_liquid.presets.name",
-      "settings": {
-        "custom_liquid": "{% render 'dynamic-price-per-100ml' %}",
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
-      }
-    },
     "custom_liquid_cCEPFd": {
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.presets.name",
@@ -321,7 +311,6 @@
   },
   "order": [
     "main",
-    "custom_liquid_NcDEVc",
     "custom_liquid_cCEPFd",
     "1765108798e420838a",
     "recommendations",
