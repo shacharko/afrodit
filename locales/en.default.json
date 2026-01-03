@@ -594,6 +594,10 @@
     "label": "Gift wrapping",
     "yes": "Yes",
     "no": "No"
+  },
+  "price_per_100ml": {
+    "label": "Price per 100 ml:",
+    "ml": "ml"
   }
 
 }
