@@ -117,7 +117,7 @@
             "heading_tag": "h3",
             "content": "",
             "page_for_content": "",
-            "custom_liquid": "{% assign scent_family_original = product.metafields.custom.scent_family.value %}\n\n{% if scent_family_original != blank %}\n  {% assign scent_family_cleaned = scent_family_original | replace: '[', '' | replace: ']', '' | replace: '\"', '' | replace: ', ', ',' %}\n  {% assign scent_families = scent_family_cleaned | split: ',' %}\n{% endif %}\n\n{% if scent_families != blank and scent_families.size > 0 %}\n  <ul style=\"list-style-type: disc; padding-inline-start: 20px; margin-top: 0;\">\n    {% for family in scent_families %}\n      <li class=\"scent-family-item\" dir=\"rtl\">{{ family | strip }}</li>\n    {% endfor %}\n  </ul>\n{% endif %}"
+            "custom_liquid": "{% assign scent_family_original = product.metafields.custom.scent_family.value %}\n\n{% if scent_family_original != blank %}\n  {% assign scent_family_cleaned = scent_family_original\n    | replace: '[', ''\n    | replace: ']', ''\n    | replace: '\"', ''\n    | replace: ', ', ','\n  %}\n  {% assign scent_families = scent_family_cleaned | split: ',' %}\n{% endif %}\n\n{% if scent_families != blank and scent_families.size > 0 %}\n  <ul class=\"scent-family-list\">\n    {% for family in scent_families %}\n      <li class=\"scent-family-item\" dir=\"ltr\">{{ family | strip }}</li>\n    {% endfor %}\n  </ul>\n{% endif %}"
           }
         },
         "accordion_BqCY9": {
