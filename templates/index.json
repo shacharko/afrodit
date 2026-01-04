@@ -608,6 +608,7 @@
         "blog_item_88UWLP",
         "blog_item_n8xnHN"
       ],
+      "disabled": true,
       "name": "Blog list slider (with description)",
       "settings": {
         "heading": "",
@@ -937,7 +938,7 @@
       "name": "t:sections.image_with_text.presets.name",
       "settings": {
         "image_position": "left",
-        "image": "shopify://shop_images/429F5A94-94ED-4808-9176-EEA946A2DBF6.webp",
+        "image": "shopify://shop_images/r76.png",
         "aspect_ratio": "portrait",
         "focal_point": "image_presentation",
         "image_caption": "",
