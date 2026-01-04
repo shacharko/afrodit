@@ -724,14 +724,14 @@
         "text_wfzQFk": {
           "type": "text",
           "settings": {
-            "text": "<h4>Luxury Hidden in Every Drop</h4><p></p>",
+            "text": "<h5>Luxury Hidden in Every Drop</h5><p></p>",
             "text_font_class": "fs-body-100"
           }
         },
         "text_q8biPD": {
           "type": "text",
           "settings": {
-            "text": "<h5>Rare, deep, and captivating fragrances that touch the soul and wait to awaken on your skin. The collection arrives directly from the brand, through our official and exclusive import in Israel, to deliver a pure, authentic, and powerful fragrance experience. Begin your journey with Attar Al Has.</h5><p></p>",
+            "text": "<h5>Rare, deep, and captivating fragrances that touch the soul and wait to awaken on your skin. The collection arrives directly from the brand, through our official and exclusive import in Israel, to deliver a pure, authentic, and powerful fragrance experience. Begin your journey with Attar Al Has.</h5>",
             "text_font_class": "fs-body-100"
           }
         },
