@@ -225,9 +225,9 @@
       ],
       "name": "t:sections.featured_collection_slider.presets.name",
       "settings": {
-        "heading": "BEST SELLER",
+        "heading": "BEST SELLERS",
         "heading_tag": "h5",
-        "subheading": "<p><strong>Discover iconic fragrances loved by thousands — scents with presence, depth, and perfect balance for those who seek quality, experience, and a lasting impression.</strong></p><p></p>",
+        "subheading": "<p><strong>Explore our most-loved fragrances, carefully selected by our customers. From timeless classics to modern masterpieces, these perfume bestsellers captivate with their unique compositions and irresistible allure. Whether you seek elegance, sensuality, or bold sophistication, find your perfect scent among the favorites at Afrodite Decants.</strong></p>",
         "link": "shopify://collections/best-seller",
         "link_text": "Best Sellers",
         "button_style": "btn--callout",
