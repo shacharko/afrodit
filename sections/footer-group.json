@@ -61,9 +61,7 @@
         "footer-2",
         "newsletter_EgW87N"
       ],
-      "custom_css": [
-        "Subscribe-footer{position: static;}"
-      ],
+      "custom_css": [],
       "settings": {
         "enable_locale_selector": true,
         "enable_country_selector": false,
