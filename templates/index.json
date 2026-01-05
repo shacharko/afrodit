@@ -58,18 +58,17 @@
     "rich_text_dmzFYM": {
       "type": "rich-text",
       "blocks": {
-        "heading_WayWMR": {
-          "type": "heading",
+        "text_99HtTj": {
+          "type": "text",
           "settings": {
-            "title": "AFRODITE DECANTS",
-            "heading_tag": "h2",
-            "heading_font_class": "fs-heading-3-base"
+            "text": "<h3><strong>AFRODITE DECANTS</strong></h3>",
+            "text_font_class": "fs-body-100"
           }
         },
         "text_4CTBzy": {
           "type": "text",
           "settings": {
-            "text": "<p>...Fragrance Speaks Louder Than Words</p><p>Discover over 500 niche perfumes from 50+ luxury brands<br/>Express Yourself. Leave an Unforgettable Impression.</p>",
+            "text": "<p>…Fragrance Speaks Louder Than Words<br/><br/>Discover over 500 luxury </p><p>and niche perfumes from 50+ top brands.<br/>At Afrodite Decants, we believe every fragrance tells a personal story — that’s why we created Discovery Sets, sample sets that allow you to experience multiple high-end scents before committing to a full bottle.</p>",
             "text_font_class": "fs-body-75"
           }
         },
@@ -77,13 +76,13 @@
           "type": "button",
           "settings": {
             "link": "shopify://collections/all",
-            "link_text": "DISCOVERY THE GIFT",
+            "link_text": "Explore Discovery Sets",
             "button_style": "btn--primary"
           }
         }
       },
       "block_order": [
-        "heading_WayWMR",
+        "text_99HtTj",
         "text_4CTBzy",
         "button_FymrAL"
       ],
