@@ -60,15 +60,15 @@
         "heading_94iM3c": {
           "type": "heading",
           "settings": {
-            "title": "מארזי היכרות - הצעד הראשון אל עולמות הניחוחות",
+            "title": "Discovery Sets – Your Introduction to the World of Fragrance",
             "heading_tag": "h3",
-            "heading_font_class": "fs-heading-3-base"
+            "heading_font_class": "fs-heading-2-base"
           }
         },
         "text_tEfyPL": {
           "type": "text",
           "settings": {
-            "text": "<h5><strong>כל מותג מביא עמו סיפור, סגנון וייחודיות משלו – ועכשיו אפשר לגלות את כולם בקלות ובחוויה אחת.<br/><br/>בקולקציית מארזי ההיכרות שלנו, הכוללת מגוון מותגים, יצרנו חוויה מושלמת של גילוי – מארזים מעוצבים בקפידה, שמאפשרים להתנסות, לגלות ולהתחבר לניחוחות שמגדירים את האופי והסטייל של כל מותג.<br/><br/>כל מארז מגיע עם 5 ניחוחות נבחרים לבחירתכם, כך שתוכלו לחוות את העומק והעושר של כל מותג בדרך אישית ומדויקת.<br/><br/>כל מארז הוא מסע חושי של גילוי – חוויה שמחברת בין החושים לנשמה, מעניקה תחושת נוכחות, ביטחון ועונג בכל רגע, ומזמינה אתכם לגלות את היוקרה, ההשראה והסגנון שמאפיינים כל מותג.<br/><br/>בחרו את מארז ההיכרות שמתאים לכם מכל מותג, ותנו לניחוחות המגוונים להוביל אתכם למסע חושי עמוק, יוקרתי ובלתי נשכח.</strong></h5>",
+            "text": "<h5><strong>Every brand tells a unique story of style and character. Our curated Discovery Sets invite you to explore these stories through a refined and effortless experience.</strong></h5><h5><strong>Each set includes five handpicked fragrances of your choice, allowing you to discover the depth, identity, and signature of each brand in a personal way.</strong></h5><h5><strong>Designed as a sensory journey, every discovery set connects the senses with the soul, evoking confidence, presence, and pleasure — and inviting you to experience the luxury and inspiration that define each brand.</strong></h5><h5><strong>Choose the discovery set that speaks to you, and begin an unforgettable journey through scent.</strong></h5>",
             "text_font_class": "fs-body-100"
           }
         }
