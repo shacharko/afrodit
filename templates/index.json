@@ -147,7 +147,7 @@
             "text_position": "center_center",
             "text_position_mobile": "center_center",
             "accent": "",
-            "title": "Slide",
+            "title": "Try It On Your Skin",
             "heading_tag": "h2",
             "heading_font_class": "fs-heading-display-2",
             "subheading": "",
@@ -175,7 +175,7 @@
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
-        "image_aspect": "custom",
+        "image_aspect": "original",
         "desktop_height": 100,
         "mobile_height": 100,
         "enable_autoplay": true,
