@@ -201,13 +201,14 @@
         "columns": "5",
         "mobile_columns": "2",
         "collection_list": [
-          "discovery-set-sweet",
-          "discovery-set-fresh",
-          "discovery-set-spicy",
-          "discovery-set-amber",
-          "discovery-set-woody"
+          "gourmand-collection",
+          "chypre-collection",
+          "woody-collection",
+          "fruity-collection",
+          "sweet-collection",
+          "aquatic-collection"
         ],
-        "collection_listing_aspect_ratio": "portrait",
+        "collection_listing_aspect_ratio": "square",
         "label_style": "beneath",
         "overlay_title_background_style": "gradient",
         "overlay_text_color": "#ffffff",
