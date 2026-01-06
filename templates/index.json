@@ -833,6 +833,43 @@
         "section_padding": "section--vertical-padding-bottom-only"
       }
     },
+    "quote_8wXtkd": {
+      "type": "quote",
+      "blocks": {
+        "quote_HtaQ7r": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>“Absolutely unparalleled products and service. I'm confident that this store will be the next big thing in its industry, and that its products will be timeless.” </p><p>⭐⭐⭐⭐⭐</p><p></p>",
+            "title": "Steve Jordans",
+            "quote_tag": "h2",
+            "font_size": "medium"
+          }
+        },
+        "quote_GgBytg": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>“Absolutely unparalleled products and service.  and that its products will be timeless.”</p><p>⭐⭐⭐⭐⭐</p>",
+            "title": "Tom Biarn",
+            "quote_tag": "h2",
+            "font_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "quote_HtaQ7r",
+        "quote_GgBytg"
+      ],
+      "name": "t:sections.quotes.presets.name",
+      "settings": {
+        "autoplay_enabled": true,
+        "autoplay_delay": 7,
+        "pagination_style": "dots",
+        "font_choice": "ff-heading",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
     "quote_LdCLgk": {
       "type": "quote",
       "blocks": {
@@ -1124,6 +1161,7 @@
     "blogs_slider_description_QNtjM8",
     "image_with_text_split_XQD3a6",
     "image_with_text_split_pcVmAB",
+    "quote_8wXtkd",
     "quote_LdCLgk",
     "rich_text_HYfzAm",
     "image_with_text_LTRzQN",
