@@ -142,7 +142,7 @@
             "image": "shopify://shop_images/IMG_5123.jpg",
             "image_mobile": "shopify://shop_images/IMG_5123.jpg",
             "focal_point": "image_presentation",
-            "mobile_focal_point": "image_presentation",
+            "mobile_focal_point": "right",
             "media_link": "",
             "text_position": "center_center",
             "text_position_mobile": "center_center",
