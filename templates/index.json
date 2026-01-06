@@ -133,6 +133,61 @@
         "section_padding": "section--vertical-padding-top-bottom"
       }
     },
+    "slideshow_GXkFPH": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_cbEQWz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5123.jpg",
+            "image_mobile": "shopify://shop_images/IMG_5123.jpg",
+            "focal_point": "image_presentation",
+            "mobile_focal_point": "image_presentation",
+            "media_link": "",
+            "text_position": "center_center",
+            "text_position_mobile": "center_center",
+            "accent": "",
+            "title": "Slide",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2",
+            "subheading": "",
+            "subheading_tag": "h2",
+            "subheading_font_class": "fs-heading-5-base",
+            "text": "<p>Use this section to make a bold statement</p>",
+            "text_font_class": "fs-body-100",
+            "link_1": "",
+            "link_text_1": "Read more",
+            "button_style_1": "btn--primary",
+            "link_2": "",
+            "link_text_2": "Read more",
+            "button_style_2": "btn--primary",
+            "text_color": "#FFFFFF",
+            "button_background_color": "#FFFFFF",
+            "button_text_color": "#000000",
+            "color_overlay": "#000000",
+            "color_overlay_gradient": "",
+            "overlay_opacity": 40
+          }
+        }
+      },
+      "block_order": [
+        "slide_cbEQWz"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "enable_autoplay": true,
+        "duration_autoplay": 6,
+        "navigation_alignment": "center",
+        "navigation_color_foreground": "#FFFFFF",
+        "navigation_color_background": "",
+        "navigation_background_opacity": 100,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
     "collection_list_slider_mR8grQ": {
       "type": "collection-list-slider",
       "name": "t:sections.collection_list_slider.presets.name",
@@ -1054,6 +1109,7 @@
     "rich_text_dmzFYM",
     "custom_liquid_97CHAd",
     "collection_list_slider_X66xn8",
+    "slideshow_GXkFPH",
     "collection_list_slider_mR8grQ",
     "custom_liquid_Yhm46m",
     "collection_list_slider_FWw4BR",
