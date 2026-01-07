@@ -25,22 +25,18 @@
             "show_custom_badges": true
           }
         },
-        "judge_me_reviews_preview_badge_9p4LFQ": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "text_44R9J9": {
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-100",
-            "text": "<p><strong>⭐ למה כדאי לקנות את המארז?</strong></p><p><strong>✔ חוסכים 18% לעומת רכישת בקבוקים בודדים</strong></p><p><strong>✔ מגיע באריזת פרימיום</strong></p><p><strong>✔ זמין במלאי ומשלוח מהיר</strong></p><p><strong>✔ מושלם כמתנה / להתנסות בקולקציה</strong></p>",
+            "text": "<p>✔ Save 15% compared to buying individual bottles<br/><br/>✔ Presented in a luxurious, elegant box<br/><br/>✔ Perfect as a gift or for discovering the collection</p><h4><strong>Best Value</strong></h4><p>✔ Buy more, pay less<br/><br/>✔ Fast shipping: 1–3 business days<br/><br/>✔ Real savings at checkout</p>",
             "column_placement": "right"
           }
         },
         "inventory_counter_nnj7H": {
           "type": "inventory-counter",
           "settings": {
-            "label": "זמינות",
+            "label": "Availability",
             "inventory_max": "100",
             "low_inventory_threshold": "40",
             "show_status_bar": false,
@@ -62,12 +58,6 @@
             "chip_layout": "natural"
           }
         },
-        "tolstoy_shoppable_video_quiz_stories_block_pxCG4": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "publishId"
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -83,6 +73,7 @@
         },
         "text_w3G6kr": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text_font_class": "fs-body-100",
             "text": "<p><strong>⭐  הכי משתלם :</strong></p><p><strong>✔ קונים כמות - משלמים פחות </strong></p><p><strong>✔ משלוח מהיר 1-3 ימים </strong></p><p><strong>✔ חיסכון שמורגש בקופה</strong></p>",
@@ -96,24 +87,6 @@
             "enable_sticky_atc_bar_desktop": false,
             "enable_sticky_atc_bar_mobile": false,
             "divider_width": "shadow--small"
-          }
-        },
-        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6": {
-          "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-          "settings": {
-            "button_style": "solid_accent_2",
-            "button_alignment": "center",
-            "button_content_alignment": "center",
-            "button_margin_top": 0,
-            "button_margin_bottom": 0,
-            "button_max_width": 0,
-            "button_padding_horizontal": 15,
-            "button_full_width": true,
-            "button_show_text": true,
-            "button_show_icon": true,
-            "icon_size": 18,
-            "icon_stroke_width": 1,
-            "icon_offset_vertical": 0
           }
         },
         "text_YLEgV": {
@@ -249,17 +222,14 @@
       },
       "block_order": [
         "product_header",
-        "judge_me_reviews_preview_badge_9p4LFQ",
         "text_44R9J9",
         "inventory_counter_nnj7H",
         "share",
         "variant_picker",
-        "tolstoy_shoppable_video_quiz_stories_block_pxCG4",
         "quantity_selector",
         "custom_liquid_6eTRz",
         "text_w3G6kr",
         "buy_buttons",
-        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6",
         "text_YLEgV",
         "accordion_XpdCx",
         "accordion_fHfiW",
