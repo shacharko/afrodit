@@ -131,7 +131,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "צור קשר",
+            "title": "Contact us",
             "heading_tag": "h2",
             "heading_font_class": "fs-heading-1-base"
           }
@@ -145,7 +145,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p></p><p><strong>PHONE : </strong>+357 96 671355</p><p><strong>DOOR OPEN :   19:00 - 10:00</strong></p>",
+            "text": "<p><strong>Customer Service<br/>10:00 AM – 17:00 PM</strong></p><p><strong>Phone : +357 96 671355</strong></p><p><strong>info@afroditedecants.com</strong></p>",
             "text_font_class": "fs-body-100"
           }
         },
