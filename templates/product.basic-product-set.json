@@ -93,7 +93,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-100",
-            "text": "<p><strong>המחיר כולל מע״מ.<br/>משלוח חינם עד הבית בעת הזמנה מעל 300 ש״ח</strong></p>",
+            "text": "<p><strong>Orders placed by 12:00 PM will be processed and dispatched on the same business day.Standard delivery time: up to 3 business days from order confirmation</strong></p>",
             "column_placement": "right"
           }
         },
