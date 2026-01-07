@@ -99,10 +99,11 @@
         },
         "accordion_XpdCx": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "expand_by_default": false,
             "column_placement": "right",
-            "heading": "זמני שילוח",
+            "heading": "Delivery times",
             "heading_tag": "h3",
             "content": "<p><strong>הזמנות שיבוצעו עד השעה 12:00 יטופלו ויישלחו באותו יום עסקים. </strong></p><p><strong>זמן אספקת משלוח סטנדרטי: עד 3 ימי עסקים מרגע אישור ההזמנה.</strong></p>",
             "page_for_content": "",
@@ -114,7 +115,7 @@
           "settings": {
             "expand_by_default": false,
             "column_placement": "left",
-            "heading": "תיאור",
+            "heading": "Description",
             "heading_tag": "h3",
             "content": "",
             "page_for_content": "",
@@ -126,7 +127,7 @@
           "settings": {
             "expand_by_default": false,
             "column_placement": "left",
-            "heading": "הבשמים בקיט",
+            "heading": "The perfumes in the kit",
             "heading_tag": "h3",
             "content": "",
             "page_for_content": "",
