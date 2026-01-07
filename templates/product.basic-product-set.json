@@ -93,7 +93,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-100",
-            "text": "<p><strong>Price includes VAT<br/>Free shipping on orders over €30 within Cyprus</strong></p>",
+            "text": "<p><strong>Price includes VAT<br/>Free shipping on orders over €30 within Cyprus.</strong></p>",
             "column_placement": "right"
           }
         },
