@@ -343,6 +343,7 @@
     },
     "17660146559414553a": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "heading": "",
         "enable_animation": true,
