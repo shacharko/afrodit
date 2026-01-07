@@ -28,7 +28,7 @@
         "inventory_counter_FFa7z": {
           "type": "inventory-counter",
           "settings": {
-            "label": "זמינות",
+            "label": "Stock",
             "inventory_max": "100",
             "low_inventory_threshold": "40",
             "show_status_bar": false,
