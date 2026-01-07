@@ -146,7 +146,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Customer Service<br/>10:00 AM – 17:00 PM</strong></p><p><strong>Phone : +357 96 671355</strong></p><p><strong>info@afroditedecants.com</strong></p>",
+            "text": "<p><strong>Customer Service<br/>Hours: <br/>Mon–Fri, 10:00 AM – 17:00 PM<br/><br/>We’re here to help! You can reach us via:<br/><br/>\t•\tEmail: info@afroditedecants.com<br/><br/>\t•\tPhone: +35796671355<br/><br/>\t•\tContact Form: Send us a message anytime, and we’ll get back to you during business hours.<br/><br/>Messages sent outside of our working hours will be answered on the next business day.</strong></p>",
             "text_font_class": "fs-body-100"
           }
         },
