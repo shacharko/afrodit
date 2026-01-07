@@ -93,19 +93,18 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-100",
-            "text": "<p><strong>Orders placed by 12:00 PM will be processed and dispatched on the same business day.Standard delivery time: up to 3 business days from order confirmation</strong></p>",
+            "text": "<p><strong>Price includes VAT<br/>Free shipping on orders over €30 within Cyprus</strong></p>",
             "column_placement": "right"
           }
         },
         "accordion_XpdCx": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
             "expand_by_default": false,
             "column_placement": "right",
             "heading": "Delivery times",
             "heading_tag": "h3",
-            "content": "<p><strong>הזמנות שיבוצעו עד השעה 12:00 יטופלו ויישלחו באותו יום עסקים. </strong></p><p><strong>זמן אספקת משלוח סטנדרטי: עד 3 ימי עסקים מרגע אישור ההזמנה.</strong></p>",
+            "content": "<p><strong>Orders placed by 12:00 PM will be processed and dispatched on the same business day.Standard delivery time: up to 3 business days from order confirmation</strong></p>",
             "page_for_content": "",
             "custom_liquid": ""
           }
