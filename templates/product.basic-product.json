@@ -80,7 +80,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-100",
-            "text": "<p>VAT included. Free home delivery on orders over €300<br/><br/></p>",
+            "text": "<p><strong>Price includes VAT.<br/>Free shipping within Cyprus on orders over €30 | Free shipping to Greece on orders over €100</strong></p>",
             "column_placement": "right"
           }
         },
@@ -89,9 +89,9 @@
           "settings": {
             "expand_by_default": false,
             "column_placement": "right",
-            "heading": "Shipping times",
+            "heading": "Delivery times",
             "heading_tag": "h3",
-            "content": "<p>Orders placed by 12:00 PM will be processed and dispatched on the same business day.<br/><br/>Standard delivery time: up to 3 business days from order confirmation</p>",
+            "content": "<p><strong>Orders placed by 12:00 PM will be processed and dispatched on the same business day.<br/><br/>Standard delivery time: up to 3 business days from order confirmation</strong></p>",
             "page_for_content": "",
             "custom_liquid": ""
           }
