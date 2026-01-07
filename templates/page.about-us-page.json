@@ -110,6 +110,7 @@
       "block_order": [
         "slide_rFULGA"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "image_aspect": "original",
