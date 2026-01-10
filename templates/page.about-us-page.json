@@ -179,14 +179,14 @@
         "email": {
           "type": "email",
           "settings": {
-            "title": "דואר אלקטרוני",
+            "title": "Email",
             "width": "half"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "title": "שם מלא",
+            "title": "Fall Name",
             "required": true,
             "width": "half"
           }
@@ -194,7 +194,7 @@
         "text_area": {
           "type": "text_area",
           "settings": {
-            "title": "הודעה",
+            "title": "Massage",
             "placeholder": "",
             "required": true,
             "height": 180,
