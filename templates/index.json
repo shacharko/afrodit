@@ -624,6 +624,12 @@
     "blogs_slider_description_QNtjM8": {
       "type": "blogs-slider-description",
       "blocks": {
+        "blog_item_n8xnHN": {
+          "type": "blog_item",
+          "settings": {
+            "blog": "news"
+          }
+        },
         "blog_item_btfpXj": {
           "type": "blog_item",
           "settings": {
@@ -647,22 +653,15 @@
           "settings": {
             "blog": "perfume-stories"
           }
-        },
-        "blog_item_n8xnHN": {
-          "type": "blog_item",
-          "settings": {
-            "blog": "news"
-          }
         }
       },
       "block_order": [
+        "blog_item_n8xnHN",
         "blog_item_btfpXj",
         "blog_item_XGjhcH",
         "blog_item_4XJWCx",
-        "blog_item_88UWLP",
-        "blog_item_n8xnHN"
+        "blog_item_88UWLP"
       ],
-      "disabled": true,
       "name": "Blog list slider (with description)",
       "settings": {
         "heading": "",
