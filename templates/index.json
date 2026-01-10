@@ -550,35 +550,13 @@
     "behind_brands_ygfcLP": {
       "type": "behind-brands",
       "blocks": {
-        "video_card_WhGHEG": {
-          "type": "video_card",
-          "settings": {
-            "video": "shopify://files/videos/ScreenRecording_10-29-2025 16-55-24_1.mov",
-            "video_url": "",
-            "poster": "shopify://shop_images/IMG_4426.jpg",
-            "product_ref": "",
-            "product_link": "",
-            "product_title": ""
-          }
-        },
-        "video_card_aKX4mG": {
-          "type": "video_card",
-          "settings": {
-            "video": "shopify://files/videos/v24044gl0000cv8ss8fog65mnge7nm20 2.MP4",
-            "video_url": "",
-            "poster": "shopify://shop_images/IMG_4422.jpg",
-            "product_ref": "",
-            "product_link": "",
-            "product_title": ""
-          }
-        },
         "video_card_RrW83b": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/ScreenRecording_11-18-2025 17-42-25_1.mp4",
+            "video": "shopify://files/videos/dfhdgh.mp4",
             "video_url": "",
-            "poster": "shopify://shop_images/IMG_4423.jpg",
-            "product_ref": "",
+            "poster": "shopify://shop_images/IMG_5293_2.jpg",
+            "product_ref": "מס-ביסוס-וואן-נייט-אונלי-יוניסק",
             "product_link": "",
             "product_title": ""
           }
@@ -589,7 +567,29 @@
             "video": "shopify://files/videos/v12044gd0000co24iv7og65n0a13kejg.MP4",
             "video_url": "",
             "poster": "shopify://shop_images/IMG_4428.jpg",
-            "product_ref": "",
+            "product_ref": "le-labo-santal-33",
+            "product_link": "shopify://products/le-labo-santal-33",
+            "product_title": ""
+          }
+        },
+        "video_card_WhGHEG": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/ScreenRecording_10-29-2025 16-55-24_1.mov",
+            "video_url": "",
+            "poster": "shopify://shop_images/IMG_4426.jpg",
+            "product_ref": "byredo-blanche",
+            "product_link": "shopify://products/byredo-blanche",
+            "product_title": ""
+          }
+        },
+        "video_card_aKX4mG": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/v24044gl0000cv8ss8fog65mnge7nm20 2.MP4",
+            "video_url": "",
+            "poster": "shopify://shop_images/IMG_4422.jpg",
+            "product_ref": "creed-eladaria",
             "product_link": "",
             "product_title": ""
           }
@@ -600,17 +600,17 @@
             "video": "shopify://files/videos/v09044g40000co01q67og65ubetnrbbg.MP4",
             "video_url": "",
             "poster": "shopify://shop_images/IMG_4427.jpg",
-            "product_ref": "",
+            "product_ref": "mmv-pryz-mrph-yvnysqs",
             "product_link": "",
             "product_title": ""
           }
         }
       },
       "block_order": [
-        "video_card_WhGHEG",
-        "video_card_aKX4mG",
         "video_card_RrW83b",
         "video_card_CfRRYU",
+        "video_card_WhGHEG",
+        "video_card_aKX4mG",
         "video_card_bmBgce"
       ],
       "name": "Behind the brands",
