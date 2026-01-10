@@ -662,6 +662,7 @@
         "blog_item_4XJWCx",
         "blog_item_88UWLP"
       ],
+      "disabled": true,
       "name": "Blog list slider (with description)",
       "settings": {
         "heading": "",
