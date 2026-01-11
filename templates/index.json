@@ -1124,7 +1124,7 @@
           "type": "item",
           "settings": {
             "question": "What is the return policy?",
-            "answer": "<p><strong>Decants and testers are non-returnable. Full-size products that are unopened and unused may be returned within 14 days of purchase.</strong></p>"
+            "answer": "<p><strong>Decants and testers are non-returnable. Full-size products that are unopened and still in their original packaging can be returned within 14 days of purchase.</strong></p>"
           }
         }
       },
