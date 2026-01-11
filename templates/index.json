@@ -270,7 +270,7 @@
           "type": "collection",
           "settings": {
             "collection": "best-seller",
-            "collection_name": "הנמכרים ביותר",
+            "collection_name": "Best Sellers",
             "show_view_all": true
           }
         }
