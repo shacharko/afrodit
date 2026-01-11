@@ -24,7 +24,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "צור קשר",
+            "title": "📩 Contact Us",
             "heading_tag": "h2",
             "heading_font_class": "fs-heading-1-base"
           }
@@ -38,7 +38,7 @@
         "text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>נשמח לעזור בכל שאלה ובקשה </p>",
+            "text": "<p><strong><br/>At AFRODITE DECANTS, we’re here for you.<br/>For any questions, requests, consultations, or assistance before or after your purchase — we’ll be happy to help.<br/><br/>Whether you’re looking for your next signature scent or need support with an order, shipping, or returns, our customer service team is always at your service.<br/><br/>🕒 Customer Service Hours<br/><br/>Sunday – Thursday<br/>10:00 AM – 5:00 PM<br/><br/><br/>📧 Email<br/><br/>For all inquiries, please contact us at:<br/>info@afroditedecants.com<br/><br/>We strive to respond to all messages as quickly as possible, usually within one business day.<br/><br/>📍 Location<br/><br/>Our logistics operations and shipments are managed from our warehouse in Cyprus.<br/><br/><br/>🤍 We’re Here for You<br/><br/>Your satisfaction is very important to us, and we do our best to provide a personal, professional, and efficient service — just like the fragrance experience we believe in.</strong></p>",
             "text_font_class": "fs-body-100"
           }
         },
@@ -71,14 +71,14 @@
         "email": {
           "type": "email",
           "settings": {
-            "title": "דואר אלקטרוני",
+            "title": "Email",
             "width": "half"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "title": "שם מלא",
+            "title": "Fall Name",
             "required": true,
             "width": "half"
           }
@@ -86,7 +86,7 @@
         "text_area": {
           "type": "text_area",
           "settings": {
-            "title": "הודעה",
+            "title": "Massage",
             "placeholder": "",
             "required": true,
             "height": 180,
