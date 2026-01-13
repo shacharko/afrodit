@@ -624,6 +624,12 @@
     "blogs_slider_description_QNtjM8": {
       "type": "blogs-slider-description",
       "blocks": {
+        "blog_item_XGjhcH": {
+          "type": "blog_item",
+          "settings": {
+            "blog": "gift-experience-mnvt-hmtnh"
+          }
+        },
         "blog_item_n8xnHN": {
           "type": "blog_item",
           "settings": {
@@ -633,19 +639,13 @@
         "blog_item_btfpXj": {
           "type": "blog_item",
           "settings": {
-            "blog": "gift-experience-אמנות-המתנה"
-          }
-        },
-        "blog_item_XGjhcH": {
-          "type": "blog_item",
-          "settings": {
-            "blog": "the-art-of-layering-אמנות-השכבות"
+            "blog": "perfume-stories"
           }
         },
         "blog_item_4XJWCx": {
           "type": "blog_item",
           "settings": {
-            "blog": "zodiac-scents-מזלות-וריח"
+            "blog": "zodiac-scents-mzlvt-vrykh"
           }
         },
         "blog_item_88UWLP": {
@@ -656,21 +656,20 @@
         }
       },
       "block_order": [
+        "blog_item_XGjhcH",
         "blog_item_n8xnHN",
         "blog_item_btfpXj",
-        "blog_item_XGjhcH",
         "blog_item_4XJWCx",
         "blog_item_88UWLP"
       ],
-      "disabled": true,
       "name": "Blog list slider (with description)",
       "settings": {
         "heading": "",
         "heading_tag": "h2",
         "subheading": "",
         "link": "shopify://blogs/news",
-        "link_text": "לכל הבלוגים",
-        "button_style": "btn--callout",
+        "link_text": "",
+        "button_style": "btn--secondary",
         "columns": "3",
         "mobile_columns": "1",
         "collection_listing_aspect_ratio": "square",
