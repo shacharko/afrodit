@@ -267,7 +267,7 @@
     "recommendations": {
       "type": "recommended-products",
       "settings": {
-        "title": "מומלצים",
+        "title": "Recommended",
         "heading_tag": "h2",
         "subheading": "",
         "maximum_products": 8,
