@@ -672,7 +672,7 @@
         "button_style": "btn--secondary",
         "columns": "3",
         "mobile_columns": "1",
-        "collection_listing_aspect_ratio": "square",
+        "collection_listing_aspect_ratio": "portrait",
         "label_style": "overlay",
         "overlay_title_background_style": "gradient",
         "overlay_text_color": "#ffffff",
