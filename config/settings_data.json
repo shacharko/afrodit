@@ -9,12 +9,12 @@
  */
 {
   "current": {
-    "color_background_body": "#fcfcf9",
+    "color_background_body": "#ffffff",
     "color_text_link": "#22292d",
     "color_text": "#22292d",
     "color_border": "#aaaaaa",
     "color_header_text": "#22292d",
-    "color_header_bg": "#fcfcf9",
+    "color_header_bg": "#ffffff",
     "color_text_footer": "#ffffff",
     "color_background_footer": "#000000",
     "color_background_button": "#242526",
