@@ -149,7 +149,7 @@
         "collapse_filter_groups_desktop": true,
         "collapse_filter_groups_mobile": true,
         "show_swatch_filters": true,
-        "show_chip_filters": true,
+        "show_chip_filters": false,
         "chip_layout": "3col",
         "pagination": "paginated",
         "enable_animation": true,
