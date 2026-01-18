@@ -75,7 +75,7 @@
     "product_listing_badge_position": "top_left",
     "cart_item_aspect_ratio": "natural",
     "enable_free_shipping_bar": true,
-    "free_shipping_threshold": "250",
+    "free_shipping_threshold": "30",
     "enable_cross_sells": true,
     "cross_sells_heading": "Last chance to save",
     "cross_sells_recommendations_type": "collection",
