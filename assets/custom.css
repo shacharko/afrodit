@@ -1,18 +1,26 @@
-/* FORCE white Add to Bag button – all languages */
-button.product-form__cart-submit.btn.btn--full.btn--secondary,
-button.product-form__cart-submit.btn.btn--full {
+/* Add to Bag only (exclude wishlist button) */
+button.product-form__cart-submit.btn:not(.nm-wishlist-button) {
   background: #ffffff !important;
   color: #111111 !important;
   border: 1px solid #111111 !important;
+  box-shadow: none !important;
 }
 
-/* Hover / Focus – stay white */
-button.product-form__cart-submit.btn.btn--full.btn--secondary:hover,
-button.product-form__cart-submit.btn.btn--full:hover,
-button.product-form__cart-submit.btn.btn--full:focus,
-button.product-form__cart-submit.btn.btn--full:focus-visible {
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):hover,
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):focus,
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):focus-visible {
   background: #ffffff !important;
   color: #111111 !important;
   border-color: #111111 !important;
   box-shadow: none !important;
+}
+
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):hover {
+  transform: translateY(-1px);
+}
+
+button.product-form__cart-submit.btn:not(.nm-wishlist-button)[disabled],
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
