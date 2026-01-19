@@ -24,3 +24,12 @@ button.product-form__cart-submit.btn:not(.nm-wishlist-button):disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+/* Force Wishlist button text to white */
+button.nm-wishlist-button {
+  color: #fff !important;
+}
+
+button.nm-wishlist-button * {
+  color: #fff !important;
+}
+
