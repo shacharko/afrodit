@@ -42,15 +42,5 @@ button.restock-alerts-notify-button:focus-visible {
   box-shadow: none !important;
 }
 
-/* If the text is inside spans/divs */
-button.restock-alerts-notify-button *,
-button.restock-alerts-notify-button.notifyButtonStyle * {
-  color: #fff !important;
-}
 
-/* If there's an icon SVG */
-button.restock-alerts-notify-button svg {
-  fill: #fff !important;
-  stroke: #fff !important;
-}
 
