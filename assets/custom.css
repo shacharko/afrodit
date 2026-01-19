@@ -1,32 +1,18 @@
-/* =========================
-   Add to Cart button – clean white style
-   ========================= */
-
-button.product-form__cart-submit.btn {
+/* FORCE white Add to Bag button – all languages */
+button.product-form__cart-submit.btn.btn--full.btn--secondary,
+button.product-form__cart-submit.btn.btn--full {
   background: #ffffff !important;
   color: #111111 !important;
   border: 1px solid #111111 !important;
-  box-shadow: none !important;
 }
 
-/* Hover / Focus – keep white (luxury look) */
-button.product-form__cart-submit.btn:hover,
-button.product-form__cart-submit.btn:focus,
-button.product-form__cart-submit.btn:focus-visible {
+/* Hover / Focus – stay white */
+button.product-form__cart-submit.btn.btn--full.btn--secondary:hover,
+button.product-form__cart-submit.btn.btn--full:hover,
+button.product-form__cart-submit.btn.btn--full:focus,
+button.product-form__cart-submit.btn.btn--full:focus-visible {
   background: #ffffff !important;
   color: #111111 !important;
   border-color: #111111 !important;
   box-shadow: none !important;
-}
-
-/* Optional subtle hover cue (no color fill) */
-button.product-form__cart-submit.btn:hover {
-  transform: translateY(-1px);
-}
-
-/* Disabled / Sold out – stay clean but muted */
-button.product-form__cart-submit.btn[disabled],
-button.product-form__cart-submit.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
