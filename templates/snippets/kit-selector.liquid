@@ -84,7 +84,7 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
     {%- for i in (1..rc) -%}
       <div class="kit-select" data-index="{{ i }}">
         <button type="button" class="btn btn--secondary kit-select__button" aria-expanded="false">
-          <span class="kit-select__label" data-placeholder>אנא בחרי דוגמית</span>
+          <span class="kit-select__label" data-placeholder>please choose sample</span>
           <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
         </button>
         <input type="hidden" class="kit-select__value" />
@@ -172,7 +172,7 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
     var ph=document.createElement('li');
     ph.className='kit-option';
     ph.setAttribute('data-variant-id','');
-    ph.innerHTML='<div class="kit-option__details"><div class="kit-option__title">אנא בחרי דוגמית</div></div>';
+    ph.innerHTML='<div class="kit-option__details"><div class="kit-option__title">please choose sample</div></div>';
     ul.appendChild(ph);
 
     if(!items.length){
@@ -232,7 +232,7 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
       var hidden=wrapper.querySelector('.kit-select__value');
       var currentId=hidden.value;
       var cur=list.find(function(i){return i.variant_id===currentId;});
-      label.textContent=cur?cur.product_title:'אנא בחרי דוגמית';
+      label.textContent=cur?cur.product_title:'please choose sample';
       renderList(ul,list,currentId,wrapper);
     });
     refreshATC();
@@ -258,9 +258,9 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
       var li=e.target.closest('.kit-option');
       if(!li||li.getAttribute('aria-disabled')==='true') return;
       var vid=li.getAttribute('data-variant-id');
-      var title=li.getAttribute('data-title')||'אנא בחרי דוגמית';
+      var title=li.getAttribute('data-title')||'please choose sample';
       if(vid){ hidden.value=vid; label.textContent=title; }
-      else { hidden.removeAttribute('value'); label.textContent='אנא בחרי דוגמית'; }
+      else { hidden.removeAttribute('value'); label.textContent='please choose sample'; }
       btn.setAttribute('aria-expanded','false');
       panel.hidden=true;
       rebuildDropdowns();
