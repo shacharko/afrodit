@@ -41,6 +41,19 @@ button.restock-alerts-notify-button:focus-visible {
   border-color: #111 !important;
   box-shadow: none !important;
 }
+/* Force text inside Notify me button */
+button.restock-alerts-notify-button *,
+button.restock-alerts-notify-button.notifyButtonStyle * {
+  color: #fff !important;
+}
+
+/* If the app uses SVG icons */
+button.restock-alerts-notify-button svg,
+button.restock-alerts-notify-button.notifyButtonStyle svg {
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
 
 
 
