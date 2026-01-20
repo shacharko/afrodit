@@ -119,10 +119,10 @@
         "mobile_columns": "2",
         "collection_list": [
           "notes",
-          "seasons",
           "scent-profiles",
+          "discovery-sets-by-brands",
           "mood",
-          "discovery-sets-by-brands"
+          "seasons"
         ],
         "collection_listing_aspect_ratio": "portrait",
         "label_style": "overlay",
