@@ -221,17 +221,13 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
       var kit_titels = window.KIT || {
         alreadySelected: 'Already selected',
         outOfStock: 'Out of stock',
-        remainingTpl: '({{ count }} left)'
+        remainingTpl: 'left'
 };
-
-function renderRemaining(n) {
-  return i18n.remainingTpl.replace('{{ count }}', String(n));
-}
 
       if(alreadyChosenElsewhere){
         note='<span class="kit-option__inventory-text" style="font-weight:600;">(כבר נבחר)</span>';
       }else if(outOfStock){
-        note='<span class="kit-option__inventory-text" style="color:#d32f2f;font-weight:bold;">אזל מהמלאי</span>';
+        note='<span class="kit-option__inventory-text" style="color:#d32f2f;font-weight:bold;">outOfStock</span>';
       }else if(total!==9999){
         note='<span class="kit-option__inventory-text">(נותר: '+Math.max(0,remaining)+')</span>';
       }
