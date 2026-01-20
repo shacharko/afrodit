@@ -602,7 +602,14 @@
   
   "aroma_notes": {
     "title": "Aromatic Notes"
-  }
+  },
+  
+  "kit": {
+    "already_selected": "Already selected",
+    "out_of_stock": "Out of stock",
+    "remaining": "({{ count }} left)"
+}
+
 
 
 }
