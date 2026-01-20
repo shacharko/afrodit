@@ -120,7 +120,7 @@
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/aries-collection",
-            "link_text": "Discover the Sets",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -139,7 +139,7 @@
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/libra-collection",
-            "link_text": "Discover the Sets",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -158,7 +158,7 @@
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/taurus-collection",
-            "link_text": "Discover the Sets",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -177,7 +177,7 @@
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/scorpio-collection",
-            "link_text": "Discover the Sets",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -195,8 +195,8 @@
             "text": "<p><strong>גלה את הצבעוניות של האישיות שלך – הזמינו עכשיו את חוויית הדיסקברי</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/gemini",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/gemini-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -208,14 +208,14 @@
             "icon_width_mobile": 50,
             "custom_icon_image": "shopify://shop_images/5E4437FA-555C-4E6E-AF8A-7D4F100381ED.png",
             "accent": "",
-            "heading": "קשת (Sagittarius)",
+            "heading": "Sagittarius",
             "heading_tag": "h3",
             "heading_font_class": "fs-heading-4-base",
-            "text": "<p><strong>חופש, הרפתקה וריגוש – פתח דלת לעולם של ניחוחות ייחודיים</strong></p>",
+            "text": "<p><strong>Freedom, adventure and excitement – ​​open a door to a world of unique fragrances</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/sagittarius",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/sagittarius-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -233,8 +233,8 @@
             "text": "<p><strong>חמימות וביתיות בכל תו – הזמן את המארז שלך ותן לעצמך פינוק</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/cancer",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/cancer-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -252,8 +252,8 @@
             "text": "<p><strong>יציבות, עומק ויוקרה – הזמן עכשיו את חוויית הניחוחות המיוחדת שלך</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/capricorn",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/capricorn-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -271,8 +271,8 @@
             "text": "<p><strong>תן לנוכחות שלך לזהור – הזמן את מארז הניחוחות שמותאם למזלך</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/leo",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/leo-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -290,8 +290,8 @@
             "text": "<p><strong>מקוריות וחדשנות בניחוח אחד – הזמן את המארז שלך ותבלוט</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/aquarius",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/aquarius-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -309,8 +309,8 @@
             "text": "<p><strong>דיוק, ניקיון והרמוניה – פנק את עצמך במארז מושלם לפי מזלך</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/virgo",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/virgo-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         },
@@ -328,8 +328,8 @@
             "text": "<p><strong>רוך, חלום וחיבור פנימי – הזמן עכשיו את מארז הניחוחות שמעורר השראה</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/pisces",
-            "link_text": "גלו את המארזים",
+            "link": "shopify://collections/pisces-collection",
+            "link_text": "Discover The Sets",
             "button_style": "btn--secondary"
           }
         }
