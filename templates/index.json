@@ -121,7 +121,8 @@
           "notes",
           "seasons",
           "scent-profiles",
-          "mood"
+          "mood",
+          "discovery-sets-by-brands"
         ],
         "collection_listing_aspect_ratio": "portrait",
         "label_style": "overlay",
