@@ -1,82 +1,117 @@
-/* Add to Bag only (exclude wishlist button) */
-button.product-form__cart-submit.btn:not(.nm-wishlist-button) {
+/* =========================================================
+   BUTTONS STYLING – CLEAN LUXURY
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1) Add to Bag / Add to Cart (ONLY)
+   - White background, black text
+   - Excludes Wishlist + Restock Notify buttons
+   --------------------------------------------------------- */
+
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle) {
   background: #ffffff !important;
   color: #111111 !important;
   border: 1px solid #111111 !important;
   box-shadow: none !important;
 }
 
-button.product-form__cart-submit.btn:not(.nm-wishlist-button):hover,
-button.product-form__cart-submit.btn:not(.nm-wishlist-button):focus,
-button.product-form__cart-submit.btn:not(.nm-wishlist-button):focus-visible {
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):hover,
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):focus,
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):focus-visible {
   background: #ffffff !important;
   color: #111111 !important;
   border-color: #111111 !important;
   box-shadow: none !important;
 }
 
-button.product-form__cart-submit.btn:not(.nm-wishlist-button):hover {
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):hover {
   transform: translateY(-1px);
 }
 
-button.product-form__cart-submit.btn:not(.nm-wishlist-button)[disabled],
-button.product-form__cart-submit.btn:not(.nm-wishlist-button):disabled {
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle)[disabled],
+button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  transform: none !important;
 }
-/* Restock / Notify me button (app) */
+
+
+/* ---------------------------------------------------------
+   2) Wishlist button (nm) – keep white text
+   --------------------------------------------------------- */
+
+button.nm-wishlist-button,
+a.nm-wishlist-button {
+  color: #ffffff !important;
+}
+
+button.nm-wishlist-button *,
+a.nm-wishlist-button * {
+  color: #ffffff !important;
+}
+
+button.nm-wishlist-button svg,
+a.nm-wishlist-button svg {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   3) Restock Alerts / Notify me button (app)
+   - Black background, white text
+   - Wins over theme/app rules
+   --------------------------------------------------------- */
+
 button.restock-alerts-notify-button,
+button.notifyButtonStyle,
 button.restock-alerts-notify-button.notifyButtonStyle {
-  background: #111 !important;   /* או #fff אם את רוצה לבן */
-  color: #fff !important;
-  border: 1px solid #111 !important;
+  background: #111111 !important;
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #111111 !important;
   box-shadow: none !important;
-}
-
-button.restock-alerts-notify-button:hover,
-button.restock-alerts-notify-button:focus,
-button.restock-alerts-notify-button:focus-visible {
-  background: #111 !important;
-  color: #fff !important;
-  border-color: #111 !important;
-  box-shadow: none !important;
-}
-/* Force text inside Notify me button */
-button.restock-alerts-notify-button *,
-button.restock-alerts-notify-button.notifyButtonStyle * {
-  color: #fff !important;
-}
-
-/* If the app uses SVG icons */
-button.restock-alerts-notify-button svg,
-button.restock-alerts-notify-button.notifyButtonStyle svg {
-  fill: #fff !important;
-  stroke: #fff !important;
-}
-/* === FIX Restock Notify button text visibility === */
-button.restock-alerts-notify-button,
-button.notifyButtonStyle {
-  background-color: #111 !important;
-  color: #fff !important;
   opacity: 1 !important;
   filter: none !important;
   mix-blend-mode: normal !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
-/* Force inner text */
 button.restock-alerts-notify-button *,
-button.notifyButtonStyle * {
-  color: #fff !important;
+button.notifyButtonStyle *,
+button.restock-alerts-notify-button.notifyButtonStyle * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+button.restock-alerts-notify-button svg,
+button.notifyButtonStyle svg,
+button.restock-alerts-notify-button.notifyButtonStyle svg {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+button.restock-alerts-notify-button:hover,
+button.notifyButtonStyle:hover,
+button.restock-alerts-notify-button:focus,
+button.notifyButtonStyle:focus,
+button.restock-alerts-notify-button:focus-visible,
+button.notifyButtonStyle:focus-visible {
+  background: #111111 !important;
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+  box-shadow: none !important;
   opacity: 1 !important;
   filter: none !important;
 }
 
-/* If app marks it as disabled */
+/* If app marks it as disabled but we still want readability */
 button.restock-alerts-notify-button[disabled],
-button.restock-alerts-notify-button[aria-disabled="true"] {
+button.restock-alerts-notify-button[aria-disabled="true"],
+button.notifyButtonStyle[disabled],
+button.notifyButtonStyle[aria-disabled="true"] {
   opacity: 1 !important;
 }
-
-
-
-
