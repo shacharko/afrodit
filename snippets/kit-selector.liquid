@@ -217,6 +217,17 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
 
       var img=item.image?'<img class="kit-option__img" src="'+item.image+'" alt="">':'';
       var note='';
+
+      var kit_titels = window.KIT || {
+        alreadySelected: 'Already selected',
+        outOfStock: 'Out of stock',
+        remainingTpl: '({{ count }} left)'
+};
+
+function renderRemaining(n) {
+  return i18n.remainingTpl.replace('{{ count }}', String(n));
+}
+
       if(alreadyChosenElsewhere){
         note='<span class="kit-option__inventory-text" style="font-weight:600;">(כבר נבחר)</span>';
       }else if(outOfStock){
