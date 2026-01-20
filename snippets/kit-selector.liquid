@@ -225,11 +225,14 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
 };
 
       if(alreadyChosenElsewhere){
-        note='<span class="kit-option__inventory-text" style="font-weight:600;">(כבר נבחר)</span>';
+        note='<span class="kit-option__inventory-text" style="font-weight:600;">+
+    kit_titles.alreadySelected +</span>';
       }else if(outOfStock){
-        note='<span class="kit-option__inventory-text" style="color:#d32f2f;font-weight:bold;">outOfStock</span>';
+        note='<span class="kit-option__inventory-text" style="color:#d32f2f;font-weight:bold;">+
+    kit_titles.outOfStock +</span>';
       }else if(total!==9999){
-        note='<span class="kit-option__inventory-text">(נותר: '+Math.max(0,remaining)+')</span>';
+        note='<span class="kit-option__inventory-text">(+
+    kit_titles.remaining +: '+Math.max(0,remaining)+')</span>';
       }
 
       li.innerHTML=img+'<div class="kit-option__details"><span class="kit-option__title">'+title+'</span>'+note+'</div>';
