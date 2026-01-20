@@ -53,6 +53,29 @@ button.restock-alerts-notify-button.notifyButtonStyle svg {
   fill: #fff !important;
   stroke: #fff !important;
 }
+/* === FIX Restock Notify button text visibility === */
+button.restock-alerts-notify-button,
+button.notifyButtonStyle {
+  background-color: #111 !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Force inner text */
+button.restock-alerts-notify-button *,
+button.notifyButtonStyle * {
+  color: #fff !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* If app marks it as disabled */
+button.restock-alerts-notify-button[disabled],
+button.restock-alerts-notify-button[aria-disabled="true"] {
+  opacity: 1 !important;
+}
 
 
 
