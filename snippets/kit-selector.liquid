@@ -113,7 +113,13 @@ KIT SELECTOR — brand_info by brand_name (== product.vendor), 2ml only, no dupl
 
 <script type="application/json" id="kit-data-json">{{ kit_data_all | strip }}</script>
 <script type="application/json" id="variants-map-json">{}</script>
-
+<script>
+  window.KIT = {
+    alreadySelected: {{ 'kit.already_selected' | t | json }},
+    outOfStock: {{ 'kit.out_of_stock' | t | json }},
+    remainingTpl: {{ 'kit.remaining' | t | json }}
+  };
+</script>
 <script>
 (function(){
   var DATA_ALL = JSON.parse(document.getElementById('kit-data-json').textContent || '[]');
