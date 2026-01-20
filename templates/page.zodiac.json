@@ -83,7 +83,7 @@
         "text_W6pbPw": {
           "type": "text",
           "settings": {
-            "text": "<p>Each zodiac sign is a story of its own – a unique blend of energy, emotion, and inner strength.</p><p>In our zodiac-based gift set collection, we combined the worlds of perfumery and astrology to create a complete experience – sets in which each one includes five carefully selected fragrances, chosen according to the character, frequency, and energy of each sign.</p><p>There are things you don’t choose – they simply happen.</p><p>The scent that feels right,<br/><br/>the presence that connects directly to the heart,<br/><br/>the energy that feels “yours.”</p><p>In our sets, every fragrance is inspired by the stars – a rare connection between scent, emotion, and destiny, revealing what truly makes you shine.</p><p>Each set is far more than a gift – it is a sensory and spiritual experience, woven with zodiac energy and telling a story of depth, balance, and natural attraction.</p><p>This is not just another fragrance set – it is a way to touch yourself through scent, connect with your energy, and feel the magic that exists between sky and earth.</p>",
+            "text": "<p><strong>Each zodiac sign is a story of its own – a unique blend of energy, emotion, and inner strength.</strong></p><p><strong>In our zodiac-based gift set collection, we combined the worlds of perfumery and astrology to create a complete experience – sets in which each one includes five carefully selected fragrances, chosen according to the character, frequency, and energy of each sign.</strong></p><p><strong>There are things you don’t choose – they simply happen.</strong></p><p><strong>The scent that feels right,<br/><br/>the presence that connects directly to the heart,<br/><br/>the energy that feels “yours.”</strong></p><p><strong>In our sets, every fragrance is inspired by the stars – a rare connection between scent, emotion, and destiny, revealing what truly makes you shine.</strong></p><p><strong>Each set is far more than a gift – it is a sensory and spiritual experience, woven with zodiac energy and telling a story of depth, balance, and natural attraction.</strong></p><p><strong>This is not just another fragrance set – it is a way to touch yourself through scent, connect with your energy, and feel the magic that exists between sky and earth.</strong></p>",
             "text_font_class": "fs-body-100"
           }
         }
@@ -116,7 +116,7 @@
             "heading": "Aries",
             "heading_tag": "h3",
             "heading_font_class": "fs-heading-4-base",
-            "text": "<p>Discover the fragrances that ignite your imagination — order your Discovery Set now</p><p></p>",
+            "text": "<p><strong>Discover the fragrances that ignite your imagination — order your Discovery Set now</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/aries-collection",
@@ -132,10 +132,10 @@
             "icon_width_mobile": 50,
             "custom_icon_image": "shopify://shop_images/91E5C906-6DD1-4FB8-A4CD-C3ABAA5422BA.png",
             "accent": "",
-            "heading": "מאזניים (Libra)",
+            "heading": "Libra",
             "heading_tag": "h3",
             "heading_font_class": "fs-heading-4-base",
-            "text": "<p><strong>איזון ויופי בניחוחות – הזמן עכשיו את חוויית הדיסקברי שלך</strong></p>",
+            "text": "<p><strong>Balance and beauty in fragrances – book your discovery experience now</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
             "link": "shopify://collections/libra-collection",
@@ -151,13 +151,13 @@
             "icon_width_mobile": 50,
             "custom_icon_image": "shopify://shop_images/BAEB791F-5BF9-4BB7-BF8B-68C87E1195BC.png",
             "accent": "",
-            "heading": "שור (Taurus)",
+            "heading": "Taurus",
             "heading_tag": "h3",
             "heading_font_class": "fs-heading-4-base",
-            "text": "<p><strong>חווה יוקרה ונוחות בכל ריח – פנק את עצמך במארז הניחוחות המושלם</strong></p>",
+            "text": "<p><strong>Experience luxury and comfort in every scent – ​​treat yourself to the perfect fragrance package.</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/taurus",
+            "link": "shopify://collections/taurus-collection",
             "link_text": "Discover the Sets",
             "button_style": "btn--secondary"
           }
@@ -170,13 +170,13 @@
             "icon_width_mobile": 50,
             "custom_icon_image": "shopify://shop_images/9E3E80E7-F9F2-4CE4-9969-46EEE8DF7164.png",
             "accent": "",
-            "heading": "עקרב (Scorpio)",
+            "heading": "Scorpio",
             "heading_tag": "h3",
             "heading_font_class": "fs-heading-4-base",
-            "text": "<p><strong>עומק, חושניות ותשוקה – הזמן את המארז שמותאם למזלך</strong></p>",
+            "text": "<p><strong>Depth, sensuality and passion – order the package that is tailored to your luck</strong></p>",
             "text_font_class": "fs-body-100",
             "text_max_width": 100,
-            "link": "shopify://collections/scorpio",
+            "link": "shopify://collections/scorpio-collection",
             "link_text": "Discover the Sets",
             "button_style": "btn--secondary"
           }
