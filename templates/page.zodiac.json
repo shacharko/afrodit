@@ -23,12 +23,14 @@
       "blocks": {
         "accent_mxBb4p": {
           "type": "accent",
+          "disabled": true,
           "settings": {
             "accent": "Accent"
           }
         },
         "heading_CGUtXJ": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "title": "Image hero",
             "heading_tag": "h2",
@@ -37,6 +39,7 @@
         },
         "text_mpd3cU": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Use these sections to promote a particular feature with editorial photography.</p>",
             "text_font_class": "fs-body-100"
