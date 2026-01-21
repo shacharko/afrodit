@@ -237,9 +237,14 @@ if (alreadyChosenElsewhere) {
     '</span>';
 
 } else if (total !== 9999) {
+  var tpl = (kit_titles.remaining || kit_titles.remainingTpl || 'left {{ count }}');
+  var txt = tpl
+    .replace(/\{\{\s*count\s*\}\}/g, remaining)   // {{ count }}
+    .replace(/\%\{\s*count\s*\}/g, remaining);    // %{count} אם אי פעם יהיה
+
   note =
     '<span class="kit-option__inventory-text">' +
-    kit_titles.remaining +
+    txt +
     '</span>';
 }
 
