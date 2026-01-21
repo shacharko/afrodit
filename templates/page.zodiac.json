@@ -18,7 +18,57 @@
         "custom_content_width": 700
       }
     },
-    
+    "image_hero_gdCXWd": {
+      "type": "image-hero",
+      "blocks": {
+        "accent_mxBb4p": {
+          "type": "accent",
+          "settings": {
+            "accent": "Accent"
+          }
+        },
+        "heading_CGUtXJ": {
+          "type": "heading",
+          "settings": {
+            "title": "Image hero",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-display-2"
+          }
+        },
+        "text_mpd3cU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use these sections to promote a particular feature with editorial photography.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "accent_mxBb4p",
+        "heading_CGUtXJ",
+        "text_mpd3cU"
+      ],
+      "name": "t:sections.image_hero.presets.name",
+      "settings": {
+        "image_aspect": "custom",
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "image": "shopify://shop_images/J7.webp",
+        "focal_point": "image_presentation",
+        "mobile_focal_point": "image_presentation",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#FFFFFF",
+        "button_background_color": "#FFFFFF",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 40,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
     "rich_text_xYgPif": {
       "type": "rich-text",
       "blocks": {
@@ -329,6 +379,7 @@
   },
   "order": [
     "main",
+    "image_hero_gdCXWd",
     "rich_text_xYgPif",
     "multi_column_ax3F8h"
   ]
