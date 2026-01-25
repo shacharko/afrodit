@@ -230,9 +230,33 @@
         "enable_gift_card_recipient": true,
         "enable_animation": true
       }
+    },
+    "176935159456cc9388": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_zXYUBF": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_zXYUBF"
+      ],
+      "settings": {
+        "heading": "App section",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "176935159456cc9388"
   ]
 }
