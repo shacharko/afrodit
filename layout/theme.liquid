@@ -147,17 +147,19 @@
     </style>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var link = document.getElementById('whatsapp-float-link');
-        if (!link) return;
+    document.addEventListener('DOMContentLoaded', function () {
+    var link = document.getElementById('whatsapp-float-link');
+    if (!link) return;
 
-        var phoneNumber = '972523311312';
-        var defaultText = 'Hi! I have a question about: ' + window.location.href;
-        var waUrl = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(defaultText);
+    // *** פה לעדכן למספר שלך ***
+    var phoneNumber = '972523311312'; // בלי 0 בהתחלה, בלי רווחים / מקפים
 
-        link.setAttribute('href', waUrl);
-      });
-    </script>
+    var defaultText = 'Hey, I have some question regarding a product you are selling ' + window.location.href;
+    var waUrl = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(defaultText);
+
+    link.setAttribute('href', 'https://wa.me/message/RT3T2MNDWRJVC1');
+  });
+</script>
 
   </body>
 
