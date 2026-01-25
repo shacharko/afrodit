@@ -77,7 +77,6 @@
                 %}
               </ul>
             </div>
-
             {% if secondary_links %}
               <div class="drawer-menu__links-wrapper animation--drawer-menu-item">
                 <ul
@@ -121,7 +120,9 @@
             {% endif %}
           </div>
         </div>
-
+        <div style="padding: 10%">
+          {% render 'payment-icons' %}
+        </div>  
         {%- if locale_selector or country_selector -%}
           {%- form 'localization', class: 'drawer-menu__form' -%}
             <ul
