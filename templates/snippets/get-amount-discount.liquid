@@ -1,3 +1,0 @@
-{% if prod.price and prod.compare_at_price and prod.price < prod.compare_at_price %}
-  {{ prod.compare_at_price | minus: prod.price }}
-{% endif %}

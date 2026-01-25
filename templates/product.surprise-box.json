@@ -12,10 +12,6 @@
     "main": {
       "type": "main-product--default",
       "blocks": {
-        "judge_me_reviews_preview_badge_9p4LFQ": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "product_header": {
           "type": "product_header",
           "settings": {
@@ -54,12 +50,6 @@
             "chip_layout": "natural"
           }
         },
-        "tolstoy_shoppable_video_quiz_stories_block_pxCG4": {
-          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
-          "settings": {
-            "publishId": "publishId"
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -80,24 +70,6 @@
             "enable_sticky_atc_bar_desktop": false,
             "enable_sticky_atc_bar_mobile": false,
             "divider_width": "shadow--small"
-          }
-        },
-        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6": {
-          "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-button-block/194f5011-a43c-4b22-b12e-eaf20dc4506a",
-          "settings": {
-            "button_style": "solid_accent_2",
-            "button_alignment": "center",
-            "button_content_alignment": "center",
-            "button_margin_top": 0,
-            "button_margin_bottom": 0,
-            "button_max_width": 0,
-            "button_padding_horizontal": 15,
-            "button_full_width": true,
-            "button_show_text": true,
-            "button_show_icon": true,
-            "icon_size": 18,
-            "icon_stroke_width": 1,
-            "icon_offset_vertical": 0
           }
         },
         "text_YLEgV": {
@@ -246,16 +218,13 @@
         }
       },
       "block_order": [
-        "judge_me_reviews_preview_badge_9p4LFQ",
         "product_header",
         "inventory_counter_nnj7H",
         "share",
         "variant_picker",
-        "tolstoy_shoppable_video_quiz_stories_block_pxCG4",
         "quantity_selector",
         "custom_liquid_6eTRz",
         "buy_buttons",
-        "swish_formerly_wishlist_king_wishlist_button_block_7fgk6",
         "text_YLEgV",
         "accordion_XpdCx",
         "accordion_fHfiW",
