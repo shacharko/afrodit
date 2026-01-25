@@ -330,6 +330,7 @@
         "quote_9LbVet",
         "quote_z6YBVm"
       ],
+      "disabled": true,
       "name": "t:sections.quotes.presets.name",
       "settings": {
         "autoplay_enabled": true,
