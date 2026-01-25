@@ -806,6 +806,7 @@
         "judge_me_reviews_medals_bxdRwq",
         "judge_me_reviews_testimonials_carousel_XPdWyK"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "enable_animation": true,
@@ -914,7 +915,6 @@
         "quote_HtaQ7r",
         "quote_GgBytg"
       ],
-      "disabled": true,
       "name": "t:sections.quotes.presets.name",
       "settings": {
         "autoplay_enabled": true,
@@ -924,74 +924,6 @@
         "enable_animation": true,
         "divider_style": "none",
         "section_padding": "section--vertical-padding-none"
-      }
-    },
-    "quote_LdCLgk": {
-      "type": "quote",
-      "blocks": {
-        "quote_D4c9MF": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>“שירות מדהים!<br/>נכנסתי במקרה לחנות ויצאתי עם הבושם המושלם. המוכר ידע מיד לכוון אותי לסגנון שאני אוהבת, ונתן לי להרגיש הכי בבית. אין ספק שאחזור שוב!”</p><p>⭐️⭐️⭐️⭐️⭐️</p>",
-            "title": "סיוון דהן",
-            "quote_tag": "h2",
-            "font_size": "medium"
-          }
-        },
-        "quote_ixKetg": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>“מבחר נדיר ושירות מקצועי<br/>אני חובב בישום שנים, אבל בחנות הזו מצאתי ריחות שלא ראיתי בשום מקום אחר. הצוות בקיא בטירוף בכל ניחוח ויודע להתאים לפי אופי. פשוט תענוג.”</p><p>⭐⭐⭐⭐⭐</p>",
-            "title": "שרון חיימוב",
-            "quote_tag": "h2",
-            "font_size": "medium"
-          }
-        },
-        "quote_YM6bXE": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>“אווירה מפנקת ושירות VIP<br/>מהרגע שנכנסתי קיבלתי יחס חם, הסברים מקצועיים והרבה סבלנות. יצאתי עם בושם שאני מאוהבת בו, ומחמאות לא מפסיקות להגיע.”</p><p>⭐⭐⭐⭐⭐</p>",
-            "title": "רוני אשכנזי",
-            "quote_tag": "h2",
-            "font_size": "medium"
-          }
-        },
-        "quote_dRPp7J": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>“יופי של חנות הגעתי לחפש מתנה, ובזכות השירות האדיב מצאתי משהו מיוחד ובדיוק בתקציב שרציתי. העטיפה הייתה מהממת והמתנה התקבלה בהתלהבות גדולה.”</p><p>⭐⭐⭐⭐⭐</p>",
-            "title": "עדי לוי",
-            "quote_tag": "h2",
-            "font_size": "medium"
-          }
-        },
-        "quote_M7LQDG": {
-          "type": "quote",
-          "settings": {
-            "quote": "<p>“חוויית קנייה בלתי נשכחת<br/>החנות מעוצבת בצורה קסומה, ומרגיש שכל בושם נבחר בקפידה. קיבלתי יחס אישי וסבלני, והמלצה שהתגלתה כבינגו מוחלט. תודה ענקית!”</p><p>⭐️⭐️⭐️⭐️⭐️</p>",
-            "title": "דניאל גולן",
-            "quote_tag": "h2",
-            "font_size": "medium"
-          }
-        }
-      },
-      "block_order": [
-        "quote_D4c9MF",
-        "quote_ixKetg",
-        "quote_YM6bXE",
-        "quote_dRPp7J",
-        "quote_M7LQDG"
-      ],
-      "disabled": true,
-      "name": "t:sections.quotes.presets.name",
-      "settings": {
-        "autoplay_enabled": true,
-        "autoplay_delay": 9,
-        "pagination_style": "dots",
-        "font_choice": "ff-heading",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
       }
     },
     "rich_text_HYfzAm": {
@@ -1235,7 +1167,6 @@
     "176934743077b4287f",
     "image_with_text_split_pcVmAB",
     "quote_8wXtkd",
-    "quote_LdCLgk",
     "rich_text_HYfzAm",
     "image_with_text_LTRzQN",
     "newsletter_compact_trl_cJwCCh",
