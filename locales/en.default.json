@@ -394,7 +394,7 @@
     }
   },
   "product": {
-    "add_to_cart": "Add to Bag",
+    "add_to_cart": "Add to Cart",
     "share": "Share",
     "sold_out": "Sold out",
     "unavailable": "Unavailable"
@@ -423,7 +423,7 @@
       "zero_price_custom_label": "Free"
     },
     "product": {
-      "add_to_cart": "Add to Bag",
+      "add_to_cart": "Add to Cart",
       "buy_now": "Buy now",
       "change_option": "Change",
       "chip_count": {
