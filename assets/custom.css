@@ -10,7 +10,7 @@
 
 button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle) {
   background: #ffffff !important;
-  color: #111111 !important;
+  /* color: #111111 !important; */
   border: 1px solid #111111 !important;
   box-shadow: none !important;
 }
