@@ -32,7 +32,7 @@
     "heading_letter_spacing": -25,
     "heading_base_size": 50,
     "heading_mobile_base_scale": 78,
-    "font_body": "serif",
+    "font_body": "nunito_sans_n3",
     "body_letter_spacing": 0,
     "body_base_size": 17,
     "body_mobile_base_scale": 95,
@@ -192,7 +192,7 @@
         "settings": {}
       },
       "6680288666557934739": {
-        "type": "shopify://apps/swish-formerly-wishlist-king/blocks/wishlist-page/194f5011-a43c-4b22-b12e-eaf20dc4506a",
+        "type": "shopify://apps/swish-wishlist-king/blocks/wishlist-page/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
         "settings": {
           "column_width": "md",
