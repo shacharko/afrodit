@@ -13,14 +13,15 @@ button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alert
   color: white !important;
   border: 1px solid #a30000 !important;
   box-shadow: none !important;
+  font-weight: bold;
 }
 
 button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):hover,
 button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):focus,
 button.product-form__cart-submit.btn:not(.nm-wishlist-button):not(.restock-alerts-notify-button):not(.notifyButtonStyle):focus-visible {
-  background: #ffffff !important;
-  color: #111111 !important;
-  border-color: #111111 !important;
+  background: #a30000 !important;
+  color: white !important;
+  border-color: #a30000 !important;
   box-shadow: none !important;
 }
 
