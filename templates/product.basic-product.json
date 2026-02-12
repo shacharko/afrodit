@@ -99,7 +99,7 @@
         "accordion_fHfiW": {
           "type": "accordion",
           "settings": {
-            "expand_by_default": false,
+            "expand_by_default": true,
             "column_placement": "left",
             "heading": "Description",
             "heading_tag": "h3",
