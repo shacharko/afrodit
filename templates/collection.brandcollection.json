@@ -50,7 +50,7 @@
         "button_text_color": "#000000",
         "color_overlay": "#000000",
         "color_overlay_gradient": "",
-        "overlay_opacity": 40,
+        "overlay_opacity": 0,
         "enable_animation": true,
         "section_padding": "section--vertical-padding-none"
       }
@@ -128,7 +128,7 @@
         "alignment": "left_left",
         "enable_animation": true,
         "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom",
+        "section_padding": "section--vertical-padding-none",
         "content_width": "custom",
         "custom_content_width": 700
       }
