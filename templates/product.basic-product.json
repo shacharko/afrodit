@@ -25,24 +25,6 @@
             "show_custom_badges": true
           }
         },
-        "judge_me_reviews_preview_badge_eYzRNy": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
-        "inventory_counter_nnj7H": {
-          "type": "inventory-counter",
-          "settings": {
-            "label": "Availability",
-            "inventory_max": "100",
-            "low_inventory_threshold": "40",
-            "show_status_bar": false,
-            "show_untracked_quantity": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -53,6 +35,26 @@
             "swatch_size": "medium",
             "chip_layout": "natural"
           }
+        },
+        "judge_me_reviews_preview_badge_eYzRNy": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "inventory_counter_nnj7H": {
+          "type": "inventory-counter",
+          "disabled": true,
+          "settings": {
+            "label": "Availability",
+            "inventory_max": "100",
+            "low_inventory_threshold": "40",
+            "show_status_bar": false,
+            "show_untracked_quantity": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -220,10 +222,10 @@
       },
       "block_order": [
         "product_header",
+        "variant_picker",
         "judge_me_reviews_preview_badge_eYzRNy",
         "inventory_counter_nnj7H",
         "share",
-        "variant_picker",
         "quantity_selector",
         "custom_liquid_aQhpT",
         "buy_buttons",
