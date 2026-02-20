@@ -86,6 +86,7 @@
         },
         "text_YLEgV": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text_font_class": "fs-body-100",
             "text": "<p><strong>Price includes VAT.<br/>Free shipping within Cyprus on orders over €30 | Free shipping to Greece on orders over €100</strong></p>",
@@ -213,6 +214,7 @@
         },
         "featured_products": {
           "type": "featured_products",
+          "disabled": true,
           "settings": {
             "heading": "בשמים שנקנו ביחד",
             "heading_tag": "h3",
