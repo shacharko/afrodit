@@ -29,7 +29,7 @@
             "show_divider": true,
             "show_vendor": true,
             "show_sku": false,
-            "show_discount": true,
+            "show_discount": false,
             "discount_format": "percent_off",
             "show_product_rating": false,
             "show_sale_badge": true,
