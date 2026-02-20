@@ -3482,7 +3482,7 @@ html.no-js .product__media-container[data-gallery-style="list"] .product__media,
     }
 .product__media-container.below-mobile .product__media-item,
       .product__media-container.below-mobile .product__media-item .media{
-        width:100%;
+        width:80%;
       }
 html.no-js .product__media-container.below-mobile .product__media-item, html.no-js .product__media-container.below-mobile .product__media-item .media{
           width:auto;

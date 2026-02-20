@@ -338,7 +338,7 @@
                   enable_product_lightbox: section.settings.enable_product_lightbox,
                   loop_video: section.settings.enable_video_looping,
                   aspect_ratio: media_aspect_ratio,
-                  sizes: '90vw',
+                  sizes: '100vw',
                   prioritize_loading: prioritize_loading,
                   within_carousel: true
                 %}
@@ -408,7 +408,7 @@
                   enable_product_lightbox: section.settings.enable_product_lightbox,
                   loop_video: section.settings.enable_video_looping,
                   aspect_ratio: media_aspect_ratio,
-                  sizes: '90vw',
+                  sizes: '100vw',
                   animate: true,
                   within_carousel: false
                 %}
@@ -420,9 +420,9 @@
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
               </div>
             {%- endfor %}
-             <div class="product__media-strip product__media-strip--mobile">
+             {% comment %} <div class="product__media-strip product__media-strip--mobile">
     {% render 'aroma-notes-strip', prod: product %}
-  </div>
+  </div> {% endcomment %}
             {% if over_media_show_limit_mobile -%}
               <div class="product__media-show-more" data-more-media-bar>
                 <button
@@ -439,7 +439,7 @@
           </div>
           {% if gallery_style_mobile == 'thumbnails' -%}
             {% render 'product-thumbnails',
-              orientation: 'horizontal',
+              orientation: 'vertical',
               featured_media: featured_media,
               aspect_ratio: image_aspect_ratio,
               initial_variant_media_position: initial_variant_media_position,
@@ -802,7 +802,7 @@
           "label": "t:sections.shared.product.settings.media.gallery_size.options.xlarge"
         }
       ],
-      "default": "large"
+      "default": "small"
     },
     {
       "type": "select",
@@ -862,7 +862,7 @@
           "label": "t:shared.options.aspect_ratio.landscape"
         }
       ],
-      "default": "portrait"
+      "default": "square"
     },
     {
       "type": "header",
