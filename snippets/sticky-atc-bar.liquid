@@ -88,6 +88,7 @@
             {%- elsif price_content_type == 'custom' -%}
               {{- custom_price_content }}
             {% endif %}
+            <span class="t-opacity-60"> (incl. VAT)</span>
           </span>
         {%- else -%}
           <span>{{ 9999 | money }}</span>

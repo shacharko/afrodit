@@ -19231,3 +19231,32 @@ html:not(.no-js):not(.prefers-reduced-motion) .animation.animation--apps .animat
     var(--delay-amount) * var(--delay-offset-multiplier, 0)
   );
   }
+
+/* Product meta line below price: limited stock (gold) and other meta (black) */
+.product__below-price-meta,
+.sticky-atc-bar__below-price{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:6px;
+}
+.product__below-price-meta .product__meta-item,
+.sticky-atc-bar__below-price .sticky-atc-bar__meta-item{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:#000; /* default black for meta text */
+}
+.product__below-price-meta .product__meta-text,
+.sticky-atc-bar__below-price .sticky-atc-bar__meta-text{
+  color:#000;
+}
+.product__below-price-meta .product__meta-text--gold,
+.sticky-atc-bar__below-price .sticky-atc-bar__meta-text--gold{
+  color:#C59A00; /* gold */
+  font-weight:600;
+}
+.product__below-price-meta .icon,
+.sticky-atc-bar__below-price .icon{
+  color:inherit;
+}
