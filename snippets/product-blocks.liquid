@@ -15,7 +15,6 @@
 {%- endcomment -%}
 {%- capture product_url -%}{{ shop.url | append: prod.url }}{%- endcapture -%}
 
-{%- comment -%} Render product_header blocks first {%- endcomment -%}
 {%- for block in blocks -%}
   {% assign renderBlock = false %}
   {% if column == block.settings.column_placement
@@ -26,8 +25,11 @@
     {% assign renderBlock = true %}
   {% endif %}
 
-  {% if renderBlock == true and block.type == 'product_header' %}
+  {% if renderBlock == true %}
     {%- case block.type -%}
+      {%- when '@app' -%}
+        {% render block %}
+
       {%- when 'product_header' -%}
         {% if is_quick %}<div class="quick-product--header-block-wrap">{% endif %}
         {%-
@@ -43,23 +45,13 @@
           custom_price_content: custom_price_content
         -%}
         {% if is_quick %}</div>{% endif %}
-    {%- endcase -%}
-  {% endif %}
-{%- endfor -%}
+      {%- when 'spacer' -%}
+        <div
+          class="product-block-spacer product__block product__block--medium"
+          style="height: {{ block.settings.space }}px"
+          {{ block.shopify_attributes }}
+        ></div>
 
-{%- comment -%} Render variant_picker blocks second {%- endcomment -%}
-{%- for block in blocks -%}
-  {% assign renderBlock = false %}
-  {% if column == block.settings.column_placement
-    or column == 'right'
-    and block.settings.column_placement == blank
-    or column == blank
-  %}
-    {% assign renderBlock = true %}
-  {% endif %}
-
-  {% if renderBlock == true and block.type == 'variant_picker' %}
-    {%- case block.type -%}
       {%- when 'variant_picker' -%}
         {%- if prod != blank -%}
           {%- render 'product-block-variant-picker',
@@ -73,23 +65,7 @@
             custom_color_value_map: custom_color_value_map
           -%}
         {%- endif -%}
-    {%- endcase -%}
-  {% endif %}
-{%- endfor -%}
 
-{%- comment -%} Render quantity_selector blocks third {%- endcomment -%}
-{%- for block in blocks -%}
-  {% assign renderBlock = false %}
-  {% if column == block.settings.column_placement
-    or column == 'right'
-    and block.settings.column_placement == blank
-    or column == blank
-  %}
-    {% assign renderBlock = true %}
-  {% endif %}
-
-  {% if renderBlock == true and block.type == 'quantity_selector' %}
-    {%- case block.type -%}
       {%- when 'quantity_selector' -%}
         {%- if prod != blank -%}
           {%-
@@ -99,34 +75,6 @@
             block_settings: block.settings,
           -%}
         {%- endif -%}
-    {%- endcase -%}
-  {% endif %}
-{%- endfor -%}
-
-{%- comment -%} Render all other blocks {%- endcomment -%}
-{%- for block in blocks -%}
-  {% assign renderBlock = false %}
-  {% if column == block.settings.column_placement
-    or column == 'right'
-    and block.settings.column_placement == blank
-    or column == blank
-  %}
-    {% assign renderBlock = true %}
-  {% endif %}
-
-  {% if renderBlock == true and block.type != 'product_header' and block.type != 'variant_picker' and block.type != 'quantity_selector' %}
-    {%- case block.type -%}
-      {%- when '@app' -%}
-        {% render block %}
-
-     
-        {% if is_quick %}</div>{% endif %}
-      {%- when 'spacer' -%}
-        <div
-          class="product-block-spacer product__block product__block--medium"
-          style="height: {{ block.settings.space }}px"
-          {{ block.shopify_attributes }}
-        ></div>
 
       {%- when 'custom_option' -%}
         {%- render 'product-block-custom-option', block: block, field_type: block.settings.field_type -%}
