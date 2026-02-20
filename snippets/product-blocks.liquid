@@ -66,6 +66,9 @@
           -%}
         {%- endif -%}
 
+      {%- when 'node_block' -%}
+        {% render 'aroma-notes-strip', prod: product %}
+
       {%- when 'quantity_selector' -%}
         {%- if prod != blank -%}
           {%-
