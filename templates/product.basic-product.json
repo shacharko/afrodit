@@ -12,6 +12,17 @@
     "main": {
       "type": "main-product--default",
       "blocks": {
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "",
+            "variant_popup_icon": "none",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "",
+            "swatch_size": "medium",
+            "chip_layout": "natural"
+          }
+        },
         "product_header": {
           "type": "product_header",
           "settings": {
@@ -23,17 +34,6 @@
             "show_product_rating": false,
             "show_sale_badge": true,
             "show_custom_badges": true
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "variant_popup_option": "",
-            "variant_popup_icon": "none",
-            "variant_popup_text": "Size guide",
-            "variant_popup_page": "",
-            "swatch_size": "medium",
-            "chip_layout": "natural"
           }
         },
         "judge_me_reviews_preview_badge_eYzRNy": {
@@ -68,13 +68,6 @@
             "column_placement": "right"
           }
         },
-        "custom_liquid_aQhpT": {
-          "type": "custom_liquid",
-          "settings": {
-            "column_placement": "right",
-            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -82,6 +75,13 @@
             "enable_sticky_atc_bar_desktop": true,
             "enable_sticky_atc_bar_mobile": true,
             "divider_width": "shadow--small"
+          }
+        },
+        "custom_liquid_aQhpT": {
+          "type": "custom_liquid",
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
           }
         },
         "text_YLEgV": {
@@ -227,15 +227,15 @@
         }
       },
       "block_order": [
-        "product_header",
         "variant_picker",
+        "product_header",
         "judge_me_reviews_preview_badge_eYzRNy",
         "inventory_counter_nnj7H",
         "share",
         "quantity_selector",
         "node_block_VmjLBj",
-        "custom_liquid_aQhpT",
         "buy_buttons",
+        "custom_liquid_aQhpT",
         "text_YLEgV",
         "accordion_XpdCx",
         "accordion_fHfiW",
@@ -272,6 +272,7 @@
     },
     "custom_liquid_cCEPFd": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom_liquid.presets.name",
       "settings": {
         "custom_liquid": "{% render 'aroma-notes-slider' %}",
