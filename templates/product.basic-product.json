@@ -62,6 +62,12 @@
             "show_labels": true
           }
         },
+        "node_block_VmjLBj": {
+          "type": "node_block",
+          "settings": {
+            "column_placement": "right"
+          }
+        },
         "custom_liquid_aQhpT": {
           "type": "custom_liquid",
           "settings": {
@@ -227,6 +233,7 @@
         "inventory_counter_nnj7H",
         "share",
         "quantity_selector",
+        "node_block_VmjLBj",
         "custom_liquid_aQhpT",
         "buy_buttons",
         "text_YLEgV",
