@@ -87,7 +87,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
-            "text": "<p>Add some text to tell customers more about your product.</p>",
+            "text": "<p><em>Dark rose wrapped in warm oud and soft vanilla.<br/>Elegant, intimate, unforgettable</em></p>",
             "column_placement": "right"
           }
         },
@@ -98,6 +98,14 @@
             "enable_sticky_atc_bar_desktop": true,
             "enable_sticky_atc_bar_mobile": true,
             "divider_width": "shadow--small"
+          }
+        },
+        "text_hHT4XX": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-75",
+            "text": "<p><em>Authentic Guaranteed • Fast Local Delivery • Sealed Returns</em></p>",
+            "column_placement": "right"
           }
         },
         "custom_liquid_aQhpT": {
@@ -263,6 +271,7 @@
         "spacer_DjKHiM",
         "text_cTFDn4",
         "buy_buttons",
+        "text_hHT4XX",
         "custom_liquid_aQhpT",
         "text_YLEgV",
         "accordion_XpdCx",
