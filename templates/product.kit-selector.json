@@ -12,6 +12,17 @@
     "main": {
       "type": "main-product-kit-selector",
       "blocks": {
+        "variant_picker_GqjkAV": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_icon": "none",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "",
+            "swatch_size": "medium",
+            "chip_layout": "3col"
+          }
+        },
         "product_header_3RafWG": {
           "type": "product_header",
           "settings": {
@@ -23,6 +34,32 @@
             "show_product_rating": false,
             "show_sale_badge": true,
             "show_custom_badges": true
+          }
+        },
+        "text_NtdHXi": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-75",
+            "text": "<p>🔥 Limited stock available •  📦 Free shipping: Greece €100 • Cyprus €30</p>",
+            "column_placement": "right"
+          }
+        },
+        "text_ExkxXr": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-75",
+            "text": "<p>VIBE: soft rose warmth. Silken depth. Modern elegace.</p>",
+            "column_placement": "right"
+          }
+        },
+        "judge_me_reviews_preview_badge_AEFaBX": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "quantity_selector_MXiHF": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_labels": true
           }
         },
         "inventory_counter_FFa7z": {
@@ -122,28 +159,11 @@
             "expand_by_default": true
           }
         },
-        "quantity_selector_MXiHF": {
-          "type": "quantity_selector",
-          "settings": {
-            "show_labels": true
-          }
-        },
         "custom_liquid_r8aaL": {
           "type": "custom_liquid",
           "settings": {
             "column_placement": "right",
             "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
-          }
-        },
-        "variant_picker_GqjkAV": {
-          "type": "variant_picker",
-          "settings": {
-            "variant_popup_option": "Size",
-            "variant_popup_icon": "none",
-            "variant_popup_text": "Size guide",
-            "variant_popup_page": "",
-            "swatch_size": "medium",
-            "chip_layout": "3col"
           }
         },
         "accordion_edidn": {
@@ -196,15 +216,18 @@
         }
       },
       "block_order": [
+        "variant_picker_GqjkAV",
         "product_header_3RafWG",
+        "text_NtdHXi",
+        "text_ExkxXr",
+        "judge_me_reviews_preview_badge_AEFaBX",
+        "quantity_selector_MXiHF",
         "inventory_counter_FFa7z",
         "product_callouts-1",
         "product_callouts-2",
         "product_callouts",
         "featured_products",
-        "quantity_selector_MXiHF",
         "custom_liquid_r8aaL",
-        "variant_picker_GqjkAV",
         "accordion_edidn",
         "accordion_tNUMwN",
         "accordion_cjJX3",
