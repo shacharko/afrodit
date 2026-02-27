@@ -166,6 +166,14 @@
             "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
           }
         },
+        "text_aJRmfQ": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-75",
+            "text": "<p><em>Authentic Guaranteed • Fast Local Delivery • Sealed Returns</em></p>",
+            "column_placement": "right"
+          }
+        },
         "accordion_edidn": {
           "type": "accordion",
           "settings": {
@@ -228,12 +236,15 @@
         "product_callouts",
         "featured_products",
         "custom_liquid_r8aaL",
+        "text_aJRmfQ",
         "accordion_edidn",
         "accordion_tNUMwN",
         "accordion_cjJX3",
         "accordion_L7d3X"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".product__meta .product__description .rte {text-align: center;}"
+      ],
       "settings": {
         "enable_sticky_product_details": true,
         "show_breadcrumbs": true,
