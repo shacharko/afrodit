@@ -12,41 +12,6 @@
     "main": {
       "type": "main-product--default",
       "blocks": {
-        "product_header": {
-          "type": "product_header",
-          "settings": {
-            "show_divider": true,
-            "show_vendor": true,
-            "show_sku": true,
-            "show_discount": true,
-            "discount_format": "percent_off",
-            "show_product_rating": false,
-            "show_sale_badge": true,
-            "show_custom_badges": true
-          }
-        },
-        "text_44R9J9": {
-          "type": "text",
-          "settings": {
-            "text_font_class": "fs-body-100",
-            "text": "<h4>⭐<strong> Why</strong> <strong>Buy This Set?</strong></h4><p><strong>✔ Save 15% compared to buying individual bottles<br/><br/>✔ Presented in a luxurious, elegant box<br/><br/>✔ Perfect as a gift or for discovering the collection</strong></p><h4>⭐ <strong>Best Value</strong></h4><p><strong>✔ Buy more, pay less<br/><br/>✔ Fast shipping: 1–3 business days<br/><br/>✔ Real savings at checkout</strong></p>",
-            "column_placement": "right"
-          }
-        },
-        "inventory_counter_nnj7H": {
-          "type": "inventory-counter",
-          "settings": {
-            "label": "Availability",
-            "inventory_max": "100",
-            "low_inventory_threshold": "40",
-            "show_status_bar": false,
-            "show_untracked_quantity": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -58,10 +23,83 @@
             "chip_layout": "natural"
           }
         },
+        "product_header": {
+          "type": "product_header",
+          "settings": {
+            "show_divider": true,
+            "show_vendor": true,
+            "show_sku": true,
+            "show_discount": false,
+            "discount_format": "percent_off",
+            "show_product_rating": false,
+            "show_sale_badge": true,
+            "show_custom_badges": true
+          }
+        },
+        "text_9jqJcQ": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-75",
+            "text": "<p>🔥 Limited stock available •  📦 Free shipping: Greece €100 • Cyprus €30</p>",
+            "column_placement": "right"
+          }
+        },
+        "text_prCVg9": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-75",
+            "text": "<p>VIBE: soft rose warmth. Silken depth. Modern elegace.</p>",
+            "column_placement": "right"
+          }
+        },
+        "judge_me_reviews_preview_badge_7azbA7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "inventory_counter_nnj7H": {
+          "type": "inventory-counter",
+          "disabled": true,
+          "settings": {
+            "label": "Availability",
+            "inventory_max": "100",
+            "low_inventory_threshold": "40",
+            "show_status_bar": false,
+            "show_untracked_quantity": false
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
             "show_labels": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "enable_sticky_atc_bar_desktop": false,
+            "enable_sticky_atc_bar_mobile": false,
+            "divider_width": "shadow--small"
+          }
+        },
+        "text_hfJkWP": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-75",
+            "text": "<p><em>Authentic Guaranteed • Fast Local Delivery • Sealed Returns</em></p>",
+            "column_placement": "right"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        },
+        "text_44R9J9": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<h4>⭐<strong> Why</strong> <strong>Buy This Set?</strong></h4><p><strong>✔ Save 15% compared to buying individual bottles<br/><br/>✔ Presented in a luxurious, elegant box<br/><br/>✔ Perfect as a gift or for discovering the collection</strong></p><h4>⭐ <strong>Best Value</strong></h4><p><strong>✔ Buy more, pay less<br/><br/>✔ Fast shipping: 1–3 business days<br/><br/>✔ Real savings at checkout</strong></p>",
+            "column_placement": "right"
           }
         },
         "custom_liquid_6eTRz": {
@@ -80,17 +118,9 @@
             "column_placement": "right"
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "enable_sticky_atc_bar_desktop": false,
-            "enable_sticky_atc_bar_mobile": false,
-            "divider_width": "shadow--small"
-          }
-        },
         "text_YLEgV": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text_font_class": "fs-body-100",
             "text": "<p><strong>Price includes VAT.<br/>Free shipping within Cyprus on orders over €30 | Free shipping to Greece on orders over €100</strong></p>",
@@ -221,15 +251,19 @@
         }
       },
       "block_order": [
-        "product_header",
-        "text_44R9J9",
-        "inventory_counter_nnj7H",
-        "share",
         "variant_picker",
+        "product_header",
+        "text_9jqJcQ",
+        "text_prCVg9",
+        "judge_me_reviews_preview_badge_7azbA7",
+        "inventory_counter_nnj7H",
         "quantity_selector",
+        "buy_buttons",
+        "text_hfJkWP",
+        "share",
+        "text_44R9J9",
         "custom_liquid_6eTRz",
         "text_w3G6kr",
-        "buy_buttons",
         "text_YLEgV",
         "accordion_XpdCx",
         "accordion_fHfiW",
@@ -242,7 +276,8 @@
       ],
       "custom_css": [
         ".product__price span {display: inline-block; min-width: 80px;}",
-        ".product__price s[data-compare-price],.product__price [data-price],.product__price .product__price-displayed-discount {display: inline-block; min-width: 80px;}"
+        ".product__price s[data-compare-price],.product__price [data-price],.product__price .product__price-displayed-discount {display: inline-block; min-width: 80px;}",
+        ".product__meta .product__description .rte {text-align: center;}"
       ],
       "settings": {
         "enable_sticky_product_details": true,
