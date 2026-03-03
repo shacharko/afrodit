@@ -23,6 +23,10 @@
             "chip_layout": "3col"
           }
         },
+        "judge_me_reviews_preview_badge_AEFaBX": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "product_header_3RafWG": {
           "type": "product_header",
           "settings": {
@@ -43,18 +47,6 @@
             "text": "<p>🔥 Limited stock available •  📦 Free shipping: Greece €100 • Cyprus €30</p>",
             "column_placement": "right"
           }
-        },
-        "text_ExkxXr": {
-          "type": "text",
-          "settings": {
-            "text_font_class": "fs-body-75",
-            "text": "<p>VIBE: soft rose warmth. Silken depth. Modern elegace.</p>",
-            "column_placement": "right"
-          }
-        },
-        "judge_me_reviews_preview_badge_AEFaBX": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         },
         "quantity_selector_MXiHF": {
           "type": "quantity_selector",
@@ -170,7 +162,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
-            "text": "<p><em>Authentic Guaranteed • Fast Local Delivery • Sealed Returns</em></p>",
+            "text": "<p><em>100% Authentic • Fast Local Shipping • Hassle-Free Returns</em></p>",
             "column_placement": "right"
           }
         },
@@ -225,10 +217,9 @@
       },
       "block_order": [
         "variant_picker_GqjkAV",
+        "judge_me_reviews_preview_badge_AEFaBX",
         "product_header_3RafWG",
         "text_NtdHXi",
-        "text_ExkxXr",
-        "judge_me_reviews_preview_badge_AEFaBX",
         "quantity_selector_MXiHF",
         "inventory_counter_FFa7z",
         "product_callouts-1",
