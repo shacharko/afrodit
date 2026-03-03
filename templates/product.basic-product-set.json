@@ -23,6 +23,10 @@
             "chip_layout": "natural"
           }
         },
+        "judge_me_reviews_preview_badge_7azbA7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "product_header": {
           "type": "product_header",
           "settings": {
@@ -52,10 +56,6 @@
             "column_placement": "right"
           }
         },
-        "judge_me_reviews_preview_badge_7azbA7": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "inventory_counter_nnj7H": {
           "type": "inventory-counter",
           "disabled": true,
@@ -73,6 +73,13 @@
             "show_labels": true
           }
         },
+        "custom_liquid_6eTRz": {
+          "type": "custom_liquid",
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -86,20 +93,9 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
-            "text": "<p><em>Authentic Guaranteed • Fast Local Delivery • Sealed Returns</em></p>",
+            "text": "<p><em>100% Authentic • Fast Local Shipping • Hassle-Free Returns</em></p>",
             "column_placement": "right"
           }
-        },
-        "custom_liquid_6eTRz": {
-          "type": "custom_liquid",
-          "settings": {
-            "column_placement": "right",
-            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {}
         },
         "text_44R9J9": {
           "type": "text",
@@ -108,6 +104,10 @@
             "text": "<h4>⭐<strong> Why</strong> <strong>Buy This Set?</strong></h4><p>✔ <strong>Save 15%</strong> compared to buying individual bottles<br/>✔ Presented in a luxurious, elegant box<br/>✔ Perfect as a gift or for discovering the collection</p><h4>⭐ <strong>Best Value</strong></h4><p>✔ Buy more, pay less<br/>✔ Fast shipping: 1–3 business days<br/>✔ Real savings at checkout</p>",
             "column_placement": "right"
           }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
         },
         "text_w3G6kr": {
           "type": "text",
@@ -252,17 +252,17 @@
       },
       "block_order": [
         "variant_picker",
+        "judge_me_reviews_preview_badge_7azbA7",
         "product_header",
         "text_9jqJcQ",
         "text_prCVg9",
-        "judge_me_reviews_preview_badge_7azbA7",
         "inventory_counter_nnj7H",
         "quantity_selector",
+        "custom_liquid_6eTRz",
         "buy_buttons",
         "text_hfJkWP",
-        "custom_liquid_6eTRz",
-        "share",
         "text_44R9J9",
+        "share",
         "text_w3G6kr",
         "text_YLEgV",
         "accordion_XpdCx",
