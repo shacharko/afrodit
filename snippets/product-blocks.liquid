@@ -220,6 +220,41 @@
 
       {%- when 'secure_payment' -%}
         {%- render 'product-block-secure-payment', product: prod, block: block, block_settings: block.settings -%}
+
+      {%- when 'product_info_box' -%}
+        {% style %}
+          .product-info-boxes { margin: 18px 0; }
+          .product-info-boxes__box {
+            border: 1px solid rgba(0,0,0,.12);
+            border-radius: 12px;
+            padding: 14px 16px;
+            background: #fff;
+          }
+          .product-info-boxes__header {
+            margin: 0 0 10px;
+            font-weight: 700;
+            letter-spacing: .02em;
+            color: #b08d2e;
+            text-transform: uppercase;
+            font-size: 14px;
+            text-align: center;
+          }
+          .product-info-boxes__content { font-size: 14px; line-height: 1.55; }
+          .product-info-boxes__content p { margin: 0 0 8px; }
+          .product-info-boxes__content p:last-child { margin-bottom: 0; }
+          .product-info-boxes__content ul { margin: 8px 0 0; padding-inline-start: 18px; }
+          .product-info-boxes__content li { margin: 6px 0; }
+        {% endstyle %}
+        <div class="product-info-boxes product__block product__block--medium" {{ block.shopify_attributes }}>
+          <div class="product-info-boxes__box">
+            {%- if block.settings.header != blank -%}
+              <h3 class="product-info-boxes__header">{{ block.settings.header }}</h3>
+            {%- endif -%}
+            {%- if block.settings.content != blank -%}
+              <div class="product-info-boxes__content rte">{{ block.settings.content }}</div>
+            {%- endif -%}
+          </div>
+        </div>
     {%- endcase -%}
   {% endif %}
 {%- endfor -%}

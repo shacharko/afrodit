@@ -1,0 +1,153 @@
+{% doc %}
+  @prompt
+    Product info box
+{% enddoc %}
+
+{% style %}
+    .product-info-boxes { margin: 18px 0; }
+  .product-info-boxes__inner { display: grid; gap: 14px; }
+
+  .product-info-boxes__box {
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: #fff;
+  }
+
+  .product-info-boxes__header {
+    margin: 0 0 10px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    /* gold header */
+    color: #b08d2e;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .product-info-boxes__content { font-size: 14px; line-height: 1.55; }
+  .product-info-boxes__content p { margin: 0 0 8px; }
+  .product-info-boxes__content p:last-child { margin-bottom: 0; }
+
+  .product-info-boxes__content ul { margin: 8px 0 0; padding-inline-start: 18px; }
+  .product-info-boxes__content li { margin: 6px 0; }
+{% endstyle %}
+
+  <div class="product-info-boxes__box" {{ block.shopify_attributes }}>
+    {% if block.settings.header != blank %}
+      <h3 class="product-info-boxes__header">{{ block.settings.header }}</h3>
+    {% endif %}
+
+    {% if block.settings.content != blank %}
+      <div class="product-info-boxes__content rte">
+        {{ block.settings.content }}
+      </div>
+    {% endif %}
+  </div>
+
+
+  {% schema %}
+{
+  "name": "Product info box",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "header",
+      "content": "Line style"
+    },
+    {
+      "type": "select",
+      "id": "line_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "dashed",
+          "label": "Dashed"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "select",
+      "id": "line_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Narrow"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ],
+      "default": "full"
+    },
+    {
+      "type": "range",
+      "id": "line_thickness",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Thickness",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "Color",
+      "default": "#AAAAAA"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product info box"
+    }
+  ]
+}
+{% endschema %}
