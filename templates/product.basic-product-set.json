@@ -82,19 +82,19 @@
             "divider_width": "shadow--small"
           }
         },
-        "custom_liquid_6eTRz": {
-          "type": "custom_liquid",
-          "settings": {
-            "column_placement": "right",
-            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
-          }
-        },
         "text_hfJkWP": {
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
             "text": "<p><em>Authentic Guaranteed • Fast Local Delivery • Sealed Returns</em></p>",
             "column_placement": "right"
+          }
+        },
+        "custom_liquid_6eTRz": {
+          "type": "custom_liquid",
+          "settings": {
+            "column_placement": "right",
+            "custom_liquid": "{% render 'gift-wrap-checkbox' %}"
           }
         },
         "share": {
@@ -104,8 +104,8 @@
         "text_44R9J9": {
           "type": "text",
           "settings": {
-            "text_font_class": "fs-body-100",
-            "text": "<h4>⭐<strong> Why</strong> <strong>Buy This Set?</strong></h4><p><strong>✔ Save 15% compared to buying individual bottles<br/><br/>✔ Presented in a luxurious, elegant box<br/><br/>✔ Perfect as a gift or for discovering the collection</strong></p><h4>⭐ <strong>Best Value</strong></h4><p><strong>✔ Buy more, pay less<br/><br/>✔ Fast shipping: 1–3 business days<br/><br/>✔ Real savings at checkout</strong></p>",
+            "text_font_class": "fs-body-75",
+            "text": "<h4>⭐<strong> Why</strong> <strong>Buy This Set?</strong></h4><p>✔ <strong>Save 15%</strong> compared to buying individual bottles<br/>✔ Presented in a luxurious, elegant box<br/>✔ Perfect as a gift or for discovering the collection</p><h4>⭐ <strong>Best Value</strong></h4><p>✔ Buy more, pay less<br/>✔ Fast shipping: 1–3 business days<br/>✔ Real savings at checkout</p>",
             "column_placement": "right"
           }
         },
@@ -259,8 +259,8 @@
         "inventory_counter_nnj7H",
         "quantity_selector",
         "buy_buttons",
-        "custom_liquid_6eTRz",
         "text_hfJkWP",
+        "custom_liquid_6eTRz",
         "share",
         "text_44R9J9",
         "text_w3G6kr",
