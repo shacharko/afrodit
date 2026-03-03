@@ -52,7 +52,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
-            "text": "<p>VIBE: soft rose warmth. Silken depth. Modern elegace.</p>",
+            "text": "<p>VIBE: {{ product.metafields.custom.vibe.value }}</p>",
             "column_placement": "right"
           }
         },
