@@ -36,6 +36,10 @@
             "show_custom_badges": true
           }
         },
+        "judge_me_reviews_preview_badge_eYzRNy": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "text_CVcVVV": {
           "type": "text",
           "settings": {
@@ -43,10 +47,6 @@
             "text": "<p>🔥 Limited stock available •  📦 Free shipping: Greece €100 • Cyprus €30</p>",
             "column_placement": "right"
           }
-        },
-        "judge_me_reviews_preview_badge_eYzRNy": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         },
         "inventory_counter_nnj7H": {
           "type": "inventory-counter",
@@ -104,7 +104,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
-            "text": "<p><em>Authentic Guaranteed • Fast Local Delivery • Sealed Returns</em></p>",
+            "text": "<p><em>100% Authentic • Fast Local Shipping • Hassle-Free Returns</em></p>",
             "column_placement": "right"
           }
         },
@@ -262,8 +262,8 @@
       "block_order": [
         "variant_picker",
         "product_header",
-        "text_CVcVVV",
         "judge_me_reviews_preview_badge_eYzRNy",
+        "text_CVcVVV",
         "inventory_counter_nnj7H",
         "share",
         "quantity_selector",
