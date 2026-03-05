@@ -33,6 +33,12 @@
 {% endstyle %}
 
   <div class="product-info-boxes__box" {{ block.shopify_attributes }}>
+    {% if block.settings.breef != blank %}
+      <div class="product-info-boxes__content rte">
+        {{ block.settings.breef }}
+      </div>
+    {% endif %}
+
     {% if block.settings.header != blank %}
       <h3 class="product-info-boxes__header">{{ block.settings.header }}</h3>
     {% endif %}
@@ -49,6 +55,11 @@
 {
   "name": "Product info box",
   "settings": [
+    {
+      "type": "richtext",
+      "id": "breef",
+      "label": "Breef"
+    },
     {
       "type": "text",
       "id": "header",
