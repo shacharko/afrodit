@@ -247,6 +247,11 @@
         {% endstyle %}
         <div class="product-info-boxes product__block product__block--medium" {{ block.shopify_attributes }}>
           <div class="product-info-boxes__box">
+             {% if block.settings.breef != blank %}
+              <div class="product-info-boxes__content rte" style="text-align: center; margin-bottom: 10px;">
+                {{ block.settings.breef }}
+              </div>
+            {% endif %}
             {%- if block.settings.header != blank -%}
               <h3 class="product-info-boxes__header">{{ block.settings.header }}</h3>
             {%- endif -%}
