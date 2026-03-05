@@ -221,6 +221,23 @@
       {%- when 'secure_payment' -%}
         {%- render 'product-block-secure-payment', product: prod, block: block, block_settings: block.settings -%}
 
+      {%- when 'whats-inside-box' -%}
+        {%- assign kit_products = prod.metafields.custom.sample_kit_products.value -%}
+        {%- if kit_products != blank -%}
+          <div class="product__block product__block--medium" {{ block.shopify_attributes }}>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <span style="flex: 1; height: 1px; background: rgba(0,0,0,.12);"></span>
+              <h3 style="margin: 0; font-weight: 700; letter-spacing: .05em; color: #b08d2e; text-transform: uppercase; font-size: 13px; white-space: nowrap;">WHAT'S INSIDE</h3>
+              <span style="flex: 1; height: 1px; background: rgba(0,0,0,.12);"></span>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; line-height: 1.6;">
+              {%- for p in kit_products -%}
+                <li style="margin: 4px 0;">• {{ p.title }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+
       {%- when 'product_info_box' -%}
         {% style %}
           .product-info-boxes { margin: 18px 0; }

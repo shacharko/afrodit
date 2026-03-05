@@ -106,6 +106,10 @@
             "column_placement": "right"
           }
         },
+        "whats_inside_box_1": {
+          "type": "whats-inside-box",
+          "settings": {}
+        },
         "product_info_box_XBNX9e": {
           "type": "product_info_box",
           "disabled": true,
@@ -281,6 +285,7 @@
         "buy_buttons",
         "text_hfJkWP",
         "product_info_box_gaUBVE",
+        "whats_inside_box_1",
         "product_info_box_XBNX9e",
         "text_44R9J9",
         "share",
