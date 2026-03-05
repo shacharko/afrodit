@@ -285,8 +285,7 @@
         "featured_products"
       ],
       "custom_css": [
-        ".product_price {display: flex; flex-wrap: wrap; gap: 8px; /* שחקי עם הערך: 6–12 */}",
-        ".product__meta .product__description .rte {text-align: center;}"
+        ".product_price {display: flex; flex-wrap: wrap; gap: 8px; /* שחקי עם הערך: 6–12 */}"
       ],
       "settings": {
         "enable_sticky_product_details": true,
