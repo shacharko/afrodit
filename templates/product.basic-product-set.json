@@ -100,7 +100,7 @@
         "product_info_box_gaUBVE": {
           "type": "product_info_box",
           "settings": {
-            "breef": "<p><strong>Discovery Set<br/>discover your next signature scent</strong></p>",
+            "breef": "<p><strong>Discovery Set<br>discover your next signature scent</strong></p>",
             "header": "WHY BUT THIS SET?",
             "content": "<p><strong>✓</strong> <strong>Save up to 15%</strong> vs buying individually bottles<br/><strong>✓</strong> Presented in a luxurious, elegant box<br/><strong>✓</strong> Perfect as a gift or for discovering the collection</p>",
             "column_placement": "right"
@@ -114,6 +114,7 @@
           "type": "product_info_box",
           "disabled": true,
           "settings": {
+            "breef": "",
             "header": "WHATS INSIDE",
             "content": "<p><strong>· </strong>Attar <strong><br/>· </strong>Attar <strong><br/>· </strong>Attar </p>",
             "column_placement": "right"
@@ -302,8 +303,7 @@
       ],
       "custom_css": [
         ".product__price span {display: inline-block; min-width: 80px;}",
-        ".product__price s[data-compare-price],.product__price [data-price],.product__price .product__price-displayed-discount {display: inline-block; min-width: 80px;}",
-        ".product__meta .product__description .rte {text-align: center;}"
+        ".product__price s[data-compare-price],.product__price [data-price],.product__price .product__price-displayed-discount {display: inline-block; min-width: 80px;}"
       ],
       "settings": {
         "enable_sticky_product_details": true,
