@@ -217,11 +217,11 @@
 
       {%- unless is_quick -%}
         {% comment %} Surface pick-up {% endcomment %}
-        <div
+        {% comment %} <div
           class="store-availability-container__wrapper"
           data-store-availability-container
           data-base-url="{{ shop.url }}{{ routes.root_url }}"
-        ></div>
+        ></div> {% endcomment %}
       {%- endunless -%}
     </div>
   </div>
