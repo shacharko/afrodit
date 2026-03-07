@@ -154,7 +154,7 @@
             "subheading": "Try It On Your Skin",
             "subheading_tag": "h2",
             "subheading_font_class": "fs-heading-4-base",
-            "text": "<p><strong>Discover Your Next Scent!</strong><br/><br/>Our Discovery Sets come in a luxurious and elegant package and offer 5 exclusive samples from a variety of categories – Seasons, Zodiac, Olfactive Families, Notes, or Vibes.<br/><br/>Get 15% off Discovery Sets on our website with the code: Winter15<br/><br/>Discovering new scents has never been this fun, easy, or rewarding!</p>",
+            "text": "<p><strong>Discover Your Next Scent!<br/><br/>Our Discovery Sets come in a luxurious and elegant package and offer 5 exclusive samples from a variety of categories – Seasons, Zodiac, Olfactive Families, Notes, or Vibes.<br/><br/>Get 15% off Discovery Sets on our website with the code: Winter15<br/><br/>Discovering new scents has never been this fun, easy, or rewarding!</strong></p>",
             "text_font_class": "fs-body-200",
             "link_1": "shopify://collections",
             "link_text_1": "Discovery our sample sets",
@@ -167,7 +167,7 @@
             "button_text_color": "#000000",
             "color_overlay": "#000000",
             "color_overlay_gradient": "",
-            "overlay_opacity": 0
+            "overlay_opacity": 55
           }
         }
       },
