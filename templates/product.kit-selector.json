@@ -12,21 +12,6 @@
     "main": {
       "type": "main-product-kit-selector",
       "blocks": {
-        "variant_picker_GqjkAV": {
-          "type": "variant_picker",
-          "settings": {
-            "variant_popup_option": "Size",
-            "variant_popup_icon": "none",
-            "variant_popup_text": "Size guide",
-            "variant_popup_page": "",
-            "swatch_size": "medium",
-            "chip_layout": "3col"
-          }
-        },
-        "judge_me_reviews_preview_badge_AEFaBX": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "product_header_3RafWG": {
           "type": "product_header",
           "settings": {
@@ -40,6 +25,17 @@
             "show_custom_badges": true
           }
         },
+        "variant_picker_GqjkAV": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_icon": "none",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "",
+            "swatch_size": "medium",
+            "chip_layout": "3col"
+          }
+        },
         "text_NtdHXi": {
           "type": "text",
           "settings": {
@@ -47,6 +43,10 @@
             "text": "<p>🔥 Limited stock available •  📦 Free shipping: Greece €100 • Cyprus €30</p>",
             "column_placement": "right"
           }
+        },
+        "judge_me_reviews_preview_badge_AEFaBX": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         },
         "quantity_selector_MXiHF": {
           "type": "quantity_selector",
@@ -216,10 +216,10 @@
         }
       },
       "block_order": [
-        "variant_picker_GqjkAV",
-        "judge_me_reviews_preview_badge_AEFaBX",
         "product_header_3RafWG",
+        "variant_picker_GqjkAV",
         "text_NtdHXi",
+        "judge_me_reviews_preview_badge_AEFaBX",
         "quantity_selector_MXiHF",
         "inventory_counter_FFa7z",
         "product_callouts-1",
