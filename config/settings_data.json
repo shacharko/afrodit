@@ -104,11 +104,6 @@
         "disabled": false,
         "settings": {}
       },
-      "11349500561483629931": {
-        "type": "shopify://apps/notify-me/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
-        "disabled": false,
-        "settings": {}
-      },
       "14197025361042770389": {
         "type": "shopify://apps/swish-formerly-wishlist-king/blocks/app-settings-main/194f5011-a43c-4b22-b12e-eaf20dc4506a",
         "disabled": false,
@@ -219,6 +214,11 @@
           "product_link_selector": "",
           "floating_reference_js": ""
         }
+      },
+      "11349500561483629931": {
+        "type": "shopify://apps/notify-me/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
