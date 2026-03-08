@@ -124,6 +124,29 @@
             "column_placement": "right"
           }
         },
+        "product_callouts": {
+          "type": "product_callouts",
+          "settings": {
+            "title": "",
+            "title_tag": "h3",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_1": "heart",
+            "text_1": "",
+            "icon_2": "security-badge",
+            "text_2": "<p><strong>Carefully Packaged to Protect Your Order</strong></p>",
+            "icon_3": "bottle",
+            "text_3": "<p><strong>Free Sample with Every Order<br/></strong></p>",
+            "icon_4": "moving-truck",
+            "text_4": "<p><strong>Fast & Reliable Shipping<br/></strong></p>",
+            "icon_5": "chat",
+            "text_5": "<p><strong>Customer Support Available</strong></p>",
+            "icon_6": "bill",
+            "text_6": "<p><strong>Authenticity Guaranteed</strong></p>",
+            "display_as_collapsible_row": false,
+            "expand_by_default": true
+          }
+        },
         "accordion_XpdCx": {
           "type": "accordion",
           "settings": {
@@ -208,29 +231,6 @@
             "expand_by_default": false
           }
         },
-        "product_callouts": {
-          "type": "product_callouts",
-          "settings": {
-            "title": "",
-            "title_tag": "h3",
-            "add_box": true,
-            "add_dividers": true,
-            "icon_1": "heart",
-            "text_1": "",
-            "icon_2": "security-badge",
-            "text_2": "<p><strong>Carefully Packaged to Protect Your Order</strong></p>",
-            "icon_3": "bottle",
-            "text_3": "<p><strong>Free Sample with Every Order<br/></strong></p>",
-            "icon_4": "moving-truck",
-            "text_4": "<p><strong>Fast & Reliable Shipping<br/></strong></p>",
-            "icon_5": "chat",
-            "text_5": "<p><strong>Customer Support Available</strong></p>",
-            "icon_6": "bill",
-            "text_6": "<p><strong>Authenticity Guaranteed</strong></p>",
-            "display_as_collapsible_row": false,
-            "expand_by_default": true
-          }
-        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -274,13 +274,13 @@
         "text_hHT4XX",
         "custom_liquid_aQhpT",
         "text_YLEgV",
+        "product_callouts",
         "accordion_XpdCx",
         "accordion_fHfiW",
         "accordion_3q6Rn",
         "accordion_BqCY9",
         "accordion_JGW3R",
         "product_callouts-1",
-        "product_callouts",
         "description",
         "featured_products"
       ],
