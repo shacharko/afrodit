@@ -276,10 +276,26 @@
         "divider_style": "none",
         "section_padding": "section--vertical-padding-top-bottom"
       }
+    },
+    "recommended_products_eKjdyc": {
+      "type": "recommended-products",
+      "name": "t:sections.recommended_products.presets.name",
+      "settings": {
+        "title": "Recommended products",
+        "heading_tag": "h2",
+        "subheading": "",
+        "maximum_products": 8,
+        "columns": "4",
+        "mobile_columns": "2",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
     }
   },
   "order": [
     "main",
+    "recommended_products_eKjdyc",
     "176935159456cc9388"
   ]
 }
