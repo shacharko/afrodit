@@ -44,7 +44,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
-            "text": "<p>🔥 Limited stock available •  📦 Free shipping: Greece €100 • Cyprus €30</p>",
+            "text": "<p>🔥 Limited stock available •  📦 Free shipping on orders over €100 (Greece) / €30 (Cyprus)</p>",
             "column_placement": "right"
           }
         },
@@ -156,7 +156,7 @@
           "settings": {
             "expand_by_default": false,
             "column_placement": "right",
-            "heading": "Delivery times",
+            "heading": "Shipping & Delivery",
             "heading_tag": "h3",
             "content": "<p><strong>Orders placed by 12:00 PM will be processed and dispatched on the same business day.Standard delivery time: up to 3 business days from order confirmation</strong></p>",
             "page_for_content": "",
@@ -243,23 +243,23 @@
             "title_tag": "h3",
             "add_box": true,
             "add_dividers": true,
-            "icon_1": "heart",
-            "text_1": "",
-            "icon_2": "security-badge",
-            "text_2": "<p><strong>Carefully Packaged to Protect Your Orde</strong></p>",
-            "icon_3": "bottle",
-            "text_3": "<p><strong>Free Sample with Every Order<br/></strong></p>",
-            "icon_4": "moving-truck",
-            "text_4": "<p><strong>Fast & Reliable Shipping<br/></strong></p>",
-            "icon_5": "chat",
-            "text_5": "<p><strong>Customer Support Available</strong></p>",
-            "icon_6": "bill",
-            "text_6": "<p><strong>Authenticity Guaranteed</strong></p>",
+            "icon_1": "security-badge",
+            "text_1": "<p><strong>Carefully Packaged to Protect Your Order<br/></strong></p>",
+            "icon_2": "bill",
+            "text_2": "<p><strong>Authenticity guaranteed<br/></strong></p>",
+            "icon_3": "chat",
+            "text_3": "<p><strong>Need help? </strong><a href=\"/pages/contact\" title=\"Contact\"><strong>Contact us</strong></a></p>",
+            "icon_4": "bottle",
+            "text_4": "<p><strong>Free sample with every purchase</strong></p>",
+            "icon_5": "padlock",
+            "text_5": "<p><strong>Secure checkout</strong></p>",
+            "icon_6": "none",
+            "text_6": "",
             "display_as_collapsible_row": false,
             "expand_by_default": true
           }
         },
-	"featured_products": {
+        "featured_products": {
           "type": "featured_products",
           "settings": {
             "heading": "בשמים שנקנו ביחד",
