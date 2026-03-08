@@ -240,7 +240,7 @@
         "show_navigation_buttons": false,
         "show_featured_media_first": false,
         "gallery_style": "thumbnails",
-        "gallery_style_mobile": "list",
+        "gallery_style_mobile": "grid",
         "gallery_size": "medium",
         "gallery_overflow": "2",
         "enable_video_looping": true,
