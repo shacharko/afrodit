@@ -11,10 +11,51 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "settings": {}
+      "settings": {
+        "enable_animation": true,
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
+    "collection_list_grid_CkWCbF": {
+      "type": "collection-list-grid",
+      "name": "t:sections.collection_list_grid.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "shopify://collections",
+        "link_text": "",
+        "button_style": "btn--callout",
+        "columns": "3",
+        "mobile_columns": "2",
+        "collection_list": [
+          "aquarius-collection",
+          "aries-collection",
+          "cancer-collection",
+          "capricorn-collection",
+          "gemini-collection",
+          "leo-collection",
+          "libra-collection",
+          "pisces-collection",
+          "sagittarius-collection",
+          "scorpio-collection",
+          "taurus-collection",
+          "virgo-collection"
+        ],
+        "collection_listing_aspect_ratio": "square",
+        "label_style": "beneath",
+        "overlay_title_background_style": "gradient",
+        "overlay_text_color": "#FFFFFF",
+        "overlay_title_background": "#000000",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection_list_grid_CkWCbF"
   ]
 }
