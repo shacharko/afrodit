@@ -77,7 +77,7 @@
         "text_4CTBzy": {
           "type": "text",
           "settings": {
-            "text": "<p>…Fragrance Speaks Louder Than Words<br/><br/>Explore our curated collection of over 500 luxury and niche perfumes from 50+ top brands.<br/>Discover, explore, and experience our decants, samples, and Discovery Sets — dive deeper into the world of fragrances, save time and money, and make the perfect choice before committing to a full bottle.<br/></p>",
+            "text": "<p>Fragrance Speaks Louder Than Words<br/><br/>Explore our curated collection of 500+ luxury and niche perfumes from over 50 top brands.<br/><br/>Discover, explore, and experience fragrances through decants, samples, and Discovery Sets — so you can find your perfect scent before committing to a full bottle.</p>",
             "text_font_class": "fs-body-75"
           }
         },
@@ -705,73 +705,6 @@
         "read_more_label": "קרא/י עוד"
       }
     },
-    "image_with_text_split_XQD3a6": {
-      "type": "image-with-text-split",
-      "blocks": {
-        "accent_X6CKeW": {
-          "type": "accent",
-          "disabled": true,
-          "settings": {
-            "accent": ""
-          }
-        },
-        "heading_X3NDEq": {
-          "type": "heading",
-          "settings": {
-            "title": "Zoologist Perfumes",
-            "heading_tag": "h2",
-            "heading_font_class": "fs-heading-1-base"
-          }
-        },
-        "text_Dknewh": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Step into the extraordinary world of Zoologist Perfumes.<br/>Each fragrance tells a story, inviting you on a unique sensory journey of luxury, mystery, and individuality.</h5>",
-            "text_font_class": "fs-body-100"
-          }
-        },
-        "subheading_iMFGaV": {
-          "type": "subheading",
-          "disabled": true,
-          "settings": {
-            "subheading": "ריחות יוצאי דופן, יוקרתיים ומקוריים שמובילים אתכם למסע אישי ומסתורי.תנו לעצמכם להיסחף – כל תו, כל ניחוח, כל מארז מזמין אתכם לגלות עולם שאין שני לו.התחילו עכשיו את החוויה – כיבואן הרשמי של Zoologist Perfumes בישראל, אנחנו מביאים את הבשמים האותנטיים ישירות אליכם",
-            "subheading_tag": "h3",
-            "subheading_font_class": "fs-heading-6-base"
-          }
-        },
-        "button_KBh3UD": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://collections/zoologist-1",
-            "link_text": "Discover the Collection",
-            "button_style": "btn--primary"
-          }
-        }
-      },
-      "block_order": [
-        "accent_X6CKeW",
-        "heading_X3NDEq",
-        "text_Dknewh",
-        "subheading_iMFGaV",
-        "button_KBh3UD"
-      ],
-      "name": "t:sections.image_with_text_split.presets.name",
-      "settings": {
-        "image_position": "right",
-        "image_mobile_position": "above-content",
-        "image_padding": "none",
-        "image": "shopify://shop_images/IMG_4212.webp",
-        "aspect_ratio": "square",
-        "focal_point": "image_presentation",
-        "content_alignment": "center",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "button_background_color": "#000000",
-        "button_text_color": "#ffffff",
-        "enable_animation": true,
-        "section_padding": "section--vertical-padding-none"
-      }
-    },
     "176934743077b4287f": {
       "type": "apps",
       "blocks": {
@@ -1172,7 +1105,6 @@
     "grid_hd3m4p",
     "behind_brands_ygfcLP",
     "blogs_slider_description_QNtjM8",
-    "image_with_text_split_XQD3a6",
     "176934743077b4287f",
     "image_with_text_split_pcVmAB",
     "quote_8wXtkd",
