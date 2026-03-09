@@ -220,9 +220,22 @@
           "position": "right"
         }
       },
+      "4730719560732683355": {
+        "type": "shopify://apps/g-translate-shop-translator/blocks/float/408a74ac-f92d-43cf-a1b1-a044341e66bd",
+        "disabled": false,
+        "settings": {
+          "horizontal_position": "left",
+          "vertical_position": "bottom",
+          "open_direction": "top",
+          "native_language_names": true,
+          "flag_style": "2d",
+          "wrapper_selector": "",
+          "custom_css": ""
+        }
+      },
       "11354984448963461329": {
         "type": "shopify://apps/g-translate-shop-translator/blocks/dropdown_with_flags/408a74ac-f92d-43cf-a1b1-a044341e66bd",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "horizontal_position": "left",
           "vertical_position": "bottom",
