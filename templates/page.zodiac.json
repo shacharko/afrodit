@@ -189,7 +189,7 @@
           "settings": {
             "icon": "plant",
             "icon_width": 110,
-            "icon_width_mobile": 50,
+            "icon_width_mobile": 200,
             "custom_icon_image": "shopify://shop_images/11E9FB17-C7BB-4D34-9DDB-FB5BA5B1DF98.png",
             "accent": "",
             "heading": "",
