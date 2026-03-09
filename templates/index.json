@@ -147,7 +147,7 @@
         "alignment": "center_center",
         "enable_animation": true,
         "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom",
+        "section_padding": "section--vertical-padding-none",
         "content_width": "custom",
         "custom_content_width": 400
       }
@@ -187,7 +187,7 @@
         "overlay_title_background": "#000000",
         "enable_animation": true,
         "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
+        "section_padding": "section--vertical-padding-none"
       }
     },
     "slideshow_GXkFPH": {
