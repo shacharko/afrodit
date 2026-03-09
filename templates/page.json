@@ -17,6 +17,30 @@
         "custom_content_width": 700
       }
     },
+    "rich_text_iX4Y3b": {
+      "type": "rich-text",
+      "blocks": {
+        "text_hiBEFR": {
+          "type": "text",
+          "settings": {
+            "text": "<h5><strong>The scent written for you in the stars<br/><br/>Every zodiac sign carries a unique energy  a personality written in the stars.<br/>Our Zodiac Fragrance Sets translate that cosmic character into scent, bringing together five carefully selected niche fragrances that reflect the spirit of each sign.<br/><br/>A personal journey through fragrance, guided by the stars.</strong></h5>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "text_hiBEFR"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-none",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
     "collection_list_grid_CkWCbF": {
       "type": "collection-list-grid",
       "name": "t:sections.collection_list_grid.presets.name",
@@ -56,6 +80,7 @@
   },
   "order": [
     "main",
+    "rich_text_iX4Y3b",
     "collection_list_grid_CkWCbF"
   ]
 }
