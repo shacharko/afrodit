@@ -933,7 +933,7 @@
         "text_grB76m": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>The perfect solution for those looking for the ideal gift — just one click away.</strong></p><p></p>",
+            "text": "<p>The perfect solution for those looking for the ideal gift — just one click away.</p><p></p>",
             "text_font_class": "fs-body-100"
           }
         },
@@ -980,7 +980,7 @@
       "type": "newsletter-compact-trl",
       "name": "Newsletter RTL (Custom)",
       "settings": {
-        "heading_text": "oin the activation club - deals, coupons and pampering gifts. Subscribe to our newsletter and we'll be in touch.",
+        "heading_text": "Join our Activation Club for exclusive offers, deals, and pampering gifts.Subscribe to our newsletter to stay updated.",
         "email_placeholder": "Your Email Address",
         "button_label": "Subscribe",
         "consent_required": false,
