@@ -906,8 +906,16 @@
         "text_9cEDFy": {
           "type": "text",
           "settings": {
-            "text": "<p>The Fragrance Experience<br/>Discover a world of scent, elegance, and emotion.<br/>Choosing a fragrance is a personal journey. Discover the scent that truly reflects you.</p><p>Discover More</p>",
+            "text": "<p>The Fragrance Experience<br/>Discover a world of scent, elegance, and emotion.<br/>Choosing a fragrance is a personal journey. Discover the scent that truly reflects you.</p>",
             "text_font_class": "fs-body-100"
+          }
+        },
+        "button_iXPyGP": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "link_text": "Discover More",
+            "button_style": "btn--primary"
           }
         },
         "subheading_C3FcyY": {
@@ -950,6 +958,7 @@
         "text_YygntL",
         "border_wcTkTx",
         "text_9cEDFy",
+        "button_iXPyGP",
         "subheading_C3FcyY",
         "border_bc34a8",
         "text_xaUeb7",
