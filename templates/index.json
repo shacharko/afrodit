@@ -906,7 +906,7 @@
         "text_9cEDFy": {
           "type": "text",
           "settings": {
-            "text": "<p>The Fragrance Experience<br/>Discover a world of scent, elegance, and emotion.<br/>Choosing a fragrance is a personal journey. Discover the scent that truly reflects you.</p>",
+            "text": "<p>The Fragrance Experience<br/>Discover a world of scent, elegance, and emotion.<br/>Choosing a fragrance is a personal journey. Discover the scent that truly reflects you.</p><p>Discover More</p>",
             "text_font_class": "fs-body-100"
           }
         },
