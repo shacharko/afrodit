@@ -141,7 +141,7 @@ Usage: {% render 'benefits-marquee-afrodite' %}
   height:2px;
   background:#d7d7d7;
   margin:0 auto;
-  margin-top:-30px;
+  margin-top:-20px;
   margin-bottom:16px;
 }
 
@@ -155,6 +155,9 @@ Usage: {% render 'benefits-marquee-afrodite' %}
 }
 
 @media (max-width: 600px){
+  .af-marquee.is-running .af-track{
+    animation: af-loop var(--af-speed, 8s) linear infinite;
+  }
   .af-track{ gap:36px; }
   .af-img img{ width:32px; height:32px; }
   .af-tag > a{
