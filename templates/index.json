@@ -913,7 +913,7 @@
         "button_iXPyGP": {
           "type": "button",
           "settings": {
-            "link": "",
+            "link": "shopify://collections",
             "link_text": "Discover More",
             "button_style": "btn--primary"
           }
