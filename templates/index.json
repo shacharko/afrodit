@@ -204,7 +204,7 @@
       "settings": {
         "heading": "Discovery Sets by Fragrance Family",
         "heading_tag": "h2",
-        "subheading": "<h5>Discover the scent that speaks to you — floral, fruity, woody, oriental, fresh, and more. Let fragrance guide you on a personal and inspiring journey.</h5><p></p>",
+        "subheading": "<p>Discover the scent that speaks to you — floral, fruity, woody, oriental, fresh, and more. Let fragrance guide you on a personal and inspiring journey.</p><p></p>",
         "link": "shopify://pages/scent-families",
         "link_text": "All Collections",
         "button_style": "btn--callout",
