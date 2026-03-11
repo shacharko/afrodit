@@ -166,17 +166,17 @@
             "text": "<p>Discover Your Next Scent!<br/><br/>Our Discovery Sets come in a luxurious and elegant package and offer 5 exclusive samples from a variety of categories – Seasons, Zodiac, Olfactive Families, Notes, or Vibes.</p>",
             "text_font_class": "fs-body-75",
             "link_1": "shopify://collections",
-            "link_text_1": "Discovery our sample sets",
+            "link_text_1": "",
             "button_style_1": "btn--secondary",
-            "link_2": "",
-            "link_text_2": "Read more",
-            "button_style_2": "btn--primary",
+            "link_2": "shopify://collections",
+            "link_text_2": "Discovery our sample sets",
+            "button_style_2": "btn--secondary",
             "text_color": "#ffffff",
             "button_background_color": "#ffffff",
             "button_text_color": "#000000",
             "color_overlay": "#000000",
             "color_overlay_gradient": "",
-            "overlay_opacity": 55
+            "overlay_opacity": 60
           }
         }
       },
@@ -187,7 +187,7 @@
       "settings": {
         "image_aspect": "custom",
         "desktop_height": 60,
-        "mobile_height": 55,
+        "mobile_height": 60,
         "enable_autoplay": true,
         "duration_autoplay": 6,
         "navigation_alignment": "center",
