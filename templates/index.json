@@ -575,10 +575,10 @@
         "video_card_RrW83b": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/dfhdgh.mp4",
+            "video": "shopify://files/videos/e535719d-0945-45fc-80df-42a2bc7b8682.MP4",
             "video_url": "",
-            "poster": "shopify://shop_images/IMG_5293_2.jpg",
-            "product_ref": "מס-ביסוס-וואן-נייט-אונלי-יוניסק",
+            "poster": "shopify://shop_images/IMG_6856.jpg",
+            "product_ref": "",
             "product_link": "",
             "product_title": ""
           }
@@ -586,27 +586,28 @@
         "video_card_CfRRYU": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/v12044gd0000co24iv7og65n0a13kejg.MP4",
+            "video": "shopify://files/videos/ScreenRecording_03-11-2026 22-52-18_1.mov",
             "video_url": "",
-            "poster": "shopify://shop_images/IMG_4428.jpg",
-            "product_ref": "le-labo-santal-33",
-            "product_link": "shopify://products/le-labo-santal-33",
+            "poster": "shopify://shop_images/IMG_6860.jpg",
+            "product_ref": "",
+            "product_link": "",
             "product_title": ""
           }
         },
         "video_card_WhGHEG": {
           "type": "video_card",
           "settings": {
-            "video": "shopify://files/videos/ScreenRecording_10-29-2025 16-55-24_1.mov",
+            "video": "shopify://files/videos/ScreenRecording_03-11-2026 23-07-32_1.mov",
             "video_url": "",
-            "poster": "shopify://shop_images/IMG_4426.jpg",
-            "product_ref": "byredo-blanche",
+            "poster": "shopify://shop_images/IMG_6862.jpg",
+            "product_ref": "",
             "product_link": "shopify://products/byredo-blanche",
             "product_title": ""
           }
         },
         "video_card_aKX4mG": {
           "type": "video_card",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/v24044gl0000cv8ss8fog65mnge7nm20 2.MP4",
             "video_url": "",
@@ -618,6 +619,7 @@
         },
         "video_card_bmBgce": {
           "type": "video_card",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/v09044g40000co01q67og65ubetnrbbg.MP4",
             "video_url": "",
@@ -638,7 +640,7 @@
       "name": "Behind the brands",
       "settings": {
         "heading": "",
-        "subheading": "<h3><strong>BEHIND THE BRANDS</strong></h3>",
+        "subheading": "<h2><strong>VIDEO OF MAKING A DECANTS </strong></h2>",
         "centered": true,
         "loop": true
       }
