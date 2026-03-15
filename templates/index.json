@@ -184,7 +184,7 @@
         "slide_cbEQWz"
       ],
       "custom_css": [
-        ".slideshow {padding-bottom: 0}"
+        ".slideshow {padding-bottom: 0;}"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
@@ -206,7 +206,7 @@
       "name": "Gift Promo Banner",
       "settings": {
         "show_icon": true,
-        "text": "€15 Gift on Your First Order",
+        "text": "Get 15% Off Your First Order",
         "code_label": "Code:",
         "code": "WELCOME15",
         "background_color": "#f5ede0",
