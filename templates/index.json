@@ -183,6 +183,9 @@
       "block_order": [
         "slide_cbEQWz"
       ],
+      "custom_css": [
+        ".slideshow {padding-bottom: 0}"
+      ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "image_aspect": "custom",
