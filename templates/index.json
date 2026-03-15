@@ -198,6 +198,21 @@
         "section_padding": "section--vertical-padding-top-bottom"
       }
     },
+    "gift_promo_banner_1": {
+      "type": "gift-promo-banner",
+      "name": "Gift Promo Banner",
+      "settings": {
+        "show_icon": true,
+        "text": "€15 Gift on Your First Order",
+        "code_label": "Code:",
+        "code": "WELCOME15",
+        "background_color": "#f5ede0",
+        "text_color": "#1a1a1a",
+        "icon_color": "#1a1a1a",
+        "code_color": "#1a1a1a",
+        "separator_color": "#999999"
+      }
+    },
     "collection_list_slider_mR8grQ": {
       "type": "collection-list-slider",
       "name": "t:sections.collection_list_slider.presets.name",
@@ -1105,6 +1120,7 @@
     "custom_liquid_97CHAd",
     "collection_list_slider_X66xn8",
     "slideshow_GXkFPH",
+    "gift_promo_banner_1",
     "collection_list_slider_mR8grQ",
     "custom_liquid_Yhm46m",
     "collection_list_slider_FWw4BR",

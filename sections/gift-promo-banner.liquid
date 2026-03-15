@@ -1,0 +1,195 @@
+<div
+  class="gift-promo-banner"
+  style="
+    --gpb-bg: {{ section.settings.background_color }};
+    --gpb-text: {{ section.settings.text_color }};
+    --gpb-icon: {{ section.settings.icon_color }};
+    --gpb-code: {{ section.settings.code_color }};
+    --gpb-separator: {{ section.settings.separator_color }};
+  "
+  data-section-id="{{ section.id }}"
+  data-section-type="gift-promo-banner"
+>
+  <div class="gift-promo-banner__inner">
+    {%- if section.settings.show_icon -%}
+      <span class="gift-promo-banner__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 12 20 22 4 22 4 12"></polyline>
+          <rect x="2" y="7" width="20" height="5"></rect>
+          <line x1="12" y1="22" x2="12" y2="7"></line>
+          <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+          <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+        </svg>
+      </span>
+    {%- endif -%}
+
+    {%- if section.settings.text != blank -%}
+      <span class="gift-promo-banner__text">{{ section.settings.text }}</span>
+    {%- endif -%}
+
+    {%- if section.settings.code != blank -%}
+      <span class="gift-promo-banner__separator" aria-hidden="true">|</span>
+      <span class="gift-promo-banner__code-wrap">
+        {%- if section.settings.code_label != blank -%}
+          <span class="gift-promo-banner__code-label">{{ section.settings.code_label }}</span>
+        {%- endif -%}
+        <span class="gift-promo-banner__code">{{ section.settings.code }}</span>
+      </span>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  .gift-promo-banner {
+    background-color: var(--gpb-bg, #f5ede0);
+    color: var(--gpb-text, #1a1a1a);
+    width: 100%;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+
+  .gift-promo-banner__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .gift-promo-banner__icon {
+    color: var(--gpb-icon, #1a1a1a);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .gift-promo-banner__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .gift-promo-banner__text {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+  }
+
+  .gift-promo-banner__separator {
+    color: var(--gpb-separator, #999999);
+    font-size: 14px;
+    opacity: 0.6;
+  }
+
+  .gift-promo-banner__code-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .gift-promo-banner__code-label {
+    font-weight: 400;
+  }
+
+  .gift-promo-banner__code {
+    color: var(--gpb-code, #1a1a1a);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  @media screen and (max-width: 480px) {
+    .gift-promo-banner__inner {
+      gap: 7px;
+    }
+
+    .gift-promo-banner__text,
+    .gift-promo-banner__code-wrap,
+    .gift-promo-banner__separator {
+      font-size: 13px;
+    }
+
+    .gift-promo-banner__icon svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Gift Promo Banner",
+  "tag": "section",
+  "class": "shopify-section--gift-promo-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show gift icon",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Banner text",
+      "default": "€15 Gift on Your First Order"
+    },
+    {
+      "type": "text",
+      "id": "code_label",
+      "label": "Code label",
+      "default": "Code:"
+    },
+    {
+      "type": "text",
+      "id": "code",
+      "label": "Promo code",
+      "default": "WELCOME15"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f5ede0"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "code_color",
+      "label": "Promo code color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator color",
+      "default": "#999999"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gift Promo Banner"
+    }
+  ]
+}
+{% endschema %}
