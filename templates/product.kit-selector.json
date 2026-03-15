@@ -237,7 +237,7 @@
         "show_navigation_buttons": false,
         "show_featured_media_first": true,
         "gallery_style": "thumbnails",
-        "gallery_style_mobile": "grid",
+        "gallery_style_mobile": "thumbnails",
         "gallery_size": "large",
         "gallery_overflow": "2",
         "enable_video_looping": true,
