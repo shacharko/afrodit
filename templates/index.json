@@ -85,7 +85,7 @@
           "type": "button",
           "settings": {
             "link": "shopify://collections/all",
-            "link_text": "Explore Discovery Sets",
+            "link_text": "Discover Scents",
             "button_style": "btn--primary"
           }
         }
