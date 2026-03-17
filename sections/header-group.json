@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_ez6fEr": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "title": "",
             "title_mobile": "",
