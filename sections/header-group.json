@@ -17,7 +17,7 @@
         "announcement_ez6fEr": {
           "type": "announcement",
           "settings": {
-            "title": "<h3>Free Sample in each order</h3>",
+            "title": "",
             "title_mobile": "",
             "link": "shopify://collections/all"
           }
@@ -25,7 +25,7 @@
         "5a2005ed-4438-4c3e-9549-f61724bea26f": {
           "type": "announcement",
           "settings": {
-            "title": "<h3>discover your next signature scent, now 18% off.</h3>",
+            "title": "<h3>Launch Offer – 10% Off Sitewide</h3>",
             "title_mobile": "",
             "link": "shopify://collections/all"
           }
