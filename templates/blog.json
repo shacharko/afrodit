@@ -138,7 +138,7 @@
       "type": "blog-posts",
       "name": "t:sections.blog_posts.presets.name",
       "settings": {
-        "heading": "Blog posts",
+        "heading": "",
         "heading_tag": "h2",
         "subheading": "",
         "link": "",
@@ -146,7 +146,79 @@
         "button_style": "btn--callout",
         "display_type": "all",
         "blog": "perfume-stories",
-        "max_articles": 4,
+        "max_articles": 2,
+        "show_tags": true,
+        "show_author": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": true,
+        "aspect_ratio": "square",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "blog_posts_bRdP4M": {
+      "type": "blog-posts",
+      "name": "t:sections.blog_posts.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "View all posts",
+        "button_style": "btn--callout",
+        "display_type": "all",
+        "blog": "zodiac-scents-mzlvt-vrykh",
+        "max_articles": 2,
+        "show_tags": true,
+        "show_author": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": true,
+        "aspect_ratio": "square",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "blog_posts_GzcXGq": {
+      "type": "blog-posts",
+      "name": "t:sections.blog_posts.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "View all posts",
+        "button_style": "btn--callout",
+        "display_type": "all",
+        "blog": "news",
+        "max_articles": 2,
+        "show_tags": true,
+        "show_author": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": true,
+        "aspect_ratio": "square",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "blog_posts_gpaYKM": {
+      "type": "blog-posts",
+      "name": "t:sections.blog_posts.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_tag": "h2",
+        "subheading": "",
+        "link": "",
+        "link_text": "View all posts",
+        "button_style": "btn--callout",
+        "display_type": "all",
+        "blog": "gift-experience-mnvt-hmtnh",
+        "max_articles": 2,
         "show_tags": true,
         "show_author": true,
         "show_date": true,
@@ -164,6 +236,9 @@
     "main",
     "blog_posts_ErRLVb",
     "rich_text_iXcPVM",
-    "blog_posts_iAC7hx"
+    "blog_posts_iAC7hx",
+    "blog_posts_bRdP4M",
+    "blog_posts_GzcXGq",
+    "blog_posts_gpaYKM"
   ]
 }
