@@ -58,35 +58,18 @@
         "enable_animation": true
       }
     },
-    "blog-posts": {
+    "blog_posts_8mYaKX": {
       "type": "blog-posts",
-      "blocks": {
-        "article_1": {
-          "type": "article",
-          "settings": {
-            "article": "news/הבנת-הריכוז-eau-de-parfum-edt-או-קולון-מה-ההבדל"
-          }
-        },
-        "article_2": {
-          "type": "article",
-          "settings": {
-            "article": "perfume-stories/ענבר-הזהב-של-עולם-הבישום"
-          }
-        }
-      },
-      "block_order": [
-        "article_1",
-        "article_2"
-      ],
+      "name": "t:sections.blog_posts.presets.name",
       "settings": {
-        "heading": "",
+        "heading": "Blog posts",
         "heading_tag": "h2",
         "subheading": "",
         "link": "",
-        "link_text": "כל הבלוגים",
+        "link_text": "View all posts",
         "button_style": "btn--callout",
-        "display_type": "selected",
-        "blog": "",
+        "display_type": "all",
+        "blog": "gift-experience-mnvt-hmtnh",
         "max_articles": 2,
         "show_tags": true,
         "show_author": true,
@@ -95,13 +78,13 @@
         "show_featured_image": true,
         "aspect_ratio": "landscape",
         "enable_animation": true,
-        "divider_style": "solid",
+        "divider_style": "none",
         "section_padding": "section--vertical-padding-top-bottom"
       }
     }
   },
   "order": [
     "main",
-    "blog-posts"
+    "blog_posts_8mYaKX"
   ]
 }
