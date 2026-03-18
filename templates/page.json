@@ -23,7 +23,7 @@
         "text_hiBEFR": {
           "type": "text",
           "settings": {
-            "text": "<h5><strong>The scent written for you in the stars<br/><br/>Every zodiac sign carries a unique energy  a personality written in the stars.<br/>Our Zodiac Fragrance Sets translate that cosmic character into scent, bringing together five carefully selected niche fragrances that reflect the spirit of each sign.<br/><br/>A personal journey through fragrance, guided by the stars.</strong></h5>",
+            "text": "<h4><strong>Your scent, written in the stars<br/><br/>Discover curated fragrance sets inspired by each zodiac sign — designed to reflect your energy, personality, and unique essence.</strong></h4>",
             "text_font_class": "fs-body-100"
           }
         }
@@ -70,7 +70,7 @@
         "collection_listing_aspect_ratio": "square",
         "label_style": "beneath",
         "overlay_title_background_style": "gradient",
-        "overlay_text_color": "#FFFFFF",
+        "overlay_text_color": "#ffffff",
         "overlay_title_background": "#000000",
         "enable_animation": true,
         "divider_style": "none",
