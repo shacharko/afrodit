@@ -23,7 +23,7 @@
         "text_hiBEFR": {
           "type": "text",
           "settings": {
-            "text": "<h4><strong>Your scent, written in the stars<br/><br/>Discover curated fragrance sets inspired by each zodiac sign — designed to reflect your energy, personality, and unique essence.</strong></h4>",
+            "text": "<h1>Zodiac Collection </h1><h4><strong><br/>Your scent, written in the stars</strong></h4><h4><strong><br/>Discover curated fragrance sets inspired by each zodiac sign — designed to reflect your energy, personality, and unique essence.</strong></h4>",
             "text_font_class": "fs-body-100"
           }
         }
