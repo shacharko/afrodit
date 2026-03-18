@@ -77,30 +77,6 @@
         "enable_animation": true
       }
     },
-    "blog_posts_ErRLVb": {
-      "type": "blog-posts",
-      "name": "t:sections.blog_posts.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_tag": "h2",
-        "subheading": "",
-        "link": "",
-        "link_text": "",
-        "button_style": "btn--callout",
-        "display_type": "selected",
-        "blog": "",
-        "max_articles": 2,
-        "show_tags": true,
-        "show_author": true,
-        "show_date": true,
-        "show_excerpt": true,
-        "show_featured_image": true,
-        "aspect_ratio": "landscape",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
-      }
-    },
     "rich_text_iXcPVM": {
       "type": "rich-text",
       "blocks": {
@@ -142,7 +118,7 @@
         "heading_tag": "h2",
         "subheading": "",
         "link": "",
-        "link_text": "View all posts",
+        "link_text": "",
         "button_style": "btn--callout",
         "display_type": "all",
         "blog": "perfume-stories",
@@ -166,7 +142,7 @@
         "heading_tag": "h2",
         "subheading": "",
         "link": "",
-        "link_text": "View all posts",
+        "link_text": "",
         "button_style": "btn--callout",
         "display_type": "all",
         "blog": "zodiac-scents-mzlvt-vrykh",
@@ -214,7 +190,7 @@
         "heading_tag": "h2",
         "subheading": "",
         "link": "",
-        "link_text": "View all posts",
+        "link_text": "",
         "button_style": "btn--callout",
         "display_type": "all",
         "blog": "gift-experience-mnvt-hmtnh",
@@ -224,7 +200,7 @@
         "show_date": true,
         "show_excerpt": true,
         "show_featured_image": true,
-        "aspect_ratio": "landscape",
+        "aspect_ratio": "square",
         "enable_animation": true,
         "divider_style": "none",
         "section_padding": "section--vertical-padding-top-bottom"
@@ -234,7 +210,6 @@
   "order": [
     "image_hero",
     "main",
-    "blog_posts_ErRLVb",
     "rich_text_iXcPVM",
     "blog_posts_iAC7hx",
     "blog_posts_bRdP4M",
