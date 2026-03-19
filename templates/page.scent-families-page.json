@@ -103,39 +103,131 @@
         "custom_content_width": 700
       }
     },
-    "collection_list_grid_pjgme9": {
-      "type": "collection-list-grid",
-      "name": "t:sections.collection_list_grid.presets.name",
+    "multi_column_3fxzca": {
+      "type": "multi-column",
+      "blocks": {
+        "image_column_c47VQh": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-03-18_at_15.08.27_2.jpg",
+            "image_width": 100,
+            "aspect_ratio": "landscape",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/fresh-clean",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Fresh / Clean",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column_JDKpmm": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-03-18_at_15.08.25.jpg",
+            "image_width": 100,
+            "aspect_ratio": "landscape",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/dark-deep",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Dark / Deep",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column_KxGUez": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-03-18_at_15.08.27.jpg",
+            "image_width": 100,
+            "aspect_ratio": "landscape",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/sweet-warm",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Sweet / Warm",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "image_column_JMPzpG": {
+          "type": "image_column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-03-18_at_15.08.27_1.jpg",
+            "image_width": 100,
+            "aspect_ratio": "landscape",
+            "enable_image_crop_circle": false,
+            "focal_point": "image_presentation",
+            "image_position": "above_text",
+            "image_link": "shopify://collections/floral-soft",
+            "small_caption": "",
+            "accent": "",
+            "heading": "Floral / Soft",
+            "heading_tag": "h3",
+            "heading_font_class": "fs-heading-4-base",
+            "text": "",
+            "text_font_class": "fs-body-100",
+            "text_max_width": 100,
+            "link": "",
+            "link_text": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "image_column_c47VQh",
+        "image_column_JDKpmm",
+        "image_column_KxGUez",
+        "image_column_JMPzpG"
+      ],
+      "name": "t:sections.multi_column.presets.name",
       "settings": {
-        "heading": "",
+        "title": "",
         "heading_tag": "h2",
+        "heading_font_class": "fs-heading-3-base",
         "subheading": "",
-        "link": "",
-        "link_text": "",
-        "button_style": "btn--callout",
-        "columns": "5",
-        "mobile_columns": "2",
-        "collection_list": [
-          "amber-collection",
-          "aldehydes-scent-family-copy",
-          "aquatic-collection",
-          "chypre-collection",
-          "gourmand-collection",
-          "leathery-scent-family",
-          "floral-collection-1",
-          "fruity-collection",
-          "powdery-collection",
-          "fresh-collection",
-          "sweet-collection",
-          "floral-collection",
-          "woody-collection",
-          "sandelwood-collection"
-        ],
-        "collection_listing_aspect_ratio": "landscape",
-        "label_style": "beneath",
-        "overlay_title_background_style": "gradient",
-        "overlay_text_color": "#ffffff",
-        "overlay_title_background": "#000000",
+        "heading_alignment": "left",
+        "content_vertical_alignment": "top",
+        "content_background_padding": "medium",
+        "columns": "2",
+        "column_spacing": 28,
+        "row_spacing": 28,
+        "column_alignment": "left",
+        "enable_slider_mobile": false,
+        "columns_mobile": "2",
+        "column_spacing_mobile": 20,
+        "row_spacing_mobile": 20,
+        "column_alignment_mobile": "left",
+        "background_behind_columns": false,
+        "background_color": "",
+        "text_color": "#000000",
+        "button_background_color": "#000000",
+        "button_text_color": "#FFFFFF",
         "enable_animation": true,
         "divider_style": "none",
         "section_padding": "section--vertical-padding-top-bottom"
@@ -146,6 +238,6 @@
     "main",
     "image_hero_PexLwJ",
     "rich_text_kMBKXM",
-    "collection_list_grid_pjgme9"
+    "multi_column_3fxzca"
   ]
 }
