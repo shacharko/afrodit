@@ -280,54 +280,6 @@
         "section_padding": "section--vertical-padding-none"
       }
     },
-    "collection_list_slider_FWw4BR": {
-      "type": "collection-list-slider",
-      "name": "t:sections.collection_list_slider.presets.name",
-      "settings": {
-        "heading": "Discovery Sets by Zodiac Signs",
-        "heading_tag": "h2",
-        "subheading": "<p>Discover the scent that enhances your zodiac sign. Each set is tailored to your unique energy, connecting you to your character and inviting a personal, refined, and unforgettable fragrance experience.</p>",
-        "link": "shopify://pages/zodiac-collection",
-        "link_text": "View the Full Collection",
-        "button_style": "btn--callout",
-        "columns": "5",
-        "mobile_columns": "2",
-        "collection_list": [
-          "aquarius",
-          "aries",
-          "cancer",
-          "capricorn",
-          "gemini",
-          "leo",
-          "libra",
-          "pisces",
-          "sagittarius",
-          "virgo",
-          "taurus",
-          "scorpio",
-          "aries-collection",
-          "aquarius-collection",
-          "cancer-collection",
-          "capricorn-collection",
-          "gemini-collection",
-          "leo-collection",
-          "libra-collection",
-          "pisces-collection",
-          "sagittarius-collection",
-          "scorpio-collection",
-          "taurus-collection",
-          "virgo-collection"
-        ],
-        "collection_listing_aspect_ratio": "portrait",
-        "label_style": "beneath",
-        "overlay_title_background_style": "gradient",
-        "overlay_text_color": "#ffffff",
-        "overlay_title_background": "#000000",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
-      }
-    },
     "featured_collection_slider_aE4DjX": {
       "type": "featured-collection-slider",
       "blocks": {
@@ -354,6 +306,42 @@
         "maximum_products": 15,
         "columns": "5",
         "mobile_columns": "2",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "collection_list_slider_FWw4BR": {
+      "type": "collection-list-slider",
+      "name": "t:sections.collection_list_slider.presets.name",
+      "settings": {
+        "heading": "Discovery Sets by Zodiac Signs",
+        "heading_tag": "h2",
+        "subheading": "<p>Discover the scent that enhances your zodiac sign. Each set is tailored to your unique energy, connecting you to your character and inviting a personal, refined, and unforgettable fragrance experience.</p>",
+        "link": "shopify://pages/zodiac-collection",
+        "link_text": "View the Full Collection",
+        "button_style": "btn--callout",
+        "columns": "5",
+        "mobile_columns": "2",
+        "collection_list": [
+          "aquarius-collection",
+          "aries-collection",
+          "cancer-collection",
+          "capricorn-collection",
+          "gemini-collection",
+          "leo-collection",
+          "libra-collection",
+          "pisces-collection",
+          "sagittarius-collection",
+          "scorpio-collection",
+          "taurus-collection",
+          "virgo-collection"
+        ],
+        "collection_listing_aspect_ratio": "portrait",
+        "label_style": "beneath",
+        "overlay_title_background_style": "gradient",
+        "overlay_text_color": "#ffffff",
+        "overlay_title_background": "#000000",
         "enable_animation": true,
         "divider_style": "none",
         "section_padding": "section--vertical-padding-top-bottom"
