@@ -9,8 +9,65 @@
  */
 {
   "sections": {
+    "image_hero_PGP4Gk": {
+      "type": "image-hero",
+      "name": "t:sections.image_hero.presets.name",
+      "settings": {
+        "image_aspect": "original",
+        "desktop_height": 65,
+        "mobile_height": 100,
+        "image": "shopify://shop_images/ChatGPT_Image_Mar_19_2026_09_04_26_PM.png",
+        "focal_point": "image_presentation",
+        "mobile_focal_point": "image_presentation",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#FFFFFF",
+        "button_background_color": "#FFFFFF",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 0,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
+    "rich_text_wxWLCm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4afLP6": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text",
+            "heading_tag": "h2",
+            "heading_font_class": "fs-heading-2-base"
+          }
+        },
+        "text_cDPmb7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text area to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text_font_class": "fs-body-100"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4afLP6",
+        "text_cDPmb7"
+      ],
+      "name": "t:sections.rich_text.presets.name",
+      "settings": {
+        "alignment": "center_center",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom",
+        "content_width": "custom",
+        "custom_content_width": 700
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_breadcrumbs": true,
         "show_collection_description": true,
@@ -54,6 +111,8 @@
     }
   },
   "order": [
+    "image_hero_PGP4Gk",
+    "rich_text_wxWLCm",
     "banner",
     "main-collection-product-grid"
   ]
