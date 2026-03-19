@@ -22,8 +22,8 @@
         "media_link": "",
         "text_position": "center_center",
         "text_position_mobile": "center_center",
-        "text_color": "#FFFFFF",
-        "button_background_color": "#FFFFFF",
+        "text_color": "#ffffff",
+        "button_background_color": "#ffffff",
         "button_text_color": "#000000",
         "color_overlay": "#000000",
         "color_overlay_gradient": "",
@@ -37,23 +37,16 @@
       "blocks": {
         "heading_4afLP6": {
           "type": "heading",
+          "disabled": true,
           "settings": {
-            "title": "Rich text",
+            "title": "All Products",
             "heading_tag": "h2",
             "heading_font_class": "fs-heading-2-base"
-          }
-        },
-        "text_cDPmb7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Use this text area to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
-            "text_font_class": "fs-body-100"
           }
         }
       },
       "block_order": [
-        "heading_4afLP6",
-        "text_cDPmb7"
+        "heading_4afLP6"
       ],
       "name": "t:sections.rich_text.presets.name",
       "settings": {
