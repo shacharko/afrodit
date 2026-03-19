@@ -242,6 +242,7 @@
     },
     "collection_list_slider_mR8grQ": {
       "type": "collection-list-slider",
+      "disabled": true,
       "name": "t:sections.collection_list_slider.presets.name",
       "settings": {
         "heading": "Discovery Sets by Fragrance Family",
@@ -1151,8 +1152,8 @@
     "gift_promo_banner_1",
     "collection_list_slider_mR8grQ",
     "custom_liquid_Yhm46m",
-    "collection_list_slider_FWw4BR",
     "featured_collection_slider_aE4DjX",
+    "collection_list_slider_FWw4BR",
     "grid_JtqcCU",
     "featured_collection_slider_iJpRtV",
     "rich_text_arA9fN",
