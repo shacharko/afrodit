@@ -299,7 +299,7 @@
         "mobile_columns": "2",
         "enable_animation": true,
         "divider_style": "none",
-        "section_padding": "section--vertical-padding-none"
+        "section_padding": "section--vertical-padding-top-bottom"
       }
     },
     "custom_liquid_Yhm46m": {
