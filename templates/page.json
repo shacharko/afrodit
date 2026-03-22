@@ -11,77 +11,14 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
         "enable_animation": true,
-        "content_width": "custom",
-        "custom_content_width": 400
-      }
-    },
-    "rich_text_iX4Y3b": {
-      "type": "rich-text",
-      "blocks": {
-        "text_hiBEFR": {
-          "type": "text",
-          "settings": {
-            "text": "<h1>Zodiac Collection </h1><h4><strong><br/>Your scent, written in the stars</strong></h4><h4><strong><br/>Discover curated fragrance sets inspired by each zodiac sign — designed to reflect your energy, personality, and unique essence.</strong></h4>",
-            "text_font_class": "fs-body-100"
-          }
-        }
-      },
-      "block_order": [
-        "text_hiBEFR"
-      ],
-      "name": "t:sections.rich_text.presets.name",
-      "settings": {
-        "alignment": "center_center",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-none",
         "content_width": "custom",
         "custom_content_width": 700
-      }
-    },
-    "collection_list_grid_CkWCbF": {
-      "type": "collection-list-grid",
-      "name": "t:sections.collection_list_grid.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_tag": "h2",
-        "subheading": "",
-        "link": "shopify://collections",
-        "link_text": "",
-        "button_style": "btn--callout",
-        "columns": "3",
-        "mobile_columns": "2",
-        "collection_list": [
-          "aquarius-collection",
-          "aries-collection",
-          "cancer-collection",
-          "capricorn-collection",
-          "gemini-collection",
-          "leo-collection",
-          "libra-collection",
-          "pisces-collection",
-          "sagittarius-collection",
-          "scorpio-collection",
-          "taurus-collection",
-          "virgo-collection"
-        ],
-        "collection_listing_aspect_ratio": "square",
-        "label_style": "beneath",
-        "overlay_title_background_style": "gradient",
-        "overlay_text_color": "#ffffff",
-        "overlay_title_background": "#000000",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
       }
     }
   },
   "order": [
-    "main",
-    "rich_text_iX4Y3b",
-    "collection_list_grid_CkWCbF"
+    "main"
   ]
 }
