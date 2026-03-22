@@ -193,7 +193,7 @@
           מזהה לפי סוג/handle של התווית ולפי ה־param (custom.seasons / custom.scent_family / custom.concentration)
           {%- endcomment -%}
 
-          {%- assign desired_order = 'price_range|vendor|seasons|scent_family|concentration|size' | split: '|' -%}
+          {%- assign desired_order = 'availability|size|gender|scent_family|vendor|seasons|vibe_mood' | split: '|' -%}
 
           {%- for want in desired_order -%}
             {%- for filter in results.filters -%}

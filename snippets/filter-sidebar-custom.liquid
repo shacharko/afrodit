@@ -38,32 +38,35 @@
       {%- endif -%}
 
       {%- comment -%}
-        מציגים רק את הפילטרים: מחיר, מותג, עונות (custom.seasons),
-        משפחת ריחות (custom.scent_family), ריכוז (custom.concentration), גודל — ובסדר הזה.
+        מציגים רק את הפילטרים: זמינות, גודל, מגדר, משפחת ריחות, מותג, עונות, ויב/מצב רוח — ובסדר הזה.
       {%- endcomment -%}
-      {%- assign desired_order = 'price_range|vendor|seasons|scent_family|concentration|size' | split: '|' -%}
+      {%- assign desired_order = 'availability|size|gender|scent_family|vendor|seasons|vibe_mood' | split: '|' -%}
 
       {%- for want in desired_order -%}
         {%- for filter in results.filters -%}
           {%- liquid
             assign fl_key = ''
+            assign h = filter.label | handleize
+            assign u = filter.url_to_remove | default: ''
 
             if filter.type == 'price_range'
               assign fl_key = 'price_range'
-            else
-              assign h = filter.label | handleize
-              assign u = filter.url_to_remove | default: ''
-              if h == 'vendor' or h == 'brand' or h == 'מותג'
-                assign fl_key = 'vendor'
-              elsif h contains 'season' or h == 'עונות' or u contains '.seasons'
-                assign fl_key = 'seasons'
-              elsif h contains 'scent-family' or h contains 'family' or h == 'משפחת-ריחות' or h == 'משפחת-ניחוחות' or u contains '.scent_family'
-                assign fl_key = 'scent_family'
-              elsif h contains 'concentration' or h == 'ריכוז' or u contains '.concentration'
-                assign fl_key = 'concentration'
-              elsif h == 'גודל' or h == 'נפח' or h contains 'size' or h contains 'volume'
-                assign fl_key = 'size'
-              endif
+            elsif h == 'availability' or filter.param_name contains 'availability'
+              assign fl_key = 'availability'
+            elsif h == 'vendor' or h == 'brand' or h == 'מותג'
+              assign fl_key = 'vendor'
+            elsif h contains 'season' or h == 'עונות' or u contains '.seasons'
+              assign fl_key = 'seasons'
+            elsif h contains 'scent-family' or h contains 'family' or h == 'משפחת-ריחות' or h == 'משפחת-ניחוחות' or u contains '.scent_family'
+              assign fl_key = 'scent_family'
+            elsif h contains 'concentration' or h == 'ריכוז' or u contains '.concentration'
+              assign fl_key = 'concentration'
+            elsif h == 'גודל' or h == 'נפח' or h contains 'size' or h contains 'volume'
+              assign fl_key = 'size'
+            elsif h contains 'gender' or h == 'מגדר'
+              assign fl_key = 'gender'
+            elsif h contains 'vibe' or h contains 'mood' or u contains 'vibe_mood' or filter.param_name contains 'vibe_mood'
+              assign fl_key = 'vibe_mood'
             endif
 
             if fl_key != want
