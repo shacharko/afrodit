@@ -258,10 +258,7 @@
         "accordion_XpdCx",
         "featured_products"
       ],
-      "custom_css": [
-        ".product__price span {display: inline-block; min-width: 80px;}",
-        ".product__price s[data-compare-price],.product__price [data-price],.product__price .product__price-displayed-discount {display: inline-block; min-width: 80px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_product_details": true,
         "show_breadcrumbs": true,
