@@ -598,7 +598,7 @@
             "arrows_position": "bottom",
             "max_width": 1100,
             "corner_styling": "soft",
-            "quote_marks_style": "serif",
+            "quote_marks_style": "cartoon",
             "card_color": "#ffffff",
             "stars_and_quote_marks_color": "#edb14c",
             "text_color": "#000000",
@@ -607,7 +607,7 @@
             "border_color": "#000000",
             "show_drop_shadow": true,
             "transition_speed": 5,
-            "header_text": "",
+            "header_text": "5/5 from 100+ reviews",
             "show_average_rating": true
           }
         }
