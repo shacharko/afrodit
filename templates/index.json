@@ -746,13 +746,6 @@
             "answer": "<p><strong>Orders can be placed directly through the website in a simple and convenient way. Our customer support team is also available via WhatsApp or by phone at +357 96 470670 for any assistance.</strong></p>"
           }
         },
-        "item_rxe6tN": {
-          "type": "item",
-          "settings": {
-            "question": "What decant sizes are available?",
-            "answer": "<p><strong>Our decants are available in three sizes: 2 ml, 5 ml, and 10 ml.<br/></strong></p>"
-          }
-        },
         "item_ttYiCH": {
           "type": "item",
           "settings": {
@@ -812,7 +805,6 @@
       },
       "block_order": [
         "item_YhfjbX",
-        "item_rxe6tN",
         "item_ttYiCH",
         "item_8F7YDE",
         "item_AcYc66",
