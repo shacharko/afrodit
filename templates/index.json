@@ -1057,14 +1057,14 @@
           "type": "item",
           "settings": {
             "question": "What is a decant and who is it for?",
-            "answer": "<p><strong>A decant is a small bottle containing original perfume, decanted directly from the brand’s official retail bottle. It allows you to experience the fragrance over time before purchasing a full-size bottle.</strong></p>"
+            "answer": "<p><strong>A decant is a small bottle containing original perfume, carefully transferred directly from the brand’s official retail bottle.<br/>It allows you to experience the fragrance over time before committing to a full-size bottle.<br/><br/>Decants are perfect for anyone who wants to try a fragrance before buying, discover new scents, or enjoy a variety of perfumes without purchasing a full-size bottle.</strong></p>"
           }
         },
         "item_8F7YDE": {
           "type": "item",
           "settings": {
             "question": "Do decants come with a spray nozzle?",
-            "answer": "<p><strong>Yes. Every decant bottle is equipped with a high-quality spray nozzle for comfortable and precise application.</strong></p>"
+            "answer": "<p><strong>Yes. All our decants come with a high-quality spray nozzle, ensuring a smooth and precise application.</strong></p>"
           }
         },
         "item_AcYc66": {
