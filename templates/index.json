@@ -304,9 +304,12 @@
     },
     "custom_liquid_Yhm46m": {
       "type": "custom-liquid",
+      "custom_css": [
+        ".af-logos {padding-bottom: 50px;}"
+      ],
       "name": "t:sections.custom_liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% render 'brand-logos-marquee', speed_s: 30, logo_h: 80, gap_px: 80, link_to_collections: true %}",
+        "custom_liquid": "{% render 'brand-logos-marquee', speed_s: 30, logo_h: 150, gap_px: 80, link_to_collections: true %}",
         "divider_style": "none",
         "section_padding": "section--vertical-padding-none"
       }
