@@ -599,6 +599,7 @@
         "quote_HtaQ7r",
         "quote_GgBytg"
       ],
+      "disabled": true,
       "name": "t:sections.quotes.presets.name",
       "settings": {
         "autoplay_enabled": true,
@@ -621,6 +622,7 @@
       "block_order": [
         "border_MtU3EM"
       ],
+      "disabled": true,
       "name": "t:sections.rich_text.presets.name",
       "settings": {
         "alignment": "left_left",
@@ -638,14 +640,14 @@
           "type": "shopify://apps/judge-me-reviews/blocks/reviews_grid_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "show_sample_reviews": true,
-            "review_selection": "product_reviews",
+            "review_selection": "all",
             "products": [
               "attar-al-has-exquisite",
               "mes-bisous-a-wondrous-flight",
               "lvy-vytvn-ymgynyyshn-yvnysqs"
             ],
-            "show_media_only": false,
-            "display_order": "media_first",
+            "show_media_only": true,
+            "display_order": "most_recent",
             "columns_desktop": 3,
             "rows_desktop": 3,
             "columns_mobile": "2",
@@ -657,10 +659,10 @@
             "corner_styling": "soft",
             "card_spacing": "medium",
             "header_text_color": "#000000",
-            "star_and_reviewer_name_color": "#F9F9F9",
+            "star_and_reviewer_name_color": "#f9f9f9",
             "drop_shadow_color": "#000000",
             "overlay_and_background_color": "#000000",
-            "content_color": "#F9F9F9",
+            "content_color": "#f9f9f9",
             "header_text": "From our customers",
             "show_average_rating": true
           }
@@ -670,10 +672,10 @@
         "judge_me_reviews_reviews_grid_widget_CggVbB"
       ],
       "settings": {
-        "heading": "App section",
+        "heading": "",
         "enable_animation": true,
         "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
+        "section_padding": "section--vertical-padding-none"
       }
     },
     "image_with_text_LTRzQN": {
