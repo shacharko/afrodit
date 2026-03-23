@@ -240,37 +240,6 @@
         "separator_color": "#999999"
       }
     },
-    "collection_list_slider_mR8grQ": {
-      "type": "collection-list-slider",
-      "disabled": true,
-      "name": "t:sections.collection_list_slider.presets.name",
-      "settings": {
-        "heading": "Discovery Sets by Fragrance Family",
-        "heading_tag": "h2",
-        "subheading": "<p>Discover the scent that speaks to you — floral, fruity, woody, oriental, fresh, and more. Let fragrance guide you on a personal and inspiring journey.</p><p></p>",
-        "link": "shopify://pages/scent-families",
-        "link_text": "All Collections",
-        "button_style": "btn--callout",
-        "columns": "5",
-        "mobile_columns": "2",
-        "collection_list": [
-          "gourmand-collection",
-          "chypre-collection",
-          "woody-collection",
-          "fruity-collection",
-          "sweet-collection",
-          "aquatic-collection"
-        ],
-        "collection_listing_aspect_ratio": "square",
-        "label_style": "beneath",
-        "overlay_title_background_style": "gradient",
-        "overlay_text_color": "#ffffff",
-        "overlay_title_background": "#000000",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
-      }
-    },
     "featured_collection_slider_aE4DjX": {
       "type": "featured-collection-slider",
       "blocks": {
@@ -466,143 +435,6 @@
         "section_padding": "section--vertical-padding-top-bottom"
       }
     },
-    "rich_text_arA9fN": {
-      "type": "rich-text",
-      "blocks": {
-        "button_3eGfiy": {
-          "type": "button",
-          "settings": {
-            "link": "",
-            "link_text": "גלו עכשיו",
-            "button_style": "btn--primary"
-          }
-        },
-        "border_cJcrgm": {
-          "type": "border",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "button_3eGfiy",
-        "border_cJcrgm"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich_text.presets.name",
-      "settings": {
-        "alignment": "center_center",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom",
-        "content_width": "full",
-        "custom_content_width": 700
-      }
-    },
-    "rich_text_qF8Ria": {
-      "type": "rich-text",
-      "blocks": {
-        "border_GgWGF6": {
-          "type": "border",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "border_GgWGF6"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich_text.presets.name",
-      "settings": {
-        "alignment": "left_left",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-none",
-        "content_width": "full",
-        "custom_content_width": 700
-      }
-    },
-    "grid_hd3m4p": {
-      "type": "grid",
-      "blocks": {
-        "item_GUhGiT": {
-          "type": "item",
-          "settings": {
-            "width": "50",
-            "height": 500,
-            "mobile_height": 500,
-            "media_fit": "cover",
-            "focal_point": "image_presentation",
-            "mobile_focal_point": "image_presentation",
-            "text_position": "center_flex-end",
-            "accent": "",
-            "title": "Grid item",
-            "heading_tag": "h3",
-            "heading_font_class": "fs-heading-2-base",
-            "subheading": "<p>Perfect for lookbooks and editorial photography</p>",
-            "subheading_tag": "h4",
-            "subheading_font_class": "fs-heading-5-base",
-            "text": "",
-            "text_font_class": "fs-body-100",
-            "link": "",
-            "link_text": "",
-            "button_style": "btn--primary",
-            "background_color": "",
-            "text_color": "#ffffff",
-            "button_background_color": "#ffffff",
-            "button_text_color": "#000000",
-            "color_overlay": "#000000",
-            "color_overlay_gradient": "",
-            "overlay_opacity": 30
-          }
-        },
-        "item_C33Vk3": {
-          "type": "item",
-          "settings": {
-            "width": "50",
-            "height": 500,
-            "mobile_height": 500,
-            "media_fit": "cover",
-            "focal_point": "image_presentation",
-            "mobile_focal_point": "image_presentation",
-            "text_position": "center_flex-end",
-            "accent": "",
-            "title": "Grid item",
-            "heading_tag": "h3",
-            "heading_font_class": "fs-heading-2-base",
-            "subheading": "<p>Perfect for lookbooks and editorial photography</p>",
-            "subheading_tag": "h4",
-            "subheading_font_class": "fs-heading-5-base",
-            "text": "",
-            "text_font_class": "fs-body-100",
-            "link": "",
-            "link_text": "",
-            "button_style": "btn--primary",
-            "background_color": "",
-            "text_color": "#ffffff",
-            "button_background_color": "#ffffff",
-            "button_text_color": "#000000",
-            "color_overlay": "#000000",
-            "color_overlay_gradient": "",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "item_GUhGiT",
-        "item_C33Vk3"
-      ],
-      "disabled": true,
-      "name": "t:sections.grid.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_tag": "h2",
-        "subheading": "",
-        "content_alignment": "center",
-        "enable_animation": true,
-        "full_width": false,
-        "spacing": 24,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
-      }
-    },
     "behind_brands_ygfcLP": {
       "type": "behind-brands",
       "blocks": {
@@ -741,132 +573,6 @@
         "read_more_label": "קרא/י עוד"
       }
     },
-    "176934743077b4287f": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_medals_bxdRwq": {
-          "type": "shopify://apps/judge-me-reviews/blocks/medals/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {}
-        },
-        "judge_me_reviews_testimonials_carousel_XPdWyK": {
-          "type": "shopify://apps/judge-me-reviews/blocks/testimonials_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "show_sample_reviews": true,
-            "reviews_selection": "all",
-            "products": [],
-            "star_rating": "all",
-            "max_reviews": 20,
-            "quote_marks_size": "small",
-            "product_name_text_size": "small",
-            "verified_badge_style": "icon",
-            "card_height": "medium",
-            "text_size": "small",
-            "stars_size": "medium",
-            "arrows_position": "bottom",
-            "max_width": 1100,
-            "corner_styling": "soft",
-            "quote_marks_style": "serif",
-            "card_color": "#f9f9f9",
-            "stars_and_quote_marks_color": "#000000",
-            "text_color": "#000000",
-            "arrows_color": "#000000",
-            "show_border": false,
-            "border_color": "#108474",
-            "show_drop_shadow": false,
-            "transition_speed": 5,
-            "header_text": "Customers are saying",
-            "show_average_rating": true
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_medals_bxdRwq",
-        "judge_me_reviews_testimonials_carousel_XPdWyK"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "enable_animation": true,
-        "divider_style": "solid",
-        "section_padding": "section--vertical-padding-top-bottom"
-      }
-    },
-    "image_with_text_split_pcVmAB": {
-      "type": "image-with-text-split",
-      "blocks": {
-        "accent_3dqFUL": {
-          "type": "accent",
-          "settings": {
-            "accent": ""
-          }
-        },
-        "heading_CybfiF": {
-          "type": "heading",
-          "settings": {
-            "title": "Attar Al Has",
-            "heading_tag": "h2",
-            "heading_font_class": "fs-heading-1-base"
-          }
-        },
-        "text_wfzQFk": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Luxury Hidden in Every Drop</h5><p></p>",
-            "text_font_class": "fs-body-100"
-          }
-        },
-        "text_q8biPD": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>Rare, deep, and captivating fragrances that touch the soul and wait to awaken on your skin. The collection arrives directly from the brand, through our official and exclusive import in Israel, to deliver a pure, authentic, and powerful fragrance experience. Begin your journey with Attar Al Has.</h5>",
-            "text_font_class": "fs-body-100"
-          }
-        },
-        "subheading_xtyHwd": {
-          "type": "subheading",
-          "disabled": true,
-          "settings": {
-            "subheading": "ניחוחות נדירים, עמוקים ומסעירים שנוגעים בנשמה ומחכים להתעורר על העור שלכם.הקולקציה מגיעה אליכם ישירות מהמותג, בייבוא רשמי ובלעדי שלנו בישראל, כדי להעניק חוויית בישום נקייה, אמיתית ומלאת עוצמה.התחילו את המסע שלכם עם Attar Al Has.",
-            "subheading_tag": "h4",
-            "subheading_font_class": "fs-heading-6-base"
-          }
-        },
-        "button_VNneiR": {
-          "type": "button",
-          "settings": {
-            "link": "shopify://collections/attar-al-has",
-            "link_text": "Discover the Collection",
-            "button_style": "btn--primary"
-          }
-        }
-      },
-      "block_order": [
-        "accent_3dqFUL",
-        "heading_CybfiF",
-        "text_wfzQFk",
-        "text_q8biPD",
-        "subheading_xtyHwd",
-        "button_VNneiR"
-      ],
-      "disabled": true,
-      "name": "t:sections.image_with_text_split.presets.name",
-      "settings": {
-        "image_position": "left",
-        "image_mobile_position": "above-content",
-        "image_padding": "none",
-        "image": "shopify://shop_images/IMG_4214.webp",
-        "aspect_ratio": "natural",
-        "focal_point": "image_presentation",
-        "content_alignment": "center",
-        "background_color": "#ffffff",
-        "text_color": "#000000",
-        "button_background_color": "#000000",
-        "button_text_color": "#ffffff",
-        "enable_animation": true,
-        "section_padding": "section--vertical-padding-bottom-only"
-      }
-    },
     "quote_8wXtkd": {
       "type": "quote",
       "blocks": {
@@ -923,6 +629,51 @@
         "section_padding": "section--vertical-padding-none",
         "content_width": "full",
         "custom_content_width": 700
+      }
+    },
+    "1774291163a3b373eb": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_reviews_grid_widget_CggVbB": {
+          "type": "shopify://apps/judge-me-reviews/blocks/reviews_grid_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "review_selection": "product_reviews",
+            "products": [
+              "attar-al-has-exquisite",
+              "mes-bisous-a-wondrous-flight",
+              "lvy-vytvn-ymgynyyshn-yvnysqs"
+            ],
+            "show_media_only": false,
+            "display_order": "media_first",
+            "columns_desktop": 3,
+            "rows_desktop": 3,
+            "columns_mobile": "2",
+            "rows_mobile": 6,
+            "show_stars": true,
+            "show_reviewer_name": true,
+            "show_review_title_on_hover_desktop": true,
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "card_spacing": "medium",
+            "header_text_color": "#000000",
+            "star_and_reviewer_name_color": "#F9F9F9",
+            "drop_shadow_color": "#000000",
+            "overlay_and_background_color": "#000000",
+            "content_color": "#F9F9F9",
+            "header_text": "From our customers",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_reviews_grid_widget_CggVbB"
+      ],
+      "settings": {
+        "heading": "App section",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
       }
     },
     "image_with_text_LTRzQN": {
@@ -1141,21 +892,16 @@
     "collection_list_slider_X66xn8",
     "slideshow_GXkFPH",
     "gift_promo_banner_1",
-    "collection_list_slider_mR8grQ",
     "featured_collection_slider_aE4DjX",
     "custom_liquid_Yhm46m",
     "collection_list_slider_FWw4BR",
     "grid_JtqcCU",
     "featured_collection_slider_iJpRtV",
-    "rich_text_arA9fN",
-    "rich_text_qF8Ria",
-    "grid_hd3m4p",
     "behind_brands_ygfcLP",
     "blogs_slider_description_QNtjM8",
-    "176934743077b4287f",
-    "image_with_text_split_pcVmAB",
     "quote_8wXtkd",
     "rich_text_HYfzAm",
+    "1774291163a3b373eb",
     "image_with_text_LTRzQN",
     "newsletter_compact_trl_cJwCCh",
     "faq_sento_KrhhAw"
