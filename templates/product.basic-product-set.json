@@ -40,6 +40,14 @@
             "show_custom_badges": true
           }
         },
+        "text_ewrrTa": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p>15% off with code : WELCOME15 <br/>💡 Available at checkout</p>",
+            "column_placement": "right"
+          }
+        },
         "text_9jqJcQ": {
           "type": "text",
           "settings": {
@@ -229,6 +237,7 @@
         "variant_picker",
         "judge_me_reviews_preview_badge_7azbA7",
         "product_header",
+        "text_ewrrTa",
         "text_9jqJcQ",
         "text_prCVg9",
         "inventory_counter_nnj7H",
