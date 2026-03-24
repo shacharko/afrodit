@@ -153,6 +153,7 @@
         "featured_link_color": "#ffffff",
         "enable_transparent_on_home": false,
         "enable_transparent_template_list": "",
+        "logo_transparent": "shopify://shop_images/AfroditeDecants_Logo.jpg",
         "color_text_transparent": "#ffffff",
         "color_count_transparent": "#000000"
       }
