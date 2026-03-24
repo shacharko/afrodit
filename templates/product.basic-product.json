@@ -257,6 +257,10 @@
             "display_as_collapsible_row": false,
             "expand_by_default": true
           }
+        },
+        "judge_me_reviews_review_snippet_widget_6YhR7w": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -282,7 +286,8 @@
         "accordion_JGW3R",
         "product_callouts-1",
         "description",
-        "featured_products"
+        "featured_products",
+        "judge_me_reviews_review_snippet_widget_6YhR7w"
       ],
       "custom_css": [
         ".product_price {display: flex; flex-wrap: wrap; gap: 8px; /* שחקי עם הערך: 6–12 */}"
