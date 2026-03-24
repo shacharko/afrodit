@@ -64,7 +64,6 @@
     },
     "main": {
       "type": "main-blog",
-      "disabled": true,
       "settings": {
         "show_tag_nav": true,
         "article_per_page": 12,
@@ -100,6 +99,7 @@
         "heading_c9hjMD",
         "text_hQjJBJ"
       ],
+      "disabled": true,
       "name": "t:sections.rich_text.presets.name",
       "settings": {
         "alignment": "center_center",
@@ -112,6 +112,7 @@
     },
     "blog_posts_iAC7hx": {
       "type": "blog-posts",
+      "disabled": true,
       "name": "t:sections.blog_posts.presets.name",
       "settings": {
         "heading": "",
@@ -136,6 +137,7 @@
     },
     "blog_posts_bRdP4M": {
       "type": "blog-posts",
+      "disabled": true,
       "name": "t:sections.blog_posts.presets.name",
       "settings": {
         "heading": "",
@@ -160,6 +162,7 @@
     },
     "blog_posts_GzcXGq": {
       "type": "blog-posts",
+      "disabled": true,
       "name": "t:sections.blog_posts.presets.name",
       "settings": {
         "heading": "",
@@ -184,6 +187,7 @@
     },
     "blog_posts_gpaYKM": {
       "type": "blog-posts",
+      "disabled": true,
       "name": "t:sections.blog_posts.presets.name",
       "settings": {
         "heading": "",

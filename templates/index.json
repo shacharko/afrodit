@@ -570,14 +570,14 @@
         "columns": "3",
         "mobile_columns": "1",
         "collection_listing_aspect_ratio": "square",
-        "label_style": "overlay",
+        "label_style": "beneath",
         "overlay_title_background_style": "gradient",
         "overlay_text_color": "#ffffff",
         "overlay_title_background": "#000000",
         "show_desc": true,
-        "desc_lines": 3,
+        "desc_lines": 4,
         "show_read_more": true,
-        "read_more_label": "קרא/י עוד"
+        "read_more_label": "Rede More"
       }
     },
     "1774291742386847dd": {
