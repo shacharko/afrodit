@@ -282,7 +282,7 @@
         "heading": "",
         "enable_animation": true,
         "divider_style": "none",
-        "section_padding": "section--vertical-padding-top-bottom"
+        "section_padding": "section--vertical-padding-none"
       }
     }
   },
