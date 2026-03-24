@@ -543,12 +543,6 @@
           "settings": {
             "blog": "zodiac-scents-mzlvt-vrykh"
           }
-        },
-        "blog_item_88UWLP": {
-          "type": "blog_item",
-          "settings": {
-            "blog": "perfume-stories"
-          }
         }
       },
       "block_order": [
@@ -556,8 +550,7 @@
         "blog_item_XGjhcH",
         "blog_item_n8xnHN",
         "blog_item_btfpXj",
-        "blog_item_4XJWCx",
-        "blog_item_88UWLP"
+        "blog_item_4XJWCx"
       ],
       "name": "Blog list slider (with description)",
       "settings": {
@@ -575,7 +568,7 @@
         "overlay_text_color": "#ffffff",
         "overlay_title_background": "#000000",
         "show_desc": true,
-        "desc_lines": 4,
+        "desc_lines": 3,
         "show_read_more": true,
         "read_more_label": "Rede More"
       }
