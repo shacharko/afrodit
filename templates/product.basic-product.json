@@ -271,7 +271,7 @@
             "review_data": "no_reviews",
             "max_width": 1200,
             "show_shop_reviews": true,
-            "empty_state": "other_products_reviews"
+            "empty_state": "hide_widget"
           }
         }
       },
