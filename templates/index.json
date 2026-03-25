@@ -798,9 +798,9 @@
             "max_width": 1100,
             "corner_styling": "soft",
             "header_text_color": "#000000",
-            "card_color": "#7D7D7D",
+            "card_color": "#7d7d7d",
             "stars_color": "",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "arrows_color": "#000000",
             "show_drop_shadow": false,
             "show_border": false,
@@ -815,6 +815,61 @@
       },
       "block_order": [
         "judge_me_reviews_videos_carousel_GNfXBH"
+      ],
+      "settings": {
+        "heading": "App section",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-top-bottom"
+      }
+    },
+    "17744335963e9f5752": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_tcknYz": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [
+              "lkhvy",
+              "lvy-vytvn-ymgynyyshn-yvnysqs",
+              "lvy-vytvn-vmbrh-nvmd-yvnysqs",
+              "mes-bisous-a-wondrous-flight",
+              "mes-bisous-passion-island",
+              "ex-nihilo-blue-talisman",
+              "ex-nihilo-fleur-narcotique-extrait",
+              "attar-al-has-exquisite",
+              "attar-al-has-skin-musk"
+            ],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#F9F9F9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_tcknYz"
       ],
       "settings": {
         "heading": "App section",
@@ -842,6 +897,7 @@
     "image_with_text_LTRzQN",
     "newsletter_compact_trl_cJwCCh",
     "faq_sento_KrhhAw",
-    "1774433419b0b3f0ea"
+    "1774433419b0b3f0ea",
+    "17744335963e9f5752"
   ]
 }
