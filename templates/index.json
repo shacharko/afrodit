@@ -455,61 +455,6 @@
         "loop": true
       }
     },
-    "17744335963e9f5752": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_cards_carousel_tcknYz": {
-          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "show_sample_reviews": true,
-            "reviews_selection": "all",
-            "products": [
-              "lkhvy",
-              "lvy-vytvn-ymgynyyshn-yvnysqs",
-              "lvy-vytvn-vmbrh-nvmd-yvnysqs",
-              "mes-bisous-a-wondrous-flight",
-              "mes-bisous-passion-island",
-              "ex-nihilo-blue-talisman",
-              "ex-nihilo-fleur-narcotique-extrait",
-              "attar-al-has-exquisite",
-              "attar-al-has-skin-musk"
-            ],
-            "star_rating": "all",
-            "show_review_media": true,
-            "display_order": "media_first",
-            "no_image_fallback": "review_text_only",
-            "max_reviews": 20,
-            "review_length": "medium",
-            "text_size": "medium",
-            "image_ratio": "1",
-            "reviews_shown": 4,
-            "show_reviewer_name": true,
-            "show_product_name": true,
-            "hide_arrows_mobile": true,
-            "arrows_position": "sides",
-            "max_width": 1100,
-            "corner_styling": "soft",
-            "header_text_color": "#000000",
-            "text_color": "#000000",
-            "card_color": "#f9f9f9",
-            "stars_color": "",
-            "arrows_color": "#000000",
-            "transition_speed": 5,
-            "header_text": "Customers are saying",
-            "show_average_rating": true
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_cards_carousel_tcknYz"
-      ],
-      "settings": {
-        "heading": "",
-        "enable_animation": true,
-        "divider_style": "none",
-        "section_padding": "section--vertical-padding-none"
-      }
-    },
     "blogs_slider_description_QNtjM8": {
       "type": "blogs-slider-description",
       "blocks": {
@@ -570,6 +515,61 @@
         "desc_lines": 3,
         "show_read_more": true,
         "read_more_label": "Rede More"
+      }
+    },
+    "17744335963e9f5752": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_tcknYz": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [
+              "lkhvy",
+              "lvy-vytvn-ymgynyyshn-yvnysqs",
+              "lvy-vytvn-vmbrh-nvmd-yvnysqs",
+              "mes-bisous-a-wondrous-flight",
+              "mes-bisous-passion-island",
+              "ex-nihilo-blue-talisman",
+              "ex-nihilo-fleur-narcotique-extrait",
+              "attar-al-has-exquisite",
+              "attar-al-has-skin-musk"
+            ],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_tcknYz"
+      ],
+      "settings": {
+        "heading": "",
+        "enable_animation": true,
+        "divider_style": "none",
+        "section_padding": "section--vertical-padding-none"
       }
     },
     "image_with_text_LTRzQN": {
@@ -785,8 +785,8 @@
     "grid_JtqcCU",
     "featured_collection_slider_iJpRtV",
     "behind_brands_ygfcLP",
-    "17744335963e9f5752",
     "blogs_slider_description_QNtjM8",
+    "17744335963e9f5752",
     "image_with_text_LTRzQN",
     "newsletter_compact_trl_cJwCCh",
     "faq_sento_KrhhAw"
