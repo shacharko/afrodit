@@ -458,12 +458,6 @@
     "blogs_slider_description_QNtjM8": {
       "type": "blogs-slider-description",
       "blocks": {
-        "blog_item_fc7bh8": {
-          "type": "blog_item",
-          "settings": {
-            "blog": "fragrance-trends-for-2026"
-          }
-        },
         "blog_item_XGjhcH": {
           "type": "blog_item",
           "settings": {
@@ -487,14 +481,20 @@
           "settings": {
             "blog": "zodiac-scents-mzlvt-vrykh"
           }
+        },
+        "blog_item_fc7bh8": {
+          "type": "blog_item",
+          "settings": {
+            "blog": "fragrance-trends-for-2026"
+          }
         }
       },
       "block_order": [
-        "blog_item_fc7bh8",
         "blog_item_XGjhcH",
         "blog_item_n8xnHN",
         "blog_item_btfpXj",
-        "blog_item_4XJWCx"
+        "blog_item_4XJWCx",
+        "blog_item_fc7bh8"
       ],
       "name": "Blog list slider (with description)",
       "settings": {
