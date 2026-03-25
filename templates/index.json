@@ -382,6 +382,17 @@
     "behind_brands_ygfcLP": {
       "type": "behind-brands",
       "blocks": {
+        "video_card_bmBgce": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/7301492621858231390.MP4",
+            "video_url": "",
+            "poster": "shopify://shop_images/IMG_7308.jpg",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        },
         "video_card_RrW83b": {
           "type": "video_card",
           "settings": {
@@ -414,38 +425,13 @@
             "product_link": "shopify://products/byredo-blanche",
             "product_title": ""
           }
-        },
-        "video_card_aKX4mG": {
-          "type": "video_card",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/v24044gl0000cv8ss8fog65mnge7nm20 2.MP4",
-            "video_url": "",
-            "poster": "shopify://shop_images/IMG_4422.jpg",
-            "product_ref": "creed-eladaria",
-            "product_link": "",
-            "product_title": ""
-          }
-        },
-        "video_card_bmBgce": {
-          "type": "video_card",
-          "disabled": true,
-          "settings": {
-            "video": "shopify://files/videos/v09044g40000co01q67og65ubetnrbbg.MP4",
-            "video_url": "",
-            "poster": "shopify://shop_images/IMG_4427.jpg",
-            "product_ref": "mmv-pryz-mrph-yvnysqs",
-            "product_link": "",
-            "product_title": ""
-          }
         }
       },
       "block_order": [
+        "video_card_bmBgce",
         "video_card_RrW83b",
         "video_card_CfRRYU",
-        "video_card_WhGHEG",
-        "video_card_aKX4mG",
-        "video_card_bmBgce"
+        "video_card_WhGHEG"
       ],
       "name": "Behind the brands",
       "settings": {
