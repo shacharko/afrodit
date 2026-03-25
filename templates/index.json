@@ -520,6 +520,44 @@
     "1774291742386847dd": {
       "type": "apps",
       "blocks": {
+        "judge_me_reviews_videos_carousel_AP6tEy": {
+          "type": "shopify://apps/judge-me-reviews/blocks/videos_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [
+              "attar-al-has-skin-musk",
+              "attar-al-has-libertys-way",
+              "attar-al-has-velvet-morganite",
+              "mes-bisous-a-wondrous-flight",
+              "mes-bisous-passion-island",
+              "marc-antoine-barrois-tilia",
+              "xerjoff-gibeon"
+            ],
+            "star_rating": "all",
+            "review_type": "photo_and_video",
+            "max_reviews": 20,
+            "show_reviewer_name": true,
+            "stars_size": "medium",
+            "text_size": "medium",
+            "arrows_position": "bottom",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "card_color": "#7D7D7D",
+            "stars_color": "",
+            "text_color": "#FFFFFF",
+            "arrows_color": "#000000",
+            "show_drop_shadow": false,
+            "show_border": false,
+            "border_color": "#108474",
+            "autoplay_media": true,
+            "transition_speed": 5,
+            "carousel_style": "highlight",
+            "header_text": "Real customer stories",
+            "show_average_rating": true
+          }
+        },
         "judge_me_reviews_testimonials_carousel_4L3N8V": {
           "type": "shopify://apps/judge-me-reviews/blocks/testimonials_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
@@ -560,6 +598,7 @@
         }
       },
       "block_order": [
+        "judge_me_reviews_videos_carousel_AP6tEy",
         "judge_me_reviews_testimonials_carousel_4L3N8V"
       ],
       "settings": {
