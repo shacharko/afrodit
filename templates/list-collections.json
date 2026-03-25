@@ -9,6 +9,29 @@
  */
 {
   "sections": {
+    "image_hero_jULCXN": {
+      "type": "image-hero",
+      "name": "t:sections.image_hero.presets.name",
+      "settings": {
+        "image_aspect": "original",
+        "desktop_height": 100,
+        "mobile_height": 100,
+        "image": "shopify://shop_images/E82818E4-0B05-4AE0-9B78-78B7695DFF46.png",
+        "focal_point": "image_presentation",
+        "mobile_focal_point": "image_presentation",
+        "media_link": "",
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "text_color": "#FFFFFF",
+        "button_background_color": "#FFFFFF",
+        "button_text_color": "#000000",
+        "color_overlay": "#000000",
+        "color_overlay_gradient": "",
+        "overlay_opacity": 0,
+        "enable_animation": true,
+        "section_padding": "section--vertical-padding-none"
+      }
+    },
     "main": {
       "type": "main-list-collections",
       "settings": {
@@ -75,6 +98,7 @@
     }
   },
   "order": [
+    "image_hero_jULCXN",
     "main"
   ]
 }
