@@ -40,7 +40,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-75",
-            "text": "<p>🔥 Limited stock available •  📦 Free shipping on orders over €100 (Greece) / €30 (Cyprus)</p>",
+            "text": "<p>🔥 Limited stock available •  📦 Shipping: Greece €10 (Free shipping on orders over €100) • Cyprus: Free shipping on orders over €30 (minimum order €30)</p>",
             "column_placement": "right"
           }
         },
