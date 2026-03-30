@@ -44,7 +44,7 @@
           "type": "text",
           "settings": {
             "text_font_class": "fs-body-100",
-            "text": "<p>15% off with code : WELCOME15 <br/>💡 Available at checkout</p>",
+            "text": "<p>🎁 15% OFF YOUR ORDER<br/>Use code: <strong>WELCOME15</strong> at checkout<br/><br/>⏳ Limited time offer</p>",
             "column_placement": "right"
           }
         },
