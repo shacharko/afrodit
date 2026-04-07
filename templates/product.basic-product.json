@@ -276,7 +276,18 @@
           "settings": {
             "show_sample_reviews": true,
             "reviews_selection": "all",
-            "products": [],
+            "products": [
+              "fragrance-de-bois-lucius",
+              "ipiccirilli-dune",
+              "mes-bisous-a-wondrous-flight",
+              "mes-bisous-tobacco-flirting-with-vanilla",
+              "mes-bisous-passion-island",
+              "attar-al-has-leather-effecto",
+              "attar-al-has-exquisite",
+              "myysvn-prnsys-qvrqdgn-bqrt-rvz-540-yvnysqs",
+              "myysvn-pnsys-qvrqygn-bqrt-rvg-540-qstryyt-yvnysqs",
+              "ex-nihilo-blue-talisman"
+            ],
             "star_rating": "all",
             "show_review_media": true,
             "display_order": "media_first",
