@@ -53,14 +53,6 @@
             "column_placement": "right"
           }
         },
-        "text_88nVxN": {
-          "type": "text",
-          "settings": {
-            "text_font_class": "fs-body-100",
-            "text": "<p>All fragrances are 100% authentic and sourced from original branded bottles.  <br/>We independently repackage them into smaller decant bottles for sampling purposes.  <br/>We are not affiliated with the original brands.</p>",
-            "column_placement": "right"
-          }
-        },
         "inventory_counter_nnj7H": {
           "type": "inventory-counter",
           "disabled": true,
@@ -101,6 +93,14 @@
           "settings": {
             "text_font_class": "fs-body-75",
             "text": "<p><em>{{ product.metafields.custom.short_description.value }}</em></p>",
+            "column_placement": "right"
+          }
+        },
+        "text_wX9xcx": {
+          "type": "text",
+          "settings": {
+            "text_font_class": "fs-body-100",
+            "text": "<p><em>All fragrances are 100% authentic and sourced from original branded bottles.  <br/>We independently repackage them into smaller decant bottles for sampling purposes.  <br/>We are not affiliated with the original brands.</em></p>",
             "column_placement": "right"
           }
         },
@@ -222,13 +222,13 @@
         "judge_me_reviews_preview_badge_eYzRNy",
         "judge_me_reviews_preview_badge_KDQyLB",
         "text_CVcVVV",
-        "text_88nVxN",
         "inventory_counter_nnj7H",
         "share",
         "quantity_selector",
         "node_block_VmjLBj",
         "spacer_DjKHiM",
         "text_cTFDn4",
+        "text_wX9xcx",
         "buy_buttons",
         "text_hHT4XX",
         "custom_liquid_aQhpT",
