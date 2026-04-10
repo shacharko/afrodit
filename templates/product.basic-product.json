@@ -268,6 +268,56 @@
         "section_padding": "section--vertical-padding-top-bottom"
       }
     },
+    "behind_brands_XVqLjx": {
+      "type": "behind-brands",
+      "blocks": {
+        "video_card_P4g7Jk": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/v24044gl0000d7ah5gvog65k61utvbbg.mp4",
+            "video_url": "",
+            "poster": "shopify://shop_images/IMG_7524.jpg",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        },
+        "video_card_RAPWQH": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/7301492621858231390.MP4",
+            "video_url": "",
+            "poster": "shopify://shop_images/IMG_7308.jpg",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        },
+        "video_card_inHLWM": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/IMG_2158.mp4",
+            "video_url": "",
+            "poster": "shopify://shop_images/IMG_7362.jpg",
+            "product_ref": "",
+            "product_link": "",
+            "product_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_card_P4g7Jk",
+        "video_card_RAPWQH",
+        "video_card_inHLWM"
+      ],
+      "name": "Behind the brands",
+      "settings": {
+        "heading": "",
+        "subheading": "<h3><strong>See What People Are Saying</strong></h3>",
+        "centered": true,
+        "loop": true
+      }
+    },
     "1769343875b9a3c259": {
       "type": "apps",
       "blocks": {
@@ -338,6 +388,7 @@
   "order": [
     "main",
     "recommendations",
+    "behind_brands_XVqLjx",
     "1769343875b9a3c259"
   ]
 }
